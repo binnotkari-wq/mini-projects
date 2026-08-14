@@ -11,7 +11,7 @@
 L'OS doit être "stripped-down" et optimisé. Il contiendra les outils système nécessaires à sa bonne exploitation. Il consituera une plateforme de lancement des logiciels GUI qui seront en flatpaks.
 Les logigiels CLI supplémentaires : soit par brew, soit par distrobox. Mais brew n'est pas compatible nixos. La méthode privilégiée sera donc distrobox, brew sera provisionné pour Silverblue au cas où. Les configs de distrobox seront partagées sur github, pour être réutilisées librement.
 
-Facultatif : pré-personnalisation du système (firefox, shell, gnome, xdg).
+Egalement, pré-personnalisation du système (firefox, shell, gnome, xdg).
 
 La référence stripped-down est silverblue, qui ne propose que les applications suivantes :
 
@@ -33,6 +33,7 @@ Logiciels | Silverblue | Nixos
 ----|----|----
 compsize | intégré | pkgs
 git | intégré | pkgs
+gstreamer plugins (nautilus) | intégré | pkgs
 hunspell | intégré | pkgs
 hunspellDicts.fr-any | intégré | pkgs
 hunspellDicts.fr-moderne | intégré | pkgs
@@ -42,6 +43,7 @@ pciutils | intégré | pkgs
 podman | intégré | pkgs
 python313 | intégré | pkgs
 skopeo | intégré | pkgs
+tracker/tinysparql | intégré | pkgs
 tree | intégré | pkgs
 usbutils | intégré | pkgs
 wget | intégré | pkgs
@@ -78,7 +80,7 @@ Pour nixos, on installe LACT, qui ne peut fonctionner en flatpak (à cause du se
 
 ---
 
-## Optimisations à mettre en place
+## Tweaks à mettre en place
 
 Optimisation | Silverblue | Nixos 
 ----|----|----
@@ -92,9 +94,6 @@ zram zstd | passer de lzo-rle à zstd | nix
 btrfs zstd 3 | passer de 1 à 3 | nix
 earlyloom | installer | nix
 
----
-
-## Options OS à mettre en place
 
 Options | Silverblue | Nixos 
 ----|----|----
@@ -125,22 +124,12 @@ Système tel qu'installé par Calamares, dans /etc/nixos
 
 ### trimming.nix
 
-On supprime tout autre logiciel gnome que  :
-
-- ptyxis
-- nautilus
-- paramètres
-- firefox
-- aide
-- yelp
-- disques
-- moniteur système
-
+On épure les apps gnome, de façon à n'avoir que les mêmes logiciels que Silerblue :
 
   services.gnome.core-apps.enable = false; # sans le bundle des apps
 
   environment.systemPackages = with pkgs; [ # mais on veut celles-ci, essentielles (et présente dans silverblue -> liste flatpaks identique)
-    ptyxis
+    ptyxis # pour avoir le même terminal que Silverblue
     nautilus
 	gnome-control-center
 	firefox
@@ -161,7 +150,9 @@ Reprendre le contenu de performance_addons.nix + OS_options.nix
 
 Reprendre le contenu selectionné de flatpak.nix, et des software_set_xxx
 
-### preferences.nix
+### environment.nix
+
+Préférences système-wide.
 
 Reprendre le contenu selectionné de xdg.nix, firefox.nix, shell.nix, gnome_dconf.nix
 
@@ -182,7 +173,11 @@ On supprime de Silverblue :
 - les extension gnome proposées par fedora
 - les services non souhaités
 
-### préférences et compte utilisateur
+### tweaks.sh
+
+### environment.sh
+
+Préférences système-wide.
 
 Placer les fichiers dans le dossier etc à injecter dans l'image bootc.
 - préférences gnome
