@@ -32,6 +32,7 @@ La référence stripped-down est silverblue, qui ne propose que les applications
 Logiciels | Silverblue | Nixos 
 ----|----|----
 compsize | intégré | pkgs
+cosign | intégré | pkgs
 git | intégré | pkgs
 gstreamer plugins (nautilus) | intégré | pkgs
 hunspell | intégré | pkgs
