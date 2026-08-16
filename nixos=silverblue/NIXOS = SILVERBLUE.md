@@ -32,7 +32,7 @@ La référence stripped-down est silverblue, qui ne propose que les applications
 Logiciels | Silverblue | Nixos 
 ----|----|----
 compsize | intégré | pkgs
-cosign | intégré | pkgs
+ffmpeg | intégré | pkgs
 git | intégré | pkgs
 gstreamer plugins (nautilus) | intégré | pkgs
 hunspell | intégré | pkgs
@@ -49,6 +49,7 @@ tree | intégré | pkgs
 usbutils | intégré | pkgs
 wget | intégré | pkgs
 nix-tree | sans objet | pkgs
+cosign | softwares.sh | pkgs
 powertop | softwares.sh | pkgs
 lm_sensors | softwares.sh | pkgs
 stress-ng | softwares.sh | pkgs
