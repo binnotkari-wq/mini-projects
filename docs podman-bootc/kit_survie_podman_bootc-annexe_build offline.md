@@ -109,16 +109,17 @@ fi
 rm -f /etc/yum.repos.d/cargo-local.repo
 ```
 
-## 4. Commande podman offline
+## 4. Commande de build offline
 
 ### Charger la base depuis /cargo sur une machine offline
 
-Date indicative à adapter
+Que ce soit avant de builder l'OCI ou l'ISO
 
 ```
-sudo podman load -i /cargo/local_cache/bootc/github/images/
+sudo podman load -i /cargo/local_cache/bootc/github/images/silverblue-44-$(date +%Y%m%d).tar
 ```
 
+(Date indicative à adapter)
 
 ### Build container OCI
 
@@ -129,15 +130,54 @@ sudo podman build --network=none --no-cache \
   -t fedora_custom_bootc:latest .
 ```
 
+Si on veut builder en allant chercher sur internet :
+```
+sudo podman build --no-cache -t fedora_custom_bootc:latest .
+```
 
 ### Build image ISO
 
+Lancer simplement buid-disk.sh qui est placé à la racine du projet git.
+Script créé par Claude.
+
+La construction de l'iso ne peut pas se faire en offline avec bootc-image-builder. Celui-ci construit un environnement de déploiement, et est prévu pour aller chercher en ligne dans les repos fedora, tous les rpm nécessaires à la construction de cet environnement d'installation.
+
+#### *Fonctinnement de bootc-image-builder*
+
+Il prend localhost/fedora_custom-bootc:latest que tu as construit, tel quel, comme un bloc figé (ton rootfs final, déjà buildé avec tous tes RPM/binaires custom) — il ne le modifie pas, ne le recompose pas, ne re-résout aucune dépendance dessus. C'est exactement le contenu que tu as validé en offline juste avant.
+
+#### *D'où viennent alors les ~500 paquets ?*
+
+Ils ne servent pas à composer ton système final — ils servent à construire l'environnement d'installation Anaconda lui-même, c'est-à-dire l'ISO amorçable qui va, une fois démarrée sur une machine, dérouler l'installateur graphique (partitionnement, choix langue, etc.) puis déployer ton image bootc dedans.
+
+Concrètement, une ISO Anaconda contient deux choses bien distinctes :
+
+Ton image bootc (fedora_custom-bootc) — le système qui sera réellement installé sur le disque cible. Ça, c'est déjà fait, figé, inchangé.
+Un mini-environnement Linux autonome (noyau, initramfs, Anaconda + son interface graphique GTK, outils de partitionnement comme parted/blivet, pilotes de stockage/réseau génériques pour détecter le matériel de la machine cible, etc.) — c'est cet environnement qui nécessite les ~500 paquets, parce qu'il doit fonctionner de façon autonome sur n'importe quel matériel avant même que ton OS ne soit installé.
+
+C'est un peu comme la différence entre "l'OS que tu vas utiliser" et "le installateur Windows/macOS qui tourne depuis une clé USB avant l'installation" — deux logiciels séparés, l'un ne contient pas nécessairement l'autre.
+
+#### *Implication pratique pour toi*
+
+Ça confirme la stratégie que je proposais : ton container (le vrai contenu utile, personnalisé, ce sur quoi tu passes le plus de temps) est déjà 100% reproductible offline — c'est acquis et validé. L'ISO Anaconda est un simple "emballage installateur" autour, qui change rarement de version d'une build à l'autre (l'installateur Fedora 44 reste le même installateur tant que tu ne changes pas de version majeure)
 
 
 
 
+#### *Ce que fait réellement bootc-image-builder sous le capot*
 
+Pour transformer une image de conteneur en ISO d'installation autonome, l'outil exécute plusieurs étapes gourmandes en processeur et en entrées/sorties disque :
 
-## 5. Bon réflexe : ne jamais faire FROM ghcr.io/... directement dans tes forks expérimentaux
+Extraction et conversion du système de fichiers : il ne se contente pas de copier le conteneur. Il extrait toutes les couches (layers), reconstitue l'arborescence complète et formate une vraie partition disque virtuelle (dans votre cas, en btrfs).
 
-Si ton Containerfile expérimental référence FROM ghcr.io/binnotkari-wq/fedora_reference-bootc:latest (au lieu de localhost/...), Podman essaiera de vérifier/retirer l'image depuis le registre à chaque build, même si elle existe déjà en local — et ça cassera ton offline. Utilise systématiquement le tag localhost/ une fois l'image chargée, c'est le point le plus important à retenir de toute cette réponse.
+Génération d'un initramfs dédié (Dracut) : il doit compiler un noyau et un système de démarrage temporaire (initramfs) capable de détecter le matériel de n'importe quel PC au boot de l'ISO. C'est l'étape qui génère souvent les avertissements grub2-probe que vous avez vus passer.
+
+Création de l'image OSTree / Native Container : il prépare la structure ostree ou le magasin de conteneurs local qui sera directement copié sur le disque dur de la machine cible lors de l'installation.
+
+Compression extrême (La partie la plus lente) : l'ISO utilise un système de fichiers compressé en lecture seule (SquashFS). La compression de plusieurs gigaoctets de données pour faire tenir l'OS et l'installeur Anaconda sur une ISO prend un temps considérable et sollicite énormément le processeur.
+
+#### *Pourquoi c'est beaucoup plus long que podman build ?*
+
+podman build ne fait qu'ajouter des couches légères et mettre à jour du texte/binaires dans un cache local.
+
+bootc-image-builder fabrique une véritable image disque complète, initialise une table de partition (MBR/GPT), installe et configure GRUB, et compresse l'ensemble du système de fichiers.
