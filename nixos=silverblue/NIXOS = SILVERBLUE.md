@@ -9,7 +9,7 @@
 **Objectif** : produire un système nixos et un système silverblue ayant les mêmes fonctionnalités.
 
 L'OS doit être "stripped-down" et optimisé. Il contiendra les outils système nécessaires à sa bonne exploitation. Il consituera une plateforme de lancement des logiciels GUI qui seront en flatpaks.
-Les logigiels CLI supplémentaires : soit par brew, soit par distrobox. Mais brew n'est pas compatible nixos. La méthode privilégiée sera donc distrobox, brew sera provisionné pour Silverblue au cas où. Les configs de distrobox seront partagées sur github, pour être réutilisées librement.
+Les logigiels CLI supplémentaires : soit par brew, soit par distrobox. Mais brew n'est pas compatible nixos. La méthode privilégiée sera donc distrobox. Les configs de distrobox seront partagées sur github, pour être réutilisées librement.
 
 Egalement, pré-personnalisation du système (firefox, shell, gnome, xdg).
 
@@ -49,13 +49,15 @@ tree | intégré | pkgs
 usbutils | intégré | pkgs
 wget | intégré | pkgs
 nix-tree | sans objet | pkgs
+gnome-shell-extension-dash-to-panel | softwares.sh | pkgs
+aria2 | softwares.sh | pkgs
 cosign | softwares.sh | pkgs
+earlyloom | softwares.sh | pkgs
 powertop | softwares.sh | pkgs
 lm_sensors | softwares.sh | pkgs
 stress-ng | softwares.sh | pkgs
 s-tui | softwares.sh | pkgs
 libva-utils | softwares.sh | pkgs
-aria2 | softwares.sh | pkgs
 shellcheck | softwares.sh | pkgs
 bat | softwares.sh | pkgs
 glow | softwares.sh | pkgs
@@ -65,6 +67,7 @@ kiwix-tools | softwares.sh | pkgs
 llama-cpp-vulkan | softwares.sh | pkgs
 distrobox | softwares.sh | pkgs
 just | softwares.sh | pkgs
+tmux | softwares.sh | pkgs
 yt-dlp | softwares.sh | pkgs
 mc | softwares.sh | pkgs
 btop | softwares.sh | pkgs
@@ -72,13 +75,16 @@ fd-find | softwares.sh | pkgs
 fzf | softwares.sh | pkgs
 tldr | softwares.sh | pkgs
 zoxide | softwares.sh | pkgs
-gnome-shell-extension-dash-to-panel | softwares.sh | pkgs
+
 
 On intègre le repo flathub : flathub.flatpakrepo (ainsi qu'activation du service flatpak pour nixos)
 
 Pour nixos, on installe LACT, qui ne peut fonctionner en flatpak (à cause du service systemd à mettre en place)
 
 > Ne plus utiliser nerd-fonts.jetbrains-mono dans nixos. Utiles uniquement pour des logiciels TUI, concretement jamais utilisés.
+
+> Ne pas utiliser brew dans Silverblue. Privilégier une distrobox si on veut utiliser des outils CLI qui ne sont pas dans l'OCI. De plus, cela permet d'harmoniser avec nixos (brew pas installable).
+
 
 ---
 
@@ -94,7 +100,6 @@ ntsync | charger module | nix
 swappiness | paramétrer | nix
 zram zstd | passer de lzo-rle à zstd | nix
 btrfs zstd 3 | passer de 1 à 3 | nix
-earlyloom | installer | nix
 
 
 Options | Silverblue | Nixos 
@@ -186,3 +191,5 @@ Placer les fichiers dans le dossier etc à injecter dans l'image bootc.
 - paramétrage de firefox
 - modèles de documents
 - environnement CLI
+
+> Ne pas intégrer la petite customisation qui est trop volatile pour être intégrée directement dans l'OS. Cela sera fait post-install, côté utilisateur. (laisser l'historisation). Enlever donc aussi les scripts d'update (pas mature, pas vraiment intégré dans un workflow pour l'instant)
