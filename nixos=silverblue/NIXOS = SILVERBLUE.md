@@ -86,6 +86,22 @@ Pour nixos, on installe LACT, qui ne peut fonctionner en flatpak (à cause du se
 > Ne pas utiliser brew dans Silverblue. Privilégier une distrobox si on veut utiliser des outils CLI qui ne sont pas dans l'OCI. De plus, cela permet d'harmoniser avec nixos (brew pas installable).
 
 
+Simulation sur un bootc silverblue 44 épuré : 
+
+```
+dnf5 install --downloadonly -y \
+  gnome-shell-extension-dash-to-panel aria2 bat btop createrepo_c \
+  dialog distrobox earlyoom fd-find fzf glow just kiwix-tools \
+  libva-utils lm_sensors mc powertop s-tui shellcheck stress-ng \
+  tldr tmux yt-dlp zenity \zoxide
+
+Résumé de la transaction :
+Installation :    114 paquets
+La taille totale des paquets entrants est de 56 MiB. Un téléchargement de 56 MiB est nécessaire.
+Après cette opération, 175 MiB supplémentaires seront utilisés (+150 MiB, -0 B).
+L'opération ne fera que télécharger les paquets pour la transaction.
+```
+
 ---
 
 ## Tweaks à mettre en place
