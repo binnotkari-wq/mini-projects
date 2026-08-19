@@ -41,6 +41,14 @@ sudo dnf5 download --resolve \
   gnome-shell-extension-dash-to-panel \
   distrobox \
   ... et caetera ...
+
+# spécifique ryzenadj dispo sur COPR ublue
+sudo dnf5 -y copr enable ublue-os/bazzite
+sudo dnf5 download --resolve \
+  --setopt=install_weak_deps=False \
+  --destdir=/home/benoit/CARGO/rpm-cache \
+  ryzenadj
+sudo dnf5 -y copr disable ublue-os/bazzite
 ```
 
 ### Créer un repo rpm

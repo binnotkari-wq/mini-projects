@@ -11,6 +11,15 @@
 L'OS doit être "stripped-down" et optimisé. Il contiendra les outils système nécessaires à sa bonne exploitation. Il consituera une plateforme de lancement des logiciels GUI qui seront en flatpaks.
 Les logigiels CLI supplémentaires : soit par brew, soit par distrobox. Mais brew n'est pas compatible nixos. La méthode privilégiée sera donc distrobox. Les configs de distrobox seront partagées sur github, pour être réutilisées librement.
 
+
+L'image bootc = la plateforme de lancement, le socle minimal et non négociable (kernel, drivers, réseau, outils de base, ton check_system_health.sh). Elle change rarement, elle est testée, versionnée, reproductible bit à bit. Rôle : que la machine démarre et fonctionne, point.
+Le repo flatpak local (create-usb) = la couche applicative, volontairement hors du cycle de vie de l'image. Rôle : que l'utilisateur ait le choix, au moment où il en a besoin, sans avoir à rebuild ou redéployer quoi que ce soit sur le socle.
+
+Ça évite de maintenir un mapping figé entre versions d'image et sélection d'apps qui aurait fini par te forcer à rebuild l'image bootc à chaque fois que tu veux ajouter/retirer une appli — ce qui aurait cassé la promesse de stabilité du socle.
+
+
+
+
 Egalement, pré-personnalisation du système (firefox, shell, gnome, xdg).
 
 La référence stripped-down est silverblue, qui ne propose que les applications suivantes :
@@ -33,6 +42,7 @@ Logiciels | Silverblue | Nixos
 ----|----|----
 compsize | intégré | pkgs
 ffmpeg | intégré | pkgs
+fwupd | intégré | pkgs
 git | intégré | pkgs
 gstreamer plugins (nautilus) | intégré | pkgs
 hunspell | intégré | pkgs
@@ -40,6 +50,7 @@ hunspellDicts.fr-any | intégré | pkgs
 hunspellDicts.fr-moderne | intégré | pkgs
 iw | intégré | pkgs
 libnotify | intégré | pkgs
+mokutil | intégré | pkgs
 pciutils | intégré | pkgs
 podman | intégré | pkgs
 python313 | intégré | pkgs
@@ -52,12 +63,14 @@ nix-tree | sans objet | pkgs
 gnome-shell-extension-dash-to-panel | softwares.sh | pkgs
 aria2 | softwares.sh | pkgs
 cosign | softwares.sh | pkgs
+duf | softwares.sh | pkgs
 earlyloom | softwares.sh | pkgs
 powertop | softwares.sh | pkgs
 lm_sensors | softwares.sh | pkgs
 stress-ng | softwares.sh | pkgs
 s-tui | softwares.sh | pkgs
 libva-utils | softwares.sh | pkgs
+msedit | softwares.sh | pkgs
 shellcheck | softwares.sh | pkgs
 bat | softwares.sh | pkgs
 glow | softwares.sh | pkgs
@@ -68,6 +81,8 @@ llama-cpp-vulkan | softwares.sh | pkgs
 distrobox | softwares.sh | pkgs
 just | softwares.sh | pkgs
 tmux | softwares.sh | pkgs
+ryzenadj | softwares.sh | pkgs
+smartmontools | softwares.sh | pkgs
 yt-dlp | softwares.sh | pkgs
 mc | softwares.sh | pkgs
 btop | softwares.sh | pkgs
@@ -148,19 +163,6 @@ Système tel qu'installé par Calamares, dans /etc/nixos
 ### trimming.nix
 
 On épure les apps gnome, de façon à n'avoir que les mêmes logiciels que Silerblue :
-
-  services.gnome.core-apps.enable = false; # sans le bundle des apps
-
-  environment.systemPackages = with pkgs; [ # mais on veut celles-ci, essentielles (et présente dans silverblue -> liste flatpaks identique)
-    ptyxis # pour avoir le même terminal que Silverblue
-    nautilus
-	gnome-control-center
-	firefox
-    gnome-user-docs
-    yelp
-    gnome-disk-utility
-    gnome-system-monitor
-  ];
 
 
 On supprime les services orca et speechd.

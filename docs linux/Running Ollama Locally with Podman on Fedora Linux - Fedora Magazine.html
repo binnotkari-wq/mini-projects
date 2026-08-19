@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html class="js" lang="en-US"><head profile="http://gmpg.org/xfn/11">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" href="https://fedoramagazine.org/wp-content/themes/fedoramagazine-1.28/favicon.ico">
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="0VLV2JI6fXqQIJHGXnxgPbK_yrF3xxuzQI0-cpSdxoA">
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.3 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Running Ollama Locally with Podman on Fedora Linux - Fedora Magazine</title>
+	<meta name="description" content="Running Large Language Models locally with Ollama and Podman on Fedora Linux provides privacy and offline tesing and can be straightforward.">
+	<link rel="canonical" href="https://fedoramagazine.org/running-ollama-locally-with-podman-on-fedora-linux/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Running Ollama Locally with Podman on Fedora Linux - Fedora Magazine">
+	<meta property="og:description" content="Running Large Language Models locally with Ollama and Podman on Fedora Linux provides privacy and offline tesing and can be straightforward.">
+	<meta property="og:url" content="https://fedoramagazine.org/running-ollama-locally-with-podman-on-fedora-linux/">
+	<meta property="og:site_name" content="Fedora Magazine">
+	<meta property="article:publisher" content="https://www.facebook.com/TheFedoraProject">
+	<meta property="article:published_time" content="2026-08-05T08:00:00+00:00">
+	<meta property="og:image" content="https://fedoramagazine.org/wp-content/uploads/2026/07/Ollama_w_Podman.jpg">
+	<meta property="og:image:width" content="1890">
+	<meta property="og:image:height" content="801">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Yazan Monshed">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@yazanmonshed">
+	<meta name="twitter:site" content="@fedora">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Yazan Monshed">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="3 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"TechArticle","@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#article","isPartOf":{"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/"},"author":[{"@id":"https:\/\/fedoramagazine.org\/#\/schema\/person\/0f870063e520abc2d28cb9411c12194d"}],"headline":"Running Ollama Locally with Podman on Fedora Linux","datePublished":"2026-08-05T08:00:00+00:00","mainEntityOfPage":{"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/"},"wordCount":584,"commentCount":0,"publisher":{"@id":"https:\/\/fedoramagazine.org\/#organization"},"image":{"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#primaryimage"},"thumbnailUrl":"https:\/\/fedoramagazine.org\/wp-content\/uploads\/2026\/07\/Ollama_w_Podman.jpg","keywords":["Ollama","podman"],"articleSection":["Fedora Project Community","Using Software"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#respond"]}]},{"@type":["WebPage","AboutPage"],"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/","url":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/","name":"Running Ollama Locally with Podman on Fedora Linux - Fedora Magazine","isPartOf":{"@id":"https:\/\/fedoramagazine.org\/#website"},"primaryImageOfPage":{"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#primaryimage"},"image":{"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#primaryimage"},"thumbnailUrl":"https:\/\/fedoramagazine.org\/wp-content\/uploads\/2026\/07\/Ollama_w_Podman.jpg","datePublished":"2026-08-05T08:00:00+00:00","description":"Running Large Language Models locally with Ollama and Podman on Fedora Linux provides privacy and offline tesing and can be straightforward.","breadcrumb":{"@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#primaryimage","url":"https:\/\/fedoramagazine.org\/wp-content\/uploads\/2026\/07\/Ollama_w_Podman.jpg","contentUrl":"https:\/\/fedoramagazine.org\/wp-content\/uploads\/2026\/07\/Ollama_w_Podman.jpg","width":1890,"height":801,"caption":"Photo by Mark Hofman on Unsplash"},{"@type":"BreadcrumbList","@id":"https:\/\/fedoramagazine.org\/running-ollama-locally-with-podman-on-fedora-linux\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/fedoramagazine.org\/"},{"@type":"ListItem","position":2,"name":"Fedora Project Community","item":"https:\/\/fedoramagazine.org\/category\/fedora-project\/"},{"@type":"ListItem","position":3,"name":"Running Ollama Locally with Podman on Fedora Linux"}]},{"@type":"WebSite","@id":"https:\/\/fedoramagazine.org\/#website","url":"https:\/\/fedoramagazine.org\/","name":"Fedora Magazine","description":"Guides, information, and news about the Fedora operating system for users, developers, system administrators, and community members.","publisher":{"@id":"https:\/\/fedoramagazine.org\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/fedoramagazine.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/fedoramagazine.org\/#organization","name":"Fedora Project","url":"https:\/\/fedoramagazine.org\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/fedoramagazine.org\/#\/schema\/logo\/image\/","url":"https:\/\/fedoramagazine.org\/wp-content\/uploads\/2020\/09\/fmag-ribbon.png","contentUrl":"https:\/\/fedoramagazine.org\/wp-content\/uploads\/2020\/09\/fmag-ribbon.png","width":317,"height":180,"caption":"Fedora Project"},"image":{"@id":"https:\/\/fedoramagazine.org\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/TheFedoraProject","https:\/\/x.com\/fedora","https:\/\/www.instagram.com\/thefedoraproject\/","https:\/\/www.youtube.com\/channel\/UCnIfca4LPFVn8-FjpPVc1ow"]},{"@type":"Person","@id":"https:\/\/fedoramagazine.org\/#\/schema\/person\/0f870063e520abc2d28cb9411c12194d","name":"Yazan Monshed","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/secure.gravatar.com\/avatar\/265fa3e0ff50e35bd2c009a7d7970cb6c47fbd898b071e4dbc8e79a9ac696160?s=96&d=retro&r=ga74b3d04a8207fe752ee341bf0f68db6","url":"https:\/\/secure.gravatar.com\/avatar\/265fa3e0ff50e35bd2c009a7d7970cb6c47fbd898b071e4dbc8e79a9ac696160?s=96&d=retro&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/265fa3e0ff50e35bd2c009a7d7970cb6c47fbd898b071e4dbc8e79a9ac696160?s=96&d=retro&r=g","caption":"Yazan Monshed"},"description":"MLOps Engineer | Go • Kubernetes • Cloud Native | Building Scalable ML Platforms","sameAs":["http:\/\/yazanalmonshed.id.fedoraproject.org\/","linkedin.com\/in\/yazanmonshed\/","https:\/\/x.com\/yazanmonshed"],"url":"https:\/\/fedoramagazine.org\/author\/yazanalmonshed\/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://widgets.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://0.gravatar.com/">
+<link rel="dns-prefetch" href="https://1.gravatar.com/">
+<link rel="dns-prefetch" href="https://2.gravatar.com/">
+<link rel="alternate" type="application/rss+xml" title="Fedora Magazine » Feed" href="https://fedoramagazine.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Fedora Magazine » Comments Feed" href="https://fedoramagazine.org/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Fedora Magazine » Running Ollama Locally with Podman on Fedora Linux Comments Feed" href="https://fedoramagazine.org/running-ollama-locally-with-podman-on-fedora-linux/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://fedoramagazine.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffedoramagazine.org%2Frunning-ollama-locally-with-podman-on-fedora-linux%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://fedoramagazine.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffedoramagazine.org%2Frunning-ollama-locally-with-podman-on-fedora-linux%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://fedoramagazine.org/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://fedoramagazine.org/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-preformatted-inline-css">
+.wp-block-preformatted{box-sizing:border-box;white-space:pre-wrap}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://fedoramagazine.org/wp-includes/blocks/preformatted/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="foobox-free-min-css" href="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/foobox.free.min.css" media="all">
+<link rel="stylesheet" id="codecolorer-css" href="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/codecolorer.css" media="screen">
+<link rel="stylesheet" id="bodhi-svgs-attachment-css" href="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/svgs-attachment.css" media="all">
+<style id="jetpack_likes-inline-css">
+#jp-post-flair{padding-top:.5em}#content div.sharedaddy,#main div.sharedaddy,div.sharedaddy{clear:both}div.sharedaddy h3.sd-title{display:inline-block;font-size:9pt;font-weight:700;line-height:1.2;margin:0 0 1em}div.sharedaddy h3.sd-title:before{border-top:1px solid #dcdcde;content:"";display:block;margin-bottom:1em;min-width:30px;width:100%}div.jetpack-likes-widget-wrapper{min-height:50px;position:relative;width:100%}div.jetpack-likes-widget-wrapper .sd-link-color{font-size:12px}div.jetpack-comment-likes-widget-wrapper{min-height:31px;position:relative;width:100%}div.jetpack-comment-likes-widget-wrapper iframe{margin-bottom:0}#likes-other-gravatars{background-color:#fff;border:1px solid #dcdcde;border-radius:4px;box-shadow:none;display:none;height:auto;max-height:240px;min-width:220px;overflow:auto;padding:9px 12px 10px;position:absolute;z-index:1000}#likes-other-gravatars *{line-height:normal}#likes-other-gravatars .likes-text{color:#101517;font-size:12px;font-weight:500;padding-bottom:8px}#likes-other-gravatars :is(li,ul){list-style-type:none;margin:0;padding:0;text-indent:0}#likes-other-gravatars li:before{content:""}#likes-other-gravatars ul.wpl-avatars{display:block;max-height:190px;overflow:auto}#likes-other-gravatars ul.wpl-avatars li{float:none;height:28px;margin:0 0 4px;width:196px}#likes-other-gravatars ul.wpl-avatars li a{align-items:center;border-bottom:none!important;display:flex;gap:8px;margin:0 2px 0 0;text-decoration:none}#likes-other-gravatars ul.wpl-avatars li a span{color:#2c3338;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#likes-other-gravatars ul.wpl-avatars li a img{background:none;border:none;border-radius:50%;box-sizing:border-box;margin:0!important;padding:1px!important;position:static}div.sd-box{border-top:1px solid #00000021}.jetpack-likes-widget-loaded iframe,.jetpack-likes-widget-loading .likes-widget-placeholder,.jetpack-likes-widget-unloaded .likes-widget-placeholder{display:block}.jetpack-likes-widget-loaded .likes-widget-placeholder,.jetpack-likes-widget-loading iframe,.jetpack-likes-widget-unloaded iframe{display:none}.comment-likes-widget,.entry-content .post-likes-widget,.post-likes-widget{border-width:0;margin:0}.comment-likes-widget-placeholder,.post-likes-widget-placeholder{border-width:0;margin:0;position:relative}.comment-likes-widget-placeholder{display:flex;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;height:18px;position:absolute}.comment-likes-widget-placeholder:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath fill='%232ea2cc' d='m12 2 2.582 6.953L22 9.257l-5.822 4.602L18.18 21 12 16.89 5.82 21l2.002-7.14L2 9.256l7.418-.304'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:16px 16px;color:#2ea2cc;content:"";display:inline-block;height:16px;padding-right:5px;position:relative;top:3px;width:16px}.post-likes-widget-placeholder .button{display:none}:is(.comment-likes-widget-placeholder,.post-likes-widget-placeholder) .loading{color:#999;font-size:12px}.comment-likes-widget-placeholder .loading{align-self:center;color:#4e4e4e;margin-top:4px;padding-left:5px}div.sharedaddy.sd-like-enabled .sd-like h3{display:none}div.sharedaddy.sd-like-enabled .sd-like .post-likes-widget{float:none;position:absolute;top:0;width:100%}.comment-likes-widget{width:100%}.cs-rating,.pd-rating{display:block!important}.sd-gplus .sd-title{display:none}@media print{.jetpack-likes-widget-wrapper{display:none}}
+/*# sourceURL=https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/build/likes/style.min.css */
+</style>
+<style id="jetpack-subscriptions-inline-css">
+#subscribe-email input{width:95%}.comment-subscription-form{margin-bottom:1em}.comment-subscription-form .subscribe-label{display:inline!important}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;overflow-wrap:normal!important;padding:0;position:absolute!important;width:1px}
+/*# sourceURL=https://fedoramagazine.org/wp-content/plugins/jetpack/_inc/build/subscriptions/subscriptions.min.css */
+</style>
+<link rel="stylesheet" id="rowling_google_fonts-css" href="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/css.css" media="all">
+<link rel="stylesheet" id="rowling_fontawesome-css" href="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/all.css" media="all">
+<link rel="stylesheet" id="rowling_style-css" href="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/style.css" media="all">
+<script id="jquery-core-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/jquery-migrate.min.js"></script>
+<script id="bodhi_svg_inline-js-extra">
+var svgSettings = {"skipNested":""};
+//# sourceURL=bodhi_svg_inline-js-extra
+</script>
+<script id="bodhi_svg_inline-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/svgs-inline-min.js"></script>
+<script id="bodhi_svg_inline-js-after">
+cssTarget={"Bodhi":"img.style-svg","ForceInlineSVG":"style-svg"};ForceInlineSVGActive="false";frontSanitizationEnabled=false;
+//# sourceURL=bodhi_svg_inline-js-after
+</script>
+<script id="rowling_flexslider-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/flexslider.js"></script>
+<script id="rowling_doubletap-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/doubletaptogo.js"></script>
+<script id="foobox-free-min-js-before">
+/* Run FooBox FREE (v2.8.4) */
+var FOOBOX = window.FOOBOX = {
+	ready: true,
+	disableOthers: false,
+	o: {wordpress: { enabled: true }, countMessage:'image %index of %total', captions: { dataTitle: ["captionTitle","title"], dataDesc: ["captionDesc","description"] }, rel: '', excludes:'.fbx-link,.nofoobox,.nolightbox,a[href*="pinterest.com/pin/create/button/"]', affiliate : { enabled: false }},
+	selectors: [
+		".gallery", ".wp-block-gallery", ".wp-caption", ".wp-block-image", "a:has(img[class*=wp-image-])", ".foobox"
+	],
+	pre: function( $ ){
+		// Custom JavaScript (Pre)
+		
+	},
+	post: function( $ ){
+		// Custom JavaScript (Post)
+		
+		// Custom Captions Code
+		
+	},
+	custom: function( $ ){
+		// Custom Extra JS
+		
+	}
+};
+//# sourceURL=foobox-free-min-js-before
+</script>
+<script id="foobox-free-min-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/foobox.free.min.js"></script>
+<link rel="https://api.w.org/" href="https://fedoramagazine.org/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://fedoramagazine.org/wp-json/wp/v2/posts/43585"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fedoramagazine.org/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://wp.me/p3XX0v-bkZ">
+	<style>img#wpstats{display:none}</style>
+		<link rel="me" href="https://fosstodon.org/@fedora">
+      
+	      <!-- Customizer CSS --> 
+	      
+	      <style type="text/css">
+	           	           
+	           	           	           	           	           
+	           	           	           	           	           	           	           	           	           
+	           	           	           	           	           	           	           	           	           	           	           	           	           
+	           	           	           	           	           	           
+	           	           	           	           	           	           	           	           	           	           	           
+	           	           
+	           	           				
+			   	           
+	           	           	           	           	           	           	           	           	           	           	           	           	           	           
+	           	           
+	           	           				
+				
+	      </style> 
+	      
+	      <!--/Customizer CSS-->
+	      
+      	
+	</head>
+	
+	<body class="wp-singular post-template-default single single-post postid-43585 single-format-standard wp-theme-fedoramagazine-128 has-featured-image">
+		
+				
+		<div class="search-container">
+			
+			<div class="section-inner">
+			
+				<form method="get" class="search-form" id="search-form" action="https://fedoramagazine.org/">
+	<input type="search" class="search-field" placeholder="Search Fedora Magazine" name="s" id="s"> 
+	<button type="submit" class="search-button"><div class="fa fw fa-search"></div></button>
+</form>			
+			</div><!-- .section-inner -->
+			
+		</div><!-- .search-container -->
+		
+		<div class="header-wrapper">
+		
+			<div class="header">
+					
+				<div class="section-inner">
+										<div class="magazine-sitelogo">
+						<a href="https://fedoramagazine.org/">
+							<img width="250px" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/fmag-ribbon.png">
+						</a>
+					</div>
+											
+							<ul class="social-menu">
+								
+								<li id="menu-item-37855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37855"><a href="https://fosstodon.org/@fedora"><span class="screen-reader-text">fosstodon</span></a></li>
+<li id="menu-item-20774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20774"><a href="https://www.facebook.com/TheFedoraProject"><span class="screen-reader-text">Meta</span></a></li>
+<li id="menu-item-20775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20775"><a href="https://www.instagram.com/thefedoraproject"><span class="screen-reader-text">Instagram</span></a></li>
+<li id="menu-item-20773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20773"><a href="https://twitter.com/fedora"><span class="screen-reader-text">Twitter</span></a></li>
+<li id="menu-item-35841" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35841"><a href="https://www.youtube.com/fedoraproject/videos"><span class="screen-reader-text">YouTube</span></a></li>
+<li id="menu-item-35842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35842"><a href="https://chat.fedoraproject.org/"><span class="screen-reader-text">Chat</span></a></li>
+<li id="menu-item-35843" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35843"><a href="https://discussion.fedoraproject.org/"><span class="screen-reader-text">Discourse</span></a></li>
+<li id="menu-item-29030" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29030"><a href="https://fedoramagazine.org/feed/" title="						"><span class="screen-reader-text">RSS Feed</span></a></li>
+								
+							</ul><!-- .social-menu -->
+						
+						<div class="clear"></div>				
+									
+				</div><!-- .section-inner -->
+				
+			</div><!-- .header -->
+			
+					</div><!-- .header-wrapper -->
+<div class="wrapper section-inner">
+	
+	<div class="content">
+												        
+				
+			<div id="post-43585" class="single post-43585 post type-post status-publish format-standard has-post-thumbnail hentry category-fedora-project category-software tag-ollama tag-podman">
+				
+				<div class="post-header">
+													
+											
+						<h1 class="post-title">Running Ollama Locally with Podman on Fedora Linux</h1>					    
+										
+					<div class="post-meta">
+
+						<span class="resp">Posted</span>
+						<span class="post-meta-author">
+						by						<a href="https://fedoramagazine.org/author/yazanalmonshed/" title="Posts by Yazan Monshed" class="author url fn" rel="author">Yazan Monshed</a>						</span>
+						<span class="post-meta-date">on <a href="https://fedoramagazine.org/running-ollama-locally-with-podman-on-fedora-linux/">August 5, 2026</a></span> 
+													<span class="post-comments">
+								<a href="https://fedoramagazine.org/running-ollama-locally-with-podman-on-fedora-linux/#comments"><span class="fa fw fa-comment"></span>4<span class="resp"> Comments</span></a>							</span>
+						
+					</div><!-- .post-meta -->
+					
+				</div><!-- .post-header -->
+				
+						
+					<div class="post-image">
+							
+						<img width="816" height="346" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-816x346.jpg" class="attachment-post-image size-post-image wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-816x346.jpg 816w, Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-300x127.jpg 300w, Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-1024x434.jpg 1024w, Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-768x325.jpg 768w, Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-1536x651.jpg 1536w, Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman-472x200.jpg 472w, Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Ollama_w_Podman.jpg 1890w" sizes="(max-width: 816px) 100vw, 816px">						
+												
+							<p class="post-image-caption"><span class="fa fw fa-camera"></span>Photo by <a href="https://unsplash.com/@mzgfsz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mark Hofman</a> on <a href="https://unsplash.com/photos/yellow-and-black-road-sign-on-gray-asphalt-road-during-daytime-TyFPBhn1El0?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+														
+												
+					</div><!-- .post-image -->
+						
+								
+				<div class="clear"></div>
+				
+				<div class="related-posts">
+
+	<div class="widget magazine_recent_widget"><div class="widget-content">			<p class="related-posts-title">Recent Posts <i class="fa fa-arrow-right" aria-hidden="true"></i></p>
+			<a class="related-post" href="https://fedoramagazine.org/test-days-for-fedora-45-help-us-test-the-big-changes/">
+                            <img width="400" height="200" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Test_Days-400x200.jpg" class="attachment-post-image-thumb size-post-image-thumb wp-post-image" alt="" decoding="async"><h3 class="title">Test Days for Fedora 45: Help Us Test the Big Changes</h3>
+                                  </a><a class="related-post" href="https://fedoramagazine.org/monitor-your-drive-health-with-performance-co-pilot-on-fedora/">
+                            <img width="400" height="200" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/Drive-Health-400x200.jpg" class="attachment-post-image-thumb size-post-image-thumb wp-post-image" alt="" decoding="async"><h3 class="title">Monitor Your Drive Health with Performance Co-Pilot on Fedora</h3>
+                                  </a><a class="related-post" href="https://fedoramagazine.org/first-flock/">
+                            <img width="400" height="200" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/first_flock-400x200.jpg" class="attachment-post-image-thumb size-post-image-thumb wp-post-image" alt="" decoding="async" loading="lazy"><h3 class="title">Developing with Fedora, first flock, and not the last!</h3>
+                                  </a>	</div><div class="clear"></div></div>
+</div>						
+				<div class="post-inner">
+	
+					<div class="post-content">
+					
+						
+<p class="wp-block-paragraph">Running Large Language Models (LLMs) 
+locally has become increasingly popular for development, privacy, and 
+offline testing. Ollama makes this incredibly straightforward, allowing 
+you to run models like Llama 3 or Mistral directly on your machine.</p>
+
+
+
+<p class="wp-block-paragraph">By leveraging Podman on Fedora Linux, you 
+can isolate Ollama inside a container. This approach keeps your host 
+system clean while making it effortless to spin up, manage, and tear 
+down your AI development environment.</p>
+
+
+
+<span id="more-43585"></span>
+
+
+
+<h2 class="wp-block-heading">What is Ollama?</h2>
+
+
+
+<p class="wp-block-paragraph">Ollama is an open-source framework 
+designed for running, creating, and sharing large language models. It 
+packages model weights, configuration, and data into a unified 
+management system. Running it inside a container means you don’t have to
+ deal with complex local dependencies, Python environments, or complex 
+GPU driver configurations on your base OS.</p>
+
+
+
+<h2 class="wp-block-heading">Verify or Install Podman</h2>
+
+
+
+<p class="wp-block-paragraph">Podman is available by default in Fedora Workstation. It can be easily install, if missing, using DNF:</p>
+
+
+
+<pre class="wp-block-preformatted">$ sudo dnf install podman -y
+
+</pre>
+
+
+
+<p class="wp-block-paragraph">For Fedora Linux Silverblue users, Podman is natively available in the immutable base system and no extra steps are necessary.<br><br>To verify your installation and ensure everything is running smoothly, execute a quick check:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman --version
+</pre>
+
+
+
+<h2 class="wp-block-heading">Step 1: Create a Persistent Volume for Your Models</h2>
+
+
+
+<p class="wp-block-paragraph">LLM weights can be huge—often ranging from
+ 4 GB to over 40 GB, depending on the model size. To avoid downloading 
+these models every time you restart your container, create a persistent 
+Podman volume to store them safely on your host disk:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman volume create ollama_storage</pre>
+
+
+
+<h2 class="wp-block-heading">Step 2: Run the Ollama Container</h2>
+
+
+
+<p class="wp-block-paragraph">Next, spin up the Ollama container. The 
+following command pulls the official image, attaches the volume we just 
+created, and maps the communication port (
+
+</p><div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:435px;"><div class="text codecolorer">11434</div></div>
+
+) to your host machine.<p></p>
+
+
+
+<pre class="wp-block-preformatted">$ podman run -d \
+  -v ollama_storage:/root/.ollama \
+  -p 11434:11434 \
+  --name ollama \
+  ollama/ollama</pre>
+
+
+
+<h3 class="wp-block-heading">Note on Hardware Acceleration</h3>
+
+
+
+<p class="wp-block-paragraph">The command above runs Ollama using your 
+CPU. If you are on Fedora Workstation or Silverblue and want to pass 
+through an Nvidia GPU for fast hardware acceleration, make sure you have
+ the Nvidia Container Toolkit installed and append the GPU flag:</p>
+
+
+
+<pre class="wp-block-preformatted">--device nvidia.com/gpu=all</pre>
+
+
+
+<h2 class="wp-block-heading">Step 3: Download and Run an AI Model</h2>
+
+
+
+<p class="wp-block-paragraph">With the container running in the background, you can interact with it using Podman’s execution command. Let’s pull and run <strong>Llama 3</strong>, a highly capable, lightweight model perfect for local development:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman exec -it ollama ollama run llama3</pre>
+
+
+
+<p class="wp-block-paragraph">The first time you execute this, Podman will download the model weights into your
+
+</p><div class="codecolorer-container text default" style="overflow:auto;white-space:nowrap;width:435px;"><div class="text codecolorer">ollama_storage</div></div>
+
+volume. Once the download completes, you will be dropped directly into an interactive terminal prompt:<p></p>
+
+
+
+<pre class="wp-block-preformatted">&gt;&gt;&gt; Send a message (/? for help)
+&gt;&gt;&gt; Tell me a fun fact about Fedora Linux.
+Fedora Linux is named after the iconic felt hat worn by the Red Hat shadowman logo! It started as a community project to provide extra packages for Red Hat Linux.
+
+&gt;&gt;&gt;
+To exit the interactive prompt, simply type /exit.</pre>
+
+
+
+<h2 class="wp-block-heading">Step 4: Interact with the Local API</h2>
+
+
+
+<p class="wp-block-paragraph">Because we mapped port <kbd>11434</kbd> to
+ our host system, you can also interact with your local Ollama instance 
+via its built-in REST API. Open a standard terminal window and send a <kbd>curl</kbd> request:</p>
+
+
+
+<pre class="wp-block-preformatted">curl http://localhost:11434/api/generate -d '{
+  "model": "llama3",
+  "prompt": "Why use containers?",
+  "stream": false
+}'</pre>
+
+
+
+<p class="wp-block-paragraph">This returns a structured JSON payload 
+containing your answer, allowing you to easily hook your local model up 
+to web apps, scripts, or IDE extensions.</p>
+
+
+
+<h3 class="wp-block-heading">Checking Container Status</h3>
+
+
+
+<p class="wp-block-paragraph">To monitor your running local AI instance, use the classic Podman management commands, perhaps starting with:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman ps</pre>
+
+
+
+<p class="wp-block-paragraph">You can also inspect the logs to make sure the API server is listening properly:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman logs ollama</pre>
+
+
+
+<p class="wp-block-paragraph">When you are done with your development session and want to free up system memory, stop the container:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman stop ollama</pre>
+
+
+
+<p class="wp-block-paragraph">If you ever need to completely remove the container environment, use:</p>
+
+
+
+<pre class="wp-block-preformatted">$ podman rm ollama</pre>
+
+
+
+<p class="wp-block-paragraph">Note: Your downloaded models are 
+completely safe inside the ollama_storage volume and will instantly 
+reattach the next time you spin up the container.</p>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="wp-block-paragraph">Using Podman to manage Ollama on Fedora 
+Linux or Fedora Silverblue offers a clean, containerized way to build 
+and test applications with LLMs completely offline. It bypasses host 
+environment pollution, isolates large model storage cleanly into a named
+ volume, and treats your AI stack exactly like any other microservice.</p>
+
+
+
+<p class="wp-block-paragraph"></p>
+<div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-58617187-43585-6a84c3b883bda" data-src="https://widgets.wp.com/likes/?ver=16.1.1#blog_id=58617187&amp;post_id=43585&amp;origin=fedoramagazine.org&amp;obj_id=58617187-43585-6a84c3b883bda" data-name="like-post-frame-58617187-43585-6a84c3b883bda" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading"><svg class="jetpack-spinner" width="18" height="18" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="46" fill="none" stroke="#ddd" stroke-width="8"></circle><path d="M 50 4 A 46 46 0 0 1 96 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" dur="1.4s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform></path></svg><span class="screen-reader-text">Loading…</span></span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-58617187-43585-6a84c3b883bda" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/a.html" height="55px" width="100%" frameborder="0" scrolling="no" title="Like or Reblog"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>						
+											
+					</div>
+					
+					<div class="clear"></div>
+
+											<div class="post-catertags">
+															<span class="post-categories">
+									<a href="https://fedoramagazine.org/category/fedora-project/" rel="category tag">Fedora Project Community</a> <a href="https://fedoramagazine.org/category/software/" rel="category tag">Using Software</a>								</span>
+							
+															<span class="post-tags">
+									<a href="https://fedoramagazine.org/tag/ollama/" rel="tag">Ollama</a><a href="https://fedoramagazine.org/tag/podman/" rel="tag">podman</a>								</span>
+													</div>
+										
+
+														<div class="post-author">
+									<a class="avatar" href="https://fedoramagazine.org/author/yazanalmonshed/"></a>
+										<img alt="" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/265fa3e0ff50e35bd2c009a7d7970cb6c47fbd898b071e4dbc8e79a9ac69.png" srcset="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/265fa3e0ff50e35bd2c009a7d7970cb6c47fbd898b071e4dbc8e79a9_002.png 2x" class="avatar avatar-96 photo" height="96" width="96" loading="lazy" decoding="async">									<!-- .avatar -->
+									<h4 class="title"><a href="https://fedoramagazine.org/author/yazanalmonshed/">Yazan Monshed</a></h4>
+
+									<p>MLOps Engineer | Go • Kubernetes • Cloud Native | Building Scalable ML Platforms</p>
+								</div>
+								
+					
+														
+				</div><!-- .post-inner -->
+				
+				<div class="clear"></div>
+				
+			</div><!-- .post -->
+			
+			    <div id="comments" class="comments-area discourse-comments-area">
+        <div class="comments-title-wrap">
+            <h2 class="comments-title discourse-comments-title">Replies from discussion.fedoraproject.org</h2>
+        </div>
+        <ol class="comment-list">    <li class="comment even depth-1">
+        <div class="comment-body">
+            <div class="comment-meta">
+                <div class="comment-author vcard">
+                    <span class="fn"><a href="https://discussion.fedoraproject.org/t/running-ollama-locally-with-podman-on-fedora-linux/198478/2" target="_blank" rel="external" class="url">Martin Sehnoutka</a></span>
+                </div>
+                <div class="comment-metadata">
+                    <time datetime="August 5, 2026">August 5, 2026</time>
+                </div>
+            </div>
+            <div class="comment-content"><p>Can I also utilize NPU instead of CPU/GPU?</p></div>
+        </div>
+    </li>
+        <li class="comment even depth-1">
+        <div class="comment-body">
+            <div class="comment-meta">
+                <div class="comment-author vcard">
+                    <span class="fn"><a href="https://discussion.fedoraproject.org/t/running-ollama-locally-with-podman-on-fedora-linux/198478/3" target="_blank" rel="external" class="url">SD</a></span>
+                </div>
+                <div class="comment-metadata">
+                    <time datetime="August 5, 2026">August 5, 2026</time>
+                </div>
+            </div>
+            <div class="comment-content"><p>I mean if you want to use some kind of LLM I think it’s far easier to just use llamafiles. - <a href="https://docs.mozilla.ai/llamafile/getting-started/pre-built-llamafiles" class="inline-onebox" rel="noopener nofollow ugc">Pre-built llamafiles | llamafile | Mozilla.ai Docs</a></p>
+<p>All you do is download a model and then run it like an executable. 
+Gives you access on the CLI and/or via a webpage (runs on port 8080 or 
+something by default IIRC.)</p>
+<p>Sample systemd file you can proxy to with nginx, etc.</p>
+<h1><a name="p-521640-etcsystemdsystemllamafileservice-1" class="anchor" href="https://discussion.fedoraproject.org/#p-521640-etcsystemdsystemllamafileservice-1" aria-label="Heading link"></a>/etc/systemd/system/llamafile.service</h1>
+<p>[Unit]<br>
+Description=Llamafile Service</p>
+<p>[Service]<br>
+Type=simple<br>
+User=llama<br>
+Group=llama<br>
+ExecStart=/bin/sh /opt/llama/llamafile/llava-v1.6-mistral-7b-Q4_K_M.llamafile --port 9998 --host 0.0.0.0 --server<br>
+Restart=on-failure<br>
+StandardOutput=journal<br>
+StandardError=journal</p>
+<p>[Install]<br>
+WantedBy=multi-user.target</p></div>
+        </div>
+    </li>
+        <li class="comment even depth-1">
+        <div class="comment-body">
+            <div class="comment-meta">
+                <div class="comment-author vcard">
+                    <span class="fn"><a href="https://discussion.fedoraproject.org/t/running-ollama-locally-with-podman-on-fedora-linux/198478/4" target="_blank" rel="external" class="url">fatka</a></span>
+                </div>
+                <div class="comment-metadata">
+                    <time datetime="August 5, 2026">August 5, 2026</time>
+                </div>
+            </div>
+            <div class="comment-content"><p>You need dedicate support in
+ the runtime for NPU based inference.  Unfortunately people gravitate 
+towards ollama because of its low starting threshold, but it does not 
+include the latest developments in various runtimes, not to mention they
+ have a poor history of crediting other FOSS projects it builds on.</p>
+<p>Anyway, to answer your question, your best bet is to try the latest <a href="https://github.com/ggml-org/llama.cpp/releases">llama.cpp release</a> for your hardware, or if you have AMD hardware you could try <a href="https://github.com/lemonade-sdk/lemonade">lemonade</a>.
+  For both, you would need to do some digging to ensure you have enabled
+ it with the right CLI flag or config option.  There’s also <a href="https://github.com/FastFlowLM/FastFlowLM">FastFlowLM</a>, but I have not tried it yet.</p></div>
+        </div>
+    </li>
+        <li class="comment even depth-1">
+        <div class="comment-body">
+            <div class="comment-meta">
+                <div class="comment-author vcard">
+                    <span class="fn"><a href="https://discussion.fedoraproject.org/t/running-ollama-locally-with-podman-on-fedora-linux/198478/5" target="_blank" rel="external" class="url">SeeM</a></span>
+                </div>
+                <div class="comment-metadata">
+                    <time datetime="August 5, 2026">August 5, 2026</time>
+                </div>
+            </div>
+            <div class="comment-content"><p>Hi. Thanks for podman 
+configuration for Ollama. I’m using it on a bare metal right now, since 
+it should occupy the box almost completely.</p>
+<p>I found that Ollama is often not a problem, but clients are. Keeping 
+models from interacting too much with my files is constantly pushing me 
+back from AI. So I did build my own images with Aider.</p>
+<p>Dockerfile</p>
+<pre><code class="lang-plaintext">from quay.io/centos/centos@sha256:f964a3791678e692fcb4beacc5ea2c47fac78e4d4f62ca693833fb3a81fa20ea
+
+USER 0
+RUN dnf --assumeyes install python3 python3-pip python3-devel git
+
+RUN useradd -u 1001 aideruser
+RUN usermod -L aideruser
+RUN mkdir -p /opt/aider_ai
+RUN chown -R 1001:0 /opt/aider_ai
+
+USER 1001
+WORKDIR /opt/aider_ai
+
+RUN pip install --upgrade "pip==26.1.2"
+ADD requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+
+RUN git config --global user.name "AIDER AI"
+RUN git config --global user.email "aideruser@localhost"
+
+ENV PATH="${PATH}:/home/aideruser/.local/bin"
+ENV AIDER_GIT=true
+ENV AIDER_DARK_MODE=true
+ENV OLLAMA_API_BASE=http://ollama.host.local:11434/
+ENV AIDER_ANALYTICS_DISABLE=true
+ENV AIDER_CHECK_UPDATE=false
+ENV AIDER_SHOW_RELEASE_NOTES=false
+ENV AIDER_YES_ALWAYS=true
+ENV OLLAMA_MODEL=qwen3.5:9b
+
+CMD aider --model=ollama_chat/${OLLAMA_MODEL}
+</code></pre>
+<p>Change ollama.host.local to Your dedicated (or You can dream of it) Ollama host.</p>
+<p>requirements.txt</p>
+<pre><code class="lang-plaintext">aider-chat==0.86.2
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.3
+aiosignal==1.4.0
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.12.1
+asgiref==3.11.1
+attrs==25.4.0
+backoff==2.2.1
+beautifulsoup4==4.14.3
+certifi==2026.1.4
+cffi==2.0.0
+charset-normalizer==3.4.4
+click==8.3.1
+ConfigArgParse==1.7.1
+diff-match-patch==20241021
+diskcache==5.6.3
+distro==1.9.0
+fastapi==0.128.8
+fastuuid==0.14.0
+filelock==3.20.3
+flake8==7.3.0
+frozenlist==1.8.0
+fsspec==2026.2.0
+gitdb==4.0.12
+GitPython==3.1.46
+grep-ast==0.9.0
+h11==0.16.0
+hf-xet==1.2.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.4.1
+idna==3.11
+importlib_metadata==7.2.1
+importlib_resources==6.5.2
+Jinja2==3.1.6
+jiter==0.13.0
+json5==0.13.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+litellm==1.81.10
+markdown-it-py==4.0.0
+MarkupSafe==3.0.3
+mccabe==0.7.0
+mdurl==0.1.2
+mixpanel==5.0.0
+mslex==1.3.0
+multidict==6.7.1
+networkx==3.4.2
+numpy==1.26.4
+openai==2.20.0
+orjson==3.11.7
+oslex==0.1.3
+packaging==26.0
+pathspec==1.0.4
+pexpect==4.9.0
+pillow==12.1.1
+posthog==7.8.6
+prompt_toolkit==3.0.52
+propcache==0.4.1
+psutil==7.2.2
+ptyprocess==0.7.0
+pycodestyle==2.14.0
+pycparser==3.0
+pydantic==2.12.5
+pydantic_core==2.41.5
+pydub==0.25.1
+pyflakes==3.4.0
+Pygments==2.19.2
+pypandoc==1.16.2
+pyperclip==1.11.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.1
+PyYAML==6.0.3
+referencing==0.37.0
+regex==2026.1.15
+requests==2.32.5
+rich==14.3.2
+rpds-py==0.30.0
+scipy==1.15.3
+shellingham==1.5.4
+shtab==1.8.0
+six==1.17.0
+smmap==5.0.2
+sniffio==1.3.1
+socksio==1.0.0
+sounddevice==0.5.5
+soundfile==0.13.1
+soupsieve==2.8.3
+starlette==0.52.1
+tiktoken==0.12.0
+tokenizers==0.22.2
+tqdm==4.67.3
+tree-sitter==0.25.2
+tree-sitter-c-sharp==0.23.1
+tree-sitter-embedded-template==0.25.0
+tree-sitter-language-pack==0.13.0
+tree-sitter-yaml==0.7.2
+typer==0.23.0
+typer-slim==0.23.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+urllib3==2.6.3
+watchfiles==1.1.1
+wcwidth==0.6.0
+yarl==1.22.0
+zipp==3.23.0
+</code></pre>
+<p>Build and run:</p>
+<pre><code class="lang-plaintext">podman build -t aider .
+
+mkdir desk
+podman unshare chown 1001:0 desk
+podman unshare chmod 770 desk
+
+podman run --rm -it --env OLLAMA_MODEL='qwen3.5:9b' --name=aider_alfa --volume ./desk/:/opt/aider_ai:rw,Z aider
+
+</code></pre>
+<p>It has a few glitches, mainly I don’t even use newer pip I pull in Dockerfile, but it can be done. Have fun!</p></div>
+        </div>
+    </li>
+    </ol>
+        <div class="respond comment-respond">
+            <h3 id="reply-title" class="comment-reply-title">
+                Continue the discussion at                 <a href="https://discussion.fedoraproject.org/t/running-ollama-locally-with-podman-on-fedora-linux/198478">discussion.fedoraproject.org</a>
+            </h3>
+        </div>
+    </div>
+    										                        
+		    
+	
+	</div><!-- .content -->
+	
+	<div class="sidebar">
+
+	<div class="widget widget_search sidebarwidget"><div class="widget-content"><form method="get" class="search-form" id="search-form" action="https://fedoramagazine.org/">
+	<input type="search" class="search-field" placeholder="Search Fedora Magazine" name="s" id="s"> 
+	<button type="submit" class="search-button"><div class="fa fw fa-search"></div></button>
+</form></div><div class="clear"></div></div><div class="widget widget_text sidebarwidget"><div class="widget-content">			<div class="textwidget"><p><img loading="lazy" decoding="async" class="size-medium wp-image-43243" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/fedora-linux-44-1.jpg" alt="Fedora Linux 44" width="300" height="127"><br>
+<a href="https://fedoraproject.org/" target="_blank" rel="noopener">Fedora Linux 44 is available now</a>. Read the <a href="https://fedoramagazine.org/announcing-fedora-linux-44">release announcement</a> for all the details.</p>
+</div>
+		</div><div class="clear"></div></div><div class="widget widget_blog_subscription jetpack_subscription_widget sidebarwidget"><div class="widget-content"><h3 class="widget-title">Subscribe to Fedora Magazine via Email</h3>
+			<div class="wp-block-jetpack-subscriptions__container">
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-5" data-blog="58617187" data-post_access_level="everybody">
+									<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" class="screen-reader-text" for="subscribe-field-blog_subscription-5">
+							Email Address						</label>
+						<input type="email" name="email" autocomplete="email" required="required" id="subscribe-field-blog_subscription-5" placeholder="Email Address">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="https://fedoramagazine.org/running-ollama-locally-with-podman-on-fedora-linux/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="subscribe-blog-blog_subscription-5">
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="4c93b5cab9"><input type="hidden" name="_wp_http_referer" value="/running-ollama-locally-with-podman-on-fedora-linux/">						<button type="submit" class="wp-block-button__link" name="jetpack_subscriptions_widget">
+							Subscribe						</button>
+					</p>
+							</form>
+							<div class="wp-block-jetpack-subscriptions__subscount">
+					Join 10.8K other subscribers				</div>
+						</div>
+			
+</div><div class="clear"></div></div><div class="widget widget_text sidebarwidget"><div class="widget-content"><h3 class="widget-title">Contribute to the Magazine</h3>			<div class="textwidget"><p>Fedora Magazine is looking for contributors!</p>
+<ul>
+<li><a href="https://docs.fedoraproject.org/en-US/fedora-magazine/writing-a-pitch/">Propose a new article</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/fedora-magazine/contributing/">Become a writer</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/fedora-magazine/editorial/">Become an editor</a></li>
+</ul>
+</div>
+		</div><div class="clear"></div></div>
+</div>	
+	<div class="clear"></div>
+	
+</div><!-- .wrapper -->
+		
+<div class="credits">
+			
+	<div class="section-inner">
+		
+			
+		<p>			
+			The opinions expressed on this website are those of each author, 
+			not of the author's employer or of Red Hat. Fedora Magazine aspires to 
+			publish all content under a Creative Commons license but may not be able 
+			to do so in all cases. You are responsible for ensuring that you have the 
+			necessary permission to reuse any work on this site. The Fedora logo is a 
+			trademark of Red Hat, Inc. <a href="https://fedoramagazine.org/terms-and-conditions">Terms and Conditions</a>
+		</p>
+		
+	</div><!-- .section-inner -->
+	
+</div><!-- .credits -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/fedoramagazine-1.28/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="rowling_global-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/global.js"></script>
+<script async="" data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/comment-reply.min.js"></script>
+<script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"58617187","post":"43585","tz":"0","srv":"fedoramagazine.org","j":"1:16.1.1"} ]);
+_stq.push([ "clickTrackerInit", "58617187", "43585" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script data-wp-strategy="defer" defer="defer" fetchpriority="low" id="jetpack-stats-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/e-202634.js"></script>
+<script id="jetpack_likes_queuehandler-js" src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/queuehandler.min.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://fedoramagazine.org/wp-includes/js/wp-emoji-release.min.js?ver=7.0.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://fedoramagazine.org/wp-includes/js/wp-emoji-loader.min.js
+</script>
+	<iframe src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+	<div id="likes-other-gravatars" role="dialog" aria-hidden="true" tabindex="-1"><div class="likes-text"><span>%d</span></div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	
+
+<img src="Running%20Ollama%20Locally%20with%20Podman%20on%20Fedora%20Linux%20-%20Fedora%20Magazine_files/g.gif" alt="" width="6" height="5" id="wpstats"></body></html>
