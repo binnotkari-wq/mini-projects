@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, 2018, Flatpak Team. Licensed under Creative Commons
+# Attribution 4.0 International License.
+# This file is distributed under the same license as the Flatpak package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# Markus Richter <semanticdesign@pm.me>, 2019. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version:  Flatpak\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-31 14:40+0530\n"
+"PO-Revision-Date: 2019-06-26 05:15-0400\n"
+"Last-Translator: Markus Richter <semanticdesign@pm.me>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../building-introduction.rst:2
+msgid "Building Introduction"
+msgstr "Einführung zum Erstellen von Flatpaks"
+
+#: ../../building-introduction.rst:4
+msgid ""
+":doc:`first-build` has already provided a quick demonstration of how "
+"applications get built with Flatpak. This page provides an additional "
+"general overview of what's involved."
+msgstr ""
+"Der Abschnitt :doc:`first-build` beinhaltete bereits eine kurze "
+"Demonstration, wie man Anwendungen mit Flatpak erzeugt. Diese Seite "
+"bietet zusätzlich eine allgemeine Übersicht, was hierbei  involviert ist."
+
+#: ../../building-introduction.rst:10
+msgid ""
+"App stores like `Flathub <https://docs.flathub.org/docs/for-app-"
+"authors/submission>`_ have additional requirements on the building "
+"process. Please refer to their respective documentation for details."
+msgstr ""
+
+#: ../../building-introduction.rst:15
+msgid "flatpak-builder"
+msgstr "flatpak-builder"
+
+#: ../../building-introduction.rst:17
+msgid ""
+"``flatpak-builder`` is the primary tool for building Flatpak "
+"applications. It allows you to take the source files for an application "
+"and build it into a Flatpak application. It also allows multiple other "
+"dependencies to be built at the same time, which get bundled into the "
+"build."
+msgstr ""
+"``flatpak-builder``ist das primäre Tool zum Erstellen von Flatpak-"
+"Anwendungen. Es erlaubt, die Quelldateien für eine Anwendung zu nehmen "
+"und diese in eine Flatpak-Anwendung einzubinden. Es erlaubt zudem, "
+"verschiedene weitere Abhängigkeiten parallel dazu aufzulösen, diese "
+"werden dann in dem erzeugten Build gebündelt."
+
+#: ../../building-introduction.rst:22
+msgid ""
+"It is packaged by several distributions and there is also a `Flatpak "
+"package <https://flathub.org/apps/org.flatpak.Builder>`_ called "
+"``org.flatpak.Builder`` available for it on Flathub (this may contain "
+"Flathub specific downstream modifications)."
+msgstr ""
+
+#: ../../building-introduction.rst:27
+msgid ""
+"The input to ``flatpak-builder`` is a manifest file. This specifies the "
+"parameters for the application that will be built, such as its name and "
+"which runtime it will depend on. The manifest also lists all the modules "
+"that are to be built as part of the build process. A source for each "
+"module can be specified, including links to file archives or version "
+"control repositories. One of the modules (usually the last one) is the "
+"application code itself."
+msgstr ""
+"``flatpak-builder`` erhält als Eingabe eine Manifest-Datei. Diese "
+"spezifiziert die Parameter für die Anwendung, die erstellt werden soll, "
+"so wie den Namen der \n"
+"Anwendung und von welcher Laufzeitumgebung es abhängig ist. Das Manifest "
+"listet zudem alle Module, die erzeugt werden als Teil des Build-"
+"Prozesses. Eine Quelle für jedes Modul kann benannt werden, dies "
+"beinhaltet auch Dateiarchive oder Repositorys mit Versionskontrolle. "
+"Eines der Module (gewöhnlich das Letzte) ist der Programmcode der "
+"Anwendung selbst."
+
+#: ../../building-introduction.rst:35
+msgid "The basic format used to invoke ``flatpak-builder`` is::"
+msgstr ""
+"Das zugrundeliegende Format für den Aufruf von ``flatpak-builder`` sieht "
+"so aus::"
+
+#: ../../building-introduction.rst:39
+msgid ""
+"Where ``<build-dir>`` is the path to the directory that the application "
+"will be built into, and ``<manifest>`` is the path to a manifest file. "
+"The contents of ``<build-dir>`` can be useful for testing and debugging "
+"purposes, but is generally treated as an artifact of the build process."
+msgstr ""
+"``<build-dir>`` bezeichnet den Pfad zum Verzeichnis, in dem die Anwendung"
+" erzeugt wird und ``<manifest>`` entspricht dem Pfad zur Manifest-Datei. "
+"Der Inhalt von ``<build-dir>`` kann zum Testen und Debuggen nützlich "
+"sein, wird aber generell als Artefakt des Build-Prozesses behandelt."
+
+#: ../../building-introduction.rst:44
+msgid "When ``flatpak-builder`` is run:"
+msgstr "Das Ausführen von ``flatpak-builder`` setzt folgende Prozesse in Gang::"
+
+#: ../../building-introduction.rst:46
+msgid "The build directory is created, if it doesn't already exist"
+msgstr "Das Build-Verzeichnis wird erzeugt, sofern es noch nicht existiert."
+
+#: ../../building-introduction.rst:47
+msgid "The source code for each module is downloaded and verified"
+msgstr "Der Quellcode wird für jedes Modul heruntergeladen und verifiziert."
+
+#: ../../building-introduction.rst:48
+msgid "The source code for each module is built and installed"
+msgstr "Der Quellcode wird für jedes Modul kompiliert und installiert."
+
+#: ../../building-introduction.rst:49
+#, fuzzy
+msgid "The build is finished by setting sandbox permissions"
+msgstr ""
+"Der Erstellungsvorgang wird mit dem Setzen der Sandbox-Berechtigungen "
+"abgeschlossen."
+
+#: ../../building-introduction.rst:50
+msgid ""
+"The build result is exported to a repository (which will be created if it"
+" doesn't exist already)"
+msgstr ""
+"Das Resultat des Erstellungsprozesses wird zu einem Repository exportiert"
+" (welches erzeugt wird, wenn es nicht bereits existiert)."
+
+#: ../../building-introduction.rst:53
+msgid "The application can then be installed from the repository and run."
+msgstr ""
+"Die Anwendung kann vom Repository aus installiert und anschließend "
+"gestartet werden."
+
+#: ../../building-introduction.rst:56
+msgid "Software Development Kits (SDKs)"
+msgstr "Software Development Kits (SDKs)"
+
+#: ../../building-introduction.rst:58
+msgid ""
+"Instead of being built using the host environment, Flatpak applications "
+"are built inside a separate environment, called an SDK."
+msgstr ""
+"Für den Erstellungsprozess wird nicht das Gastsystem verwendet, anstelle "
+"dessen werden Flatpak-Anwendungen innerhalb einer separaten Umgebung "
+"erzeugt, dem SDK."
+
+#: ../../building-introduction.rst:61
+msgid ""
+"SDKs are like the regular runtime that applications run in. The "
+"difference is that SDKs also include all the development resources and "
+"tools that are required to build an application, such as build and "
+"packaging tools, header files, compilers and debuggers."
+msgstr ""
+"SDKs sind wie die regulären Laufzeitumgebungen in denen Anwendungen "
+"laufen. Der Unterschied ist, dass SDKs zusätzlich alle Entwicklungs-"
+"Ressourcen beinhalten und Tools, die benötigt werden, um eine Anwendung "
+"zu erzeugen, sowie Tools für die Erstellung und Paketierung, Header-"
+"Dateien, Compiler und Debugger."
+
+#: ../../building-introduction.rst:66
+#, fuzzy
+msgid ""
+"Each runtime has an accompanying SDK. For example, there is both a GNOME "
+"43 runtime and a GNOME 43 SDK. Applications that use the runtime are "
+"built with the matching SDK."
+msgstr ""
+"Jede Laufzeitumgebung verfügt über ein korrespondierendes SDK. "
+"Beispielsweise existiert eine GNOME 3.26 Laufzeitumgebung und ein GNOME "
+"3.26 SDK. Anwendungen, die diese Laufzeitumgebung verwenden, werden mit "
+"dem zugehörigen SDK erstellt."
+
+#: ../../building-introduction.rst:70
+#, fuzzy
+msgid ""
+"Like runtimes, SDKs will sometimes be automatically installed for you, "
+"but if you do need to manually install them, they are installed in the "
+"same way as applications and runtimes, such as::"
+msgstr ""
+"SDKs werden, genau wie Laufzeitumgebungen, gelegentlich automatisch "
+"installiert. Sollte der Bedarf bestehen, diese manuell zu installieren, "
+"werden sie auf die gleiche Weise installiert wie Anwendungen und "
+"Laufzeitumgebungen. So wie hier::"
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is a Flatpak package "
+#~ "called ``org.flatpak.Builder`` available for "
+#~ "it too on `Flathub "
+#~ "<https://flathub.org/apps/org.flatpak.Builder>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is a `Flatpak package "
+#~ "<https://flathub.org/apps/org.flatpak.Builder>`_ called "
+#~ "``org.flatpak.Builder`` available for it too"
+#~ " on Flathub."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "App stores like `Flathub "
+#~ "<https://docs.flathub.org/docs/for-app-"
+#~ "authors/submission>`_ has additional requirements"
+#~ " on the building process. Please "
+#~ "refer to their respective documentation "
+#~ "for details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is packaged by several distributions"
+#~ " and there is also a `Flatpak "
+#~ "package <https://flathub.org/apps/org.flatpak.Builder>`_ "
+#~ "called ``org.flatpak.Builder`` available for "
+#~ "it on Flathub."
+#~ msgstr ""
+
