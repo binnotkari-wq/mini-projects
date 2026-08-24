@@ -52,24 +52,25 @@
   # --- PKGS ---
 
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.dash-to-panel
+    lact
+    nix-tree                            # Analyse des paquets et dépendances
+
+    compsize                            # utilitaire analyse Btrfs
+    ffmpeg
+    fwupd                               # Utilitaire de mise à jour de firmware
+    git                                 # versionning, et interface avec repos en ligne
     gst_all_1.gstreamer
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly  # utile pour mp3 notamment
     gst_all_1.gst-libav
-    lact
-
-    nix-tree
-    compsize                            # utilitaire analyse Btrfs
-    nix-tree                            # Analyse des paquets et dépendances
-    ffmpeg
-    git                                 # versionning, et interface avec repos en ligne
     hunspell                            # vérificateur orthographe, utilisé à l'échelle du système
     hunspellDicts.fr-any                # dictionaire français, utilisé à l'échelle du système
     hunspellDicts.fr-moderne            # dictionnaire francais, utilisé à l'échelle du système
     iw
+    libnotify                           # Outil boites de dialogue scripts
+    mokutil                             # Utilitaire interface secure boot
     pciutils                            # Essentiel pour l'inventaire matériel
     python313                           # Version économiquee en espace disque (45 Mo)
     skopeo                              # manipulation des images bootc (création d'un fichier OCI local)
@@ -77,37 +78,35 @@
     usbutils
     wget
 
-    aria2                               # gestionnaire de téléchargement universel
+    gnomeExtensions.dash-to-panel
+    aria2                               # Gestionnaire de téléchargement universel
     bat                                 # better cat. Visualisation esthetique
     btop                                # Version "esthétique" de htop (confort visuel)
-    cosign                              # signature des images bootc (création d'un fichier OCI local)
-    createrepo_c
-    dialog                              # outil boites de dialogue scripts
+    cosign                              # Signature des images bootc (création d'un fichier OCI local)
+    createrepo_c                        # Outils de création de repo rpm local (pour build offline d'un container)
+    dialog                              # Outil boites de dialogue scripts
     distrobox                           # Pour tests Silverblue/Debian/Arch sans polluer NixOS
     duf                                 # Visualisation rapide de l'espace disque
-    earlyoom
-    fd                                  # recherche
-    fwupd                               # utilitaire de mise à jour de firmware
-    fzf                                 # recherche intelligente
+    earlyoom                            # Libération proactive de mémoire (kill des process les plus gourmands, avant oom du kernel)
+    fd                                  # Recherche
+    fzf                                 # Recherche intelligente
     glow                                # Lecture de documentation Markdown (supérieur à mdcat sur le rendu et la tolérance)
     just                                # Exécuteur de commandes de projet
-    kiwix-tools                         # (3.0 MiB download, 12.6 MiB unpacked) wikipedia offline
+    kiwix-tools                         # Wikipedia offline
     libva-utils                         # Permet de lancer 'vainfo' pour tester l'accélération vidéo
-    libnotify                           # outil boites de dialogue scripts
     llama-cpp-vulkan                    # (10.6 MiB download, 79.9 MiB unpacked) Pour LLM optimisée GPU/iGPU
     lm_sensors                          # Surveillance des températures
     mc                                  # Gestionnaire de fichiers interactif
-    mokutil                             # utilitaire interface secure boot
-    msedit                              # éditeur de texte TUI, souris et menus, raccourcis clavier standards
-    powertop                            # Vital pour optimiser la batterie
-    ryzenadj
+    msedit                              # Editeur de texte TUI, souris et menus, raccourcis clavier standards
+    powertop                            # Optimiseur d'économie d'énèrgie
+    ryzenadj                            # Réglages TDP APU Ryzen
     s-tui                               # Monitoring CPU en temps réel
-    shellcheck                          # contrôle de syntaxe scripts bash
-    smartmontools                       # utilitaire analyse état SMART des disques
-    stress-ng                           # Pour tester la stabilité du Ryzen
-    tldr                                # astuces et conseil d'utilisation des logiciels
-    tmux                                # multiplexeur de terminal
-    yt-dlp                              # téléchargement de fichiers sur youtube (complet, juste audio, etc...)
-    zenity                              # outil boites de dialogue scripts (GTK)
+    shellcheck                          # Contrôle de syntaxe scripts bash
+    smartmontools                       # Utilitaire analyse état SMART des disques
+    stress-ng                           # Pour tester la stabilité du CPU
+    tldr                                # Astuces et conseil d'utilisation des logiciels
+    tmux                                # Multiplexeur de terminal
+    yt-dlp                              # Téléchargement de fichiers sur youtube (complet, juste audio, etc...)
+    zenity                              # Outil boites de dialogue scripts (GTK)
   ];
 }

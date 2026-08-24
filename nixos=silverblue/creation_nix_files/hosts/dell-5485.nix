@@ -44,7 +44,9 @@ in
     ];
 
   # --- TDP ---
-  powerManagement.powertop.enable = true;                                                       # met en place un service qui applique automatiquement les réglages appliqués. Utiliser seulement sur PC portables.
+  # Ne pas activer : trop agressif, les récepteurs clavier et souris sans fil réagissent mal à la politique d'exctinction automatique de l'USB
+  # Règle de powertop à affiner : on pourra ensuite réactiver ce service sans effet de bord néfaste.
+  # powerManagement.powertop.enable = true;                                                       # met en place un service qui applique automatiquement les réglages appliqués. Utiliser seulement sur PC portables.
 
 
 
