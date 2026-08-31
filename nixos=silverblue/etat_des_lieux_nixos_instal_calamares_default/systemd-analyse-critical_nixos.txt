@@ -1,0 +1,20 @@
+The time when unit became active or started is printed after the "@" character.
+The time the unit took to start is printed after the "+" character.
+
+graphical.target @4.267s
+└─display-manager.service @4.183s +82ms
+  └─systemd-user-sessions.service @4.153s +26ms
+    └─network.target @4.148s
+      └─NetworkManager.service @3.858s +289ms
+        └─network-pre.target @3.847s
+          └─resolvconf.service @3.656s +188ms
+            └─basic.target @3.609s
+              └─dbus-broker.service @3.359s +188ms
+                └─dbus.socket @3.340s +255us
+                  └─sysinit.target @3.321s
+                    └─systemd-update-utmp.service @3.278s +41ms
+                      └─systemd-tmpfiles-setup.service @3.201s +69ms
+                        └─local-fs.target @3.190s
+                          └─boot.mount @3.112s +76ms
+                            └─systemd-fsck@dev-disk-by\x2duuid-5AE2\x2dA86B.service @1.978s +188ms
+                              └─dev-disk-by\x2duuid-5AE2\x2dA86B.device

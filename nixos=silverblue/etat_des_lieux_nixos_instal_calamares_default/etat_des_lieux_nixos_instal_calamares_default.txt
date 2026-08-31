@@ -1,0 +1,864 @@
+[benoit@nixos:~]$ systemctl list-units --type=service --state=running --no-pager
+  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION                                       
+  accounts-daemon.service       loaded active running Accounts Service
+  avahi-daemon.service          loaded active running Avahi mDNS/DNS-SD Stack
+  colord.service                loaded active running Manage, Install and Generate Color Profiles
+  cups-browsed.service          loaded active running CUPS Remote Printer Discovery
+  cups.service                  loaded active running CUPS Scheduler
+  dbus-broker.service           loaded active running D-Bus System Message Bus
+  display-manager.service       loaded active running Display Manager
+  ModemManager.service          loaded active running Modem Manager
+  NetworkManager.service        loaded active running Network Manager
+  nscd.service                  loaded active running Name Service Cache Daemon (nsncd)
+  polkit.service                loaded active running Authorization Manager
+  power-profiles-daemon.service loaded active running Power Profiles daemon
+  rtkit-daemon.service          loaded active running RealtimeKit Scheduling Policy Service
+  systemd-journald.service      loaded active running Journal Service
+  systemd-logind.service        loaded active running User Login Management
+  systemd-machined.service      loaded active running Virtual Machine and Container Registration Service
+  systemd-oomd.service          loaded active running Userspace Out-Of-Memory (OOM) Killer
+  systemd-timesyncd.service     loaded active running Network Time Synchronization
+  systemd-udevd.service         loaded active running Rule-based Manager for Device Events and Files
+  udisks2.service               loaded active running Disk Manager
+  upower.service                loaded active running Daemon for power management
+  user@1000.service             loaded active running User Manager for UID 1000
+  wpa_supplicant.service        loaded active running WPA Supplicant instance
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+23 loaded units listed.
+
+[benoit@nixos:~]$ systemctl --user list-units --type=service --state=running --no-pager
+  UNIT                                                           LOAD   ACTIVE SUB     DESCRIPTION
+  at-spi-dbus-bus.service                                        loaded active running Accessibility services bus
+  dbus-:1.1-org.freedesktop.portal.IBus@0.service                loaded active running dbus-:1.1-org.freedesktop.portal.IBus@0.service
+  dbus-:1.1-org.freedesktop.secrets@0.service                    loaded active running dbus-:1.1-org.freedesktop.secrets@0.service
+  dbus-:1.1-org.gnome.Console@0.service                          loaded active running dbus-:1.1-org.gnome.Console@0.service
+  dbus-:1.1-org.gnome.Identity@0.service                         loaded active running dbus-:1.1-org.gnome.Identity@0.service
+  dbus-:1.1-org.gnome.OnlineAccounts@0.service                   loaded active running dbus-:1.1-org.gnome.OnlineAccounts@0.service
+  dbus-:1.1-org.gnome.ScreenSaver@0.service                      loaded active running dbus-:1.1-org.gnome.ScreenSaver@0.service
+  dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service loaded active running dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service
+  dbus-:1.1-org.gnome.Shell.CalendarServer@0.service             loaded active running dbus-:1.1-org.gnome.Shell.CalendarServer@0.service
+  dbus-:1.1-org.gnome.Shell.Notifications@0.service              loaded active running dbus-:1.1-org.gnome.Shell.Notifications@0.service
+  dbus-:1.12-org.a11y.atspi.Registry@0.service                   loaded active running dbus-:1.12-org.a11y.atspi.Registry@0.service
+  dbus-broker.service                                            loaded active running D-Bus User Message Bus
+  evolution-addressbook-factory.service                          loaded active running Evolution address book service
+  evolution-alarm-notify.service                                 loaded active running Event and Task Reminders
+  evolution-calendar-factory.service                             loaded active running Evolution calendar service
+  evolution-source-registry.service                              loaded active running Evolution source registry
+  gcr-ssh-agent.service                                          loaded active running GCR ssh-agent wrapper
+  gnome-session-manager@gnome.service                            loaded active running GNOME Session Manager (session: gnome)
+  gnome-session-monitor.service                                  loaded active running Monitor Session leader for GNOME Session
+  gvfs-afc-volume-monitor.service                                loaded active running Virtual filesystem service - Apple File Conduit monitor
+  gvfs-daemon.service                                            loaded active running Virtual filesystem service
+  gvfs-goa-volume-monitor.service                                loaded active running Virtual filesystem service - GNOME Online Accounts monitor
+  gvfs-gphoto2-volume-monitor.service                            loaded active running Virtual filesystem service - digital camera monitor
+  gvfs-mtp-volume-monitor.service                                loaded active running Virtual filesystem service - Media Transfer Protocol monitor
+  gvfs-udisks2-volume-monitor.service                            loaded active running Virtual filesystem service - disk device monitor
+  localsearch-3.service                                          loaded active running LocalSearch indexer
+  org.freedesktop.IBus.session.GNOME.service                     loaded active running IBus Daemon for GNOME
+  org.gnome.SettingsDaemon.A11ySettings.service                  loaded active running GNOME accessibility service
+  org.gnome.SettingsDaemon.Color.service                         loaded active running GNOME color management service
+  org.gnome.SettingsDaemon.Datetime.service                      loaded active running GNOME date & time service
+  org.gnome.SettingsDaemon.Housekeeping.service                  loaded active running GNOME maintenance of expirable data service
+  org.gnome.SettingsDaemon.Keyboard.service                      loaded active running GNOME keyboard configuration service
+  org.gnome.SettingsDaemon.MediaKeys.service                     loaded active running GNOME keyboard shortcuts service
+  org.gnome.SettingsDaemon.Power.service                         loaded active running GNOME power management service
+  org.gnome.SettingsDaemon.PrintNotifications.service            loaded active running GNOME printer notifications service
+  org.gnome.SettingsDaemon.Rfkill.service                        loaded active running GNOME RFKill support service
+  org.gnome.SettingsDaemon.ScreensaverProxy.service              loaded active running GNOME FreeDesktop screensaver service
+  org.gnome.SettingsDaemon.Sharing.service                       loaded active running GNOME file sharing service
+  org.gnome.SettingsDaemon.Smartcard.service                     loaded active running GNOME smartcard service
+  org.gnome.SettingsDaemon.Sound.service                         loaded active running GNOME sound sample caching service
+  org.gnome.SettingsDaemon.UsbProtection.service                 loaded active running GNOME USB protection service
+  org.gnome.SettingsDaemon.Wwan.service                          loaded active running GNOME WWan support service
+  org.gnome.SettingsDaemon.XSettings.service                     loaded active running GNOME XSettings service
+  org.gnome.Shell@user.service                                   loaded active running GNOME Shell
+  pipewire-pulse.service                                         loaded active running PipeWire PulseAudio
+  pipewire.service                                               loaded active running PipeWire Multimedia Service
+  wireplumber.service                                            loaded active running Multimedia Service Session Manager
+  xdg-desktop-portal-gnome.service                               loaded active running Portal service (GNOME implementation)
+  xdg-desktop-portal-gtk.service                                 loaded active running Portal service (GTK/GNOME implementation)
+  xdg-desktop-portal.service                                     loaded active running Portal service
+  xdg-document-portal.service                                    loaded active running flatpak document portal service
+  xdg-permission-store.service                                   loaded active running sandboxed app permission store
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+52 loaded units listed.
+
+[benoit@nixos:~]$ nix-store -q --references /var/run/current-system/sw | cut -d'-' -f2-
+shared-mime-info-2.4
+linux-pam-1.7.1
+openssh-10.3p1
+avahi-0.8
+tinysparql-3.11.1
+at-spi2-core-2.60.1
+gtk+3-3.24.52
+seahorse-47.0.1
+curl-8.20.0-bin
+xf86-input-libinput-1.5.0
+sound-theme-freedesktop-0.8
+less-692-man
+ncurses-6.6
+bash-interactive-5.3p9
+iptables-1.8.13
+procps-4.0.6
+perl-5.42.0
+xdg-user-dirs-0.20
+which-2.23
+dbus-1.16.2
+glib-2.88.1-bin
+hostname-hostname-debian-3.25
+gnugrep-3.12
+gnused-4.9
+gawk-5.4.0
+xdg-utils-1.2.1
+nixos-build-vms
+libcap-2.77
+kexec-tools-2.0.32
+kbd-2.9.0
+kmod-31
+systemd-260.1
+polkit-127
+bolt-0.9.8
+nixos-enter
+nixos-install
+openssh-10.3p1-man
+linux-pam-1.7.1-doc
+dosfstools-4.2-man
+cryptsetup-2.8.6-man
+nix-2.34.7
+lvm2-2.03.39-man
+nano-9.0
+dosfstools-4.2-doc
+glibc-2.42-61-bin
+shadow-4.19.4
+shadow-4.19.4-su
+fuse-2.9.9-bin
+avahi-0.8-man
+xorg-server-21.1.22
+nixos-icons-0-unstable-2025-06-28
+accountsservice-23.13.9
+gdm-50.0
+openresolv-3.17.0
+iputils-20250605
+modemmanager-1.24.2
+networkmanager-1.56.0
+tecla-50.0
+geoclue-2.7.2
+gnome-initial-setup-50.0
+mtools-4.0.49-info
+nix-2.34.7-doc
+nixos-background-info
+colord-1.4.8
+upower-1.91.1
+gnome-settings-daemon-50.1
+gnome-keyring-50.0
+gnome-bluetooth-47.2
+gnome-clocks-50.0
+bluez-5.86
+pipewire-1.6.5
+gnome-shell-50.1
+gnome-browser-connector-42.1
+bzip2-1.0.8-bin
+baobab-50.0
+bash-interactive-5.3p9-info
+rygel-45.1
+sudo-1.9.17p2
+dosfstools-4.2
+linux-pam-1.7.1-man
+nixos-manual-html
+coreutils-full-9.11-info
+gnutar-1.35
+fuse-3.17.4-man
+gawk-5.4.0-man
+ncurses-6.6-man
+gnome-maps-50.1
+pipewire-1.6.5-man
+zstd-1.5.7-bin
+gzip-1.14
+man-db-2.13.1
+gnome-user-share-48.2
+polkit-127-bin
+colord-1.4.8-man
+xz-5.8.3-doc
+nano-9.0-man
+diffutils-3.12-info
+bash-interactive-5.3p9-man
+gnome-user-docs-50.0
+gnome-logs-50.0
+xrandr-1.5.4
+cups-2.4.19
+gnome-characters-50.0
+which-2.23-man
+xdg-user-dirs-gtk-0.16
+rtkit-0.14
+dbus-1.16.2-man
+sudo-1.9.17p2-man
+acl-2.3.2-man
+networkmanager-1.56.0-man
+acl-2.3.2-doc
+btrfs-progs-6.19.1
+nixos-generate-config
+bind-9.20.23-man
+cups-2.4.19-man
+xf86-input-evdev-2.11.0
+gnome-online-accounts-3.58.1
+gnome-contacts-50.0
+fuse-3.17.4-bin
+adwaita-icon-theme-50.0
+firefox-151.0.2
+gawk-5.4.0-info
+nixos-version
+pipewire-1.6.5-doc
+acl-2.3.2-bin
+man-db-2.13.1-doc
+bash-interactive-5.3p9-doc
+gnome-font-viewer-50.0
+findutils-4.10.0
+nix-2.34.7-man
+xdg-desktop-portal-gtk-1.15.3
+nixos-help
+less-692
+wpa_supplicant-2.11
+xz-5.8.3-bin
+util-linux-2.42-bin
+udisks-2.11.1
+gvfs-1.60.0
+gnome-color-manager-3.36.2
+texinfo-interactive-7.2
+libcap-2.77-doc
+shadow-4.19.4-man
+dconf-0.49.0
+speech-dispatcher-0.12.1
+iproute2-7.0.0
+xdg-desktop-portal-gnome-50.0
+libressl-4.2.1-nc
+evolution-with-plugins
+nixos-rebuild-ng-26.05
+cpio-2.15
+gzip-1.14-man
+gnome-disk-utility-46.1
+fuse-2.9.9-man
+gnome-connections-50.0
+localsearch-3.11.1
+gnome-remote-desktop-50.1
+gnome-control-center-50.1
+btrfs-progs-6.19.1-man
+attr-2.5.2-bin
+nixos-option
+dleyna-0.8.3
+libressl-4.2.1-man
+ibus-with-plugins-1.5.33
+autostart-ibus-daemon
+systemd-260.1-man
+nano-9.0-doc
+nix-info
+nautilus-50.1
+papers-50.0
+iceauth-1.0.10
+bind-9.20.23-host
+gnome-bluetooth-47.2-man
+perl-5.42.0-man
+yelp-49.0
+wireplumber-0.5.14
+iputils-20250605-man
+attr-2.5.2-man
+kmod-31-man
+cups-pk-helper-0.2.6
+gnome-tour-50.0
+cryptsetup-2.8.6-bin
+gnome-console-50.0
+xlsclients-1.1.5
+gnome-weather-50.0
+findutils-4.10.0-info
+fontconfig-2.17.1-bin
+gnome-music-49.1
+iptables-1.8.13-man
+xauth-1.1.5
+nixos-firewall-tool
+gnutar-1.35-info
+time-1.10
+power-profiles-daemon-0.30
+xprop-1.2.8
+gtk3-immodule.cache
+loupe-50.0
+xsetroot-1.1.3
+libcap-2.77-man
+gnome-text-editor-50.0
+gnome-menus-3.38.1
+coreutils-full-9.11
+mtools-4.0.49
+decibels-49.6.1
+nix-bash-completions-0.6.8
+time-1.10-info
+setxkbmap-1.3.4
+xset-1.2.5
+zstd-1.5.7-man
+simple-scan-50.0
+sudo-1.9.17p2-doc
+attr-2.5.2-doc
+rsync-3.4.1
+gnome-calendar-50.0
+which-2.23-info
+nixos-configuration-reference-manpage
+dbus-1.16.2-doc
+dbus-broker-37
+strace-7.0
+lvm2-2.03.39-bin
+nano-9.0-info
+gzip-1.14-info
+mkpasswd-5.6.6-man
+orca-50.1.2
+gnugrep-3.12-info
+strace-7.0-man
+sushi-50.rc.1
+xrdb-1.2.2
+snapshot-50.0
+xdg-desktop-portal-1.20.4
+mtools-4.0.49-man
+gnome-backgrounds-50.0
+patch-2.8
+gnused-4.9-info
+gnome-calculator-50.0
+gnome-session-50.0
+xinput-1.6.4
+wireplumber-0.5.14-doc
+diffutils-3.12
+xz-5.8.3-man
+mkpasswd-5.6.6
+networkmanager-1.56.0-doc
+bcache-tools-1.1
+gnome-system-monitor-50.0
+epiphany-50.4
+showtime-50.0
+getent-glibc-2.42-61
+xdg-user-dirs-0.20-man
+glibc-locales-2.42-61
+udisks-2.11.1-man
+util-linux-2.42-man
+bzip2-1.0.8-man
+kbd-2.9.0-man
+curl-8.20.0-man
+gnome-online-accounts-3.58.1-man
+xterm-410
+
+[benoit@nixos:~]$ ls /run/current-system/sw/bin/
+'['                                   infotocap                     pw-metadata
+ accessdb                             init                          pw-midi2play
+ addpart                              insmod                        pw-midi2record
+ advtest                              install                       pw-mididump
+ agetty                               install-info                  pw-midiplay
+ amuFormat.sh                         instmodsh                     pw-midirecord
+ apropos                              integritysetup                pw-mon
+ arpd                                 ionice                        pw-play
+ arping                               ip                            pw-profiler
+ arptables                            ip6tables                     pw-record
+ arptables-nft                        ip6tables-apply               pw-reserve
+ arptables-nft-restore                ip6tables-legacy              pw-sysex
+ arptables-nft-save                   ip6tables-legacy-restore      pw-top
+ arptables-restore                    ip6tables-legacy-save         pwunconv
+ arptables-save                       ip6tables-nft                 pw-v4l2
+ arptables-translate                  ip6tables-nft-restore         pzstd
+ attr                                 ip6tables-nft-save            rctest
+ avahi-autoipd                        ip6tables-restore             rdma
+ avahi-browse                         ip6tables-restore-translate   readlink
+ avahi-browse-domains                 ip6tables-save                readprofile
+ avahi-daemon                         ip6tables-translate           realpath
+ avahi-dnsconfd                       ipcmk                         reboot
+ avahi-publish                        ipcrm                         rename
+ avahi-publish-address                ipcs                          renice
+ avahi-publish-service                ippeveprinter                 reset
+ avahi-resolve                        ippfind                       resize
+ avahi-resolve-address                ipptool                       resizecons
+ avahi-resolve-host-name              iptables                      resizepart
+ avahi-set-host-name                  iptables-apply                resolvconf
+ avinfo                               iptables-legacy               resolvectl
+ avtest                               iptables-legacy-restore       rev
+ awk                                  iptables-legacy-save          rfcomm
+ b2sum                                iptables-nft                  rfkill
+ baobab                               iptables-nft-restore          rm
+ base32                               iptables-nft-save             rmdir
+ base64                               iptables-restore              rmmod
+ basename                             iptables-restore-translate    rnano
+ basenc                               iptables-save                 rsync
+ bash                                 iptables-translate            rsync-ssl
+ bashbug                              iptables-xml                  rtacct
+ bcache                               irqtop                        rtcwake
+ bcache-super-show                    isosize                       rtkitctl
+ bcmfw                                isotest                       rtlfw
+ bdaddr                               join                          rtmon
+ bits                                 journalctl                    rtstat
+ blkdiscard                           json_pp                       run0
+ blkid                                kbdinfo                       runcon
+ blkpr                                kbd_mode                      runuser
+ blkzone                              kbdrate                       rygel
+ blockdev                             kexec                         rygel-preferences
+ bluemoon                             kgx                           scotest
+ bluetoothctl                         kill                          scp
+ bluetoothd                           kmod                          screendump
+ bluetooth-player                     koi8rxterm                    script
+ bluetooth-sendto                     l2ping                        scriptlive
+ bneptest                             l2test                        scriptreplay
+ boltctl                              last                          sdiff
+ bootctl                              lastb                         sdptool
+ bridge                               lastlog2                      seahorse
+ broadwayd                            ldattach                      sed
+ btattach                             ldconfig                      seq
+ btconfig                             ldd                           seq2bseq
+ btgatt-client                        ld.so                         setarch
+ btgatt-server                        less                          setcap
+ btinfo                               lessecho                      setfacl
+ btiotest                             lesskey                       setfattr
+ btmgmt                               lexgrog                       setfont
+ btmon                                libnetcfg                     setkeycodes
+ btmon-logger                         link                          setleds
+ btpclient                            linux32                       setlogcons
+ btpclientctl                         linux64                       setmetamode
+ btproxy                              ln                            setpalette
+ btrfs                                lnstat                        setpgid
+ btrfsck                              loadkeys                      setpriv
+ btrfs-convert                        loadunimap                    setsid
+ btrfs-find-root                      locale                        setterm
+ btrfs-image                          localectl                     setvesablank
+ btrfs-map-logical                    localedef                     setvtrgb
+ btrfs-select-super                   localsearch                   setxkbmap
+ btrfstune                            logger                        sfdisk
+ btsnoop                              login                         sftp
+ bunzip2                              loginctl                      sg
+ busctl                               logname                       sh
+ bzcat                                logoutd                       sha1sum
+ bzcmp                                look                          sha224sum
+ bzdiff                               losetup                       sha256sum
+ bzegrep                              loupe                         sha384sum
+ bzfgrep                              lp                            sha512sum
+ bzgrep                               lpadmin                       shasum
+ bzip2                                lpc                           showconsolefont
+ bzip2recover                         lpinfo                        showkey
+ bzless                               lpmove                        showtime
+ bzmore                               lpoptions                     shred
+ cal                                  lpq                           shuf
+ cancel                               lpr                           shutdown
+ capsh                                lprm                          simple-scan
+ captoinfo                            lpstat                        slabtop
+ captree                              ls                            sleep
+ cat                                  lsblk                         sln
+ catman                               lsclocks                      snapshot
+ cd-create-profile                    lscpu                         sort
+ cd-fix-profile                       lsfd                          sotruss
+ cd-iccdump                           lsipc                         spa-acp-tool
+ cd-it8                               lsirq                         spa-inspect
+ cfdisk                               lslocks                       spa-json-dump
+ chacl                                lslogins                      spa-monitor
+ chage                                lsmem                         spa-resample
+ chcon                                lsmod                         spawn_console
+ chcpu                                lsns                          spawn_login
+ check-selftest                       lvchange                      spd-conf
+ chfn                                 lvconvert                     spd-say
+ chgpasswd                            lvcreate                      spdsend
+ chgrp                                lvdisplay                     speech-dispatcher
+ chmem                                lvextend                      splain
+ chmod                                lvm                           split
+ choom                                lvmconfig                     sprof
+ chown                                lvmdevices                    ss
+ chpasswd                             lvmdiskscan                   ssh
+ chroot                               lvmsadc                       ssh-add
+ chrt                                 lvmsar                        ssh-agent
+ chsh                                 lvreduce                      ssh-copy-id
+ chvt                                 lvremove                      sshd
+ ciptool                              lvrename                      ssh-keygen
+ cksum                                lvresize                      ssh-keyscan
+ clear                                lvs                           stat
+ clockdiff                            lvscan                        stdbuf
+ clrunimap                            lz                            strace
+ cltest                               lzcat                         strace-log-merge
+ cmp                                  lzcmp                         streamzip
+ col                                  lzdiff                        stty
+ colcrt                               lzegrep                       su
+ colormgr                             lzfgrep                       sudo
+ colrm                                lzgrep                        sudoedit
+ column                               lzless                        sudo_logsrvd
+ comm                                 lzma                          sudoreplay
+ copyfilerange                        lzmadec                       sudo_sendlog
+ coredumpctl                          lzmainfo                      sulogin
+ corelist                             lzmore                        sum
+ coresched                            machinectl                    sushi
+ coreutils                            make-bcache                   swaplabel
+ cp                                   makedb                        swapoff
+ cpan                                 makeinfo                      swapon
+ cpio                                 man                           switch_root
+ create-image                         mandb                         sync
+ cryptsetup                           manpath                       sysctl
+ csplit                               man-recode                    systemctl
+ ctrlaltdel                           mapscrn                       systemd-ac-power
+ ctstat                               mattrib                       systemd-analyze
+ cupsaccept                           mbadblocks                    systemd-ask-password
+ cupsctl                              mcat                          systemd-cat
+ cupsd                                mcd                           systemd-cgls
+ cupsdisable                          mcheck                        systemd-cgtop
+ cupsenable                           mcomp                         systemd-confext
+ cupsfilter                           mcookie                       systemd-creds
+ cupsreject                           mcopy                         systemd-cryptenroll
+ cupstestppd                          md5sum                        systemd-cryptsetup
+ curl                                 mdel                          systemd-delta
+ cut                                  mdeltree                      systemd-detect-virt
+ cvtsudoers                           mdir                          systemd-dissect
+ date                                 mdoctorfat                    systemd-escape
+ dbus-broker                          mdu                           systemd-firstboot
+ dbus-broker-launch                   mesg                          systemd-home-fallback-shell
+ dbus-cleanup-sockets                 mesh-cfgclient                systemd-hwdb
+ dbus-daemon                          mesh-cfgtest                  systemd-id128
+ dbus-launch                          meshctl                       systemd-inhibit
+ dbus-monitor                         mformat                       systemd-machine-id-setup
+ dbus-run-session                     minfo                         systemd-mount
+ dbus-send                            mkdir                         systemd-mstack
+ dbus-test-tool                       mkdosfs                       systemd-mute-console
+ dbus-update-activation-environment   mkfifo                        systemd-notify
+ dbus-uuidgen                         mkfs                          systemd-nspawn
+ dcb                                  mkfs.bfs                      systemd-path
+ dconf                                mkfs.btrfs                    systemd-pty-forward
+ dd                                   mkfs.cramfs                   systemd-repart
+ deallocvt                            mkfs.fat                      systemd-resolve
+ delpart                              mkfs.minix                    systemd-run
+ depmod                               mkfs.msdos                    systemd-socket-activate
+ devlink                              mkfs.vfat                     systemd-stdio-bridge
+ df                                   mkhomedir_helper              systemd-sysext
+ diff                                 mkmanifest                    systemd-sysusers
+ diff3                                mknod                         systemd-tmpfiles
+ dir                                  mkpasswd                      systemd-tty-ask-password-agent
+ dircolors                            mkswap                        systemd-umount
+ dirname                              mktemp                        systemd-vmspawn
+ dmesg                                mlabel                        systemd-vpick
+ dmsetup                              mmcli                         tabs
+ dmstats                              mmd                           tac
+ dosfsck                              mmount                        tail
+ dosfslabel                           mmove                         tar
+ dpll                                 ModemManager                  taskset
+ du                                   modinfo                       tc
+ dumpkeys                             modprobe                      tecla
+ ebtables                             more                          tee
+ ebtables-nft                         mount                         test
+ ebtables-nft-restore                 mount.ddi                     test-runner
+ ebtables-nft-save                    mount.fuse                    texi2any
+ ebtables-restore                     mount.fuse3                   texi2dvi
+ ebtables-save                        mount.mstack                  texi2pdf
+ ebtables-translate                   mountpoint                    texindex
+ echo                                 mpartition                    tgz
+ eddystone                            mpris-proxy                   tic
+ egrep                                mrd                           time
+ eject                                mren                          timedatectl
+ enc2xs                               mshortname                    timeout
+ encguess                             mshowfat                      tinysparql
+ enosys                               mtools                        tipc
+ env                                  mtoolstest                    tload
+ epiphany                             mtrace                        top
+ exch                                 mtype                         touch
+ expand                               mv                            tput
+ expiry                               mxtar                         tr
+ expr                                 mzip                          tracepath
+ factor                               namei                         true
+ fadvise                              nano                          truncate
+ faillock                             nautilus                      tset
+ faillog                              nautilus-autorun-software     tsort
+ fallocate                            nc                            tty
+ false                                netshaper                     tzselect
+ fatlabel                             networkctl                    uclampset
+ fc-cache                             NetworkManager                udevadm
+ fc-cat                               newgidmap                     udisksctl
+ fc-conflist                          newgrp                        ul
+ fc-list                              newuidmap                     ulockmgr_server
+ fc-match                             newusers                      umount
+ fc-pattern                           nfbpf_compile                 umount.udisks2
+ fc-query                             nfnl_osf                      uname
+ fc-scan                              nfsynproxy                    uname26
+ fc-validate                          nice                          uncompress
+ fdisk                                nix                           unexpand
+ fgconsole                            nix-build                     uniq
+ fgrep                                nix-channel                   unix_chkpwd
+ fincore                              nix-collect-garbage           unlink
+ find                                 nix-copy-closure              unlzma
+ findfs                               nix-daemon                    unshare
+ findmnt                              nix-env                       unxz
+ firefox                              nix-hash                      unzstd
+ flock                                nix-info                      updatectl
+ fmt                                  nix-instantiate               update-mime-database
+ fold                                 nixos-build-vms               upower
+ free                                 nixos-enter                   uptime
+ fsck                                 nixos-firewall-tool           useradd
+ fsck.btrfs                           nixos-generate-config         userdbctl
+ fsck.cramfs                          nixos-help                    userdel
+ fsck.fat                             nixos-install                 usermod
+ fsck.minix                           nixos-option                  users
+ fsck.msdos                           nixos-rebuild                 utmpdump
+ fsck.vfat                            nixos-version                 uuidd
+ fsfreeze                             nix-prefetch-url              uuidgen
+ fstrim                               nix-shell                     uuidparse
+ fusermount                           nix-store                     uxterm
+ fusermount3                          nl                            uz
+ gapplication                         nmcli                         varlinkctl
+ gatt-service                         nm-online                     vdir
+ gatttool                             nmtui                         vdpa
+ gawk                                 nmtui-connect                 veritysetup
+ gcalccmd                             nmtui-edit                    vgcfgbackup
+ gcm-import                           nmtui-hostname                vgcfgrestore
+ gcm-inspect                          nohup                         vgchange
+ gcm-picker                           nokfw                         vgck
+ gcm-viewer                           nologin                       vgconvert
+ gdbus                                nproc                         vgcreate
+ gdm                                  nscd                          vgdisplay
+ gdm-config                           nsenter                       vgexport
+ gencat                               nstat                         vgextend
+ genl                                 numfmt                        vgimport
+ getcap                               obex-client-tool              vgimportclone
+ getconf                              obexctl                       vgimportdevices
+ getent                               obexd                         vgmerge
+ getfacl                              obex-server-tool              vgmknodes
+ getfattr                             od                            vgreduce
+ getino                               oobtest                       vgremove
+ getkeycodes                          oomctl                        vgrename
+ getopt                               openvt                        vgs
+ getpcaps                             orca                          vgscan
+ getsubids                            org.gnome.Decibels            vgsplit
+ getunimap                            outpsfheader                  vigr
+ gi-compile-repository                pam_timestamp_check           vipw
+ gi-decompile-typelib                 papers                        visudo
+ gi-inspect-typelib                   papers-previewer              vmcore-dmesg
+ gio                                  papers-thumbnailer            vmstat
+ gnome-browser-connector              partx                         w
+ gnome-browser-connector-host         passwd                        waitpid
+ gnome-calculator                     paste                         wall
+ gnome-calendar                       patch                         watch
+ gnome-characters                     pathchk                       wc
+ gnome-clocks                         pcprofiledump                 wcurl
+ gnome-connections                    pdftexi2dvi                   wdctl
+ gnome-contacts                       perl                          whatis
+ gnome-control-center                 perl5.42.0                    whereis
+ gnome-disk-image-mounter             perlbug                       which
+ gnome-disks                          perldoc                       who
+ gnome-extensions                     perlivp                       whoami
+ gnome-extensions-app                 perlthanks                    wipefs
+ gnome-font-viewer                    pgrep                         wireplumber
+ gnome-help                           piconv                        wpa_cli
+ gnome-keyring                        pidof                         wpa_passphrase
+ gnome-keyring-3                      pidwait                       wpa_supplicant
+ gnome-keyring-daemon                 ping                          wpctl
+ gnome-logs                           pinky                         wpexec
+ gnome-maps                           pipesz                        write
+ gnome-music                          pipewire                      X
+ gnome-session                        pipewire-aes67                x86_64
+ gnome-session-inhibit                pipewire-avb                  xargs
+ gnome-session-quit                   pipewire-pulse                xauth
+ gnome-shell                          pipewire-vulkan               xdg-desktop-icon
+ gnome-shell-extension-tool           pivot_root                    xdg-desktop-menu
+ gnome-shell-test-tool                pkaction                      xdg-email
+ gnome-system-monitor                 pkcheck                       xdg-icon-resource
+ gnome-text-editor                    pkexec                        xdg-mime
+ gnome-thumbnail-font                 pkill                         xdg-open
+ gnome-tour                           pkttyagent                    xdg-screensaver
+ gnome-weather                        pl2pm                         xdg-settings
+ gpasswd                              pldd                          xdg-terminal
+ grdctl                               pmap                          xdg-user-dir
+ grep                                 pod2html                      xdg-user-dirs-gtk-update
+ groupadd                             pod2man                       xdg-user-dirs-update
+ groupdel                             pod2texi                      Xephyr
+ groupmems                            pod2text                      xinput
+ groupmod                             pod2usage                     xlsclients
+ groups                               podchecker                    Xnest
+ grpck                                portablectl                   Xorg
+ grpconv                              poweroff                      xprop
+ grpunconv                            powerprofilesctl              xrandr
+ gsettings                            ppdc                          xrdb
+ gtf                                  ppdhtml                       xset
+ gtk-launch                           ppdi                          xsetroot
+ gtk-update-icon-cache                ppdmerge                      xsubpp
+ gunzip                               ppdpo                         xtables-legacy-multi
+ gzexe                                pr                            xtables-monitor
+ gzip                                 printenv                      xtables-nft-multi
+ h2ph                                 printf                        xterm
+ h2xs                                 prlimit                       xtrace
+ halt                                 prove                         Xvfb
+ hardlink                             ps                            xz
+ hciattach                            psfaddtable                   xzcat
+ hciconfig                            psfgettable                   xzcmp
+ hcidump                              psfstriptable                 xzdec
+ hcieventmask                         psfxtable                     xzdiff
+ hcisecfilter                         ptar                          xzegrep
+ hcitool                              ptardiff                      xzfgrep
+ hd                                   ptargrep                      xzgrep
+ head                                 ptx                           xzless
+ hex2hcd                              pvchange                      xzmore
+ hexdump                              pvck                          yelp
+ hid2hci                              pvcreate                      yes
+ homectl                              pvdisplay                     zcat
+ host                                 pvmove                        zcmp
+ hostid                               pvremove                      zdiff
+ hostname                             pvresize                      zdump
+ hostnamectl                          pvs                           zegrep
+ hugetop                              pvscan                        zfgrep
+ hwclock                              pw-cat                        zforce
+ hwdb                                 pwck                          zgrep
+ i386                                 pw-cli                        zic
+ ibeacon                              pw-config                     zipdetails
+ ibus                                 pw-container                  zless
+ ibus-daemon                          pwconv                        zmore
+ ibus-setup                           pwd                           znew
+ iceauth                              pw-dot                        zramctl
+ iconv                                pw-dsdplay                    zstd
+ iconvconfig                          pw-dump                       zstdcat
+ id                                   pwdx                          zstdgrep
+ ifstat                               pw-encplay                    zstdless
+ importctl                            pwhistory_helper              zstdmt
+ info                                 pw-link
+ infocmp                              pw-loopback
+
+[benoit@nixos:~]$ busctl list --no-pager
+NAME                                   PID PROCESS         USER             CONNECTION    UNIT                          SESSION DESCRIPTION
+:1.0                                  1003 systemd-timesyn systemd-timesync :1.0          systemd-timesyncd.service     -       -
+:1.1                                   982 systemd-oomd    systemd-oom      :1.1          systemd-oomd.service          -       -
+:1.10                                 1388 NetworkManager  root             :1.10         NetworkManager.service        -       -
+:1.11                                 1394 polkitd         polkituser       :1.11         polkit.service                -       -
+:1.13                                 1475 gdm             root             :1.13         display-manager.service       -       -
+:1.14                                 1486 cupsd           root             :1.14         cups.service                  -       -
+:1.15                                 1339 cups-browsed    root             :1.15         cups-browsed.service          -       -
+:1.16                                 1339 cups-browsed    root             :1.16         cups-browsed.service          -       -
+:1.17                                 1498 dbus            cups             :1.17         cups.service                  -       -
+:1.18                                 1497 dbus            cups             :1.18         cups.service                  -       -
+:1.19                                 1499 dbus            cups             :1.19         cups.service                  -       -
+:1.2                                     1 systemd         root             :1.2          init.scope                    -       -
+:1.25                                 1631 rtkit-daemon    root             :1.25         rtkit-daemon.service          -       -
+:1.26                                 1662 .colord-wrapped colord           :1.26         colord.service                -       -
+:1.3                                  1272 dbus-broker-lau root             :1.3          dbus-broker.service           -       -
+:1.31                                 1702 upowerd         root             :1.31         upower.service                -       -
+:1.4                                  1282 systemd-machine root             :1.4          systemd-machined.service      -       -
+:1.44                                 1860 power-profiles- root             :1.44         power-profiles-daemon.service -       -
+:1.5                                  1275 avahi-daemon    avahi            :1.5          avahi-daemon.service          -       -
+:1.51                                 1955 ModemManager    root             :1.51         ModemManager.service          -       -
+:1.58                                 2029 gdm-session-wor root             :1.58         session-2.scope               2       -
+:1.60                                 2043 systemd         benoit           :1.60         user@1000.service             -       -
+:1.61                                 2066 .gnome-keyring- benoit           :1.61         session-2.scope               2       -
+:1.62                                 2072 gdm-wayland-ses benoit           :1.62         session-2.scope               2       -
+:1.63                                 2105 .gnome-session- benoit           :1.63         user@1000.service             -       -
+:1.64                                 2111 .gnome-shell-wr benoit           :1.64         user@1000.service             -       -
+:1.66                                 2202 .org.gnome.Shel benoit           :1.66         user@1000.service             -       -
+:1.67                                 2231 .gsd-media-keys benoit           :1.67         user@1000.service             -       -
+:1.68                                 2230 .gsd-keyboard-w benoit           :1.68         user@1000.service             -       -
+:1.69                                 2268 .gsd-wwan-wrapp benoit           :1.69         user@1000.service             -       -
+:1.7                                  1307 systemd-logind  root             :1.7          systemd-logind.service        -       -
+:1.70                                 2235 .gsd-disk-utili benoit           :1.70         user@1000.service             -       -
+:1.72                                 2234 .gsd-power-wrap benoit           :1.72         user@1000.service             -       -
+:1.73                                 2246 .gsd-rfkill-wra benoit           :1.73         user@1000.service             -       -
+:1.75                                 2253 .gsd-sharing-wr benoit           :1.75         user@1000.service             -       -
+:1.76                                 2264 .gsd-usb-protec benoit           :1.76         user@1000.service             -       -
+:1.77                                 2236 .gsd-print-noti benoit           :1.77         user@1000.service             -       -
+:1.78                                 2328 udisksd         root             :1.78         udisks2.service               -       -
+:1.79                                 2355 .gsd-printer-wr benoit           :1.79         user@1000.service             -       -
+:1.8                                  1301 accounts-daemon root             :1.8          accounts-daemon.service       -       -
+:1.80                                 2371 pipewire        benoit           :1.80         user@1000.service             -       -
+:1.81                                 2372 pipewire-pulse  benoit           :1.81         user@1000.service             -       -
+:1.82                                 2374 wireplumber     benoit           :1.82         user@1000.service             -       -
+:1.83                                 2360 .org.gnome.Scre benoit           :1.83         user@1000.service             -       -
+:1.84                                 2424 .ibus-dconf-wra benoit           :1.84         user@1000.service             -       -
+:1.85                                 2422 .gvfs-udisks2-v benoit           :1.85         user@1000.service             -       -
+:1.86                                 2438 .localsearch-3- benoit           :1.86         user@1000.service             -       -
+:1.87                                 2494 .goa-daemon-wra benoit           :1.87         user@1000.service             -       -
+:1.88                                 2111 .gnome-shell-wr benoit           :1.88         user@1000.service             -       -
+:1.89                                 2537 .evolution-cale benoit           :1.89         user@1000.service             -       -
+:1.9                                  1366 wpa_supplicant  wpa_supplicant   :1.9          wpa_supplicant.service        -       -
+:1.90                                 2475 .xdg-desktop-po benoit           :1.90         user@1000.service             -       -
+:1.91                                 2583 .evolution-addr benoit           :1.91         user@1000.service             -       -
+:1.92                                 2374 wireplumber     benoit           :1.92         user@1000.service             -       -
+:1.93                                 2374 wireplumber     benoit           :1.93         user@1000.service             -       -
+:1.94                                 2374 wireplumber     benoit           :1.94         user@1000.service             -       -
+:1.95                                 2413 .xdg-desktop-po benoit           :1.95         user@1000.service             -       -
+:1.96                                 2755 .xdg-desktop-po benoit           :1.96         user@1000.service             -       -
+:1.97                                 2413 .xdg-desktop-po benoit           :1.97         user@1000.service             -       -
+:1.98                                 2858 busctl          benoit           :1.98         user@1000.service             -       -
+com.redhat.NewPrinterNotification     2355 .gsd-printer-wr benoit           :1.79         user@1000.service             -       -
+com.redhat.PrinterDriversInstaller    2355 .gsd-printer-wr benoit           :1.79         user@1000.service             -       -
+fi.w1.wpa_supplicant1                 1366 wpa_supplicant  wpa_supplicant   :1.9          wpa_supplicant.service        -       -
+net.hadess.PowerProfiles              1860 power-profiles- root             :1.44         power-profiles-daemon.service -       -
+org.bluez                                - -               -                (activatable) -                             -       -
+org.bluez.mesh                           - -               -                (activatable) -                             -       -
+org.freedesktop.Accounts              1301 accounts-daemon root             :1.8          accounts-daemon.service       -       -
+org.freedesktop.Avahi                 1275 avahi-daemon    avahi            :1.5          avahi-daemon.service          -       -
+org.freedesktop.ColorManager          1662 .colord-wrapped colord           :1.26         colord.service                -       -
+org.freedesktop.DBus                     1 systemd         root             -             init.scope                    -       -
+org.freedesktop.GeoClue2                 - -               -                (activatable) -                             -       -
+org.freedesktop.ModemManager1         1955 ModemManager    root             :1.51         ModemManager.service          -       -
+org.freedesktop.NetworkManager        1388 NetworkManager  root             :1.10         NetworkManager.service        -       -
+org.freedesktop.PolicyKit1            1394 polkitd         polkituser       :1.11         polkit.service                -       -
+org.freedesktop.RealtimeKit1          1631 rtkit-daemon    root             :1.25         rtkit-daemon.service          -       -
+org.freedesktop.UDisks2               2328 udisksd         root             :1.78         udisks2.service               -       -
+org.freedesktop.UPower                1702 upowerd         root             :1.31         upower.service                -       -
+org.freedesktop.UPower.PowerProfiles  1860 power-profiles- root             :1.44         power-profiles-daemon.service -       -
+org.freedesktop.bolt                     - -               -                (activatable) -                             -       -
+org.freedesktop.home1                    - -               -                (activatable) -                             -       -
+org.freedesktop.hostname1                - -               -                (activatable) -                             -       -
+org.freedesktop.import1                  - -               -                (activatable) -                             -       -
+org.freedesktop.locale1                  - -               -                (activatable) -                             -       -
+org.freedesktop.login1                1307 systemd-logind  root             :1.7          systemd-logind.service        -       -
+org.freedesktop.machine1              1282 systemd-machine root             :1.4          systemd-machined.service      -       -
+org.freedesktop.network1                 - -               -                (activatable) -                             -       -
+org.freedesktop.nm_dispatcher            - -               -                (activatable) -                             -       -
+org.freedesktop.nm_priv_helper           - -               -                (activatable) -                             -       -
+org.freedesktop.oom1                   982 systemd-oomd    systemd-oom      :1.1          systemd-oomd.service          -       -
+org.freedesktop.portable1                - -               -                (activatable) -                             -       -
+org.freedesktop.resolve1                 - -               -                (activatable) -                             -       -
+org.freedesktop.systemd1                 1 systemd         root             :1.2          init.scope                    -       -
+org.freedesktop.sysupdate1               - -               -                (activatable) -                             -       -
+org.freedesktop.timedate1                - -               -                (activatable) -                             -       -
+org.freedesktop.timesync1             1003 systemd-timesyn systemd-timesync :1.0          systemd-timesyncd.service     -       -
+org.gnome.DisplayManager              1475 gdm             root             :1.13         display-manager.service       -       -
+org.gnome.RemoteDesktop.Configuration    - -               -                (activatable) -                             -       -
+org.opensuse.CupsPkHelper.Mechanism      - -               -                (activatable) -                             -       -
+
+
+[benoit@nixos:~]$ findmnt --types btrfs,xfs,tmpfs
+TARGET SOURCE                  FSTYPE OPTIONS
+/      /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17
+│                              btrfs  rw,relatime,space_cache=v2,subvolid=5,subvol=/
+├─/dev/shm
+│      tmpfs                   tmpfs  rw,nosuid,nodev
+├─/run tmpfs                   tmpfs  rw,nosuid,nodev,size=996988k,nr_inodes=819200,mode=755
+│ ├─/run/credentials/systemd-journald.service
+│ │    none                    tmpfs  ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode
+│ ├─/run/wrappers
+│ │    tmpfs                   tmpfs  rw,nodev,relatime,mode=755
+│ └─/run/user/1000
+│      tmpfs                   tmpfs  rw,nosuid,nodev,relatime,size=398792k,nr_inodes=99698,mode=700,uid=1000,gi
+├─/nix /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17[/nix]
+│ │                            btrfs  rw,relatime,space_cache=v2,subvolid=257,subvol=/nix
+│ └─/nix/store
+│      /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17[/nix/store]
+│                              btrfs  ro,nosuid,nodev,relatime,space_cache=v2,subvolid=257,subvol=/nix
+└─/home
+       /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17[/home]
+                               btrfs  rw,relatime,space_cache=v2,subvolid=256,subvol=/home
+
+[benoit@nixos:~]$ env | grep -E "XDG_|PATH" | sort
+GI_TYPELIB_PATH=/nix/store/jlyahda14aya375lv7k9fsin2zk90nxz-glib-2.88.1/lib/girepository-1.0:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/lib/girepository-1.0:/nix/store/bgmv4ynr3sdksgq4m7pjbh36jbf42lnd-gnome-desktop-44.5/lib/girepository-1.0
+GTK_PATH=/home/benoit/.nix-profile/lib/gtk-2.0:/home/benoit/.nix-profile/lib/gtk-3.0:/home/benoit/.nix-profile/lib/gtk-4.0:/nix/profile/lib/gtk-2.0:/nix/profile/lib/gtk-3.0:/nix/profile/lib/gtk-4.0:/home/benoit/.local/state/nix/profile/lib/gtk-2.0:/home/benoit/.local/state/nix/profile/lib/gtk-3.0:/home/benoit/.local/state/nix/profile/lib/gtk-4.0:/etc/profiles/per-user/benoit/lib/gtk-2.0:/etc/profiles/per-user/benoit/lib/gtk-3.0:/etc/profiles/per-user/benoit/lib/gtk-4.0:/nix/var/nix/profiles/default/lib/gtk-2.0:/nix/var/nix/profiles/default/lib/gtk-3.0:/nix/var/nix/profiles/default/lib/gtk-4.0:/run/current-system/sw/lib/gtk-2.0:/run/current-system/sw/lib/gtk-3.0:/run/current-system/sw/lib/gtk-4.0
+INFOPATH=/home/benoit/.nix-profile/info:/home/benoit/.nix-profile/share/info:/nix/profile/info:/nix/profile/share/info:/home/benoit/.local/state/nix/profile/info:/home/benoit/.local/state/nix/profile/share/info:/etc/profiles/per-user/benoit/info:/etc/profiles/per-user/benoit/share/info:/nix/var/nix/profiles/default/info:/nix/var/nix/profiles/default/share/info:/run/current-system/sw/info:/run/current-system/sw/share/info
+LIBEXEC_PATH=/home/benoit/.nix-profile/libexec:/nix/profile/libexec:/home/benoit/.local/state/nix/profile/libexec:/etc/profiles/per-user/benoit/libexec:/nix/var/nix/profiles/default/libexec:/run/current-system/sw/libexec
+NIX_PATH=nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos:nixos-config=/etc/nixos/configuration.nix:/nix/var/nix/profiles/per-user/root/channels
+NIX_XDG_DESKTOP_PORTAL_DIR=/run/current-system/sw/share/xdg-desktop-portal/portals
+PATH=/run/wrappers/bin:/home/benoit/.nix-profile/bin:/nix/profile/bin:/home/benoit/.local/state/nix/profile/bin:/etc/profiles/per-user/benoit/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin
+QTWEBKIT_PLUGIN_PATH=/home/benoit/.nix-profile/lib/mozilla/plugins/:/nix/profile/lib/mozilla/plugins/:/home/benoit/.local/state/nix/profile/lib/mozilla/plugins/:/etc/profiles/per-user/benoit/lib/mozilla/plugins/:/nix/var/nix/profiles/default/lib/mozilla/plugins/:/run/current-system/sw/lib/mozilla/plugins/
+XCURSOR_PATH=/home/benoit/.icons:/home/benoit/.local/share/icons:/home/benoit/.nix-profile/share/icons:/home/benoit/.nix-profile/share/pixmaps:/nix/profile/share/icons:/nix/profile/share/pixmaps:/home/benoit/.local/state/nix/profile/share/icons:/home/benoit/.local/state/nix/profile/share/pixmaps:/etc/profiles/per-user/benoit/share/icons:/etc/profiles/per-user/benoit/share/pixmaps:/nix/var/nix/profiles/default/share/icons:/nix/var/nix/profiles/default/share/pixmaps:/run/current-system/sw/share/icons:/run/current-system/sw/share/pixmaps
+XDG_CONFIG_DIRS=/etc/xdg:/home/benoit/.nix-profile/etc/xdg:/nix/profile/etc/xdg:/home/benoit/.local/state/nix/profile/etc/xdg:/etc/profiles/per-user/benoit/etc/xdg:/nix/var/nix/profiles/default/etc/xdg:/run/current-system/sw/etc/xdg:/nix/store/6jw52bmf68qfpcyxhyh9gb1avir5x7s3-gnome-settings-daemon-50.1/etc/xdg
+XDG_CURRENT_DESKTOP=GNOME
+XDG_DATA_DIRS=/nix/store/ls6pspvbpmxw9bcfsyx4arxi38jwnm4q-gnome-console-50.0/share:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/share/gsettings-schemas/gsettings-desktop-schemas-50.1:/nix/store/hkg2i77ydzyym51dql6q375lnf29f17a-gtk4-4.22.4/share/gsettings-schemas/gtk4-4.22.4:/nix/store/ls6pspvbpmxw9bcfsyx4arxi38jwnm4q-gnome-console-50.0/share/gsettings-schemas/gnome-console-50.0:/nix/store/wlr66jnxijb0wp6jpxmvywzcpz5fxjm1-gnome-session-50.0/share:/nix/store/k8a44404day9i86sxkjm0gq5ymlvyh06-gsettings-desktop-schemas-50.1/share/gsettings-schemas/gsettings-desktop-schemas-50.1:/nix/store/6jw52bmf68qfpcyxhyh9gb1avir5x7s3-gnome-settings-daemon-50.1/share/gsettings-schemas/gnome-settings-daemon-50.1:/nix/store/wlr66jnxijb0wp6jpxmvywzcpz5fxjm1-gnome-session-50.0/share/gsettings-schemas/gnome-session-50.0:/nix/store/wlr66jnxijb0wp6jpxmvywzcpz5fxjm1-gnome-session-50.0/share:/nix/store/0603svisz5xrhh84m4cdddjrvl9vs8yy-gnome-mimeapps/share:/nix/store/qq3jc10vlh69ja2cx8yiymp2g1rjrisa-desktops/share:/home/benoit/.nix-profile/share:/nix/profile/share:/home/benoit/.local/state/nix/profile/share:/etc/profiles/per-user/benoit/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share:/nix/store/9cbkfzrc424n69hpz6nvc3izlq7vggq3-gnome-shell-50.1/share/gsettings-schemas/gnome-shell-50.1:/nix/store/9cbkfzrc424n69hpz6nvc3izlq7vggq3-gnome-shell-50.1/share:/nix/store/9cbkfzrc424n69hpz6nvc3izlq7vggq3-gnome-shell-50.1/share
+XDG_MENU_PREFIX=gnome-
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=gnome
+XDG_SESSION_EXTRA_DEVICE_ACCESS=render:accel
+XDG_SESSION_TYPE=wayland
+
+[benoit@nixos:~]$ 
+
