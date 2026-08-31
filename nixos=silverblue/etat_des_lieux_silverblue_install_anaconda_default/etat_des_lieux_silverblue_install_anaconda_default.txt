@@ -1,0 +1,1825 @@
+benoit@fedora:~$ systemctl list-units --type=service --state=running --no-pager
+  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION                   
+  accounts-daemon.service       loaded active running Accounts Service
+  auditd.service                loaded active running Security Audit Logging Service
+  avahi-daemon.service          loaded active running Avahi mDNS/DNS-SD Stack
+  chronyd.service               loaded active running NTP client/server
+  colord.service                loaded active running Manage, Install and Generate …
+  cups.service                  loaded active running CUPS Scheduler
+  dbus-broker.service           loaded active running D-Bus System Message Bus
+  firewalld.service             loaded active running firewalld - dynamic firewall …
+  flatpak-system-helper.service loaded active running flatpak system helper
+  fwupd.service                 loaded active running Firmware update daemon
+  gdm.service                   loaded active running GNOME Display Manager
+  gssproxy.service              loaded active running GSSAPI Proxy Daemon
+  ModemManager.service          loaded active running Modem Manager
+  NetworkManager.service        loaded active running Network Manager
+  pcscd.service                 loaded active running PC/SC Smart Card Daemon
+  polkit.service                loaded active running Authorization Manager
+  rtkit-daemon.service          loaded active running RealtimeKit Scheduling Policy…
+  spice-vdagentd.service        loaded active running Agent daemon for Spice guests
+  spice-webdavd.service         loaded active running webdav daemon for Spice guests
+  sssd-kcm.service              loaded active running SSSD Kerberos Cache Manager
+  switcheroo-control.service    loaded active running Switcheroo Control Proxy serv…
+  systemd-homed.service         loaded active running Home Area Manager
+  systemd-journald.service      loaded active running Journal Service
+  systemd-logind.service        loaded active running User Login Management
+  systemd-nsresourced.service   loaded active running Namespace Resource Manager
+  systemd-oomd.service          loaded active running Userspace Out-Of-Memory (OOM)…
+  systemd-resolved.service      loaded active running Network Name Resolution
+  systemd-udevd.service         loaded active running Rule-based Manager for Device…
+  systemd-userdbd.service       loaded active running User Database Manager
+  tuned-ppd.service             loaded active running PPD-to-TuneD API Translation …
+  tuned.service                 loaded active running Dynamic System Tuning Daemon
+  udisks2.service               loaded active running Disk Manager
+  upower.service                loaded active running Daemon for power management
+  uresourced.service            loaded active running User resource assignment daem…
+  user@1000.service             loaded active running User Manager for UID 1000
+  wpa_supplicant.service        loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+36 loaded units listed.
+
+
+systemctl --user list-units --type=service --state=running --no-pager
+  UNIT                                                LOAD   ACTIVE SUB     DESCRIPTION
+  at-spi-dbus-bus.service                             loaded active running Accessibility services bus
+  dbus-:1.2-org.freedesktop.portal.IBus@0.service     loaded active running dbus-:1.2-org.freedesktop.portal.IBus@0.service
+  dbus-:1.2-org.freedesktop.secrets@0.service         loaded active running dbus-:1.2-org.freedesktop.secrets@0.service
+  dbus-:1.2-org.gnome.Identity@0.service              loaded active running dbus-:1.2-org.gnome.Identity@0.service
+  dbus-:1.2-org.gnome.OnlineAccounts@0.service        loaded active running dbus-:1.2-org.gnome.OnlineAccounts@0.service
+  dbus-:1.2-org.gnome.Ptyxis@0.service                loaded active running dbus-:1.2-org.gnome.Ptyxis@0.service
+  dbus-:1.2-org.gnome.ScreenSaver@0.service           loaded active running dbus-:1.2-org.gnome.ScreenSaver@0.service
+  dbus-:1.2-org.gnome.Shell.CalendarServer@0.service  loaded active running dbus-:1.2-org.gnome.Shell.CalendarServer@0.service
+  dbus-:1.2-org.gnome.Shell.Notifications@0.service   loaded active running dbus-:1.2-org.gnome.Shell.Notifications@0.service
+  dbus-:1.20-org.a11y.atspi.Registry@0.service        loaded active running dbus-:1.20-org.a11y.atspi.Registry@0.service
+  dbus-broker.service                                 loaded active running D-Bus User Message Bus
+  dconf.service                                       loaded active running User preferences database
+  evolution-addressbook-factory.service               loaded active running Evolution address book service
+  evolution-alarm-notify.service                      loaded active running Event and Task Reminders
+  evolution-calendar-factory.service                  loaded active running Evolution calendar service
+  evolution-source-registry.service                   loaded active running Evolution source registry
+  gnome-session-manager@gnome.service                 loaded active running GNOME Session Manager (session: gnome)
+  gnome-session-monitor.service                       loaded active running Monitor Session leader for GNOME Session
+  gnome-software.service                              loaded active running GNOME Software
+  gvfs-afc-volume-monitor.service                     loaded active running Virtual filesystem service - Apple File Conduit monitor
+  gvfs-daemon.service                                 loaded active running Virtual filesystem service
+  gvfs-goa-volume-monitor.service                     loaded active running Virtual filesystem service - GNOME Online Accounts monitor
+  gvfs-gphoto2-volume-monitor.service                 loaded active running Virtual filesystem service - digital camera monitor
+  gvfs-metadata.service                               loaded active running Virtual filesystem metadata service
+  gvfs-mtp-volume-monitor.service                     loaded active running Virtual filesystem service - Media Transfer Protocol monitor
+  gvfs-udisks2-volume-monitor.service                 loaded active running Virtual filesystem service - disk device monitor
+  localsearch-3.service                               loaded active running LocalSearch indexer
+  mpris-proxy.service                                 loaded active running Bluetooth mpris proxy
+  org.freedesktop.IBus.session.GNOME.service          loaded active running IBus Daemon for GNOME
+  org.gnome.SettingsDaemon.A11ySettings.service       loaded active running GNOME accessibility service
+  org.gnome.SettingsDaemon.Color.service              loaded active running GNOME color management service
+  org.gnome.SettingsDaemon.Datetime.service           loaded active running GNOME date & time service
+  org.gnome.SettingsDaemon.Housekeeping.service       loaded active running GNOME maintenance of expirable data service
+  org.gnome.SettingsDaemon.Keyboard.service           loaded active running GNOME keyboard configuration service
+  org.gnome.SettingsDaemon.MediaKeys.service          loaded active running GNOME keyboard shortcuts service
+  org.gnome.SettingsDaemon.Power.service              loaded active running GNOME power management service
+  org.gnome.SettingsDaemon.PrintNotifications.service loaded active running GNOME printer notifications service
+  org.gnome.SettingsDaemon.Rfkill.service             loaded active running GNOME RFKill support service
+  org.gnome.SettingsDaemon.ScreensaverProxy.service   loaded active running GNOME FreeDesktop screensaver service
+  org.gnome.SettingsDaemon.Sharing.service            loaded active running GNOME file sharing service
+  org.gnome.SettingsDaemon.Smartcard.service          loaded active running GNOME smartcard service
+  org.gnome.SettingsDaemon.Sound.service              loaded active running GNOME sound sample caching service
+  org.gnome.SettingsDaemon.UsbProtection.service      loaded active running GNOME USB protection service
+  org.gnome.SettingsDaemon.Wwan.service               loaded active running GNOME WWan support service
+  org.gnome.SettingsDaemon.XSettings.service          loaded active running GNOME XSettings service
+  org.gnome.Shell@user.service                        loaded active running GNOME Shell
+  pipewire-pulse.service                              loaded active running PipeWire PulseAudio
+  pipewire.service                                    loaded active running PipeWire Multimedia Service
+  spice-vdagent.service                               loaded active running Spice guest session agent
+  uresourced.service                                  loaded active running User resource assignment daemon
+  wireplumber.service                                 loaded active running Multimedia Service Session Manager
+  xdg-desktop-portal-gnome.service                    loaded active running Portal service (GNOME implementation)
+  xdg-desktop-portal-gtk.service                      loaded active running Portal service (GTK/GNOME implementation)
+  xdg-desktop-portal.service                          loaded active running Portal service
+  xdg-document-portal.service                         loaded active running flatpak document portal service
+  xdg-permission-store.service                        loaded active running sandboxed app permission store
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+56 loaded units listed.
+
+
+benoit@fedora:~$ rpm -qa --qf '%{NAME}\n' | sort
+7zip
+aardvark-dns
+abattis-cantarell-fonts
+abattis-cantarell-vf-fonts
+abseil-cpp
+accountsservice
+accountsservice-libs
+acl
+adobe-mappings-cmap
+adobe-mappings-cmap-deprecated
+adobe-mappings-pdf
+adobe-source-code-pro-fonts
+adwaita-cursor-theme
+adwaita-icon-theme
+adwaita-icon-theme-legacy
+adwaita-mono-fonts
+adwaita-sans-fonts
+alsa-lib
+alsa-sof-firmware
+alsa-ucm
+alsa-utils
+alternatives
+amd-gpu-firmware
+amd-ucode-firmware
+anthy-unicode
+antiword
+appstream
+appstream-data
+apr
+apr-util
+apr-util-lmdb
+apr-util-openssl
+aribb24
+atheros-firmware
+atk
+atkmm
+at-spi2-atk
+at-spi2-core
+attr
+audit
+audit-libs
+audit-rules
+authselect
+authselect-libs
+avahi
+avahi-glib
+avahi-gobject
+avahi-libs
+avahi-tools
+b43-fwcutter
+b43-openfwwf
+bash
+bash-color-prompt
+bash-completion
+bc
+bind-libs
+bind-utils
+bluez
+bluez-cups
+bluez-libs
+bluez-obexd
+bolt
+boost-atomic
+boost-chrono
+boost-container
+boost-date-time
+boost-thread
+bootc
+bootupd
+braille-printer-app
+brcmfmac-firmware
+brlapi
+brltty
+btrfs-progs
+bubblewrap
+buildah
+bzip2
+bzip2-libs
+c2esp
+ca-certificates
+cairo
+cairo-gobject
+cairomm
+cairomm1.16
+capstone
+c-ares
+catatonit
+cdparanoia-libs
+checkpolicy
+chrony
+cifs-utils
+cifs-utils-info
+cirrus-audio-firmware
+cjson
+cldr-emoji-annotation
+cldr-emoji-annotation-dtd
+cmake-filesystem
+codec2
+colord
+colord-gtk4
+colord-libs
+color-filesystem
+composefs
+composefs-libs
+compsize
+conmon
+containers-common
+containers-common-extra
+container-selinux
+coreutils
+coreutils-common
+cpio
+cpp
+cracklib
+cracklib-dicts
+criu
+criu-libs
+crun
+crypto-policies
+crypto-policies-scripts
+cryptsetup
+cryptsetup-libs
+cups
+cups-browsed
+cups-client
+cups-filesystem
+cups-filters
+cups-filters-driverless
+cups-ipptool
+cups-libs
+cups-pk-helper
+curl
+cyrus-sasl-gssapi
+cyrus-sasl-lib
+cyrus-sasl-plain
+dbus
+dbus-broker
+dbus-common
+dbus-libs
+dconf
+default-editor
+default-fonts-am
+default-fonts-ar
+default-fonts-as
+default-fonts-ast
+default-fonts-be
+default-fonts-bg
+default-fonts-bn
+default-fonts-bo
+default-fonts-br
+default-fonts-chr
+default-fonts-cjk-mono
+default-fonts-cjk-sans
+default-fonts-cjk-serif
+default-fonts-core-emoji
+default-fonts-core-math
+default-fonts-core-mono
+default-fonts-core-sans
+default-fonts-core-serif
+default-fonts-dv
+default-fonts-dz
+default-fonts-el
+default-fonts-eo
+default-fonts-eu
+default-fonts-fa
+default-fonts-got
+default-fonts-gu
+default-fonts-he
+default-fonts-hi
+default-fonts-hy
+default-fonts-ia
+default-fonts-ii
+default-fonts-iu
+default-fonts-ka
+default-fonts-kab
+default-fonts-km
+default-fonts-kn
+default-fonts-ku
+default-fonts-lo
+default-fonts-mai
+default-fonts-ml
+default-fonts-mni
+default-fonts-mr
+default-fonts-my
+default-fonts-nb
+default-fonts-ne
+default-fonts-nn
+default-fonts-nqo
+default-fonts-nr
+default-fonts-nso
+default-fonts-or
+default-fonts-other-mono
+default-fonts-other-sans
+default-fonts-other-serif
+default-fonts-pa
+default-fonts-ru
+default-fonts-sat
+default-fonts-si
+default-fonts-ss
+default-fonts-syr
+default-fonts-ta
+default-fonts-te
+default-fonts-th
+default-fonts-tn
+default-fonts-ts
+default-fonts-uk
+default-fonts-ur
+default-fonts-ve
+default-fonts-vi
+default-fonts-xh
+default-fonts-yi
+default-fonts-zu
+desktop-backgrounds-gnome
+desktop-file-utils
+device-mapper
+device-mapper-event
+device-mapper-event-libs
+device-mapper-libs
+device-mapper-persistent-data
+diffutils
+distribution-gpg-keys
+djvulibre-libs
+dmidecode
+dnf5daemon-server
+dnf5daemon-server-polkit
+dnsmasq
+dns-root-data
+dosfstools
+dotconf
+double-conversion
+dracut
+duktape
+dymo-cups-drivers
+e2fsprogs
+e2fsprogs-libs
+efibootmgr
+efi-filesystem
+efivar-libs
+elfutils-debuginfod-client
+elfutils-default-yama-scope
+elfutils-libelf
+elfutils-libs
+emacs-filesystem
+enchant2
+epiphany-runtime
+espeak-ng
+ethtool
+evolution-data-server
+evolution-data-server-langpacks
+evolution-ews-core
+evolution-ews-langpacks
+exempi
+exfatprogs
+exiv2
+exiv2-libs
+expat
+f2fs-tools
+f44-backgrounds-base
+f44-backgrounds-gnome
+faad2-libs
+fdk-aac-free
+fedora-bookmarks
+fedora-chromium-config
+fedora-chromium-config-gnome
+fedora-flathub-remote
+fedora-gpg-keys
+fedora-logos
+fedora-logos-httpd
+fedora-release-common
+fedora-release-identity-silverblue
+fedora-release-ostree-desktop
+fedora-release-silverblue
+fedora-repos
+fedora-repos-archive
+fedora-repos-ostree
+fedora-third-party
+fedora-workstation-backgrounds
+fedora-workstation-repositories
+ffmpeg-free
+fftw-libs-double
+fftw-libs-single
+file
+file-libs
+filesystem
+findutils
+firefox
+firefox-langpacks
+firewalld
+firewalld-filesystem
+flac-libs
+flashrom
+flatpak
+flatpak-libs
+flatpak-selinux
+flatpak-session-helper
+flite
+fmt
+fontconfig
+fonts-filesystem
+fpaste
+fprintd
+fprintd-pam
+freeglut
+freerdp-libs
+freetype
+fribidi
+fstrm
+fuse3
+fuse3-libs
+fuse-common
+fuse-overlayfs
+fwupd
+fwupd-efi
+fwupd-plugin-flashrom
+fwupd-plugin-modem-manager
+fwupd-plugin-uefi-capsule-data
+gamemode
+game-music-emu
+gawk
+gawk-all-langpacks
+gcr
+gcr3
+gcr3-base
+gcr-libs
+gd
+gdbm
+gdbm-libs
+gdk-pixbuf2
+gdm
+gdouros-symbola-fonts
+geoclue2
+geoclue2-libs
+geocode-glib
+gettext
+gettext-envsubst
+gettext-libs
+gettext-runtime
+ghostscript
+ghostscript-tools-fontutils
+ghostscript-tools-printing
+giflib
+git-core
+git-core-doc
+gjs
+glib2
+glibc
+glibc-all-langpacks
+glibc-common
+glibc-gconv-extra
+glibmm2.4
+glibmm2.68
+glib-networking
+glx-utils
+glycin-gtk4-libs
+glycin-libs
+glycin-loaders
+glycin-thumbnailer
+gmp
+gnome-app-list
+gnome-autoar
+gnome-backgrounds
+gnome-bluetooth
+gnome-bluetooth-libs
+gnome-browser-connector
+gnome-classic-session
+gnome-color-manager
+gnome-control-center
+gnome-control-center-filesystem
+gnome-desktop3
+gnome-desktop4
+gnome-disk-utility
+gnome-epub-thumbnailer
+gnome-initial-setup
+gnome-keyring
+gnome-keyring-pam
+gnome-menus
+gnome-online-accounts
+gnome-online-accounts-libs
+gnome-remote-desktop
+gnome-session
+gnome-session-wayland-session
+gnome-settings-daemon
+gnome-shell
+gnome-shell-common
+gnome-shell-extension-apps-menu
+gnome-shell-extension-background-logo
+gnome-shell-extension-common
+gnome-shell-extension-launch-new-instance
+gnome-shell-extension-places-menu
+gnome-shell-extension-window-list
+gnome-software
+gnome-software-rpm-ostree
+gnome-system-monitor
+gnome-tour
+gnome-user-docs
+gnome-user-share
+gnulib-l10n
+gnupg2
+gnupg2-dirmngr
+gnupg2-gpg-agent
+gnupg2-gpgconf
+gnupg2-keyboxd
+gnupg2-scdaemon
+gnupg2-verify
+gnutls
+gnutls-dane
+gobject-introspection
+google-droid-sans-fonts
+google-noto-color-emoji-fonts
+google-noto-emoji-fonts
+google-noto-fonts-common
+google-noto-naskh-arabic-vf-fonts
+google-noto-sans-arabic-vf-fonts
+google-noto-sans-armenian-vf-fonts
+google-noto-sans-bengali-vf-fonts
+google-noto-sans-canadian-aboriginal-vf-fonts
+google-noto-sans-cherokee-vf-fonts
+google-noto-sans-cjk-vf-fonts
+google-noto-sans-devanagari-vf-fonts
+google-noto-sans-ethiopic-vf-fonts
+google-noto-sans-georgian-vf-fonts
+google-noto-sans-gothic-fonts
+google-noto-sans-gujarati-vf-fonts
+google-noto-sans-gurmukhi-vf-fonts
+google-noto-sans-hebrew-vf-fonts
+google-noto-sans-kannada-vf-fonts
+google-noto-sans-khmer-vf-fonts
+google-noto-sans-lao-vf-fonts
+google-noto-sans-math-fonts
+google-noto-sans-meetei-mayek-vf-fonts
+google-noto-sans-mono-cjk-vf-fonts
+google-noto-sans-mono-vf-fonts
+google-noto-sans-nko-fonts
+google-noto-sans-ol-chiki-vf-fonts
+google-noto-sans-oriya-vf-fonts
+google-noto-sans-sinhala-vf-fonts
+google-noto-sans-symbols-2-fonts
+google-noto-sans-symbols-vf-fonts
+google-noto-sans-syriac-vf-fonts
+google-noto-sans-tamil-vf-fonts
+google-noto-sans-telugu-vf-fonts
+google-noto-sans-thaana-vf-fonts
+google-noto-sans-thai-vf-fonts
+google-noto-sans-vf-fonts
+google-noto-sans-yi-fonts
+google-noto-serif-armenian-vf-fonts
+google-noto-serif-bengali-vf-fonts
+google-noto-serif-cjk-vf-fonts
+google-noto-serif-devanagari-vf-fonts
+google-noto-serif-ethiopic-vf-fonts
+google-noto-serif-georgian-vf-fonts
+google-noto-serif-gujarati-vf-fonts
+google-noto-serif-gurmukhi-vf-fonts
+google-noto-serif-hebrew-vf-fonts
+google-noto-serif-kannada-vf-fonts
+google-noto-serif-khmer-vf-fonts
+google-noto-serif-lao-vf-fonts
+google-noto-serif-oriya-vf-fonts
+google-noto-serif-sinhala-vf-fonts
+google-noto-serif-tamil-vf-fonts
+google-noto-serif-telugu-vf-fonts
+google-noto-serif-thai-vf-fonts
+google-noto-serif-vf-fonts
+gpgme
+gpgmepp
+graphene
+graphite2
+graphviz-libs
+grep
+groff-base
+grub2-common
+grub2-efi-ia32
+grub2-efi-x64
+grub2-pc
+grub2-pc-modules
+grub2-tools
+grub2-tools-minimal
+gsettings-desktop-schemas
+gsm
+gsound
+gssdp
+gssproxy
+gst-editing-services
+gstreamer1
+gstreamer1-plugin-dav1d
+gstreamer1-plugin-libav
+gstreamer1-plugins-bad-free
+gstreamer1-plugins-bad-free-libs
+gstreamer1-plugins-base
+gstreamer1-plugins-good
+gstreamer1-plugins-good-qt
+gstreamer1-plugins-good-qt6
+gstreamer1-plugins-ugly-free
+gst-thumbnailers
+gtk3
+gtk4
+gtkmm3.0
+gtkmm4.0
+gtksourceview5
+gtk-update-icon-cache
+gupnp
+gupnp-av
+gupnp-dlna
+gupnp-igd
+gutenprint
+gutenprint-cups
+gutenprint-libs
+gvfs
+gvfs-afc
+gvfs-afp
+gvfs-archive
+gvfs-client
+gvfs-fuse
+gvfs-goa
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+gweather-locations
+gweather-locations-common
+gzip
+harfbuzz
+harfbuzz-icu
+hdparm
+hfsplus-tools
+hicolor-icon-theme
+hidapi
+highway
+hiredis
+hostname
+hplip
+hplip-common
+hplip-libs
+httpd
+httpd-core
+httpd-filesystem
+httpd-tools
+hunspell
+hunspell-en
+hunspell-en-GB
+hunspell-en-US
+hunspell-filesystem
+hwdata
+hyperv-daemons
+hyperv-daemons-license
+hypervfcopyd
+hypervkvpd
+hypervvssd
+hyphen
+ibus
+ibus-anthy
+ibus-anthy-python
+ibus-chewing
+ibus-gtk3
+ibus-gtk4
+ibus-hangul
+ibus-libpinyin
+ibus-libs
+ibus-m17n
+ibus-setup
+ibus-typing-booster
+iio-sensor-proxy
+ilbc
+ImageMagick
+ImageMagick-libs
+imath
+inih
+inih-cpp
+initscripts-service
+intel-audio-firmware
+intel-gmmlib
+intel-gpu-firmware
+intel-lpmd
+intel-mediasdk
+intel-vpl-gpu-rt
+intel-vsc-firmware
+ipp-usb
+iproute
+ipset
+ipset-libs
+iptables-libs
+iptables-nft
+iptstate
+iputils
+iso-codes
+iw
+iwlegacy-firmware
+iwlwifi-dvm-firmware
+iwlwifi-mld-firmware
+iwlwifi-mvm-firmware
+jansson
+javascriptcoregtk4.1
+javascriptcoregtk6.0
+jbig2dec-libs
+jbigkit-libs
+jomolhari-fonts
+jq
+json-c
+json-glib
+julietaula-montserrat-fonts
+jxrlib
+kasumi-common
+kasumi-unicode
+kbd
+kbd-legacy
+kbd-misc
+kde-filesystem
+kernel
+kernel-core
+kernel-modules
+kernel-modules-core
+kernel-modules-extra
+kernel-tools
+kernel-tools-libs
+keyutils
+keyutils-libs
+kf6-filesystem
+kf6-karchive
+kf6-kimageformats
+kmod
+kmod-libs
+kpartx
+krb5-libs
+kyotocabinet-libs
+lame-libs
+langpacks-core-en
+langpacks-en
+langpacks-fonts-en
+langtable
+lcms2
+leptonica
+less
+liba52
+libacl
+libadwaita
+libaio
+libao
+libaom
+libarchive
+libaribcaption
+libass
+libassuan
+libasyncns
+libatasmart
+libatomic
+libattr
+libavc1394
+libavcodec-free
+libavdevice-free
+libavfilter-free
+libavformat-free
+libavif
+libavutil-free
+libb2
+libbabeltrace
+libbasicobjects
+libblkid
+libblockdev
+libblockdev-crypto
+libblockdev-fs
+libblockdev-loop
+libblockdev-mdraid
+libblockdev-nvme
+libblockdev-part
+libblockdev-smart
+libblockdev-swap
+libblockdev-utils
+libbluray
+libbpf
+libbrotli
+libbs2b
+libbsd
+libbytesize
+libcaca
+libcamera
+libcamera-ipa
+libcanberra
+libcanberra-gtk3
+libcap
+libcap-ng
+libcap-ng-python3
+libcbor
+libcdio
+libcdio-paranoia
+libchewing
+libchromaprint
+libcloudproviders
+libcollection
+libcom_err
+libcue
+libcupsfilters
+libcurl-minimal
+libdaemon
+libdatrie
+libdav1d
+libdc1394
+libdecor
+libdeflate
+libdhash
+libdisplay-info
+libdnf5
+libdnf5-cli
+libdnf5-plugin-appstream
+libdovi
+libdrm
+libdvdnav
+libdvdread
+libebur128
+libeconf
+libedit
+libei
+libeis
+libepoxy
+liberation-mono-fonts
+liberation-sans-fonts
+liberation-serif-fonts
+libertas-firmware
+libev
+libevdev
+libevent
+libexif
+libfdisk
+libffi
+libfido2
+libfontenc
+libfprint
+libftdi
+libfyaml
+libgcc
+libgcrypt
+libgee
+libgexiv2
+libglvnd
+libglvnd-egl
+libglvnd-gles
+libglvnd-glx
+libglvnd-opengl
+libgomp
+libgpg-error
+libgphoto2
+libgs
+libgsf
+libgtop2
+libgudev
+libgusb
+libgweather
+libgxps
+libhandy
+libhangul
+libheif
+libibverbs
+libical
+libical-glib
+libICE
+libicu
+libidn2
+libiec61883
+libieee1284
+libijs
+libimagequant
+libimobiledevice
+libimobiledevice-glue
+libini_config
+libinput
+libjaylink
+libjcat
+libjpeg-turbo
+libjxl
+libkcapi
+libkcapi-hasher
+libkcapi-hmaccalc
+libksba
+liblastlog2
+liblc3
+libldac
+libldb
+liblerc
+liblouis
+liblouis-tables
+liblouisutdml
+liblouisutdml-utils
+liblqr-1
+libmanette
+libmaxminddb
+libmbim
+libmbim-utils
+libmd
+libmediaart
+libmnl
+libmodplug
+libmodulemd
+libmount
+libmpc
+libmpeg2
+libmspack
+libmtp
+libmysofa
+libndp
+libnet
+libnetfilter_conntrack
+libnfnetlink
+libnfsidmap
+libnftnl
+libnghttp2
+libnice
+libnl3
+libnma
+libnma-common
+libnma-gtk4
+libnotify
+libnsl2
+libnvme
+liboeffis
+libogg
+libopenjph
+libopenmpt
+libosinfo
+libpaper
+libpasswdqc
+libpath_utils
+libpcap
+libpciaccess
+libpfm
+libphonenumber
+libpinyin
+libpinyin-data
+libpipeline
+libpkgconf
+libplacebo
+libplist
+libpng
+libportal
+libportal-gtk4
+libppd
+libproxy
+libpskc
+libpsl
+libpwquality
+libqmi
+libqmi-utils
+libqrtr-glib
+librabbitmq
+libraqm
+LibRaw
+libraw1394
+libref_array
+librepo
+libreport-filesystem
+librist
+librsvg2
+libsamplerate
+libsane-airscan
+libsane-hpaio
+libsbc
+libseccomp
+libsecret
+libselinux
+libselinux-utils
+libsemanage
+libsepol
+libshaderc
+libshout
+libsigc++20
+libsigc++30
+libslirp
+libSM
+libsmartcols
+libsmbclient
+libsndfile
+libsodium
+libsolv
+libsoup3
+libspelling
+libsrtp
+libss
+libssh
+libssh-config
+libsss_certmap
+libsss_idmap
+libsss_nss_idmap
+libsss_sudo
+libstdc++
+libstemmer
+libswresample-free
+libswscale-free
+libtalloc
+libtasn1
+libtdb
+libtevent
+libtextstyle
+libthai
+libtheora
+libtiff
+libtinysparql
+libtirpc
+libtommath
+libtool-ltdl
+libtraceevent
+libudfread
+libudisks2
+libultrahdr
+libunibreak
+libunistring
+libunwind
+liburing
+libusb1
+libusbmuxd
+libuser
+libuuid
+libuv
+libv4l
+libva
+libva-intel-media-driver
+libvdpau
+libverto
+libverto-libev
+libvisual
+libvmaf
+libvncserver
+libvorbis
+libvpl
+libvpx
+libwacom
+libwacom-data
+libwayland-client
+libwayland-cursor
+libwayland-egl
+libwayland-server
+libwbclient
+libwebp
+libwinpr
+libwmf-lite
+libwnck3
+libX11
+libX11-common
+libX11-xcb
+libXau
+libxcb
+libXcomposite
+libxcrypt
+libXcursor
+libxcvt
+libXdamage
+libXdmcp
+libXext
+libXfixes
+libXfont2
+libXft
+libXi
+libXinerama
+libxkbcommon
+libxkbcommon-x11
+libxkbfile
+libxml2
+libxmlb
+libXmu
+libXpm
+libXrandr
+libXrender
+libXres
+libxshmfence
+libxslt
+libXt
+libXtst
+libXv
+libXxf86vm
+libyaml
+libyuv
+libzip
+libzstd
+lilv-libs
+linux-atm-libs
+linux-firmware
+linux-firmware-whence
+llvm-filesystem
+llvm-libs
+lmdb-libs
+lm_sensors-libs
+localsearch
+lockdev
+logrotate
+lpcnetfreedv
+lrzsz
+lsof
+lttng-ust
+lua-libs
+lvm2
+lvm2-libs
+lz4-libs
+lzo
+m17n-db
+m17n-lib
+madan-fonts
+mailcap
+malcontent
+malcontent-control
+malcontent-libs
+malcontent-ui-libs
+man-db
+man-pages
+mcelog
+mdadm
+memstrack
+mesa-dri-drivers
+mesa-filesystem
+mesa-libEGL
+mesa-libgbm
+mesa-libGL
+mesa-libGLU
+mesa-vulkan-drivers
+microcode_ctl
+mkpasswd
+mobile-broadband-provider-info
+mod_dnssd
+ModemManager
+ModemManager-glib
+mod_http2
+mod_lua
+mokutil
+mozilla-filesystem
+mozjs140
+mpage
+mpdecimal
+mpfr
+mpg123-libs
+msgraph
+mt7xxx-firmware
+mtdev
+mtr
+mutter
+mutter-common
+nano
+nano-default-editor
+nautilus
+nautilus-extensions
+ncurses
+ncurses-base
+ncurses-libs
+netavark
+net-snmp-libs
+nettle
+NetworkManager
+NetworkManager-adsl
+NetworkManager-bluetooth
+NetworkManager-config-connectivity-fedora
+NetworkManager-libnm
+NetworkManager-openconnect
+NetworkManager-openconnect-gnome
+NetworkManager-openvpn
+NetworkManager-openvpn-gnome
+NetworkManager-ppp
+NetworkManager-ssh
+NetworkManager-ssh-gnome
+NetworkManager-ssh-selinux
+NetworkManager-vpnc
+NetworkManager-vpnc-gnome
+NetworkManager-wifi
+NetworkManager-wwan
+nfs-client-utils
+nfs-common-utils
+nfs-utils
+nfsv3-client-utils
+nfsv4-client-utils
+nftables
+nftables-services
+ngtcp2
+ngtcp2-crypto-gnutls
+ngtcp2-crypto-ossl
+nilfs-utils
+nm-connection-editor
+noopenh264
+npth
+nspr
+nss
+nss-altfiles
+nss-mdns
+nss-softokn
+nss-softokn-freebl
+nss-sysinit
+nss-util
+ntfs-3g
+ntfs-3g-libs
+ntfs-3g-system-compression
+ntfsprogs
+numactl-libs
+nvidia-gpu-firmware
+nvme-cli
+nxpwireless-firmware
+oniguruma
+openal-soft
+openapv-libs
+openconnect
+opencore-amr
+openexr-libs
+openjpeg
+openldap
+openpace
+openpgm
+open-sans-fonts
+opensc
+opensc-libs
+openssh
+openssh-clients
+openssh-server
+openssl
+openssl-libs
+open-vm-tools
+open-vm-tools-desktop
+openvpn
+opus
+orc
+orca
+osinfo-db
+osinfo-db-tools
+os-prober
+ostree
+ostree-libs
+p11-kit
+p11-kit-server
+p11-kit-trust
+PackageKit-glib
+paktype-naskh-basic-fonts
+pam
+pam_afs_session
+pam-libs
+pam_passwdqc
+pango
+pangomm
+pangomm2.48
+papers-libs
+papers-nautilus
+papers-previewer
+papers-thumbnailer
+paps
+passim
+passim-libs
+passt
+passt-selinux
+passwdqc
+passwdqc-utils
+pcaudiolib
+pciutils
+pciutils-libs
+pcre2
+pcre2-syntax
+pcre2-utf16
+pcre2-utf32
+pcsc-lite
+pcsc-lite-ccid
+pcsc-lite-libs
+pinentry
+pinentry-gnome3
+pinfo
+pipewire
+pipewire-alsa
+pipewire-config-raop
+pipewire-gstreamer
+pipewire-jack-audio-connection-kit
+pipewire-jack-audio-connection-kit-libs
+pipewire-libs
+pipewire-plugin-libcamera
+pipewire-pulseaudio
+pipewire-utils
+pixman
+pkcs11-helper
+pkcs11-provider
+pkgconf
+pkgconf-m4
+pkgconf-pkg-config
+plymouth
+plymouth-core-libs
+plymouth-graphics-libs
+plymouth-plugin-label
+plymouth-plugin-two-step
+plymouth-scripts
+plymouth-system-theme
+plymouth-theme-spinner
+podman
+podman-sequoia
+policycoreutils
+policycoreutils-python-utils
+polkit
+polkit-libs
+poppler
+poppler-cpp
+poppler-data
+poppler-glib
+poppler-utils
+popt
+portaudio
+ppp
+prefixdevname
+printer-driver-brlaser
+procps-ng
+protobuf
+protobuf-c
+psmisc
+ptouch-driver
+ptyxis
+publicsuffix-list-dafsa
+pulseaudio-libs
+pulseaudio-libs-glib2
+pulseaudio-utils
+python3
+python3-anyio
+python3-argcomplete
+python3-audit
+python3-boto3
+python3-botocore
+python3-brlapi
+python3-cairo
+python3-certifi
+python3-charset-normalizer
+python3-click
+python3-cups
+python3-dasbus
+python3-dateutil
+python3-dbus
+python3-distro
+python3-enchant
+python3-file-magic
+python3-firewall
+python3-gobject
+python3-gobject-base
+python3-h11
+python3-html2text
+python3-httpcore
+python3-httpx
+python3-ibus
+python3-idna
+python3-inotify
+python3-jmespath
+python3-langtable
+python3-libs
+python3-libselinux
+python3-libsemanage
+python3-linux-procfs
+python3-louis
+python3-nftables
+python3-olefile
+python3-packaging
+python3-pam
+python3-perf
+python3-pexpect
+python3-pillow
+python3-policycoreutils
+python3-psutil
+python3-ptyprocess
+python3-pyatspi
+python3-pyaudio
+python3-pysocks
+python3-pyudev
+python3-pyxdg
+python3-pyyaml
+python3-rapidfuzz
+python3-regex
+python3-requests
+python3-s3transfer
+python3-setools
+python3-six
+python3-speechd
+python3-urllib3
+python3-urllib3+socks
+python-pip-wheel
+python-unversioned-command
+qadwaitadecorations-qt5
+qcom-wwan-firmware
+qemu-guest-agent
+qemu-user-static-aarch64
+qpdf-libs
+qrencode-libs
+qt5-filesystem
+qt5-qtbase
+qt5-qtbase-common
+qt5-qtbase-gui
+qt5-qtdeclarative
+qt5-qtsvg
+qt5-qttranslations
+qt5-qtwayland
+qt5-qtx11extras
+qt5-qtxmlpatterns
+qt6-filesystem
+qt6-qtbase
+qt6-qtbase-common
+qt6-qtbase-gui
+qt6-qtdeclarative
+qt6-qtsvg
+qt6-qttranslations
+qt6-qtwayland
+qt6-qtwayland-adwaita-decoration
+qt-settings
+quota
+quota-nls
+rav1e-libs
+rdma-core-common
+readline
+realmd
+realtek-firmware
+redhat-menus
+rest
+rit-meera-new-fonts
+rit-rachana-fonts
+rootfiles
+rpcbind
+rpm
+rpm-libs
+rpm-ostree
+rpm-ostree-libs
+rpm-plugin-audit
+rpm-plugin-dbus-announce
+rpm-plugin-selinux
+rpm-sequoia
+rsync
+rtkit
+rubberband-libs
+rygel
+samba-client
+samba-client-libs
+samba-common
+samba-core-libs
+samba-ndr-libs
+sane-airscan
+sane-backends
+sane-backends-drivers-cameras
+sane-backends-drivers-scanners
+sane-backends-libs
+sdbus-cpp
+sdl2-compat
+SDL3
+sed
+selinux-policy
+selinux-policy-targeted
+serd
+setup
+setxkbmap
+shadow-utils
+shadow-utils-subid
+shared-mime-info
+shim-ia32
+shim-x64
+sil-padauk-fonts
+simdutf
+skopeo
+slang
+slirp4netns
+snappy
+sord
+sos
+sound-theme-freedesktop
+soundtouch
+soxr
+spandsp
+speech-dispatcher
+speech-dispatcher-espeak-ng
+speech-dispatcher-libs
+speech-dispatcher-utils
+speex
+spice-vdagent
+spice-webdavd
+spirv-tools-libs
+splix
+sqlite-libs
+sratom
+srt-libs
+sshpass
+sssd-client
+sssd-common
+sssd-kcm
+sssd-krb5-common
+sssd-nfs-idmap
+startup-notification
+stix-fonts
+stoken-libs
+sudo
+sudo-python-plugin
+svt-av1-libs
+switcheroo-control
+system-config-printer-libs
+system-config-printer-udev
+systemd
+systemd-container
+systemd-libs
+systemd-networkd
+systemd-oomd-defaults
+systemd-pam
+systemd-resolved
+systemd-shared
+systemd-sysusers
+systemd-udev
+taglib
+tar
+tcl
+tecla
+tesseract-common
+tesseract-langpack-eng
+tesseract-libs
+tesseract-tessdata-doc
+thermald
+time
+tinysparql
+tiwilink-firmware
+toolbox
+totem-pl-parser
+totem-video-thumbnailer
+tpm2-tools
+tpm2-tss
+tpm2-tss-fapi
+tree
+tslib
+tuned
+tuned-ppd
+twolame-libs
+tzdata
+uchardet
+udftools
+udisks2
+unbound-anchor
+unbound-libs
+unicode-ucd
+unzip
+upower
+upower-libs
+uresourced
+uriparser
+urw-base35-bookman-fonts
+urw-base35-c059-fonts
+urw-base35-d050000l-fonts
+urw-base35-fonts
+urw-base35-fonts-common
+urw-base35-gothic-fonts
+urw-base35-nimbus-mono-ps-fonts
+urw-base35-nimbus-roman-fonts
+urw-base35-nimbus-sans-fonts
+urw-base35-p052-fonts
+urw-base35-standard-symbols-ps-fonts
+urw-base35-z003-fonts
+usb_modeswitch
+usb_modeswitch-data
+usbmuxd
+usbutils
+usermode
+userspace-rcu
+util-linux
+util-linux-core
+vazirmatn-vf-fonts
+vid.stab
+vim-data
+vim-minimal
+virtualbox-guest-additions
+virt-what
+vo-amrwbenc
+volume_key-libs
+vpnc
+vpnc-script
+vte291
+vte291-gtk4
+vte-profile
+vulkan-loader
+wavpack
+webkit2gtk4.1
+webkitgtk6.0
+webrtc-audio-processing
+wget2
+wget2-libs
+wget2-wget
+which
+whois
+whois-nls
+wireguard-tools
+wireless-regdb
+wireplumber
+wireplumber-libs
+wl-clipboard
+words
+wpa_supplicant
+wsdd
+xcb-util
+xcb-util-cursor
+xcb-util-image
+xcb-util-keysyms
+xcb-util-renderutil
+xcb-util-wm
+xdg-dbus-proxy
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
+xdg-user-dirs
+xdg-user-dirs-gtk
+xdg-utils
+xdriinfo
+xevd-libs
+xeve-libs
+xfsprogs
+xhost
+xkbcomp
+xkeyboard-config
+xml-common
+xmlsec1
+xmlsec1-openssl
+xmodmap
+xorg-x11-server-Xwayland
+xorg-x11-xauth
+xorg-x11-xinit
+xprop
+xrdb
+xvidcore
+xxhash-libs
+xz
+xz-libs
+yajl
+yelp
+yelp-libs
+yelp-xsl
+zchunk-libs
+zeromq
+zimg
+zip
+zix
+zlib-ng-compat
+zram-generator
+zram-generator-defaults
+zstd
+zvbi
+
+
+benoit@fedora:~$ busctl list --no-pager
+NAME                                             PID PROCESS         USER            CONNECTION    UNIT                          SESSION DESCRIPTION
+:1.0                                            1177 systemd-resolve systemd-resolve :1.0          systemd-resolved.service      -       -
+:1.1                                            1239 systemd-oomd    systemd-oom     :1.1          systemd-oomd.service          -       -
+:1.10                                           1403 spice-webdavd   root            :1.10         spice-webdavd.service         -       -
+:1.100                                          2873 gsd-a11y-settin benoit          :1.100        user@1000.service             -       -
+:1.101                                          2882 gsd-housekeepin benoit          :1.101        user@1000.service             -       -
+:1.102                                          2901 gsd-rfkill      benoit          :1.102        user@1000.service             -       -
+:1.104                                          2978 ibus-extension- benoit          :1.104        user@1000.service             -       -
+:1.105                                          2952 gsd-wwan        benoit          :1.105        user@1000.service             -       -
+:1.106                                          2928 gsd-smartcard   benoit          :1.106        user@1000.service             -       -
+:1.109                                          3076 gvfs-udisks2-vo benoit          :1.109        user@1000.service             -       -
+:1.11                                           1378 accounts-daemon root            :1.11         accounts-daemon.service       -       -
+:1.110                                          3088 pipewire-pulse  benoit          :1.110        user@1000.service             -       -
+:1.111                                          3077 localsearch-3   benoit          :1.111        user@1000.service             -       -
+:1.113                                          3113 spice-vdagentd  root            :1.113        spice-vdagentd.service        -       -
+:1.114                                          2859 evolution-sourc benoit          :1.114        user@1000.service             -       -
+:1.115                                          3072 gjs             benoit          :1.115        user@1000.service             -       -
+:1.116                                          3084 evolution-alarm benoit          :1.116        user@1000.service             -       -
+:1.117                                          3144 goa-daemon      benoit          :1.117        user@1000.service             -       -
+:1.118                                          3197 evolution-calen benoit          :1.118        user@1000.service             -       -
+:1.119                                          2900 gsd-print-notif benoit          :1.119        user@1000.service             -       -
+:1.12                                           1349 polkitd         polkitd         :1.12         polkit.service                -       -
+:1.120                                          3256 gsd-printer     benoit          :1.120        user@1000.service             -       -
+:1.121                                          3245 evolution-addre benoit          :1.121        user@1000.service             -       -
+:1.122                                          2758 gnome-shell     benoit          :1.122        user@1000.service             -       -
+:1.124                                          3182 xdg-desktop-por benoit          :1.124        user@1000.service             -       -
+:1.126                                          3596 gsd-xsettings   benoit          :1.126        user@1000.service             -       -
+:1.128                                          3130 xdg-desktop-por benoit          :1.128        user@1000.service             -       -
+:1.129                                          3769 xdg-desktop-por benoit          :1.129        user@1000.service             -       -
+:1.13                                           1389 systemd-logind  root            :1.13         systemd-logind.service        -       -
+:1.130                                          3130 xdg-desktop-por benoit          :1.130        user@1000.service             -       -
+:1.131                                          3647 mutter-x11-fram benoit          :1.131        user@1000.service             -       -
+:1.132                                          3087 gnome-software  benoit          :1.132        user@1000.service             -       -
+:1.135                                          3800 fwupd           root            :1.135        fwupd.service                 -       -
+:1.138                                          5327 flatpak-system- root            :1.138        flatpak-system-helper.service -       -
+:1.14                                           1451 ModemManager    root            :1.14         ModemManager.service          -       -
+:1.141                                          5522 ptyxis          benoit          :1.141        user@1000.service             -       -
+:1.145                                          5530 ptyxis-agent    benoit          :1.145        user@1000.service             -       -
+:1.15                                           1452 firewalld       root            :1.15         firewalld.service             -       -
+:1.151                                          5894 nautilus        benoit          :1.151        user@1000.service             -       -
+:1.154                                          5969 gvfsd-network   benoit          :1.154        user@1000.service             -       -
+:1.155                                          5975 gvfsd-dnssd     benoit          :1.155        user@1000.service             -       -
+:1.158                                          5981 gvfsd-wsdd      benoit          :1.158        user@1000.service             -       -
+:1.159                                          6090 flatpak-portal  benoit          :1.159        user@1000.service             -       -
+:1.16                                           1508 NetworkManager  root            :1.16         NetworkManager.service        -       -
+:1.164                                          6336 busctl          benoit          :1.164        user@1000.service             -       -
+:1.19                                           1517 cupsd           root            :1.19         cups.service                  -       -
+:1.2                                               1 systemd         root            :1.2          init.scope                    -       -
+:1.20                                           1551 gdm             root            :1.20         gdm.service                   -       -
+:1.22                                           1571 uresourced      root            :1.22         uresourced.service            -       -
+:1.24                                           1519 tuned           root            :1.24         tuned.service                 -       -
+:1.27                                           1627 tuned-ppd       root            :1.27         tuned-ppd.service             -       -
+:1.3                                            1327 dbus-broker-lau root            :1.3          dbus-broker.service           -       -
+:1.4                                            1350 rtkit-daemon    root            :1.4          rtkit-daemon.service          -       -
+:1.41                                           1744 colord          colord          :1.41         colord.service                -       -
+:1.5                                            1352 systemd-homed   root            :1.5          systemd-homed.service         -       -
+:1.6                                            1354 udisksd         root            :1.6          udisks2.service               -       -
+:1.64                                           2441 wpa_supplicant  root            :1.64         wpa_supplicant.service        -       -
+:1.66                                           2458 gdm-session-wor root            :1.66         session-2.scope               2       -
+:1.69                                           2554 systemd         benoit          :1.69         user@1000.service             -       -
+:1.7                                            1351 switcheroo-cont root            :1.7          switcheroo-control.service    -       -
+:1.70                                           2570 mpris-proxy     benoit          :1.70         user@1000.service             -       -
+:1.71                                           2577 gnome-keyring-d benoit          :1.71         session-2.scope               2       -
+:1.72                                           2612 gdm-wayland-ses benoit          :1.72         session-2.scope               2       -
+:1.75                                           2733 gnome-session-s benoit          :1.75         user@1000.service             -       -
+:1.76                                           2728 uresourced      benoit          :1.76         user@1000.service             -       -
+:1.78                                           2760 pipewire        benoit          :1.78         user@1000.service             -       -
+:1.79                                           2760 pipewire        benoit          :1.79         user@1000.service             -       -
+:1.8                                            1341 avahi-daemon    avahi           :1.8          avahi-daemon.service          -       -
+:1.80                                           2761 wireplumber     benoit          :1.80         user@1000.service             -       -
+:1.81                                           2758 gnome-shell     benoit          :1.81         user@1000.service             -       -
+:1.82                                           2761 wireplumber     benoit          :1.82         user@1000.service             -       -
+:1.83                                           2761 wireplumber     benoit          :1.83         user@1000.service             -       -
+:1.84                                           2761 wireplumber     benoit          :1.84         user@1000.service             -       -
+:1.85                                           2819 at-spi-bus-laun benoit          :1.85         user@1000.service             -       -
+:1.87                                           2836 gnome-shell-cal benoit          :1.87         user@1000.service             -       -
+:1.88                                           2874 gsd-color       benoit          :1.88         user@1000.service             -       -
+:1.89                                           2884 gsd-disk-utilit benoit          :1.89         user@1000.service             -       -
+:1.9                                            1359 upowerd         root            :1.9          upower.service                -       -
+:1.90                                           2886 gsd-keyboard    benoit          :1.90         user@1000.service             -       -
+:1.91                                           2889 gsd-media-keys  benoit          :1.91         user@1000.service             -       -
+:1.92                                           2910 gsd-sharing     benoit          :1.92         user@1000.service             -       -
+:1.93                                           2862 gjs             benoit          :1.93         user@1000.service             -       -
+:1.94                                           2893 gsd-power       benoit          :1.94         user@1000.service             -       -
+:1.95                                           2976 ibus-dconf      benoit          :1.95         user@1000.service             -       -
+:1.96                                           2880 gsd-datetime    benoit          :1.96         user@1000.service             -       -
+:1.98                                           2931 gsd-sound       benoit          :1.98         user@1000.service             -       -
+:1.99                                           2951 gsd-usb-protect benoit          :1.99         user@1000.service             -       -
+com.redhat.NewPrinterNotification               3256 gsd-printer     benoit          :1.120        user@1000.service             -       -
+com.redhat.PrinterDriversInstaller              3256 gsd-printer     benoit          :1.120        user@1000.service             -       -
+com.redhat.tuned                                1519 tuned           root            :1.24         tuned.service                 -       -
+fi.w1.wpa_supplicant1                           2441 wpa_supplicant  root            :1.64         wpa_supplicant.service        -       -
+net.hadess.PowerProfiles                        1627 tuned-ppd       root            :1.27         tuned-ppd.service             -       -
+net.hadess.SwitcherooControl                    1351 switcheroo-cont root            :1.7          switcheroo-control.service    -       -
+net.reactivated.Fprint                             - -               -               (activatable) -                             -       -
+org.bluez                                          - -               -               (activatable) -                             -       -
+org.fedoraproject.FirewallD1                    1452 firewalld       root            :1.15         firewalld.service             -       -
+org.freedesktop.Accounts                        1378 accounts-daemon root            :1.11         accounts-daemon.service       -       -
+org.freedesktop.Avahi                           1341 avahi-daemon    avahi           :1.8          avahi-daemon.service          -       -
+org.freedesktop.ColorManager                    1744 colord          colord          :1.41         colord.service                -       -
+org.freedesktop.DBus                               1 systemd         root            -             init.scope                    -       -
+org.freedesktop.Flatpak.SystemHelper            5327 flatpak-system- root            :1.138        flatpak-system-helper.service -       -
+org.freedesktop.GeoClue2                           - -               -               (activatable) -                             -       -
+org.freedesktop.MalcontentTimer1                   - -               -               (activatable) -                             -       -
+org.freedesktop.MalcontentTimer1.ExtensionAgent    - -               -               (activatable) -                             -       -
+org.freedesktop.MalcontentWeb1                     - -               -               (activatable) -                             -       -
+org.freedesktop.ModemManager1                   1451 ModemManager    root            :1.14         ModemManager.service          -       -
+org.freedesktop.NetworkManager                  1508 NetworkManager  root            :1.16         NetworkManager.service        -       -
+org.freedesktop.Passim                             - -               -               (activatable) -                             -       -
+org.freedesktop.PolicyKit1                      1349 polkitd         polkitd         :1.12         polkit.service                -       -
+org.freedesktop.RealtimeKit1                    1350 rtkit-daemon    root            :1.4          rtkit-daemon.service          -       -
+org.freedesktop.UDisks2                         1354 udisksd         root            :1.6          udisks2.service               -       -
+org.freedesktop.UPower                          1359 upowerd         root            :1.9          upower.service                -       -
+org.freedesktop.UPower.PowerProfiles            1627 tuned-ppd       root            :1.27         tuned-ppd.service             -       -
+org.freedesktop.UResourced                      1571 uresourced      root            :1.22         uresourced.service            -       -
+org.freedesktop.bolt                               - -               -               (activatable) -                             -       -
+org.freedesktop.fwupd                           3800 fwupd           root            :1.135        fwupd.service                 -       -
+org.freedesktop.home1                           1352 systemd-homed   root            :1.5          systemd-homed.service         -       -
+org.freedesktop.hostname1                          - -               -               (activatable) -                             -       -
+org.freedesktop.import1                            - -               -               (activatable) -                             -       -
+org.freedesktop.intel_lpmd                         - -               -               (activatable) -                             -       -
+org.freedesktop.locale1                            - -               -               (activatable) -                             -       -
+org.freedesktop.login1                          1389 systemd-logind  root            :1.13         systemd-logind.service        -       -
+org.freedesktop.machine1                           - -               -               (activatable) -                             -       -
+org.freedesktop.network1                           - -               -               (activatable) -                             -       -
+org.freedesktop.nm_dispatcher                      - -               -               (activatable) -                             -       -
+org.freedesktop.nm_priv_helper                     - -               -               (activatable) -                             -       -
+org.freedesktop.oom1                            1239 systemd-oomd    systemd-oom     :1.1          systemd-oomd.service          -       -
+org.freedesktop.portable1                          - -               -               (activatable) -                             -       -
+org.freedesktop.realmd                             - -               -               (activatable) -                             -       -
+org.freedesktop.resolve1                        1177 systemd-resolve systemd-resolve :1.0          systemd-resolved.service      -       -
+org.freedesktop.systemd1                           1 systemd         root            :1.2          init.scope                    -       -
+org.freedesktop.sysupdate1                         - -               -               (activatable) -                             -       -
+org.freedesktop.thermald                           - -               -               (activatable) -                             -       -
+org.freedesktop.timedate1                          - -               -               (activatable) -                             -       -
+org.freedesktop.timesync1                          - -               -               (activatable) -                             -       -
+org.gnome.DisplayManager                        1551 gdm             root            :1.20         gdm.service                   -       -
+org.gnome.RemoteDesktop.Configuration              - -               -               (activatable) -                             -       -
+org.opensuse.CupsPkHelper.Mechanism                - -               -               (activatable) -                             -       -
+org.projectatomic.rpmostree1                       - -               -               (activatable) -                             -       -
+org.rpm.dnf.v0                                     - -               -               (activatable) -                             -       -
+
+
+benoit@fedora:~$ findmnt --types btrfs,xfs,tmpfs
+TARGET SOURCE FSTYPE OPTIONS
+/dev/shm
+       tmpfs  tmpfs  rw,nosuid,nodev,seclabel,inode64,usrquota
+/run   tmpfs  tmpfs  rw,nosuid,nodev,seclabel,size=588628k,nr_inodes=819200,mode=755
+├─/run/credentials/systemd-journald.service
+│      none   tmpfs  ro,nosuid,nodev,noexec,relatime,nosymfollow,seclabel,size=1024k
+├─/run/credentials/systemd-cryptsetup@luks\x5cx2d6f159332\x5cx2d0751\x5cx2d4f1c\x5cx2db75b\x5cx2dbf9532629a0b.service
+│      none   tmpfs  ro,nosuid,nodev,noexec,relatime,nosymfollow,seclabel,size=1024k
+├─/run/credentials/systemd-resolved.service
+│      none   tmpfs  ro,nosuid,nodev,noexec,relatime,nosymfollow,seclabel,size=1024k
+└─/run/user/1000
+       tmpfs  tmpfs  rw,nosuid,nodev,relatime,seclabel,size=294312k,nr_inodes=73578,
+/var   /dev/mapper/luks-6f159332-0751-4f1c-b75b-bf9532629a0b[/var]
+│             btrfs  rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=256,
+└─/var/home
+       /dev/mapper/luks-6f159332-0751-4f1c-b75b-bf9532629a0b[/home]
+              btrfs  rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=257,
+/tmp   tmpfs  tmpfs  rw,nosuid,nodev,seclabel,size=1471568k,nr_inodes=1048576,inode6
+/etc   /dev/mapper/luks-6f159332-0751-4f1c-b75b-bf9532629a0b[/root/ostree/deploy/fedora/deploy/b8e75b708a972d784856f07d964202860088b1138ef9eadb01aa7d76c795104a.0/etc]
+              btrfs  rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=258,
+/sysroot
+│      /dev/mapper/luks-6f159332-0751-4f1c-b75b-bf9532629a0b[/root]
+│             btrfs  ro,relatime,seclabel,discard=async,space_cache=v2,subvolid=258,
+└─/sysroot/ostree/deploy/fedora/var
+       /dev/mapper/luks-6f159332-0751-4f1c-b75b-bf9532629a0b[/root/ostree/deploy/fedora/var]
+              btrfs  rw,relatime,seclabel,discard=async,space_cache=v2,subvolid=258,
+
+
+
+benoit@fedora:~$ env | grep -E "XDG_|PATH" | sort
+DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
+PATH=/var/home/benoit/.local/bin:/var/home/benoit/bin:/usr/local/sbin:/usr/local/bin:/usr/bin
+XDG_CURRENT_DESKTOP=GNOME
+XDG_DATA_DIRS=/var/home/benoit/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+XDG_MENU_PREFIX=gnome-
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=gnome
+XDG_SESSION_EXTRA_DEVICE_ACCESS=render:accel
+XDG_SESSION_TYPE=wayland
+benoit@fedora:~$ 
+
+

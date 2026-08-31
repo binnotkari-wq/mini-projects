@@ -1,0 +1,410 @@
+sept. 01 00:49:00 systemd[2043]: Queued start job for default target Main User Target.
+sept. 01 00:49:00 systemd[2043]: Created slice User Application Slice.
+sept. 01 00:49:00 systemd[2043]: Created slice User Core Session Slice.
+sept. 01 00:49:00 systemd[2043]: Started Daily Cleanup of User's Temporary Directories.
+sept. 01 00:49:00 systemd[2043]: Reached target Paths.
+sept. 01 00:49:00 systemd[2043]: Reached target Timers.
+sept. 01 00:49:00 dbus-broker-launch[2054]: Policy to allow eavesdropping in /etc/dbus-1/session.conf +27: Eavesdropping is deprecated and ignored
+sept. 01 00:49:00 dbus-broker-launch[2054]: Policy to allow eavesdropping in /etc/dbus-1/session.conf +29: Eavesdropping is deprecated and ignored
+sept. 01 00:49:00 systemd[2043]: Starting D-Bus User Message Bus Socket...
+sept. 01 00:49:00 systemd[2043]: Starting GCR ssh-agent wrapper...
+sept. 01 00:49:00 systemd[2043]: Listening on PipeWire PulseAudio.
+sept. 01 00:49:00 systemd[2043]: Listening on PipeWire Multimedia System Sockets.
+sept. 01 00:49:00 systemd[2043]: Listening on Speech Dispatcher Socket.
+sept. 01 00:49:00 systemd[2043]: Starting Create User Files and Directories...
+sept. 01 00:49:00 systemd[2043]: Listening on D-Bus User Message Bus Socket.
+sept. 01 00:49:00 systemd[2043]: Starting D-Bus User Message Bus...
+sept. 01 00:49:00 systemd[2043]: Finished Create User Files and Directories.
+sept. 01 00:49:00 systemd[2043]: Listening on GCR ssh-agent wrapper.
+sept. 01 00:49:00 systemd[2043]: Reached target Sockets.
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.ColorHelper' in service file '/nix/store/5gndkw05j5j478i74asyfwwkmr4lppxk-colord-1.4.8/share/dbus-1/services/org.freedesktop.ColorHelper.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'ca.desrt.dconf' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/ca.desrt.dconf.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-renderer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/com.intel.dleyna-renderer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-server' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/com.intel.dleyna-server.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.a11y.Bus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.a11y.Bus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.bluez.obex' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.bluez.obex.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.ColorHelper' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.ColorHelper.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.FileManager1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.FileManager1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Control' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.LocalSearch3.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Writeback' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.LocalSearch3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.LocalSearch3.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files.Control' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Writeback' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.Tracker3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.PermissionStore' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gnome' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gnome.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gtk' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gtk.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.import1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.import1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.machine1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.machine1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portable1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portable1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Desktop' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.Desktop.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Documents' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.Documents.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Tracker' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.Tracker.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.systemd1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.systemd1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.BrowserConnector' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.BrowserConnector.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Calculator.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Calculator.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Calendar' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Calendar.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Characters' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Characters.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Connections' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Connections.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Console' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Console.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Contacts.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Contacts.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Contacts' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Contacts.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Decibels' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Decibels.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.DiskUtility' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.DiskUtility.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Epiphany.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Epiphany.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Epiphany.WebAppProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Epiphany.WebAppProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Extensions' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Extensions.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Identity' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Identity.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Logs' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Logs.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Loupe' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Loupe.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Maps' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Maps.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Music' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Music.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Nautilus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Nautilus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.NautilusPreviewer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.NautilusPreviewer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.OnlineAccounts' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.OnlineAccounts.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Rygel1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Rygel1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.ScreenSaver' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.ScreenSaver.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Settings.GlobalShortcutsProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.GlobalShortcutsProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Settings.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Settings' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.CalendarServer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.CalendarServer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.Extensions' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.Extensions.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.HotplugSniffer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.HotplugSniffer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.Notifications' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.Notifications.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.PortalHelper' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.PortalHelper.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.Screencast' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.Screencast.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Showtime' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Showtime.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Snapshot' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Snapshot.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.SystemMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.SystemMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.TextEditor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.TextEditor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Tour' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Tour.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Weather.BackgroundService' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Weather.BackgroundService.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Weather' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Weather.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.baobab' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.baobab.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.clocks' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.clocks.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.AddressBook10' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook10.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Calendar8' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Sources5' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.UserPrompter0' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.font-viewer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.font-viewer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.seahorse.Application' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.seahorse.Application.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.AfcVolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Daemon' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.Daemon.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GPhoto2VolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GoaVolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.MTPVolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Metadata' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.Metadata.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.UDisks2VolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.bluez.obex' in service file '/nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86/share/dbus-1/services/org.bluez.obex.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.AfcVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Daemon' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.Daemon.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GPhoto2VolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GoaVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.MTPVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Metadata' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.Metadata.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.UDisks2VolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Tracker' in service file '/nix/store/l3j5fql7983mqzjf08h9fw75p2k8vqmj-tinysparql-3.11.1/share/dbus-1/services/org.freedesktop.portal.Tracker.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.NautilusPreviewer' in service file '/nix/store/vmfn41hlznwzrqzm89zyjigw9k845bcj-sushi-50.rc.1/share/dbus-1/services/org.gnome.NautilusPreviewer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Rygel1' in service file '/nix/store/4byw913gmjv6iihxn29823hs5w6ydidv-rygel-45.1/share/dbus-1/services/org.gnome.Rygel1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Control' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Writeback' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files.Control' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Writeback' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Identity' in service file '/nix/store/b54l5dxbjsq94gh9gkqkd4bnjxlsx3vm-gnome-online-accounts-3.58.1/share/dbus-1/services/org.gnome.Identity.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.OnlineAccounts' in service file '/nix/store/b54l5dxbjsq94gh9gkqkd4bnjxlsx3vm-gnome-online-accounts-3.58.1/share/dbus-1/services/org.gnome.OnlineAccounts.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.BrowserConnector' in service file '/nix/store/3v9qjzcvp1r887kjnnn5kyc2i91win0b-gnome-browser-connector-42.1/share/dbus-1/services/org.gnome.BrowserConnector.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.AddressBook10' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook10.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Calendar8' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Sources5' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.UserPrompter0' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.a11y.Bus' in service file '/nix/store/s3knizlhir254y56l6kdd85dq8pm8xb1-at-spi2-core-2.60.1/share/dbus-1/services/org.a11y.Bus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-renderer' in service file '/nix/store/inwj258p73cc83sbnfpscgrk79xyzfrg-dleyna-0.8.3/share/dbus-1/services/com.intel.dleyna-renderer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-server' in service file '/nix/store/inwj258p73cc83sbnfpscgrk79xyzfrg-dleyna-0.8.3/share/dbus-1/services/com.intel.dleyna-server.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.seahorse.Application' in service file '/nix/store/06qhqkr36d2q62bp2033djxc9xs4jykp-seahorse-47.0.1/share/dbus-1/services/org.gnome.seahorse.Application.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.DiskUtility' in service file '/nix/store/hr3jxb6skihcjpzqc0jf15f8ldfblfg8-gnome-disk-utility-46.1/share/dbus-1/services/org.gnome.DiskUtility.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'ca.desrt.dconf' in service file '/nix/store/f0xjii7970sxgfz2qca66v530j99xwgv-dconf-0.49.0/share/dbus-1/services/ca.desrt.dconf.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.PermissionStore' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Desktop' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.portal.Desktop.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Documents' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.portal.Documents.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gnome' in service file '/nix/store/ff7ylgalc5j72bqr3nnpf4x0znfa4a7h-xdg-desktop-portal-gnome-50.0/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gnome.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gtk' in service file '/nix/store/c4qd650jyr7vgnwnspjg12nr30xyjhs0-xdg-desktop-portal-gtk-1.15.3/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gtk.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:49:00 systemd[2043]: Started D-Bus User Message Bus.
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ready
+sept. 01 00:49:00 systemd[2043]: Reached target Basic System.
+sept. 01 00:49:00 systemd[2043]: Started GCR ssh-agent wrapper.
+sept. 01 00:49:00 systemd[2043]: Starting Run user-specific NixOS activation...
+sept. 01 00:49:00 systemd[2043]: Finished Run user-specific NixOS activation.
+sept. 01 00:49:00 systemd[2043]: Reached target Main User Target.
+sept. 01 00:49:00 systemd[2043]: Startup finished in 317ms.
+sept. 01 00:49:00 systemd[2043]: Reached target Sound Card.
+sept. 01 00:49:00 .gnome-session-[2079]: Starting GNOME session target: gnome-session@gnome.target
+sept. 01 00:49:00 systemd[2043]: Created slice Slice /app/gnome-session-manager.
+sept. 01 00:49:00 systemd[2043]: Created slice User Background Tasks Slice.
+sept. 01 00:49:00 systemd[2043]: GNOME Initial Setup Copy Worker skipped, unmet condition check ConditionPathExists=!/home/benoit/.config/gnome-initial-setup-done
+sept. 01 00:49:00 systemd[2043]: Starting Monitor Session leader for GNOME Session...
+sept. 01 00:49:00 systemd[2043]: Starting User folders update...
+sept. 01 00:49:00 systemd[2043]: Finished User folders update.
+sept. 01 00:49:00 systemd[2043]: Reached target Session services which should run early before the graphical session is brought up.
+sept. 01 00:49:00 systemd[2043]: Started Monitor Session leader for GNOME Session.
+sept. 01 00:49:00 systemd[2043]: Reached target Tasks to be run before GNOME Session starts.
+sept. 01 00:49:00 systemd[2043]: Starting GNOME Session Manager (session: gnome)...
+sept. 01 00:49:00 gnome-session-service[2105]: App at-spi-dbus-bus.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 gnome-session-service[2105]: App gnome-keyring-pkcs11.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 gnome-session-service[2105]: App gnome-keyring-secrets.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 gnome-session-service[2105]: App xdg-user-dirs.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 systemd[2043]: Started GNOME Session Manager (session: gnome).
+sept. 01 00:49:00 systemd[2043]: Reached target GNOME Session Manager is ready.
+sept. 01 00:49:00 systemd[2043]: Starting GNOME Shell...
+sept. 01 00:49:00 systemd[2043]: Starting Virtual filesystem service...
+sept. 01 00:49:01 systemd[2043]: Started Virtual filesystem service.
+sept. 01 00:49:01 gnome-shell[2111]: Running GNOME Shell (using mutter 50.1) as a Wayland display server
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 12: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 13: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 14: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 13: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: Thread 'KMS thread' will be using high priority scheduling
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 14: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: Added device '/dev/dri/card1' (qxl) using atomic mode setting.
+sept. 01 00:49:01 gnome-shell[2111]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Not hardware accelerated
+sept. 01 00:49:01 gnome-shell[2111]: Created gbm renderer for '/dev/dri/card1'
+sept. 01 00:49:01 gnome-shell[2111]: Boot VGA GPU /dev/dri/card1 selected as primary
+sept. 01 00:49:01 systemd[2043]: Starting Accessibility services bus...
+sept. 01 00:49:01 systemd[2043]: Started Accessibility services bus.
+sept. 01 00:49:01 dbus-broker-launch[2168]: Ready
+sept. 01 00:49:01 gnome-shell[2111]: Using public X11 display :0, (using unix:/tmp/.X11-unix/X1 for managed services)
+sept. 01 00:49:01 gnome-shell[2111]: Using Wayland display name 'wayland-0'
+sept. 01 00:49:01 systemd[2043]: Created slice Slice /app/dbus-:1.12-org.a11y.atspi.Registry.
+sept. 01 00:49:01 systemd[2043]: Started dbus-:1.12-org.a11y.atspi.Registry@0.service.
+sept. 01 00:49:01 at-spi2-registryd[2170]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.Screencast.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.Shell.Screencast@0.service.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.CalendarServer.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.Shell.CalendarServer@0.service.
+sept. 01 00:49:02 systemd[2043]: Starting sandboxed app permission store...
+sept. 01 00:49:02 systemd[2043]: Started sandboxed app permission store.
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Registering session with GDM
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.Notifications.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.Shell.Notifications@0.service.
+sept. 01 00:49:02 systemd[2043]: Starting Evolution source registry...
+sept. 01 00:49:02 systemd[2043]: Started GNOME Shell.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME Session is initialized.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME basic session services.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME session services.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME Session (session: gnome).
+sept. 01 00:49:02 systemd[2043]: Starting Signal initialization done to GNOME Session Manager...
+sept. 01 00:49:02 systemd[2043]: Starting IBus Daemon for GNOME...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME accessibility service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME color management service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME date & time service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME maintenance of expirable data service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME keyboard configuration service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME keyboard shortcuts service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME power management service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME printer notifications service...
+sept. 01 00:49:02 gnome-session-service[2105]: Entering running state
+sept. 01 00:49:02 systemd[2043]: Starting GNOME RFKill support service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME FreeDesktop screensaver service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME file sharing service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME smartcard service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME sound sample caching service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME USB protection service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME WWan support service...
+sept. 01 00:49:02 systemd[2043]: Finished Signal initialization done to GNOME Session Manager.
+sept. 01 00:49:02 systemd[2043]: Started GNOME accessibility service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME color management service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME maintenance of expirable data service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME keyboard configuration service.
+sept. 01 00:49:02 systemd[2043]: Started Application launched by gnome-session-service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME accessibility target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME color management target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME maintenance of expirable data target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME keyboard configuration target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME date & time service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME date & time target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME WWan support service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME WWan support target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME FreeDesktop screensaver service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME sound sample caching service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME RFKill support service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME RFKill support target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME FreeDesktop screensaver target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME sound sample caching target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME printer notifications service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME printer notifications target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME USB protection service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME USB protection target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME smartcard service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME smartcard target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME file sharing service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME file sharing target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME power management service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME power management target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME keyboard shortcuts service.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.ScreenSaver.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME keyboard shortcuts target.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.ScreenSaver@0.service.
+sept. 01 00:49:02 systemd[2043]: Started PipeWire Multimedia Service.
+sept. 01 00:49:02 systemd[2043]: Started PipeWire PulseAudio.
+sept. 01 00:49:02 systemd[2043]: Started Multimedia Service Session Manager.
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Will monitor session 2
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+sept. 01 00:49:02 pipewire-pulse[2372]: mod.protocol-pulse: setsockopt(SO_PRIORITY) failed: Mauvais descripteur de fichier
+sept. 01 00:49:02 pipewire-pulse[2372]: mod.protocol-pulse: client 0x5cf835a1f000: no peercred: Mauvais descripteur de fichier
+sept. 01 00:49:02 systemd[2043]: Starting Portal service...
+sept. 01 00:49:02 gsd-media-keys[2231]: Failed to grab accelerator for keybinding settings:hibernate
+sept. 01 00:49:02 gsd-media-keys[2231]: Failed to grab accelerator for keybinding settings:playback-repeat
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - disk device monitor...
+sept. 01 00:49:02 systemd[2043]: Started IBus Daemon for GNOME.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.freedesktop.portal.IBus.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME Session.
+sept. 01 00:49:02 systemd[2043]: Reached target Current graphical user session.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.freedesktop.portal.IBus@0.service.
+sept. 01 00:49:02 systemd[2043]: Starting Event and Task Reminders...
+sept. 01 00:49:02 systemd[2043]: GNOME Initial Setup skipped, unmet condition check ConditionPathExists=!/home/benoit/.config/gnome-initial-setup-done
+sept. 01 00:49:02 systemd[2043]: Starting LocalSearch indexer...
+sept. 01 00:49:02 systemd[2043]: Started User folders update.
+sept. 01 00:49:02 systemd[2043]: Starting flatpak document portal service...
+sept. 01 00:49:02 systemd[2043]: Started LocalSearch indexer.
+sept. 01 00:49:02 systemd[2043]: Started flatpak document portal service.
+sept. 01 00:49:02 systemd[2043]: Started Virtual filesystem service - disk device monitor.
+sept. 01 00:49:02 systemd[2043]: Starting Portal service (GNOME implementation)...
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - Media Transfer Protocol monitor...
+sept. 01 00:49:02 systemd[2043]: Started Virtual filesystem service - Media Transfer Protocol monitor.
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - digital camera monitor...
+sept. 01 00:49:02 systemd[2043]: Started Virtual filesystem service - digital camera monitor.
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - GNOME Online Accounts monitor...
+sept. 01 00:49:03 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.OnlineAccounts.
+sept. 01 00:49:03 systemd[2043]: Started dbus-:1.1-org.gnome.OnlineAccounts@0.service.
+sept. 01 00:49:03 goa-daemon[2494]: goa-daemon version 3.58.1 starting
+sept. 01 00:49:03 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Identity.
+sept. 01 00:49:03 systemd[2043]: Started dbus-:1.1-org.gnome.Identity@0.service.
+sept. 01 00:49:03 systemd[2043]: Started Virtual filesystem service - GNOME Online Accounts monitor.
+sept. 01 00:49:03 systemd[2043]: Starting Virtual filesystem service - Apple File Conduit monitor...
+sept. 01 00:49:03 systemd[2043]: Started Virtual filesystem service - Apple File Conduit monitor.
+sept. 01 00:49:03 gsd-usb-protection[2264]: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+sept. 01 00:49:03 systemd[2043]: Started Evolution source registry.
+sept. 01 00:49:03 gnome-shell[2412]: Xwayland glamor: GBM Wayland interfaces not available
+sept. 01 00:49:03 gnome-shell[2412]: Failed to initialize glamor, falling back to sw
+sept. 01 00:49:03 systemd[2043]: Starting Evolution calendar service...
+sept. 01 00:49:03 pipewire-pulse[2372]: mod.protocol-pulse: setsockopt(SO_PRIORITY) failed: Mauvais descripteur de fichier
+sept. 01 00:49:03 pipewire-pulse[2372]: mod.protocol-pulse: client 0x5cf835a38760: no peercred: Mauvais descripteur de fichier
+sept. 01 00:49:03 gnome-shell[2573]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+sept. 01 00:49:03 gnome-shell[2573]: > Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+sept. 01 00:49:03 gnome-shell[2573]: >                   Using F23, ignoring XF86TouchpadOff
+sept. 01 00:49:03 gnome-shell[2573]: > Warning:          Symbol map for key <FK23> redefined
+sept. 01 00:49:03 gnome-shell[2573]: >                   Using last definition for conflicting fields
+sept. 01 00:49:03 gnome-shell[2573]: > Warning:          Symbol map for key <FK24> redefined
+sept. 01 00:49:03 gnome-shell[2573]: >                   Using last definition for conflicting fields
+sept. 01 00:49:03 gnome-shell[2573]: Errors from xkbcomp are not fatal to the X server
+sept. 01 00:49:03 systemd[2043]: Started Event and Task Reminders.
+sept. 01 00:49:03 systemd[2043]: Started Evolution calendar service.
+sept. 01 00:49:03 systemd[2043]: Starting Evolution address book service...
+sept. 01 00:49:03 .gnome-shell-wr[2111]: GNOME Shell started at Tue Sep 01 2026 00:49:02 GMT+0200 (heure d’été d’Europe centrale)
+sept. 01 00:49:03 .gnome-shell-wr[2111]: Registering display with GDM
+sept. 01 00:49:04 systemd[2043]: Started Evolution address book service.
+sept. 01 00:49:04 systemd[2043]: Reached target GNOME session X11 services.
+sept. 01 00:49:04 systemd[2043]: Starting GNOME XSettings service...
+sept. 01 00:49:04 gnome-shell[2662]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+sept. 01 00:49:04 gnome-shell[2662]: > Warning:          Unsupported maximum keycode 709, clipping.
+sept. 01 00:49:04 gnome-shell[2662]: >                   X11 cannot support keycodes above 255.
+sept. 01 00:49:04 gnome-shell[2662]: > Warning:          Virtual modifier Hyper multiply defined
+sept. 01 00:49:04 gnome-shell[2662]: >                   Using 0, ignoring 0
+sept. 01 00:49:04 gnome-shell[2662]: > Warning:          Virtual modifier ScrollLock multiply defined
+sept. 01 00:49:04 gnome-shell[2662]: >                   Using 0, ignoring 0
+sept. 01 00:49:04 gnome-shell[2662]: Errors from xkbcomp are not fatal to the X server
+sept. 01 00:49:04 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider.
+sept. 01 00:49:04 systemd[2043]: Started dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service.
+sept. 01 00:49:04 systemd[2043]: Started GNOME XSettings service.
+sept. 01 00:49:04 systemd[2043]: Reached target GNOME session X11 services.
+sept. 01 00:49:04 systemd[2043]: GNOME XSettings target is inactive.
+sept. 01 00:49:04 gsd-xsettings[2666]: Failed to get current UI scaling factor: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Destination does not exist
+sept. 01 00:49:04 wireplumber[2374]: spa.bluez5: BlueZ system service is not available
+sept. 01 00:49:04 gsd-media-keys[2231]: Unable to get default sink
+sept. 01 00:49:04 wireplumber[2374]: [0:00:45.612456363] [2374]  INFO IPAManager ipa_manager.cpp:147 libcamera is not installed. Adding '/nix/store/src/ipa' to the IPA search path
+sept. 01 00:49:04 wireplumber[2374]: [0:00:45.612843559] [2374]  INFO Camera camera_manager.cpp:340 libcamera v0.7.0
+sept. 01 00:49:04 gnome-shell[2727]: libEGL warning: DRI3 error: Could not get DRI3 device
+sept. 01 00:49:04 gnome-shell[2727]: libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+sept. 01 00:49:04 systemd[2043]: Started Portal service (GNOME implementation).
+sept. 01 00:49:04 systemd[2043]: Starting Portal service (GTK/GNOME implementation)...
+sept. 01 00:49:04 systemd[2043]: Started Portal service (GTK/GNOME implementation).
+sept. 01 00:49:04 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.freedesktop.secrets.
+sept. 01 00:49:04 systemd[2043]: Started dbus-:1.1-org.freedesktop.secrets@0.service.
+sept. 01 00:49:04 gnome-keyring-daemon[2764]: discover_other_daemon: 1
+sept. 01 00:49:04 systemd[2043]: Started Portal service.
+sept. 01 00:49:16 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Console.
+sept. 01 00:49:16 systemd[2043]: Started dbus-:1.1-org.gnome.Console@0.service.
+sept. 01 00:49:16 kgx[2785]: The resource style-dark.css is deprecated and shouldn't be used anymore. Use style.css with media queries instead.
+sept. 01 00:49:16 systemd[2043]: Started VTE child process 2792 launched by kgx process 2785.
+sept. 01 00:49:17 kgx[2785]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+sept. 01 00:49:17 kgx[2785]: libEGL warning: failed to get driver name for fd -1
+sept. 01 00:49:17 kgx[2785]: libEGL warning: MESA-LOADER: failed to retrieve device information
+sept. 01 00:49:17 kgx[2785]: libEGL warning: failed to get driver name for fd -1
+sept. 01 00:49:17 kgx[2785]: MESA: error: ZINK: failed to choose pdev
+sept. 01 00:49:17 kgx[2785]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:01 systemd[2043]: Starting Virtual filesystem metadata service...
+août 31 22:50:01 systemd[2043]: Started Virtual filesystem metadata service.
+août 31 22:50:10 sudo[2883]:   benoit : TTY=pts/0 ; PWD=/home/benoit ; USER=root ; COMMAND=/run/current-system/sw/bin/dmesg
+août 31 22:50:10 sudo[2883]: pam_unix(sudo:session): session opened for user root(uid=0) by benoit(uid=1000)
+août 31 22:50:10 sudo[2883]: pam_unix(sudo:session): session closed for user root
+août 31 22:50:18 sudo[2890]:   benoit : TTY=pts/0 ; PWD=/home/benoit ; USER=root ; COMMAND=/run/current-system/sw/bin/dmesg
+août 31 22:50:18 sudo[2890]: pam_unix(sudo:session): session opened for user root(uid=0) by benoit(uid=1000)
+août 31 22:50:18 sudo[2890]: pam_unix(sudo:session): session closed for user root
+août 31 22:50:39 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Nautilus.
+août 31 22:50:39 systemd[2043]: Started dbus-:1.1-org.gnome.Nautilus@0.service.
+août 31 22:50:39 org.gnome.Nautilus[2921]: Connecting to org.freedesktop.Tracker3.Miner.Files
+août 31 22:50:39 org.gnome.Nautilus[2921]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+août 31 22:50:39 nautilus[2921]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:39 nautilus[2921]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:50:39 nautilus[2921]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:39 nautilus[2921]: MESA: error: ZINK: failed to choose pdev
+août 31 22:50:39 nautilus[2921]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:39 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.NautilusPreviewer.
+août 31 22:50:39 systemd[2043]: Started dbus-:1.1-org.gnome.NautilusPreviewer@0.service.
+août 31 22:50:40 .gvfsd-wsdd-wra[3020]: Failed to spawn the wsdd daemon: L’exécution du processus fils « wsdd » a échoué (Aucun fichier ou dossier de ce nom)
+août 31 22:50:40 .gvfsd-network-[3001]: Couldn't create directory monitor on wsdd:///. Error: Le montage automatique a échoué : Échec du lancement du démon wsdd sous-jacent.
+août 31 22:50:40 org.gnome.Nautilus[2921]: Failed to add emblem. “. GThemedIcon emblem-unwritable-symbolic unwritable-symbolic emblem-unwritable unwritable” not found in the icon theme
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: MESA: error: ZINK: failed to choose pdev
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:50 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.TextEditor.
+août 31 22:50:50 systemd[2043]: Started dbus-:1.1-org.gnome.TextEditor@0.service.
+août 31 22:50:50 gnome-text-editor[3054]: The resource style-hc.css is deprecated and shouldn't be used anymore. Use style.css with media queries instead.
+août 31 22:50:50 gnome-text-editor[3054]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:50 gnome-text-editor[3054]: MESA: error: ZINK: failed to choose pdev
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:51 systemd[2043]: dbus-:1.1-org.gnome.NautilusPreviewer@0.service: Consumed 1.694s CPU time over 12.103s wall clock time, 161.8M memory peak.
+août 31 22:51:33 systemd[2043]: dbus-:1.1-org.gnome.TextEditor@0.service: Consumed 7.545s CPU time over 43.940s wall clock time, 180.1M memory peak.
+août 31 22:52:51 systemd[2043]: Started dbus-:1.1-org.gnome.TextEditor@1.service.
+août 31 22:52:51 gnome-text-editor[3158]: The resource style-hc.css is deprecated and shouldn't be used anymore. Use style.css with media queries instead.
+août 31 22:52:51 gnome-text-editor[3158]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: failed to get driver name for fd -1
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: failed to get driver name for fd -1
+août 31 22:52:51 gnome-text-editor[3158]: MESA: error: ZINK: failed to choose pdev
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:53:03 systemd[2043]: dbus-:1.1-org.gnome.TextEditor@1.service: Consumed 1.911s CPU time over 12.585s wall clock time, 100.2M memory peak.
+août 31 22:54:45 systemd[2043]: Starting Cleanup of User's Temporary Files and Directories...
+août 31 22:54:45 systemd[2043]: Finished Cleanup of User's Temporary Files and Directories.

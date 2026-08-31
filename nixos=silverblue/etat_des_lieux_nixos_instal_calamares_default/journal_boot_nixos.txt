@@ -1,0 +1,1987 @@
+août 31 22:48:19 kernel: Linux version 7.0.10 (nixbld@localhost) (gcc (GCC) 15.2.0, GNU ld (GNU Binutils) 2.46) #1-NixOS SMP PREEMPT_DYNAMIC Sat May 23 11:09:44 UTC 2026
+août 31 22:48:19 kernel: Command line: initrd=\EFI\nixos\rqmambzsh8rsxlc33agcc45ifpyxmpcn-initrd-linux-7.0.10-initrd.efi init=/nix/store/4ykl7sy2408vscmx7qwrj24ccwf85kpf-nixos-system-nixos-26.05.590.ec942ba042da/init root=fstab loglevel=4 lsm=landlock,yama,bpf
+août 31 22:48:19 kernel: BIOS-provided physical RAM map:
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000002ffff]  System RAM
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x0000000000030000-0x000000000004ffff]  device reserved
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x0000000000050000-0x000000000009efff]  System RAM
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x000000000009f000-0x000000000009ffff]  device reserved
+août 31 22:48:19 kernel: BIOS-e820: [gap 0x00000000000a0000-0x00000000000fffff]
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x0000000000100000-0x000000007e8edfff]  System RAM
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x000000007e8ee000-0x000000007eb6dfff]  device reserved
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x000000007eb6e000-0x000000007eb7dfff]  ACPI data
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x000000007eb7e000-0x000000007ebfdfff]  ACPI NVS
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x000000007ebfe000-0x000000007effffff]  System RAM
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x000000007f000000-0x000000007fffffff]  device reserved
+août 31 22:48:19 kernel: BIOS-e820: [gap 0x0000000080000000-0x00000000afffffff]
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x00000000b0000000-0x00000000bfffffff]  device reserved
+août 31 22:48:19 kernel: BIOS-e820: [gap 0x00000000c0000000-0x00000000ffffffff]
+août 31 22:48:19 kernel: BIOS-e820: [mem 0x0000000100000000-0x000000017fffffff]  System RAM
+août 31 22:48:19 kernel: NX (Execute Disable) protection: active
+août 31 22:48:19 kernel: APIC: Static calls initialized
+août 31 22:48:19 kernel: efi: EFI v2.7 by EDK II
+août 31 22:48:19 kernel: efi: SMBIOS=0x7e9d6000 ACPI=0x7eb7d000 ACPI 2.0=0x7eb7d014 MEMATTR=0x7d92c018 RNG=0x7eb73018 INITRD=0x7d92dc18 
+août 31 22:48:19 kernel: random: crng init done
+août 31 22:48:19 kernel: SMBIOS 2.8 present.
+août 31 22:48:19 kernel: DMI: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 0.0.0 02/06/2015
+août 31 22:48:19 kernel: DMI: Memory slots populated: 1/1
+août 31 22:48:19 kernel: Hypervisor detected: KVM
+août 31 22:48:19 kernel: last_pfn = 0x7f000 max_arch_pfn = 0x400000000
+août 31 22:48:19 kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+août 31 22:48:19 kernel: kvm-clock: using sched offset of 7158088415 cycles
+août 31 22:48:19 kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+août 31 22:48:19 kernel: tsc: Detected 2096.062 MHz processor
+août 31 22:48:19 kernel: e820: update [mem 0x00000000-0x00000fff] System RAM ==> device reserved
+août 31 22:48:19 kernel: e820: remove [mem 0x000a0000-0x000fffff] System RAM
+août 31 22:48:19 kernel: last_pfn = 0x180000 max_arch_pfn = 0x400000000
+août 31 22:48:19 kernel: MTRR map: 4 entries (2 fixed + 2 variable; max 18), built from 8 variable MTRRs
+août 31 22:48:19 kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+août 31 22:48:19 kernel: last_pfn = 0x7f000 max_arch_pfn = 0x400000000
+août 31 22:48:19 kernel: Using GB pages for direct mapping
+août 31 22:48:19 kernel: Secure boot disabled
+août 31 22:48:19 kernel: RAMDISK: [mem 0x77950000-0x79486fff]
+août 31 22:48:19 kernel: ACPI: Early table checksum verification disabled
+août 31 22:48:19 kernel: ACPI: RSDP 0x000000007EB7D014 000024 (v02 BOCHS )
+août 31 22:48:19 kernel: ACPI: XSDT 0x000000007EB7C0E8 00004C (v01 BOCHS  BXPC     00000001      01000013)
+août 31 22:48:19 kernel: ACPI: FACP 0x000000007EB78000 0000F4 (v03 BOCHS  BXPC     00000001 BXPC 00000001)
+août 31 22:48:19 kernel: ACPI: DSDT 0x000000007EB79000 00263A (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+août 31 22:48:19 kernel: ACPI: FACS 0x000000007EBDC000 000040
+août 31 22:48:19 kernel: ACPI: APIC 0x000000007EB77000 0000B0 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+août 31 22:48:19 kernel: ACPI: MCFG 0x000000007EB76000 00003C (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+août 31 22:48:19 kernel: ACPI: WAET 0x000000007EB75000 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+août 31 22:48:19 kernel: ACPI: BGRT 0x000000007EB74000 000038 (v01 INTEL  EDK2     00000002      01000013)
+août 31 22:48:19 kernel: ACPI: Reserving FACP table memory at [mem 0x7eb78000-0x7eb780f3]
+août 31 22:48:19 kernel: ACPI: Reserving DSDT table memory at [mem 0x7eb79000-0x7eb7b639]
+août 31 22:48:19 kernel: ACPI: Reserving FACS table memory at [mem 0x7ebdc000-0x7ebdc03f]
+août 31 22:48:19 kernel: ACPI: Reserving APIC table memory at [mem 0x7eb77000-0x7eb770af]
+août 31 22:48:19 kernel: ACPI: Reserving MCFG table memory at [mem 0x7eb76000-0x7eb7603b]
+août 31 22:48:19 kernel: ACPI: Reserving WAET table memory at [mem 0x7eb75000-0x7eb75027]
+août 31 22:48:19 kernel: ACPI: Reserving BGRT table memory at [mem 0x7eb74000-0x7eb74037]
+août 31 22:48:19 kernel: No NUMA configuration found
+août 31 22:48:19 kernel: Faking a node at [mem 0x0000000000000000-0x000000017fffffff]
+août 31 22:48:19 kernel: NODE_DATA(0) allocated [mem 0x17fff8780-0x17fffdcff]
+août 31 22:48:19 kernel: ACPI: PM-Timer IO Port: 0x608
+août 31 22:48:19 kernel: ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+août 31 22:48:19 kernel: IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+août 31 22:48:19 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+août 31 22:48:19 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+août 31 22:48:19 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+août 31 22:48:19 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+août 31 22:48:19 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+août 31 22:48:19 kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+août 31 22:48:19 kernel: e820: update [mem 0x7d385000-0x7d38dfff] System RAM ==> device reserved
+août 31 22:48:19 kernel: TSC deadline timer available
+août 31 22:48:19 kernel: CPU topo: Max. logical packages:   1
+août 31 22:48:19 kernel: CPU topo: Max. logical nodes:      1
+août 31 22:48:19 kernel: CPU topo: Num. nodes per package:  1
+août 31 22:48:19 kernel: CPU topo: Max. logical dies:       1
+août 31 22:48:19 kernel: CPU topo: Max. dies per package:   1
+août 31 22:48:19 kernel: CPU topo: Max. threads per core:   2
+août 31 22:48:19 kernel: CPU topo: Num. cores per package:     4
+août 31 22:48:19 kernel: CPU topo: Num. threads per package:   8
+août 31 22:48:19 kernel: CPU topo: Allowing 8 present CPUs plus 0 hotplug CPUs
+août 31 22:48:19 kernel: kvm-guest: APIC: eoi() replaced with kvm_guest_apic_eoi_write()
+août 31 22:48:19 kernel: kvm-guest: KVM setup pv remote TLB flush
+août 31 22:48:19 kernel: kvm-guest: setup PV sched yield
+août 31 22:48:19 kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+août 31 22:48:19 kernel: PM: hibernation: Registered nosave memory: [mem 0x00030000-0x0004ffff]
+août 31 22:48:19 kernel: PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x000fffff]
+août 31 22:48:19 kernel: PM: hibernation: Registered nosave memory: [mem 0x7d385000-0x7d38dfff]
+août 31 22:48:19 kernel: PM: hibernation: Registered nosave memory: [mem 0x7e8ee000-0x7ebfdfff]
+août 31 22:48:19 kernel: PM: hibernation: Registered nosave memory: [mem 0x7f000000-0xffffffff]
+août 31 22:48:19 kernel: [gap 0xc0000000-0xffffffff] available for PCI devices
+août 31 22:48:19 kernel: Booting paravirtualized kernel on KVM
+août 31 22:48:19 kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+août 31 22:48:19 kernel: Zone ranges:
+août 31 22:48:19 kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+août 31 22:48:19 kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+août 31 22:48:19 kernel:   Normal   [mem 0x0000000100000000-0x000000017fffffff]
+août 31 22:48:19 kernel:   Device   empty
+août 31 22:48:19 kernel: Movable zone start for each node
+août 31 22:48:19 kernel: Early memory node ranges
+août 31 22:48:19 kernel:   node   0: [mem 0x0000000000001000-0x000000000002ffff]
+août 31 22:48:19 kernel:   node   0: [mem 0x0000000000050000-0x000000000009efff]
+août 31 22:48:19 kernel:   node   0: [mem 0x0000000000100000-0x000000007e8edfff]
+août 31 22:48:19 kernel:   node   0: [mem 0x000000007ebfe000-0x000000007effffff]
+août 31 22:48:19 kernel:   node   0: [mem 0x0000000100000000-0x000000017fffffff]
+août 31 22:48:19 kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000017fffffff]
+août 31 22:48:19 kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+août 31 22:48:19 kernel: On node 0, zone DMA: 32 pages in unavailable ranges
+août 31 22:48:19 kernel: On node 0, zone DMA: 97 pages in unavailable ranges
+août 31 22:48:19 kernel: On node 0, zone DMA32: 784 pages in unavailable ranges
+août 31 22:48:19 kernel: On node 0, zone Normal: 4096 pages in unavailable ranges
+août 31 22:48:19 kernel: setup_percpu: NR_CPUS:384 nr_cpumask_bits:8 nr_cpu_ids:8 nr_node_ids:1
+août 31 22:48:19 kernel: percpu: Embedded 99 pages/cpu s282624 r8192 d114688 u524288
+août 31 22:48:19 kernel: pcpu-alloc: s282624 r8192 d114688 u524288 alloc=1*2097152
+août 31 22:48:19 kernel: pcpu-alloc: [0] 0 1 2 3 [0] 4 5 6 7 
+août 31 22:48:19 kernel: kvm-guest: PV spinlocks enabled
+août 31 22:48:19 kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+août 31 22:48:19 kernel: Kernel command line: initrd=\EFI\nixos\rqmambzsh8rsxlc33agcc45ifpyxmpcn-initrd-linux-7.0.10-initrd.efi init=/nix/store/4ykl7sy2408vscmx7qwrj24ccwf85kpf-nixos-system-nixos-26.05.590.ec942ba042da/init root=fstab loglevel=4 lsm=landlock,yama,bpf
+août 31 22:48:19 kernel: printk: log buffer data + meta data: 262144 + 1114112 = 1376256 bytes
+août 31 22:48:19 kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+août 31 22:48:19 kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+août 31 22:48:19 kernel: software IO TLB: area num 8.
+août 31 22:48:19 kernel: Fallback order for Node 0: 0 
+août 31 22:48:19 kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1043566
+août 31 22:48:19 kernel: Policy zone: Normal
+août 31 22:48:19 kernel: mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+août 31 22:48:19 kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+août 31 22:48:19 kernel: allocated 8388608 bytes of page_ext
+août 31 22:48:19 kernel: ftrace: allocating 49263 entries in 194 pages
+août 31 22:48:19 kernel: ftrace: allocated 194 pages with 3 groups
+août 31 22:48:19 kernel: Dynamic Preempt: lazy
+août 31 22:48:19 kernel: rcu: Preemptible hierarchical RCU implementation.
+août 31 22:48:19 kernel: rcu:         RCU event tracing is enabled.
+août 31 22:48:19 kernel: rcu:         RCU restricting CPUs from NR_CPUS=384 to nr_cpu_ids=8.
+août 31 22:48:19 kernel:         Trampoline variant of Tasks RCU enabled.
+août 31 22:48:19 kernel:         Rude variant of Tasks RCU enabled.
+août 31 22:48:19 kernel:         Tracing variant of Tasks RCU enabled.
+août 31 22:48:19 kernel: rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+août 31 22:48:19 kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+août 31 22:48:19 kernel: RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+août 31 22:48:19 kernel: RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+août 31 22:48:19 kernel: NR_IRQS: 24832, nr_irqs: 488, preallocated irqs: 16
+août 31 22:48:19 kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+août 31 22:48:19 kernel: kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+août 31 22:48:19 kernel: Console: colour dummy device 80x25
+août 31 22:48:19 kernel: printk: legacy console [tty0] enabled
+août 31 22:48:19 kernel: ACPI: Core revision 20251212
+août 31 22:48:19 kernel: APIC: Switch to symmetric I/O mode setup
+août 31 22:48:19 kernel: x2apic enabled
+août 31 22:48:19 kernel: APIC: Switched APIC routing to: physical x2apic
+août 31 22:48:19 kernel: kvm-guest: APIC: send_IPI_mask() replaced with kvm_send_ipi_mask()
+août 31 22:48:19 kernel: kvm-guest: APIC: send_IPI_mask_allbutself() replaced with kvm_send_ipi_mask_allbutself()
+août 31 22:48:19 kernel: kvm-guest: setup PV IPIs
+août 31 22:48:19 kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e36a88731c, max_idle_ns: 440795269020 ns
+août 31 22:48:19 kernel: Calibrating delay loop (skipped) preset value.. 4192.12 BogoMIPS (lpj=2096062)
+août 31 22:48:19 kernel: AMD Zen1 DIV0 bug detected. Disable SMT for full protection.
+août 31 22:48:19 kernel: AMD Zen1 FPDSS bug detected, enabling mitigation.
+août 31 22:48:19 kernel: Last level iTLB entries: 4KB 512, 2MB 255, 4MB 127
+août 31 22:48:19 kernel: Last level dTLB entries: 4KB 512, 2MB 255, 4MB 127, 1GB 0
+août 31 22:48:19 kernel: mitigations: Enabled attack vectors: user_kernel, user_user, guest_host, guest_guest, SMT mitigations: auto
+août 31 22:48:19 kernel: Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+août 31 22:48:19 kernel: Speculative Return Stack Overflow: IBPB-extending microcode not applied!
+août 31 22:48:19 kernel: Speculative Return Stack Overflow: WARNING: See https://kernel.org/doc/html/latest/admin-guide/hw-vuln/srso.html for mitigation options.
+août 31 22:48:19 kernel: Spectre V2 : Mitigation: Retpolines
+août 31 22:48:19 kernel: RETBleed: Mitigation: untrained return thunk
+août 31 22:48:19 kernel: Speculative Return Stack Overflow: Vulnerable: Safe RET, no microcode
+août 31 22:48:19 kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+août 31 22:48:19 kernel: Spectre V2 : Spectre v2 / SpectreRSB: Filling RSB on context switch and VMEXIT
+août 31 22:48:19 kernel: Spectre V2 : Enabling Speculation Barrier for firmware calls
+août 31 22:48:19 kernel: active return thunk: retbleed_return_thunk
+août 31 22:48:19 kernel: Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+août 31 22:48:19 kernel: active return thunk: srso_return_thunk
+août 31 22:48:19 kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+août 31 22:48:19 kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+août 31 22:48:19 kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+août 31 22:48:19 kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+août 31 22:48:19 kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'compacted' format.
+août 31 22:48:19 kernel: Freeing SMP alternatives memory: 44K
+août 31 22:48:19 kernel: pid_max: default: 32768 minimum: 301
+août 31 22:48:19 kernel: landlock: Up and running.
+août 31 22:48:19 kernel: Yama: becoming mindful.
+août 31 22:48:19 kernel: LSM support for eBPF active
+août 31 22:48:19 kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+août 31 22:48:19 kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+août 31 22:48:19 kernel: VFS: Finished mounting rootfs on nullfs
+août 31 22:48:19 kernel: smpboot: CPU0: AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx (family: 0x17, model: 0x18, stepping: 0x1)
+août 31 22:48:19 kernel: Performance Events: Fam17h+ core perfctr, AMD PMU driver.
+août 31 22:48:19 kernel: ... version:                   0
+août 31 22:48:19 kernel: ... bit width:                 48
+août 31 22:48:19 kernel: ... generic counters:          6
+août 31 22:48:19 kernel: ... generic bitmap:            000000000000003f
+août 31 22:48:19 kernel: ... fixed-purpose counters:    0
+août 31 22:48:19 kernel: ... fixed-purpose bitmap:      0000000000000000
+août 31 22:48:19 kernel: ... value mask:                0000ffffffffffff
+août 31 22:48:19 kernel: ... max period:                00007fffffffffff
+août 31 22:48:19 kernel: ... global_ctrl mask:          000000000000003f
+août 31 22:48:19 kernel: signal: max sigframe size: 1776
+août 31 22:48:19 kernel: rcu: Hierarchical SRCU implementation.
+août 31 22:48:19 kernel: rcu:         Max phase no-delay instances is 400.
+août 31 22:48:19 kernel: Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+août 31 22:48:19 kernel: smp: Bringing up secondary CPUs ...
+août 31 22:48:19 kernel: smpboot: x86: Booting SMP configuration:
+août 31 22:48:19 kernel: .... node  #0, CPUs:      #2 #4 #6 #1 #3 #5 #7
+août 31 22:48:19 kernel: smp: Brought up 1 node, 8 CPUs
+août 31 22:48:19 kernel: smpboot: Total of 8 processors activated (33536.99 BogoMIPS)
+août 31 22:48:19 kernel: Memory: 3898104K/4174264K available (17442K kernel code, 2932K rwdata, 13792K rodata, 3696K init, 4652K bss, 259344K reserved, 0K cma-reserved)
+août 31 22:48:19 kernel: devtmpfs: initialized
+août 31 22:48:19 kernel: x86/mm: Memory block size: 128MB
+août 31 22:48:19 kernel: ACPI: PM: Registering ACPI NVS region [mem 0x7eb7e000-0x7ebfdfff] (524288 bytes)
+août 31 22:48:19 kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+août 31 22:48:19 kernel: posixtimers hash table entries: 4096 (order: 4, 65536 bytes, linear)
+août 31 22:48:19 kernel: futex hash table entries: 2048 (131072 bytes on 1 NUMA nodes, total 128 KiB, linear).
+août 31 22:48:19 kernel: PM: RTC time: 22:48:18, date: 2026-08-31
+août 31 22:48:19 kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+août 31 22:48:19 kernel: DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+août 31 22:48:19 kernel: DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+août 31 22:48:19 kernel: DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+août 31 22:48:19 kernel: audit: initializing netlink subsys (disabled)
+août 31 22:48:19 kernel: audit: type=2000 audit(1788209297.703:1): state=initialized audit_enabled=0 res=1
+août 31 22:48:19 kernel: thermal_sys: Registered thermal governor 'fair_share'
+août 31 22:48:19 kernel: thermal_sys: Registered thermal governor 'bang_bang'
+août 31 22:48:19 kernel: thermal_sys: Registered thermal governor 'step_wise'
+août 31 22:48:19 kernel: thermal_sys: Registered thermal governor 'user_space'
+août 31 22:48:19 kernel: thermal_sys: Registered thermal governor 'power_allocator'
+août 31 22:48:19 kernel: cpuidle: using governor menu
+août 31 22:48:19 kernel: efi: Freeing EFI boot services memory: 37892K
+août 31 22:48:19 kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+août 31 22:48:19 kernel: PCI: ECAM [mem 0xb0000000-0xbfffffff] (base 0xb0000000) for domain 0000 [bus 00-ff]
+août 31 22:48:19 kernel: PCI: ECAM [mem 0xb0000000-0xbfffffff] reserved as E820 entry
+août 31 22:48:19 kernel: PCI: Using configuration type 1 for base access
+août 31 22:48:19 kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+août 31 22:48:19 kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+août 31 22:48:19 kernel: HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+août 31 22:48:19 kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+août 31 22:48:19 kernel: HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+août 31 22:48:19 kernel: ACPI: Added _OSI(Module Device)
+août 31 22:48:19 kernel: ACPI: Added _OSI(Processor Device)
+août 31 22:48:19 kernel: ACPI: Added _OSI(Processor Aggregator Device)
+août 31 22:48:19 kernel: ACPI: 1 ACPI AML tables successfully acquired and loaded
+août 31 22:48:19 kernel: ACPI: \_SB_: platform _OSC: OS support mask [002e7eff]
+août 31 22:48:19 kernel: ACPI: Interpreter enabled
+août 31 22:48:19 kernel: ACPI: PM: (supports S0 S5)
+août 31 22:48:19 kernel: ACPI: Using IOAPIC for interrupt routing
+août 31 22:48:19 kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+août 31 22:48:19 kernel: PCI: Using E820 reservations for host bridge windows
+août 31 22:48:19 kernel: ACPI: Enabled 2 GPEs in block 00 to 3F
+août 31 22:48:19 kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+août 31 22:48:19 kernel: acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+août 31 22:48:19 kernel: acpi PNP0A08:00: _OSC: platform does not support [PCIeHotplug LTR]
+août 31 22:48:19 kernel: acpi PNP0A08:00: _OSC: OS now controls [PME AER PCIeCapability]
+août 31 22:48:19 kernel: PCI host bridge to bus 0000:00
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [mem 0x80000000-0xafffffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [mem 0x800000000-0xfffffffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+août 31 22:48:19 kernel: pci 0000:00:00.0: [8086:29c0] type 00 class 0x060000 conventional PCI endpoint
+août 31 22:48:19 kernel: pci 0000:00:01.0: [1b36:0100] type 00 class 0x030000 conventional PCI endpoint
+août 31 22:48:19 kernel: pci 0000:00:01.0: BAR 0 [mem 0xc4000000-0xc7ffffff]
+août 31 22:48:19 kernel: pci 0000:00:01.0: BAR 1 [mem 0xc0000000-0xc3ffffff]
+août 31 22:48:19 kernel: pci 0000:00:01.0: BAR 2 [mem 0xc8c44000-0xc8c45fff]
+août 31 22:48:19 kernel: pci 0000:00:01.0: BAR 3 [io  0xb260-0xb27f]
+août 31 22:48:19 kernel: pci 0000:00:01.0: ROM [mem 0xffff0000-0xffffffff pref]
+août 31 22:48:19 kernel: pci 0000:00:01.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+août 31 22:48:19 kernel: pci 0000:00:02.0: [1b36:000c] type 01 class 0x060400 PCIe Root Port
+août 31 22:48:19 kernel: pci 0000:00:02.0: BAR 0 [mem 0xc8c4c000-0xc8c4cfff]
+août 31 22:48:19 kernel: pci 0000:00:02.0: PCI bridge to [bus 01]
+août 31 22:48:19 kernel: pci 0000:00:02.0:   bridge window [io  0xb000-0xbfff]
+août 31 22:48:19 kernel: pci 0000:00:02.0:   bridge window [mem 0xc8a00000-0xc8bfffff]
+août 31 22:48:19 kernel: pci 0000:00:02.0:   bridge window [mem 0x800000000-0x8000fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.1: [1b36:000c] type 01 class 0x060400 PCIe Root Port
+août 31 22:48:19 kernel: pci 0000:00:02.1: BAR 0 [mem 0xc8c4b000-0xc8c4bfff]
+août 31 22:48:19 kernel: pci 0000:00:02.1: PCI bridge to [bus 02]
+août 31 22:48:19 kernel: pci 0000:00:02.1:   bridge window [io  0xa000-0xafff]
+août 31 22:48:19 kernel: pci 0000:00:02.1:   bridge window [mem 0xc8800000-0xc89fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.2: [1b36:000c] type 01 class 0x060400 PCIe Root Port
+août 31 22:48:19 kernel: pci 0000:00:02.2: BAR 0 [mem 0xc8c4a000-0xc8c4afff]
+août 31 22:48:19 kernel: pci 0000:00:02.2: PCI bridge to [bus 03]
+août 31 22:48:19 kernel: pci 0000:00:02.2:   bridge window [io  0x9000-0x9fff]
+août 31 22:48:19 kernel: pci 0000:00:02.2:   bridge window [mem 0xc8600000-0xc87fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.2:   bridge window [mem 0x800100000-0x8001fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.3: [1b36:000c] type 01 class 0x060400 PCIe Root Port
+août 31 22:48:19 kernel: pci 0000:00:02.3: BAR 0 [mem 0xc8c49000-0xc8c49fff]
+août 31 22:48:19 kernel: pci 0000:00:02.3: PCI bridge to [bus 04]
+août 31 22:48:19 kernel: pci 0000:00:02.3:   bridge window [io  0x8000-0x8fff]
+août 31 22:48:19 kernel: pci 0000:00:02.3:   bridge window [mem 0xc8400000-0xc85fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.3:   bridge window [mem 0x800200000-0x8002fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.4: [1b36:000c] type 01 class 0x060400 PCIe Root Port
+août 31 22:48:19 kernel: pci 0000:00:02.4: BAR 0 [mem 0xc8c48000-0xc8c48fff]
+août 31 22:48:19 kernel: pci 0000:00:02.4: PCI bridge to [bus 05]
+août 31 22:48:19 kernel: pci 0000:00:02.4:   bridge window [io  0x7000-0x7fff]
+août 31 22:48:19 kernel: pci 0000:00:02.4:   bridge window [mem 0xc8200000-0xc83fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.4:   bridge window [mem 0x800300000-0x8003fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.5: [1b36:000c] type 01 class 0x060400 PCIe Root Port
+août 31 22:48:19 kernel: pci 0000:00:02.5: BAR 0 [mem 0xc8c47000-0xc8c47fff]
+août 31 22:48:19 kernel: pci 0000:00:02.5: PCI bridge to [bus 06]
+août 31 22:48:19 kernel: pci 0000:00:02.5:   bridge window [io  0x6000-0x6fff]
+août 31 22:48:19 kernel: pci 0000:00:02.5:   bridge window [mem 0xc8000000-0xc81fffff]
+août 31 22:48:19 kernel: pci 0000:00:1b.0: [8086:293e] type 00 class 0x040300 conventional PCI endpoint
+août 31 22:48:19 kernel: pci 0000:00:1b.0: BAR 0 [mem 0xc8c40000-0xc8c43fff]
+août 31 22:48:19 kernel: pci 0000:00:1f.0: [8086:2918] type 00 class 0x060100 conventional PCI endpoint
+août 31 22:48:19 kernel: pci 0000:00:1f.0: quirk: [io  0x0600-0x067f] claimed by ICH6 ACPI/GPIO/TCO
+août 31 22:48:19 kernel: pci 0000:00:1f.2: [8086:2922] type 00 class 0x010601 conventional PCI endpoint
+août 31 22:48:19 kernel: pci 0000:00:1f.2: BAR 4 [io  0xb240-0xb25f]
+août 31 22:48:19 kernel: pci 0000:00:1f.2: BAR 5 [mem 0xc8c46000-0xc8c46fff]
+août 31 22:48:19 kernel: pci 0000:00:1f.3: [8086:2930] type 00 class 0x0c0500 conventional PCI endpoint
+août 31 22:48:19 kernel: pci 0000:00:1f.3: BAR 4 [io  0xb200-0xb23f]
+août 31 22:48:19 kernel: acpiphp: Slot [0] registered
+août 31 22:48:19 kernel: pci 0000:01:00.0: [1af4:1041] type 00 class 0x020000 PCIe Endpoint
+août 31 22:48:19 kernel: pci 0000:01:00.0: BAR 1 [mem 0xc8a00000-0xc8a00fff]
+août 31 22:48:19 kernel: pci 0000:01:00.0: BAR 4 [mem 0x800000000-0x800003fff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:01:00.0: ROM [mem 0xfffc0000-0xffffffff pref]
+août 31 22:48:19 kernel: pci 0000:00:02.0: PCI bridge to [bus 01]
+août 31 22:48:19 kernel: acpiphp: Slot [0-1] registered
+août 31 22:48:19 kernel: pci 0000:02:00.0: [1b36:000d] type 00 class 0x0c0330 PCIe Endpoint
+août 31 22:48:19 kernel: pci 0000:02:00.0: BAR 0 [mem 0xc8800000-0xc8803fff 64bit]
+août 31 22:48:19 kernel: pci 0000:00:02.1: PCI bridge to [bus 02]
+août 31 22:48:19 kernel: acpiphp: Slot [0-2] registered
+août 31 22:48:19 kernel: pci 0000:03:00.0: [1af4:1043] type 00 class 0x078000 PCIe Endpoint
+août 31 22:48:19 kernel: pci 0000:03:00.0: BAR 1 [mem 0xc8600000-0xc8600fff]
+août 31 22:48:19 kernel: pci 0000:03:00.0: BAR 4 [mem 0x800100000-0x800103fff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.2: PCI bridge to [bus 03]
+août 31 22:48:19 kernel: acpiphp: Slot [0-3] registered
+août 31 22:48:19 kernel: pci 0000:04:00.0: [1af4:1042] type 00 class 0x010000 PCIe Endpoint
+août 31 22:48:19 kernel: pci 0000:04:00.0: BAR 1 [mem 0xc8400000-0xc8400fff]
+août 31 22:48:19 kernel: pci 0000:04:00.0: BAR 4 [mem 0x800200000-0x800203fff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.3: PCI bridge to [bus 04]
+août 31 22:48:19 kernel: acpiphp: Slot [0-4] registered
+août 31 22:48:19 kernel: pci 0000:05:00.0: [1af4:1045] type 00 class 0x00ff00 PCIe Endpoint
+août 31 22:48:19 kernel: pci 0000:05:00.0: BAR 4 [mem 0x800300000-0x800303fff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.4: PCI bridge to [bus 05]
+août 31 22:48:19 kernel: acpiphp: Slot [0-5] registered
+août 31 22:48:19 kernel: pci 0000:00:02.5: PCI bridge to [bus 06]
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKE configured for IRQ 10
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKF configured for IRQ 10
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKG configured for IRQ 11
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link LNKH configured for IRQ 11
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIA configured for IRQ 16
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIB configured for IRQ 17
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIC configured for IRQ 18
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSID configured for IRQ 19
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIE configured for IRQ 20
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIF configured for IRQ 21
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIG configured for IRQ 22
+août 31 22:48:19 kernel: ACPI: PCI: Interrupt link GSIH configured for IRQ 23
+août 31 22:48:19 kernel: iommu: Default domain type: Translated
+août 31 22:48:19 kernel: iommu: DMA domain TLB invalidation policy: lazy mode
+août 31 22:48:19 kernel: ACPI: bus type USB registered
+août 31 22:48:19 kernel: usbcore: registered new interface driver usbfs
+août 31 22:48:19 kernel: usbcore: registered new interface driver hub
+août 31 22:48:19 kernel: usbcore: registered new device driver usb
+août 31 22:48:19 kernel: efivars: Registered efivars operations
+août 31 22:48:19 kernel: NetLabel: Initializing
+août 31 22:48:19 kernel: NetLabel:  domain hash size = 128
+août 31 22:48:19 kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+août 31 22:48:19 kernel: NetLabel:  unlabeled traffic allowed by default
+août 31 22:48:19 kernel: PCI: Using ACPI for IRQ routing
+août 31 22:48:19 kernel: PCI: pci_cache_line_size set to 64 bytes
+août 31 22:48:19 kernel: pci 0000:00:01.0: BAR 3 [io  0xb260-0xb27f]: can't claim; address conflict with PCI Bus 0000:01 [io  0xb000-0xbfff]
+août 31 22:48:19 kernel: pci 0000:00:1f.2: BAR 4 [io  0xb240-0xb25f]: can't claim; address conflict with PCI Bus 0000:01 [io  0xb000-0xbfff]
+août 31 22:48:19 kernel: pci 0000:00:1f.3: BAR 4 [io  0xb200-0xb23f]: can't claim; address conflict with PCI Bus 0000:01 [io  0xb000-0xbfff]
+août 31 22:48:19 kernel: e820: register RAM buffer resource [mem 0x0009f000-0x0009ffff]
+août 31 22:48:19 kernel: e820: register RAM buffer resource [mem 0x7d385000-0x7fffffff]
+août 31 22:48:19 kernel: e820: register RAM buffer resource [mem 0x7e8ee000-0x7fffffff]
+août 31 22:48:19 kernel: e820: register RAM buffer resource [mem 0x7f000000-0x7fffffff]
+août 31 22:48:19 kernel: pci 0000:00:01.0: vgaarb: setting as boot VGA device
+août 31 22:48:19 kernel: pci 0000:00:01.0: vgaarb: bridge control possible
+août 31 22:48:19 kernel: pci 0000:00:01.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+août 31 22:48:19 kernel: vgaarb: loaded
+août 31 22:48:19 kernel: clocksource: Switched to clocksource kvm-clock
+août 31 22:48:19 kernel: VFS: Disk quotas dquot_6.6.0
+août 31 22:48:19 kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+août 31 22:48:19 kernel: acpi PNP0C01:00: Reserved [mem 0xb0000000-0xbfffffff]
+août 31 22:48:19 kernel: pnp: PnP ACPI init
+août 31 22:48:19 kernel: pnp: PnP ACPI: found 4 devices
+août 31 22:48:19 kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+août 31 22:48:19 kernel: NET: Registered PF_INET protocol family
+août 31 22:48:19 kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+août 31 22:48:19 kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+août 31 22:48:19 kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+août 31 22:48:19 kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+août 31 22:48:19 kernel: TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+août 31 22:48:19 kernel: TCP: Hash tables configured (established 32768 bind 32768)
+août 31 22:48:19 kernel: MPTCP token hash table entries: 4096 (order: 5, 98304 bytes, linear)
+août 31 22:48:19 kernel: UDP hash table entries: 2048 (order: 5, 131072 bytes, linear)
+août 31 22:48:19 kernel: UDP-Lite hash table entries: 2048 (order: 5, 131072 bytes, linear)
+août 31 22:48:19 kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+août 31 22:48:19 kernel: NET: Registered PF_XDP protocol family
+août 31 22:48:19 kernel: pci 0000:01:00.0: ROM [mem 0xfffc0000-0xffffffff pref]: can't claim; no compatible bridge window
+août 31 22:48:19 kernel: pci 0000:00:02.1: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 02] add_size 200000 add_align 100000
+août 31 22:48:19 kernel: pci 0000:00:02.5: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 06] add_size 200000 add_align 100000
+août 31 22:48:19 kernel: pci 0000:00:02.1: bridge window [mem 0x800400000-0x8005fffff 64bit pref]: assigned
+août 31 22:48:19 kernel: pci 0000:00:02.5: bridge window [mem 0x800600000-0x8007fffff 64bit pref]: assigned
+août 31 22:48:19 kernel: pci 0000:00:1f.3: BAR 4 [io  0x1000-0x103f]: assigned
+août 31 22:48:19 kernel: pci 0000:00:01.0: BAR 3 [io  0x1040-0x105f]: assigned
+août 31 22:48:19 kernel: pci 0000:00:1f.2: BAR 4 [io  0x1060-0x107f]: assigned
+août 31 22:48:19 kernel: pci 0000:01:00.0: ROM [mem 0xc8a40000-0xc8a7ffff pref]: assigned
+août 31 22:48:19 kernel: pci 0000:00:02.0: PCI bridge to [bus 01]
+août 31 22:48:19 kernel: pci 0000:00:02.0:   bridge window [io  0xb000-0xbfff]
+août 31 22:48:19 kernel: pci 0000:00:02.0:   bridge window [mem 0xc8a00000-0xc8bfffff]
+août 31 22:48:19 kernel: pci 0000:00:02.0:   bridge window [mem 0x800000000-0x8000fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.1: PCI bridge to [bus 02]
+août 31 22:48:19 kernel: pci 0000:00:02.1:   bridge window [io  0xa000-0xafff]
+août 31 22:48:19 kernel: pci 0000:00:02.1:   bridge window [mem 0xc8800000-0xc89fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.1:   bridge window [mem 0x800400000-0x8005fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.2: PCI bridge to [bus 03]
+août 31 22:48:19 kernel: pci 0000:00:02.2:   bridge window [io  0x9000-0x9fff]
+août 31 22:48:19 kernel: pci 0000:00:02.2:   bridge window [mem 0xc8600000-0xc87fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.2:   bridge window [mem 0x800100000-0x8001fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.3: PCI bridge to [bus 04]
+août 31 22:48:19 kernel: pci 0000:00:02.3:   bridge window [io  0x8000-0x8fff]
+août 31 22:48:19 kernel: pci 0000:00:02.3:   bridge window [mem 0xc8400000-0xc85fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.3:   bridge window [mem 0x800200000-0x8002fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.4: PCI bridge to [bus 05]
+août 31 22:48:19 kernel: pci 0000:00:02.4:   bridge window [io  0x7000-0x7fff]
+août 31 22:48:19 kernel: pci 0000:00:02.4:   bridge window [mem 0xc8200000-0xc83fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.4:   bridge window [mem 0x800300000-0x8003fffff 64bit pref]
+août 31 22:48:19 kernel: pci 0000:00:02.5: PCI bridge to [bus 06]
+août 31 22:48:19 kernel: pci 0000:00:02.5:   bridge window [io  0x6000-0x6fff]
+août 31 22:48:19 kernel: pci 0000:00:02.5:   bridge window [mem 0xc8000000-0xc81fffff]
+août 31 22:48:19 kernel: pci 0000:00:02.5:   bridge window [mem 0x800600000-0x8007fffff 64bit pref]
+août 31 22:48:19 kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+août 31 22:48:19 kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: resource 7 [mem 0x80000000-0xafffffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]
+août 31 22:48:19 kernel: pci_bus 0000:00: resource 9 [mem 0x800000000-0xfffffffff window]
+août 31 22:48:19 kernel: pci_bus 0000:01: resource 0 [io  0xb000-0xbfff]
+août 31 22:48:19 kernel: pci_bus 0000:01: resource 1 [mem 0xc8a00000-0xc8bfffff]
+août 31 22:48:19 kernel: pci_bus 0000:01: resource 2 [mem 0x800000000-0x8000fffff 64bit pref]
+août 31 22:48:19 kernel: pci_bus 0000:02: resource 0 [io  0xa000-0xafff]
+août 31 22:48:19 kernel: pci_bus 0000:02: resource 1 [mem 0xc8800000-0xc89fffff]
+août 31 22:48:19 kernel: pci_bus 0000:02: resource 2 [mem 0x800400000-0x8005fffff 64bit pref]
+août 31 22:48:19 kernel: pci_bus 0000:03: resource 0 [io  0x9000-0x9fff]
+août 31 22:48:19 kernel: pci_bus 0000:03: resource 1 [mem 0xc8600000-0xc87fffff]
+août 31 22:48:19 kernel: pci_bus 0000:03: resource 2 [mem 0x800100000-0x8001fffff 64bit pref]
+août 31 22:48:19 kernel: pci_bus 0000:04: resource 0 [io  0x8000-0x8fff]
+août 31 22:48:19 kernel: pci_bus 0000:04: resource 1 [mem 0xc8400000-0xc85fffff]
+août 31 22:48:19 kernel: pci_bus 0000:04: resource 2 [mem 0x800200000-0x8002fffff 64bit pref]
+août 31 22:48:19 kernel: pci_bus 0000:05: resource 0 [io  0x7000-0x7fff]
+août 31 22:48:19 kernel: pci_bus 0000:05: resource 1 [mem 0xc8200000-0xc83fffff]
+août 31 22:48:19 kernel: pci_bus 0000:05: resource 2 [mem 0x800300000-0x8003fffff 64bit pref]
+août 31 22:48:19 kernel: pci_bus 0000:06: resource 0 [io  0x6000-0x6fff]
+août 31 22:48:19 kernel: pci_bus 0000:06: resource 1 [mem 0xc8000000-0xc81fffff]
+août 31 22:48:19 kernel: pci_bus 0000:06: resource 2 [mem 0x800600000-0x8007fffff 64bit pref]
+août 31 22:48:19 kernel: ACPI: \_SB_.GSIG: Enabled at IRQ 22
+août 31 22:48:19 kernel: PCI: CLS 0 bytes, default 64
+août 31 22:48:19 kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+août 31 22:48:19 kernel: software IO TLB: mapped [mem 0x0000000073950000-0x0000000077950000] (64MB)
+août 31 22:48:19 kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e36a88731c, max_idle_ns: 440795269020 ns
+août 31 22:48:19 kernel: Trying to unpack rootfs image as initramfs...
+août 31 22:48:19 kernel: Initialise system trusted keyrings
+août 31 22:48:19 kernel: workingset: timestamp_bits=40 max_order=20 bucket_order=0
+août 31 22:48:19 kernel: Key type asymmetric registered
+août 31 22:48:19 kernel: Asymmetric key parser 'x509' registered
+août 31 22:48:19 kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+août 31 22:48:19 kernel: io scheduler mq-deadline registered
+août 31 22:48:19 kernel: io scheduler kyber registered
+août 31 22:48:19 kernel: pcieport 0000:00:02.0: PME: Signaling with IRQ 24
+août 31 22:48:19 kernel: pcieport 0000:00:02.0: AER: enabled with IRQ 24
+août 31 22:48:19 kernel: pcieport 0000:00:02.1: PME: Signaling with IRQ 25
+août 31 22:48:19 kernel: pcieport 0000:00:02.1: AER: enabled with IRQ 25
+août 31 22:48:19 kernel: pcieport 0000:00:02.2: PME: Signaling with IRQ 26
+août 31 22:48:19 kernel: pcieport 0000:00:02.2: AER: enabled with IRQ 26
+août 31 22:48:19 kernel: pcieport 0000:00:02.3: PME: Signaling with IRQ 27
+août 31 22:48:19 kernel: pcieport 0000:00:02.3: AER: enabled with IRQ 27
+août 31 22:48:19 kernel: pcieport 0000:00:02.4: PME: Signaling with IRQ 28
+août 31 22:48:19 kernel: pcieport 0000:00:02.4: AER: enabled with IRQ 28
+août 31 22:48:19 kernel: pcieport 0000:00:02.5: PME: Signaling with IRQ 29
+août 31 22:48:19 kernel: pcieport 0000:00:02.5: AER: enabled with IRQ 29
+août 31 22:48:19 kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+août 31 22:48:19 kernel: 00:00: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+août 31 22:48:19 kernel: Linux agpgart interface v0.103
+août 31 22:48:19 kernel: ACPI: bus type drm_connector registered
+août 31 22:48:19 kernel: usbcore: registered new interface driver usbserial_generic
+août 31 22:48:19 kernel: usbserial: USB Serial support registered for generic
+août 31 22:48:19 kernel: simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+août 31 22:48:19 kernel: [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+août 31 22:48:19 kernel: fbcon: Deferring console take-over
+août 31 22:48:19 kernel: simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+août 31 22:48:19 kernel: pstore: Using crash dump compression: deflate
+août 31 22:48:19 kernel: pstore: Registered efi_pstore as persistent store backend
+août 31 22:48:19 kernel: drop_monitor: Initializing network drop monitor service
+août 31 22:48:19 kernel: NET: Registered PF_INET6 protocol family
+août 31 22:48:19 kernel: Segment Routing with IPv6
+août 31 22:48:19 kernel: In-situ OAM (IOAM) with IPv6
+août 31 22:48:19 kernel: IPI shorthand broadcast: enabled
+août 31 22:48:19 kernel: sched_clock: Marking stable (564001929, 1861131)->(607825808, -41962748)
+août 31 22:48:19 kernel: registered taskstats version 1
+août 31 22:48:19 kernel: Loading compiled-in X.509 certificates
+août 31 22:48:19 kernel: Demotion targets for Node 0: null
+août 31 22:48:19 kernel: Key type .fscrypt registered
+août 31 22:48:19 kernel: Key type fscrypt-provisioning registered
+août 31 22:48:19 kernel: ima: No TPM chip found, activating TPM-bypass!
+août 31 22:48:19 kernel: ima: Allocated hash algorithm: sha1
+août 31 22:48:19 kernel: ima: No architecture policies found
+août 31 22:48:19 kernel: PM:   Magic number: 6:466:857
+août 31 22:48:19 kernel: RAS: Correctable Errors collector initialized.
+août 31 22:48:19 kernel: clk: Disabling unused clocks
+août 31 22:48:19 kernel: PM: genpd: Disabling unused power domains
+août 31 22:48:19 kernel: Freeing initrd memory: 27868K
+août 31 22:48:19 kernel: Freeing unused decrypted memory: 2028K
+août 31 22:48:19 kernel: Freeing unused kernel image (initmem) memory: 3696K
+août 31 22:48:19 kernel: Write protecting the kernel read-only data: 32768k
+août 31 22:48:19 kernel: Freeing unused kernel image (text/rodata gap) memory: 988K
+août 31 22:48:19 kernel: Freeing unused kernel image (rodata/data gap) memory: 544K
+août 31 22:48:19 kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+août 31 22:48:19 kernel: Run /init as init process
+août 31 22:48:19 kernel:   with arguments:
+août 31 22:48:19 kernel:     /init
+août 31 22:48:19 kernel:   with environment:
+août 31 22:48:19 kernel:     HOME=/
+août 31 22:48:19 kernel:     TERM=linux
+août 31 22:48:19 systemd[1]: Inserted module 'autofs4'
+août 31 22:48:19 kernel: fuse: init (API version 7.45)
+août 31 22:48:19 systemd[1]: Successfully made /usr/ read-only.
+août 31 22:48:19 systemd[1]: systemd 260.1 running in system mode (+PAM +AUDIT -SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK -BTF -XKBCOMMON +UTMP +LIBARCHIVE)
+août 31 22:48:19 systemd[1]: Detected virtualization kvm.
+août 31 22:48:19 systemd[1]: Detected architecture x86-64.
+août 31 22:48:19 systemd[1]: Running in initrd.
+août 31 22:48:19 kernel: fbcon: Taking over console
+août 31 22:48:19 systemd[1]: Initializing machine ID from SMBIOS/DMI UUID.
+août 31 22:48:19 systemd[1]: Hostname set to <nixos>.
+août 31 22:48:19 kernel: Console: switching to colour frame buffer device 160x50
+août 31 22:48:19 systemd[1]: Queued start job for default target Initrd Default Target.
+août 31 22:48:19 systemd[1]: Created slice Slice /system/modprobe.
+août 31 22:48:19 systemd[1]: Created slice Slice /system/systemd-cryptsetup.
+août 31 22:48:19 systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+août 31 22:48:19 systemd[1]: Expecting device /dev/disk/by-uuid/d821dad6-c97f-4085-8195-14e6d132df17...
+août 31 22:48:19 systemd[1]: Expecting device /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17...
+août 31 22:48:19 systemd[1]: Reached target Path Units.
+août 31 22:48:19 systemd[1]: Reached target Slice Units.
+août 31 22:48:19 systemd[1]: Reached target Swaps.
+août 31 22:48:19 systemd[1]: Reached target Timer Units.
+août 31 22:48:19 systemd[1]: Listening on D-Bus System Message Bus Socket.
+août 31 22:48:19 systemd[1]: Listening on Journal Socket (/dev/log).
+août 31 22:48:19 systemd[1]: Listening on Journal Sockets.
+août 31 22:48:19 systemd[1]: Listening on udev Control Socket.
+août 31 22:48:19 systemd[1]: Listening on udev Kernel Socket.
+août 31 22:48:19 systemd[1]: Reached target Socket Units.
+août 31 22:48:19 systemd[1]: Starting Create List of Static Device Nodes...
+août 31 22:48:19 systemd[1]: Starting Load Kernel Module configfs...
+août 31 22:48:19 systemd[1]: Starting Journal Service...
+août 31 22:48:19 systemd[1]: Starting Load Kernel Modules...
+août 31 22:48:19 systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+août 31 22:48:19 systemd[1]: Starting Coldplug All udev Devices...
+août 31 22:48:19 systemd[1]: Finished Create List of Static Device Nodes.
+août 31 22:48:19 systemd[1]: modprobe@configfs.service: Deactivated successfully.
+août 31 22:48:19 systemd[1]: Finished Load Kernel Module configfs.
+août 31 22:48:19 systemd[1]: Kernel Configuration File System skipped, unmet condition check ConditionPathExists=/sys/kernel/config
+août 31 22:48:19 systemd-journald[171]: Collecting audit messages is disabled.
+août 31 22:48:19 systemd[1]: Starting Create Static Device Nodes in /dev gracefully...
+août 31 22:48:19 kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+août 31 22:48:19 kernel: device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+août 31 22:48:19 kernel: raid6: avx2x4   gen() 12448 MB/s
+août 31 22:48:19 kernel: raid6: avx2x2   gen() 15730 MB/s
+août 31 22:48:19 systemd-journald[171]: Journal started
+août 31 22:48:19 systemd-journald[171]: Runtime Journal (/run/log/journal/c967a6318c9748f4986cea9d78653e87) is 8M, max 77.8M, 69.8M free.
+août 31 22:48:19 systemd-modules-load[173]: Using 6 probe threads
+août 31 22:48:19 systemd-modules-load[173]: Inserted module 'virtio_rng'
+août 31 22:48:19 systemd-modules-load[173]: Inserted module 'virtio_balloon'
+août 31 22:48:19 systemd-modules-load[173]: Inserted module 'virtio_gpu'
+août 31 22:48:19 systemd-modules-load[173]: Inserted module 'dm_mod'
+août 31 22:48:19 kernel: raid6: avx2x1   gen() 11027 MB/s
+août 31 22:48:19 kernel: raid6: using algorithm avx2x2 gen() 15730 MB/s
+août 31 22:48:19 systemd[1]: Finished Create Static Device Nodes in /dev gracefully.
+août 31 22:48:19 systemd[1]: Started Journal Service.
+août 31 22:48:19 systemd[1]: Starting Create Static Device Nodes in /dev...
+août 31 22:48:19 kernel: raid6: .... xor() 10086 MB/s, rmw enabled
+août 31 22:48:19 kernel: raid6: using avx2x2 recovery algorithm
+août 31 22:48:19 kernel: xor: automatically using best checksumming function   avx       
+août 31 22:48:19 systemd[1]: Finished Create Static Device Nodes in /dev.
+août 31 22:48:19 systemd[1]: Reached target Preparation for Local File Systems.
+août 31 22:48:19 systemd[1]: Reached target Local File Systems.
+août 31 22:48:19 systemd[1]: Starting Create System Files and Directories...
+août 31 22:48:19 systemd[1]: Starting Rule-based Manager for Device Events and Files...
+août 31 22:48:19 systemd[1]: Finished Create System Files and Directories.
+août 31 22:48:19 systemd-udevd[204]: Using default interface naming scheme 'v260'.
+août 31 22:48:19 systemd[1]: Started Rule-based Manager for Device Events and Files.
+août 31 22:48:19 systemd[1]: Finished Coldplug All udev Devices.
+août 31 22:48:19 systemd[1]: Starting Virtual Console Setup...
+août 31 22:48:19 kernel: xhci_hcd 0000:02:00.0: xHCI Host Controller
+août 31 22:48:19 kernel: xhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 1
+août 31 22:48:19 kernel: virtio_blk virtio2: 8/0/0 default/read/poll queues
+août 31 22:48:19 kernel: xhci_hcd 0000:02:00.0: hcc params 0x00087001 hci version 0x100 quirks 0x0000000000000010
+août 31 22:48:19 kernel: xhci_hcd 0000:02:00.0: xHCI Host Controller
+août 31 22:48:19 kernel: xhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 2
+août 31 22:48:19 kernel: xhci_hcd 0000:02:00.0: Host supports USB 3.0 SuperSpeed
+août 31 22:48:19 kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.00
+août 31 22:48:19 kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+août 31 22:48:19 kernel: usb usb1: Product: xHCI Host Controller
+août 31 22:48:19 kernel: usb usb1: Manufacturer: Linux 7.0.10 xhci-hcd
+août 31 22:48:19 kernel: usb usb1: SerialNumber: 0000:02:00.0
+août 31 22:48:19 systemd[1]: systemd-vconsole-setup.service: Deactivated successfully.
+août 31 22:48:19 kernel: hub 1-0:1.0: USB hub found
+août 31 22:48:19 kernel: hub 1-0:1.0: 15 ports detected
+août 31 22:48:19 kernel: i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+août 31 22:48:19 kernel: virtio_blk virtio2: [vda] 41943040 512-byte logical blocks (21.5 GB/20.0 GiB)
+août 31 22:48:19 systemd[1]: Stopped Virtual Console Setup.
+août 31 22:48:19 kernel: Btrfs loaded, zoned=yes, fsverity=yes
+août 31 22:48:19 systemd-modules-load[173]: Inserted module 'btrfs'
+août 31 22:48:19 kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+août 31 22:48:19 kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+août 31 22:48:19 kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+août 31 22:48:19 kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.00
+août 31 22:48:19 kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+août 31 22:48:19 kernel: usb usb2: Product: xHCI Host Controller
+août 31 22:48:19 kernel: usb usb2: Manufacturer: Linux 7.0.10 xhci-hcd
+août 31 22:48:19 kernel: usb usb2: SerialNumber: 0000:02:00.0
+août 31 22:48:19 kernel: hub 2-0:1.0: USB hub found
+août 31 22:48:19 kernel: hub 2-0:1.0: 15 ports detected
+août 31 22:48:19 systemd[1]: Finished Load Kernel Modules.
+août 31 22:48:19 kernel:  vda: vda1 vda2
+août 31 22:48:19 systemd[1]: Starting Apply Kernel Variables...
+août 31 22:48:19 systemd[1]: Starting Virtual Console Setup...
+août 31 22:48:19 kernel: SCSI subsystem initialized
+août 31 22:48:19 kernel: virtio_net virtio0 enp1s0: renamed from eth0
+août 31 22:48:19 kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+août 31 22:48:19 systemd[1]: Finished Apply Kernel Variables.
+août 31 22:48:19 systemd-vconsole-setup[255]: Configuration of first virtual console was skipped, ignoring remaining ones.
+août 31 22:48:19 systemd[1]: Finished Virtual Console Setup.
+août 31 22:48:19 kernel: libata version 3.00 loaded.
+août 31 22:48:19 kernel: ACPI: \_SB_.GSIA: Enabled at IRQ 16
+août 31 22:48:19 kernel: ahci 0000:00:1f.2: AHCI vers 0001.0000, 32 command slots, 1.5 Gbps, SATA mode
+août 31 22:48:19 kernel: ahci 0000:00:1f.2: 6/6 ports implemented (port mask 0x3f)
+août 31 22:48:19 kernel: ahci 0000:00:1f.2: flags: 64bit ncq only 
+août 31 22:48:19 systemd[1]: Found device /dev/disk/by-uuid/d821dad6-c97f-4085-8195-14e6d132df17.
+août 31 22:48:19 kernel: scsi host0: ahci
+août 31 22:48:19 kernel: scsi host1: ahci
+août 31 22:48:19 kernel: scsi host2: ahci
+août 31 22:48:19 kernel: scsi host3: ahci
+août 31 22:48:19 kernel: scsi host4: ahci
+août 31 22:48:19 kernel: scsi host5: ahci
+août 31 22:48:19 kernel: ata1: SATA max UDMA/133 abar m4096@0xc8c46000 port 0xc8c46100 irq 53 lpm-pol 1
+août 31 22:48:19 kernel: ata2: SATA max UDMA/133 abar m4096@0xc8c46000 port 0xc8c46180 irq 53 lpm-pol 1
+août 31 22:48:19 kernel: ata3: SATA max UDMA/133 abar m4096@0xc8c46000 port 0xc8c46200 irq 53 lpm-pol 1
+août 31 22:48:19 kernel: ata4: SATA max UDMA/133 abar m4096@0xc8c46000 port 0xc8c46280 irq 53 lpm-pol 1
+août 31 22:48:19 kernel: ata5: SATA max UDMA/133 abar m4096@0xc8c46000 port 0xc8c46300 irq 53 lpm-pol 1
+août 31 22:48:19 kernel: ata6: SATA max UDMA/133 abar m4096@0xc8c46000 port 0xc8c46380 irq 53 lpm-pol 1
+août 31 22:48:19 systemd[1]: Starting Cryptography Setup for luks-d821dad6-c97f-4085-8195-14e6d132df17...
+août 31 22:48:19 systemd[1]: Starting Dispatch Password Requests to Console...
+août 31 22:48:19 systemd[1]: Started Dispatch Password Requests to Console.
+août 31 22:48:19 systemd-tty-ask-password-agent[289]: Starting password query on /dev/tty1.
+août 31 22:48:19 kernel: ata6: SATA link down (SStatus 0 SControl 300)
+août 31 22:48:19 kernel: ata4: SATA link down (SStatus 0 SControl 300)
+août 31 22:48:19 kernel: ata2: SATA link down (SStatus 0 SControl 300)
+août 31 22:48:19 kernel: ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+août 31 22:48:19 kernel: ata5: SATA link down (SStatus 0 SControl 300)
+août 31 22:48:19 kernel: ata1: SATA link down (SStatus 0 SControl 300)
+août 31 22:48:19 kernel: ata3.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+août 31 22:48:19 kernel: ata3.00: applying bridge limits
+août 31 22:48:19 kernel: ata3.00: configured for UDMA/100
+août 31 22:48:19 kernel: scsi 2:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+août 31 22:48:20 kernel: sr 2:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+août 31 22:48:20 kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+août 31 22:48:20 kernel: sr 2:0:0:0: Attached scsi CD-ROM sr0
+août 31 22:48:39 systemd-tty-ask-password-agent[289]: Password query on /dev/tty1 finished successfully.
+août 31 22:48:39 systemd-cryptsetup[285]: Set cipher aes, mode xts-plain64, key size 512 bits for device /dev/disk/by-uuid/d821dad6-c97f-4085-8195-14e6d132df17.
+août 31 22:48:41 kernel: Key type encrypted registered
+août 31 22:48:41 systemd[1]: Found device /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17.
+août 31 22:48:41 systemd[1]: Finished Cryptography Setup for luks-d821dad6-c97f-4085-8195-14e6d132df17.
+août 31 22:48:41 systemd[1]: Reached target Local Encrypted Volumes.
+août 31 22:48:41 systemd[1]: Reached target Initrd Root Device.
+août 31 22:48:41 systemd[1]: Reached target System Initialization.
+août 31 22:48:41 systemd[1]: Reached target Basic System.
+août 31 22:48:41 systemd[1]: Mounting /sysroot...
+août 31 22:48:41 kernel: BTRFS: device label root devid 1 transid 122 /dev/mapper/luks-d821dad6-c97f-4085-8195-14e6d132df17 (254:0) scanned by mount (476)
+août 31 22:48:41 kernel: BTRFS info (device dm-0): first mount of filesystem 5e49ae39-caaa-46e9-87d8-6323c7f8ecad
+août 31 22:48:41 kernel: BTRFS info (device dm-0): using crc32c checksum algorithm
+août 31 22:48:41 kernel: BTRFS info (device dm-0): enabling free space tree
+août 31 22:48:41 systemd[1]: Mounted /sysroot.
+août 31 22:48:41 systemd[1]: Reached target Initrd Root File System.
+août 31 22:48:41 systemd[1]: sysroot-nix.mount: Directory /sysroot/nix to mount over is not empty, mounting anyway.
+août 31 22:48:41 systemd[1]: Mounting /sysroot/nix...
+août 31 22:48:41 systemd[1]: Mounting /sysroot/run...
+août 31 22:48:41 systemd[1]: Starting Mountpoints Configured in the Real Root...
+août 31 22:48:41 systemd[1]: Mounted /sysroot/nix.
+août 31 22:48:41 systemd[1]: Starting Find NixOS closure...
+août 31 22:48:42 systemd-sysroot-fstab-check[497]: /sysroot should be mounted in the initrd, will request daemon-reload.
+août 31 22:48:42 systemd[1]: Mounted /sysroot/run.
+août 31 22:48:42 systemd[1]: Reload requested from client PID 497 ('systemd-sysroot') (unit initrd-parse-etc.service)...
+août 31 22:48:42 systemd[1]: Reloading...
+août 31 22:48:42 systemd[1]: Reloading finished in 406 ms.
+août 31 22:48:42 systemd-sysroot-fstab-check[497]: Requesting initrd-fs.target/start/replace...
+août 31 22:48:42 systemd[1]: Finished Find NixOS closure.
+août 31 22:48:42 systemd-sysroot-fstab-check[497]: Requesting swap.target/start/replace...
+août 31 22:48:42 systemd[1]: initrd-parse-etc.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Finished Mountpoints Configured in the Real Root.
+août 31 22:48:42 systemd[1]: initrd-parse-etc.service: Triggering OnSuccess= dependencies.
+août 31 22:48:42 systemd[1]: Reached target Initrd File Systems.
+août 31 22:48:42 systemd[1]: Starting Create Volatile Files and Directories in the Real Root...
+août 31 22:48:42 systemd[1]: Finished Create Volatile Files and Directories in the Real Root.
+août 31 22:48:42 systemd[1]: Reached target Initrd Default Target.
+août 31 22:48:42 systemd[1]: Starting Cleaning Up and Shutting Down Daemons...
+août 31 22:48:42 systemd[1]: Stopped target Initrd Default Target.
+août 31 22:48:42 systemd[1]: Stopped target Basic System.
+août 31 22:48:42 systemd[1]: Stopped target Initrd Root Device.
+août 31 22:48:42 systemd[1]: Stopped target Path Units.
+août 31 22:48:42 systemd[1]: Stopped target Slice Units.
+août 31 22:48:42 systemd[1]: Stopped target Socket Units.
+août 31 22:48:42 systemd[1]: Stopped target System Initialization.
+août 31 22:48:42 systemd[1]: Stopped target Local Encrypted Volumes.
+août 31 22:48:42 systemd[1]: Stopped target Swaps.
+août 31 22:48:42 systemd[1]: Stopped target Timer Units.
+août 31 22:48:42 systemd[1]: dbus.socket: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Closed D-Bus System Message Bus Socket.
+août 31 22:48:42 systemd[1]: initrd-find-nixos-closure.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Find NixOS closure.
+août 31 22:48:42 systemd[1]: Stopping Dispatch Password Requests to Console...
+août 31 22:48:42 systemd[1]: systemd-sysctl.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Apply Kernel Variables.
+août 31 22:48:42 systemd[1]: systemd-modules-load.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Load Kernel Modules.
+août 31 22:48:42 systemd[1]: systemd-tmpfiles-setup-sysroot.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Create Volatile Files and Directories in the Real Root.
+août 31 22:48:42 systemd[1]: systemd-tmpfiles-setup.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Create System Files and Directories.
+août 31 22:48:42 systemd[1]: Stopped target Local File Systems.
+août 31 22:48:42 systemd[1]: Stopped target Preparation for Local File Systems.
+août 31 22:48:42 systemd[1]: systemd-udev-trigger.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Coldplug All udev Devices.
+août 31 22:48:42 systemd[1]: Stopping Rule-based Manager for Device Events and Files...
+août 31 22:48:42 systemd[1]: systemd-ask-password-console.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Dispatch Password Requests to Console.
+août 31 22:48:42 systemd[1]: systemd-udevd.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Rule-based Manager for Device Events and Files.
+août 31 22:48:42 systemd[1]: systemd-udevd.service: Consumed 1.318s CPU time over 23.427s wall clock time, 29.7M memory peak.
+août 31 22:48:42 systemd[1]: initrd-cleanup.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Finished Cleaning Up and Shutting Down Daemons.
+août 31 22:48:42 systemd[1]: systemd-ask-password-console.path: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Dispatch Password Requests to Console Directory Watch.
+août 31 22:48:42 systemd[1]: systemd-udevd-control.socket: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Closed udev Control Socket.
+août 31 22:48:42 systemd[1]: Starting Cleanup udev Database...
+août 31 22:48:42 systemd[1]: systemd-tmpfiles-setup-dev.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Create Static Device Nodes in /dev.
+août 31 22:48:42 systemd[1]: systemd-tmpfiles-setup-dev-early.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Create Static Device Nodes in /dev gracefully.
+août 31 22:48:42 systemd[1]: kmod-static-nodes.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Create List of Static Device Nodes.
+août 31 22:48:42 systemd[1]: systemd-vconsole-setup.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Stopped Virtual Console Setup.
+août 31 22:48:42 systemd[1]: initrd-udevadm-cleanup-db.service: Deactivated successfully.
+août 31 22:48:42 systemd[1]: Finished Cleanup udev Database.
+août 31 22:48:42 systemd[1]: Reached target Switch Root.
+août 31 22:48:42 systemd[1]: Starting NixOS Activation...
+août 31 22:48:43 initrd-nixos-activation-start[751]: booting system configuration /nix/store/4ykl7sy2408vscmx7qwrj24ccwf85kpf-nixos-system-nixos-26.05.590.ec942ba042da
+août 31 22:48:43 initrd-nixos-activation-start[751]: running activation script...
+août 31 22:48:43 initrd-nixos-activation-start[775]: setting up /etc...
+août 31 22:48:43 systemd[1]: initrd-nixos-activation.service: Deactivated successfully.
+août 31 22:48:43 systemd[1]: Finished NixOS Activation.
+août 31 22:48:43 systemd[1]: Starting Switch Root...
+août 31 22:48:43 systemd[1]: Switching root.
+août 31 22:48:44 systemd-journald[171]: Journal stopped
+août 31 22:48:45 systemd-journald[171]: Received SIGTERM from PID 1 (systemd).
+août 31 22:48:45 kernel: NET: Registered PF_VSOCK protocol family
+août 31 22:48:45 systemd[1]: systemd 260.1 running in system mode (+PAM +AUDIT -SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK -BTF -XKBCOMMON +UTMP +LIBARCHIVE)
+août 31 22:48:45 systemd[1]: Detected virtualization kvm.
+août 31 22:48:45 systemd[1]: Detected architecture x86-64.
+août 31 22:48:45 systemd[1]: bpf-restrict-fs: LSM BPF program attached
+août 31 22:48:45 systemd[1]: /etc/systemd/system/cups.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/cups/cups.sock → /run/cups/cups.sock; please update the unit file accordingly.
+août 31 22:48:45 systemd[1]: initrd-switch-root.service: Deactivated successfully.
+août 31 22:48:45 systemd[1]: Stopped initrd-switch-root.service.
+août 31 22:48:45 systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+août 31 22:48:45 systemd[1]: Created slice Virtual Machine and Container Slice.
+août 31 22:48:45 systemd[1]: Created slice Slice /system/systemd-fsck.
+août 31 22:48:45 systemd[1]: Created slice User and Session Slice.
+août 31 22:48:45 systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+août 31 22:48:45 systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+août 31 22:48:45 systemd[1]: Expecting device /dev/disk/by-uuid/5AE2-A86B...
+août 31 22:48:45 systemd[1]: Reached target Local Encrypted Volumes.
+août 31 22:48:45 systemd[1]: Reached target Login Prompts.
+août 31 22:48:45 systemd[1]: Stopped target initrd-fs.target.
+août 31 22:48:45 systemd[1]: Stopped target initrd-root-fs.target.
+août 31 22:48:45 systemd[1]: Stopped target initrd-switch-root.target.
+août 31 22:48:45 systemd[1]: Reached target Virtual Machines and Containers.
+août 31 22:48:45 systemd[1]: Reached target Path Units.
+août 31 22:48:45 systemd[1]: Reached target Remote File Systems.
+août 31 22:48:45 systemd[1]: Reached target Slice Units.
+août 31 22:48:45 systemd[1]: Reached target Swaps.
+août 31 22:48:45 systemd[1]: Listening on Process Core Dump Socket.
+août 31 22:48:45 systemd[1]: Listening on Credential Encryption/Decryption.
+août 31 22:48:45 systemd[1]: Starting Journal Log Access Socket...
+août 31 22:48:45 systemd[1]: Listening on Journal Audit Socket.
+août 31 22:48:45 systemd[1]: Listening on Userspace Out-Of-Memory (OOM) Killer Socket.
+août 31 22:48:45 systemd[1]: Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+août 31 22:48:45 systemd[1]: Listening on udev Control Socket.
+août 31 22:48:45 systemd[1]: Mounting Huge Pages File System...
+août 31 22:48:45 systemd[1]: Mounting POSIX Message Queue File System...
+août 31 22:48:45 systemd[1]: Mounting Kernel Debug File System...
+août 31 22:48:45 systemd[1]: Mounting Kernel Trace File System...
+août 31 22:48:45 systemd[1]: Starting Create List of Static Device Nodes...
+août 31 22:48:45 systemd[1]: Starting Load Kernel Module configfs...
+août 31 22:48:45 systemd[1]: Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+août 31 22:48:45 systemd[1]: Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+août 31 22:48:45 systemd[1]: Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+août 31 22:48:45 systemd[1]: Mounting FUSE Control File System...
+août 31 22:48:45 systemd[1]: systemd-cryptsetup@luks\x2dd821dad6\x2dc97f\x2d4085\x2d8195\x2d14e6d132df17.service: Deactivated successfully.
+août 31 22:48:45 systemd[1]: Stopped systemd-cryptsetup@luks\x2dd821dad6\x2dc97f\x2d4085\x2d8195\x2d14e6d132df17.service.
+août 31 22:48:45 systemd[1]: systemd-cryptsetup@luks\x2dd821dad6\x2dc97f\x2d4085\x2d8195\x2d14e6d132df17.service: Consumed 5.850s CPU time over 26.049s wall clock time, 420.7M memory peak.
+août 31 22:48:45 systemd[1]: Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+août 31 22:48:45 systemd[1]: Starting Journal Service...
+août 31 22:48:45 systemd[1]: Starting Load Kernel Modules...
+août 31 22:48:45 systemd[1]: Starting Userspace Out-Of-Memory (OOM) Killer...
+août 31 22:48:45 systemd[1]: Starting Remount Root and Kernel File Systems...
+août 31 22:48:45 systemd[1]: Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+août 31 22:48:45 systemd[1]: Starting Coldplug All udev Devices...
+août 31 22:48:45 systemd[1]: Listening on Journal Log Access Socket.
+août 31 22:48:45 systemd[1]: Mounted Huge Pages File System.
+août 31 22:48:45 systemd[1]: Mounted POSIX Message Queue File System.
+août 31 22:48:45 systemd[1]: Mounted Kernel Debug File System.
+août 31 22:48:45 systemd[1]: Mounted Kernel Trace File System.
+août 31 22:48:45 systemd[1]: Finished Create List of Static Device Nodes.
+août 31 22:48:45 systemd[1]: modprobe@configfs.service: Deactivated successfully.
+août 31 22:48:45 systemd[1]: Finished Load Kernel Module configfs.
+août 31 22:48:45 systemd[1]: Mounted FUSE Control File System.
+août 31 22:48:45 systemd-journald[980]: Collecting audit messages is enabled.
+août 31 22:48:45 systemd[1]: Mounting Kernel Configuration File System...
+août 31 22:48:45 systemd-journald[980]: Journal started
+août 31 22:48:45 systemd-journald[980]: Runtime Journal (/run/log/journal/c967a6318c9748f4986cea9d78653e87) is 8M, max 97.3M, 89.3M free.
+août 31 22:48:45 systemd[1]: Queued start job for default target Graphical Interface.
+août 31 22:48:45 systemd[1]: systemd-journald.service: Deactivated successfully.
+août 31 22:48:45 systemd-modules-load[981]: Using 4 probe threads
+août 31 22:48:45 systemd-modules-load[981]: Module 'ctr' is built in
+août 31 22:48:45 systemd[1]: Starting Create Static Device Nodes in /dev gracefully...
+août 31 22:48:45 systemd[1]: Started Journal Service.
+août 31 22:48:45 systemd-modules-load[981]: Inserted module 'loop'
+août 31 22:48:45 kernel: loop: module loaded
+août 31 22:48:45 systemd[1]: Finished Remount Root and Kernel File Systems.
+août 31 22:48:45 systemd[1]: Mounted Kernel Configuration File System.
+août 31 22:48:45 systemd[1]: Starting Flush Journal to Persistent Storage...
+août 31 22:48:45 systemd[1]: Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+août 31 22:48:45 systemd[1]: Starting Load/Save OS Random Seed...
+août 31 22:48:45 systemd[1]: Starting Network Time Synchronization...
+août 31 22:48:45 systemd[1]: TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+août 31 22:48:45 systemd[1]: Finished Create Static Device Nodes in /dev gracefully.
+août 31 22:48:45 systemd[1]: Starting Create Static Device Nodes in /dev...
+août 31 22:48:45 systemd-oomd[982]: No swap; memory pressure usage will be degraded
+août 31 22:48:45 systemd[1]: Started Userspace Out-Of-Memory (OOM) Killer.
+août 31 22:48:45 systemd-journald[980]: Time spent on flushing to /var/log/journal/c967a6318c9748f4986cea9d78653e87 is 18.584ms for 845 entries.
+août 31 22:48:45 systemd-journald[980]: System Journal (/var/log/journal/c967a6318c9748f4986cea9d78653e87) is 45.4M, max 1.8G, 1.8G free.
+août 31 22:48:45 systemd-journald[980]: Received client request to flush runtime journal.
+août 31 22:48:45 systemd[1]: Finished Create Static Device Nodes in /dev.
+août 31 22:48:45 systemd[1]: Reached target Preparation for Local File Systems.
+août 31 22:48:45 systemd[1]: Starting Rule-based Manager for Device Events and Files...
+août 31 22:48:45 systemd[1]: Finished Load/Save OS Random Seed.
+août 31 22:48:45 systemd[1]: First Boot Complete skipped, unmet condition check ConditionFirstBoot=yes
+août 31 22:48:45 systemd-timesyncd[1003]: Disabling NSCD because DNSSEC validation is turned off
+août 31 22:48:46 systemd[1]: Finished Flush Journal to Persistent Storage.
+août 31 22:48:46 systemd[1]: Started Network Time Synchronization.
+août 31 22:48:46 systemd-udevd[1011]: Using default interface naming scheme 'v260'.
+août 31 22:48:46 systemd[1]: Finished Coldplug All udev Devices.
+août 31 22:48:46 kernel: kvm_amd: TSC scaling supported
+août 31 22:48:46 kernel: kvm_amd: Nested Virtualization enabled
+août 31 22:48:46 kernel: kvm_amd: Nested Paging enabled
+août 31 22:48:46 kernel: kvm_amd: LBR virtualization supported
+août 31 22:48:46 kernel: kvm_amd: Virtual VMLOAD VMSAVE supported
+août 31 22:48:46 kernel: kvm_amd: Virtual GIF supported
+août 31 22:48:46 systemd-modules-load[981]: Inserted module 'kvm_amd'
+août 31 22:48:46 systemd[1]: Finished Load Kernel Modules.
+août 31 22:48:46 systemd[1]: Starting Firewall...
+août 31 22:48:46 systemd[1]: Starting Apply Kernel Variables...
+août 31 22:48:46 systemd[1]: Started Rule-based Manager for Device Events and Files.
+août 31 22:48:46 systemd[1]: Finished Apply Kernel Variables.
+août 31 22:48:46 systemd[1]: Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+août 31 22:48:46 kernel: input: Power Button as /devices/platform/LNXPWRBN:00/input/input2
+août 31 22:48:46 kernel: ACPI: button: Power Button [PWRF]
+août 31 22:48:46 kernel: rtc_cmos 00:03: RTC can wake from S4
+août 31 22:48:46 kernel: lpc_ich 0000:00:1f.0: I/O space for GPIO uninitialized
+sept. 01 00:48:47 kernel: ACPI: \_SB_.GSIF: Enabled at IRQ 21
+sept. 01 00:48:47 kernel: rtc_cmos 00:03: registered as rtc0
+sept. 01 00:48:47 kernel: rtc_cmos 00:03: setting system clock to 2026-08-31T22:48:47 UTC (1788216527)
+sept. 01 00:48:47 kernel: rtc_cmos 00:03: alarms up to one day, y3k, 242 bytes nvram
+sept. 01 00:48:47 systemd[1]: Condition check resulted in /dev/disk/by-uuid/5AE2-A86B being skipped.
+sept. 01 00:48:47 kernel: Console: switching to colour dummy device 80x25
+sept. 01 00:48:47 kernel: qxl 0000:00:01.0: vgaarb: deactivate vga console
+sept. 01 00:48:47 kernel: [drm] Device Version 0.0
+sept. 01 00:48:47 systemd[1]: Starting File System Check on /dev/disk/by-uuid/5AE2-A86B...
+sept. 01 00:48:47 kernel: [drm] Compression level 0 log level 0
+sept. 01 00:48:47 kernel: [drm] 12286 io pages at offset 0x1000000
+sept. 01 00:48:47 kernel: [drm] 16777216 byte draw area at offset 0x0
+sept. 01 00:48:47 kernel: [drm] RAM header offset: 0x3ffe000
+sept. 01 00:48:47 kernel: [drm] qxl: 16M of VRAM memory size
+sept. 01 00:48:47 kernel: [drm] qxl: 63M of IO pages memory ready (VRAM domain)
+sept. 01 00:48:47 kernel: [drm] qxl: 64M of Surface memory size
+sept. 01 00:48:47 kernel: [drm] slot 0 (main): base 0xc4000000, size 0x03ffe000
+sept. 01 00:48:47 kernel: [drm] slot 1 (surfaces): base 0xc0000000, size 0x04000000
+sept. 01 00:48:47 kernel: input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+sept. 01 00:48:47 kernel: i801_smbus 0000:00:1f.3: Enabling SMBus device
+sept. 01 00:48:47 kernel: i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+sept. 01 00:48:47 kernel: i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD
+sept. 01 00:48:47 kernel: [drm] Initialized qxl 0.1.0 for 0000:00:01.0 on minor 1
+sept. 01 00:48:47 kernel: input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+sept. 01 00:48:47 kernel: fbcon: qxldrmfb (fb0) is primary device
+sept. 01 00:48:47 kernel: EDAC MC: Ver: 3.0.0
+sept. 01 00:48:47 kernel: Console: switching to colour frame buffer device 128x48
+sept. 01 00:48:47 kernel: qxl 0000:00:01.0: [drm] fb0: qxldrmfb frame buffer device
+sept. 01 00:48:47 systemd[1]: Starting Virtual Console Setup...
+sept. 01 00:48:47 systemd[1]: home.mount: Directory /home to mount over is not empty, mounting anyway.
+sept. 01 00:48:47 systemd[1]: Mounting /home...
+sept. 01 00:48:47 kernel: iTCO_wdt iTCO_wdt.0.auto: Found a ICH9 TCO device (Version=2, TCOBASE=0x0660)
+sept. 01 00:48:47 kernel: iTCO_wdt iTCO_wdt.0.auto: initialized. heartbeat=30 sec (nowayout=0)
+sept. 01 00:48:47 systemd-fsck[1135]: fsck.fat 4.2 (2021-01-31)
+sept. 01 00:48:47 systemd-fsck[1135]: /dev/vda1: 17 files, 10438/261627 clusters
+sept. 01 00:48:47 kernel: mousedev: PS/2 mouse device common for all mice
+sept. 01 00:48:47 systemd[1]: Mounting /run/wrappers...
+sept. 01 00:48:47 systemd[1]: Finished File System Check on /dev/disk/by-uuid/5AE2-A86B.
+sept. 01 00:48:47 systemd-vconsole-setup[1134]: Configuration of first virtual console was skipped, ignoring remaining ones.
+sept. 01 00:48:47 systemd[1]: Finished Virtual Console Setup.
+sept. 01 00:48:47 systemd[1]: Mounted /home.
+sept. 01 00:48:47 systemd[1]: Mounted /run/wrappers.
+sept. 01 00:48:47 systemd[1]: Starting Create SUID/SGID Wrappers...
+sept. 01 00:48:47 kernel: snd_hda_codec_generic hdaudioC0D0: autoconfig for Generic: line_outs=1 (0x3/0x0/0x0/0x0/0x0) type:line
+sept. 01 00:48:47 kernel: snd_hda_codec_generic hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+sept. 01 00:48:47 kernel: snd_hda_codec_generic hdaudioC0D0:    hp_outs=0 (0x0/0x0/0x0/0x0/0x0)
+sept. 01 00:48:47 kernel: snd_hda_codec_generic hdaudioC0D0:    mono: mono_out=0x0
+sept. 01 00:48:47 kernel: snd_hda_codec_generic hdaudioC0D0:    inputs:
+sept. 01 00:48:47 kernel: snd_hda_codec_generic hdaudioC0D0:      Line=0x5
+sept. 01 00:48:47 systemd[1]: Reached target Sound Card.
+sept. 01 00:48:47 systemd[1]: suid-sgid-wrappers.service: Deactivated successfully.
+sept. 01 00:48:47 systemd[1]: Finished Create SUID/SGID Wrappers.
+sept. 01 00:48:47 systemd[1]: suid-sgid-wrappers.service: Consumed 202ms CPU time over 239ms wall clock time, 5.1M memory peak, 1.8M read from disk.
+sept. 01 00:48:48 systemd[1]: Finished Firewall.
+sept. 01 00:48:48 systemd[1]: Mounting /boot...
+sept. 01 00:48:48 systemd[1]: Mounted /boot.
+sept. 01 00:48:48 systemd[1]: Reached target Local File Systems.
+sept. 01 00:48:48 systemd[1]: Listening on Boot Loader Control Service Socket.
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd[1]: Starting Update Boot Loader Random Seed...
+sept. 01 00:48:48 systemd[1]: Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+sept. 01 00:48:48 systemd[1]: Starting Create System Files and Directories...
+sept. 01 00:48:48 bootctl[1263]: Random seed file /boot/loader/random-seed successfully refreshed (32 bytes).
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd[1]: Finished Update Boot Loader Random Seed.
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd[1]: Finished Create System Files and Directories.
+sept. 01 00:48:48 systemd[1]: Rebuild Journal Catalog skipped, unmet condition check ConditionNeedsUpdate=/var
+sept. 01 00:48:48 systemd[1]: Update is Completed skipped, no trigger condition checks were met.
+sept. 01 00:48:48 systemd[1]: Starting Record System Boot/Shutdown in UTMP...
+sept. 01 00:48:48 systemd[1]: Finished Record System Boot/Shutdown in UTMP.
+sept. 01 00:48:48 systemd[1]: Reached target System Initialization.
+sept. 01 00:48:48 systemd[1]: Started Discard unused filesystem blocks once a week.
+sept. 01 00:48:48 systemd[1]: Started logrotate.timer.
+sept. 01 00:48:48 systemd[1]: Started Daily Cleanup of Temporary Directories.
+sept. 01 00:48:48 systemd[1]: Reached target Timer Units.
+sept. 01 00:48:48 systemd[1]: Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+sept. 01 00:48:48 systemd[1]: Listening on CUPS Scheduler.
+sept. 01 00:48:48 systemd[1]: Listening on D-Bus System Message Bus Socket.
+sept. 01 00:48:48 systemd[1]: Listening on Nix Daemon Socket.
+sept. 01 00:48:48 systemd[1]: Listening on Authorization Manager Agent Helper.
+sept. 01 00:48:48 systemd[1]: Listening on Hostname Service Socket.
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:48 systemd[1]: Reached target Socket Units.
+sept. 01 00:48:48 systemd[1]: Starting D-Bus System Message Bus...
+sept. 01 00:48:48 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 dbus-broker-launch[1272]: Looking up NSS group entry for 'netdev'...
+sept. 01 00:48:49 dbus-broker-launch[1272]: NSS returned no entry for 'netdev'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Invalid group-name in /nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/system.d/avahi-dbus.conf +24: group="netdev"
+sept. 01 00:48:49 dbus-broker-launch[1272]: Invalid group-name in /nix/store/xaiy7h3sjjbqzvgl89pk922x9zjb4vvk-avahi-0.8/share/dbus-1/system.d/avahi-dbus.conf +24: group="netdev"
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.ColorManager' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/system-services/org.freedesktop.ColorManager.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.opensuse.CupsPkHelper.Mechanism' in service file '/nix/store/lnnhxikmsxghmfd6x709303dvxa7ldxy-cups-pk-helper-0.2.6/share/dbus-1/system-services/org.opensuse.CupsPkHelper.Mechanism.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'fi.w1.wpa_supplicant1' in service file '/nix/store/ccg38hd04sbr8hz024v0mllhj6dbqw65-wpa_supplicant-2.11/share/dbus-1/system-services/fi.w1.wpa_supplicant1.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.nm_dispatcher' in service file '/nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0/share/dbus-1/system-services/org.freedesktop.nm_dispatcher.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.nm_priv_helper' in service file '/nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0/share/dbus-1/system-services/org.freedesktop.nm_priv_helper.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.ModemManager1' in service file '/nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/share/dbus-1/system-services/org.freedesktop.ModemManager1.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.UPower' in service file '/nix/store/9prf5gdap3i1q9i3rwcb6p155nhw5gkx-upower-1.91.1/share/dbus-1/system-services/org.freedesktop.UPower.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.UDisks2' in service file '/nix/store/n78i97lcyazhsvsxr6bjfgk0p0fmm7bs-udisks-2.11.1/share/dbus-1/system-services/org.freedesktop.UDisks2.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'net.hadess.PowerProfiles' in service file '/nix/store/n7dybpimr865c0qqhd4pc7wplzxsr6h9-power-profiles-daemon-0.30/share/dbus-1/system-services/net.hadess.PowerProfiles.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.UPower.PowerProfiles' in service file '/nix/store/n7dybpimr865c0qqhd4pc7wplzxsr6h9-power-profiles-daemon-0.30/share/dbus-1/system-services/org.freedesktop.UPower.PowerProfiles.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.bluez.mesh' in service file '/nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86/share/dbus-1/system-services/org.bluez.mesh.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.bluez' in service file '/nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86/share/dbus-1/system-services/org.bluez.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.gnome.RemoteDesktop.Configuration' in service file '/nix/store/my51331wm356f01sb9lyl8qqafsqf1kq-gnome-remote-desktop-50.1/share/dbus-1/system-services/org.gnome.RemoteDesktop.Configuration.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.GeoClue2' in service file '/nix/store/zsywvnb16ip21c860v3cbdhydlgz2g21-geoclue-2.7.2/share/dbus-1/system-services/org.freedesktop.GeoClue2.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.Accounts' in service file '/nix/store/zksdpqr2m1pz10k07kq12i6z09fckypy-accountsservice-23.13.9/share/dbus-1/system-services/org.freedesktop.Accounts.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.RealtimeKit1' in service file '/nix/store/7jipg2a4abd56vc62jqgl638p19vv93g-rtkit-0.14/share/dbus-1/system-services/org.freedesktop.RealtimeKit1.service'
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ignoring duplicate name 'org.freedesktop.PolicyKit1' in service file '/nix/store/jfvg9jnx0l478s1356flk8dybndsm3ym-polkit-127/share/dbus-1/system-services/org.freedesktop.PolicyKit1.service'
+sept. 01 00:48:49 systemd[1]: Started D-Bus System Message Bus.
+sept. 01 00:48:49 dbus-broker-launch[1272]: Ready
+sept. 01 00:48:49 systemd[1]: Reached target Basic System.
+sept. 01 00:48:49 systemd[1]: Starting Network Manager Script Dispatcher Service...
+sept. 01 00:48:49 systemd[1]: Starting Avahi mDNS/DNS-SD Stack...
+sept. 01 00:48:49 systemd[1]: Import lastlog data into lastlog2 database skipped, unmet condition check ConditionPathExists=!/var/lib/lastlog/lastlog2.db
+sept. 01 00:48:49 systemd[1]: Starting Logrotate configuration check...
+sept. 01 00:48:49 systemd[1]: Starting Name Service Cache Daemon (nsncd)...
+sept. 01 00:48:49 systemd[1]: Starting Post-Boot Actions...
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd[1]: Started Reset console on configuration changes.
+sept. 01 00:48:49 systemd[1]: Starting resolvconf update...
+sept. 01 00:48:49 systemd[1]: Starting Virtual Machine and Container Registration Service...
+sept. 01 00:48:49 systemd[1]: Starting WPA Supplicant instance...
+sept. 01 00:48:49 systemd[1]: Finished Post-Boot Actions.
+sept. 01 00:48:49 logrotate[1276]: warning: logrotate in debug mode does nothing except printing debug messages!  Consider using verbose mode (-v) instead if this is not what you want.
+sept. 01 00:48:49 logrotate[1276]: reading config file /nix/store/2m6xdfihzl850c9y208c37d9cli7rihj-logrotate.conf
+sept. 01 00:48:49 logrotate[1276]: note: 'monthly' overrides previously specified 'weekly'
+sept. 01 00:48:49 logrotate[1276]: Reading state from file: /var/lib/logrotate.status
+sept. 01 00:48:49 logrotate[1276]: state file /var/lib/logrotate.status does not exist
+sept. 01 00:48:49 logrotate[1276]: Allocating hash table for state file, size 64 entries
+sept. 01 00:48:49 logrotate[1276]: Handling 2 logs
+sept. 01 00:48:49 logrotate[1276]: rotating pattern: "/var/log/btmp" monthly empty log files are not rotated, only log files >= 1048576 bytes are rotated, (1 rotations), old logs are removed
+sept. 01 00:48:49 logrotate[1276]: considering log /var/log/btmp
+sept. 01 00:48:49 logrotate[1276]: Creating new state
+sept. 01 00:48:49 logrotate[1276]:   Now: 2026-09-01 00:48
+sept. 01 00:48:49 logrotate[1276]:   Last rotated at 2026-09-01 00:00
+sept. 01 00:48:49 logrotate[1276]:   log does not need rotating (log has already been rotated)
+sept. 01 00:48:49 logrotate[1276]: rotating pattern: "/var/log/wtmp" monthly empty log files are not rotated, only log files >= 1048576 bytes are rotated, (1 rotations), old logs are removed
+sept. 01 00:48:49 logrotate[1276]: considering log /var/log/wtmp
+sept. 01 00:48:49 logrotate[1276]: Creating new state
+sept. 01 00:48:49 logrotate[1276]:   Now: 2026-09-01 00:48
+sept. 01 00:48:49 logrotate[1276]:   Last rotated at 2026-09-01 00:00
+sept. 01 00:48:49 logrotate[1276]:   log does not need rotating (log has already been rotated)
+sept. 01 00:48:49 systemd[1]: Started Name Service Cache Daemon (nsncd).
+sept. 01 00:48:49 nsncd[1277]: Aug 31 22:48:49.267 INFO started, config: Config { ignored_request_types: {}, worker_count: 8, handoff_timeout: 10s }, path: "/var/run/nscd/socket"
+sept. 01 00:48:49 systemd[1]: Finished Logrotate configuration check.
+sept. 01 00:48:49 systemd[1]: Reached target Host and Network Name Lookups.
+sept. 01 00:48:49 systemd[1]: Reached target User and Group Name Lookups.
+sept. 01 00:48:49 systemd[1]: Starting Accounts Service...
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd[1]: Starting User Login Management...
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd[1]: Started Virtual Machine and Container Registration Service.
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 avahi-daemon[1275]: Found user 'avahi' (UID 999) and group 'avahi' (GID 999).
+sept. 01 00:48:49 avahi-daemon[1275]: Successfully dropped root privileges.
+sept. 01 00:48:49 avahi-daemon[1275]: avahi-daemon 0.8 starting up.
+sept. 01 00:48:49 avahi-daemon[1275]: WARNING: No NSS support for mDNS detected, consider installing nss-mdns!
+sept. 01 00:48:49 systemd[1]: Started Avahi mDNS/DNS-SD Stack.
+sept. 01 00:48:49 avahi-daemon[1275]: No service file found in /etc/avahi/services.
+sept. 01 00:48:49 avahi-daemon[1275]: Joining mDNS multicast group on interface lo.IPv6 with address ::1.
+sept. 01 00:48:49 avahi-daemon[1275]: New relevant interface lo.IPv6 for mDNS.
+sept. 01 00:48:49 avahi-daemon[1275]: Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+sept. 01 00:48:49 avahi-daemon[1275]: New relevant interface lo.IPv4 for mDNS.
+sept. 01 00:48:49 avahi-daemon[1275]: Network interface enumeration completed.
+sept. 01 00:48:49 avahi-daemon[1275]: Server startup complete. Host name is nixos.local. Local service cookie is 3025760534.
+sept. 01 00:48:49 systemd[1]: Started CUPS Remote Printer Discovery.
+sept. 01 00:48:49 systemd[1]: Started Network Manager Script Dispatcher Service.
+sept. 01 00:48:49 systemd[1]: Stopped target Host and Network Name Lookups.
+sept. 01 00:48:49 systemd[1]: Stopping Host and Network Name Lookups...
+sept. 01 00:48:49 systemd[1]: Stopped target User and Group Name Lookups.
+sept. 01 00:48:49 systemd[1]: Stopping User and Group Name Lookups...
+sept. 01 00:48:49 systemd[1]: Stopping Name Service Cache Daemon (nsncd)...
+sept. 01 00:48:49 systemd[1]: nscd.service: Deactivated successfully.
+sept. 01 00:48:49 avahi-daemon[1275]: Got SIGHUP, reloading.
+sept. 01 00:48:49 avahi-daemon[1275]: No service file found in /etc/avahi/services.
+sept. 01 00:48:49 systemd[1]: Stopped Name Service Cache Daemon (nsncd).
+sept. 01 00:48:49 systemd[1]: nscd.service: Consumed 50ms CPU time over 152ms wall clock time, 4.4M memory peak, 1.5M read from disk.
+sept. 01 00:48:49 systemd[1]: Starting Name Service Cache Daemon (nsncd)...
+sept. 01 00:48:49 systemd-logind[1307]: New seat seat0.
+sept. 01 00:48:49 systemd-logind[1307]: Watching system buttons on /dev/input/event1 (Power Button)
+sept. 01 00:48:49 systemd-logind[1307]: Watching system buttons on /dev/input/event0 (AT Translated Set 2 keyboard)
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd[1]: Started WPA Supplicant instance.
+sept. 01 00:48:49 systemd[1]: Started User Login Management.
+sept. 01 00:48:49 systemd[1]: Starting linger-users.service...
+sept. 01 00:48:49 systemd[1]: Finished resolvconf update.
+sept. 01 00:48:49 systemd[1]: Reached target Preparation for Network.
+sept. 01 00:48:49 nsncd[1360]: Aug 31 22:48:49.418 INFO started, config: Config { ignored_request_types: {}, worker_count: 8, handoff_timeout: 10s }, path: "/var/run/nscd/socket"
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd[1]: Starting Network Manager...
+sept. 01 00:48:49 systemd[1]: Starting Extra networking commands....
+sept. 01 00:48:49 systemd[1]: Started Name Service Cache Daemon (nsncd).
+sept. 01 00:48:49 systemd[1]: Reached target Host and Network Name Lookups.
+sept. 01 00:48:49 systemd[1]: Reached target User and Group Name Lookups.
+sept. 01 00:48:49 systemd[1]: linger-users.service: Deactivated successfully.
+sept. 01 00:48:49 systemd[1]: Finished linger-users.service.
+sept. 01 00:48:49 systemd[1]: Starting Authorization Manager...
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd[1]: Finished Extra networking commands..
+sept. 01 00:48:49 wpa_supplicant[1366]: Successfully initialized wpa_supplicant
+sept. 01 00:48:49 systemd[1]: Starting Hostname Service...
+sept. 01 00:48:49 polkitd[1394]: Started polkitd version 127
+sept. 01 00:48:49 systemd[1]: Started Authorization Manager.
+sept. 01 00:48:49 accounts-daemon[1301]: started daemon version 23.13.9
+sept. 01 00:48:49 systemd[1]: Started Accounts Service.
+sept. 01 00:48:49 systemd[1]: Created slice CUPS Slice.
+sept. 01 00:48:49 systemd[1]: Started Hostname Service.
+sept. 01 00:48:49 systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+sept. 01 00:48:49 systemd[1]: Started Network Manager.
+sept. 01 00:48:49 systemd[1]: Reached target Network.
+sept. 01 00:48:49 systemd[1]: Starting CUPS Scheduler...
+sept. 01 00:48:49 systemd[1]: Starting Permit User Sessions...
+sept. 01 00:48:49 kernel: NET: Registered PF_PACKET protocol family
+sept. 01 00:48:49 avahi-daemon[1275]: Joining mDNS multicast group on interface enp1s0.IPv6 with address fe80::851a:5257:49de:4b6b.
+sept. 01 00:48:49 avahi-daemon[1275]: New relevant interface enp1s0.IPv6 for mDNS.
+sept. 01 00:48:49 systemd[1]: Finished Permit User Sessions.
+sept. 01 00:48:49 systemd[1]: Reached target Multi-User System.
+sept. 01 00:48:49 systemd[1]: Starting Display Manager...
+sept. 01 00:48:49 systemd[1]: Started Display Manager.
+sept. 01 00:48:49 systemd[1]: Reached target Graphical Interface.
+sept. 01 00:48:49 cupsd[1486]: No limit for Validate-Job defined in policy default and no suitable template found.
+sept. 01 00:48:49 cupsd[1486]: No limit for Cancel-Jobs defined in policy default - using Pause-Printer's policy.
+sept. 01 00:48:49 cupsd[1486]: No limit for Cancel-My-Jobs defined in policy default - using Send-Document's policy.
+sept. 01 00:48:49 cupsd[1486]: No limit for Close-Job defined in policy default - using Send-Document's policy.
+sept. 01 00:48:49 cupsd[1486]: No limit for CUPS-Get-Document defined in policy default - using Send-Document's policy.
+sept. 01 00:48:49 cupsd[1486]: No JobPrivateAccess defined in policy default - using defaults.
+sept. 01 00:48:49 cupsd[1486]: No JobPrivateValues defined in policy default - using defaults.
+sept. 01 00:48:49 cupsd[1486]: No SubscriptionPrivateAccess defined in policy default - using defaults.
+sept. 01 00:48:49 cupsd[1486]: No SubscriptionPrivateValues defined in policy default - using defaults.
+sept. 01 00:48:49 cupsd[1486]: Remote access is disabled.
+sept. 01 00:48:49 cupsd[1486]: Loaded configuration file "/etc/cups/cupsd.conf"
+sept. 01 00:48:49 cupsd[1486]: Configured for up to 100 clients.
+sept. 01 00:48:49 cupsd[1486]: Allowing up to 100 client connections per host.
+sept. 01 00:48:49 cupsd[1486]: Using policy "default" as the default.
+sept. 01 00:48:49 cupsd[1486]: Full reload is required.
+sept. 01 00:48:49 cupsd[1486]: Loaded MIME database from "/nix/store/2v9xrz2kn35pa6kpz2ricdqjxwvn8jjy-cups-progs/share/cups/mime" and "/etc/cups": 41 types, 31 filters...
+sept. 01 00:48:49 cupsd[1486]: Loading job cache file "/var/cache/cups/job.cache"...
+sept. 01 00:48:49 cupsd[1486]: Full reload complete.
+sept. 01 00:48:49 cupsd[1486]: Cleaning out old files in "/var/cache/cups".
+sept. 01 00:48:49 cupsd[1486]: Listening to [v1.::1]:631 on fd 8...
+sept. 01 00:48:49 cupsd[1486]: Listening to 127.0.0.1:631 on fd 4...
+sept. 01 00:48:49 cupsd[1486]: Listening to /run/cups/cups.sock on fd 3...
+sept. 01 00:48:49 cupsd[1486]: Resuming new connection processing...
+sept. 01 00:48:49 systemd[1]: Started CUPS Scheduler.
+sept. 01 00:48:49 cupsd[1486]: REQUEST localhost - - "POST / HTTP/1.1" 200 349 Create-Printer-Subscriptions successful-ok
+sept. 01 00:48:49 systemd[1]: Startup finished in 865ms (kernel) + 26.063s (initrd) + 4.319s (userspace) = 31.248s.
+sept. 01 00:48:49 avahi-daemon[1275]: Joining mDNS multicast group on interface enp1s0.IPv4 with address 10.0.2.15.
+sept. 01 00:48:49 avahi-daemon[1275]: New relevant interface enp1s0.IPv4 for mDNS.
+sept. 01 00:48:49 cupsd[1486]: REQUEST localhost - - "POST / HTTP/1.1" 200 176 Create-Printer-Subscriptions successful-ok
+sept. 01 00:48:49 dbus-broker-launch[1272]: Activation request for 'org.freedesktop.resolve1' failed: The systemd unit 'dbus-org.freedesktop.resolve1.service' could not be found.
+sept. 01 00:48:49 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:49 systemd-logind[1307]: New session 'c1' of user 'gdm-greeter' with class 'greeter' and type 'wayland'.
+sept. 01 00:48:49 systemd[1]: Created slice Slice /user/60578.
+sept. 01 00:48:49 systemd[1]: Starting User Runtime Directory /run/user/60578...
+sept. 01 00:48:49 systemd[1]: Stopped target Host and Network Name Lookups.
+sept. 01 00:48:49 systemd[1]: Stopping Host and Network Name Lookups...
+sept. 01 00:48:49 systemd[1]: Stopped target User and Group Name Lookups.
+sept. 01 00:48:49 systemd[1]: Stopping User and Group Name Lookups...
+sept. 01 00:48:49 systemd[1]: Stopping Name Service Cache Daemon (nsncd)...
+sept. 01 00:48:49 systemd[1]: nscd.service: Deactivated successfully.
+sept. 01 00:48:49 systemd[1]: Stopped Name Service Cache Daemon (nsncd).
+sept. 01 00:48:49 avahi-daemon[1275]: Got SIGHUP, reloading.
+sept. 01 00:48:49 avahi-daemon[1275]: No service file found in /etc/avahi/services.
+sept. 01 00:48:49 systemd[1]: Starting Name Service Cache Daemon (nsncd)...
+sept. 01 00:48:49 systemd[1]: Finished User Runtime Directory /run/user/60578.
+sept. 01 00:48:50 systemd[1]: Starting User Manager for UID 60578...
+sept. 01 00:48:50 nsncd[1549]: Aug 31 22:48:50.016 INFO started, config: Config { ignored_request_types: {}, worker_count: 8, handoff_timeout: 10s }, path: "/var/run/nscd/socket"
+sept. 01 00:48:50 systemd[1]: Started Name Service Cache Daemon (nsncd).
+sept. 01 00:48:50 systemd[1]: Reached target Host and Network Name Lookups.
+sept. 01 00:48:50 systemd[1]: Reached target User and Group Name Lookups.
+sept. 01 00:48:50 (systemd)[1555]: pam_unix(systemd-user:session): session opened for user gdm-greeter(uid=60578) by (uid=0)
+sept. 01 00:48:50 systemd-logind[1307]: New session '1' of user 'gdm-greeter' with class 'manager-early' and type 'unspecified'.
+sept. 01 00:48:50 systemd[1555]: Queued start job for default target Main User Target.
+sept. 01 00:48:50 systemd[1555]: Created slice User Application Slice.
+sept. 01 00:48:50 systemd[1555]: Created slice User Core Session Slice.
+sept. 01 00:48:50 systemd[1555]: Started Daily Cleanup of User's Temporary Directories.
+sept. 01 00:48:50 systemd[1555]: Reached target Paths.
+sept. 01 00:48:50 systemd[1555]: Reached target Timers.
+sept. 01 00:48:50 systemd[1555]: Starting D-Bus User Message Bus Socket...
+sept. 01 00:48:50 systemd[1555]: Starting GCR ssh-agent wrapper...
+sept. 01 00:48:50 systemd[1555]: Listening on PipeWire PulseAudio.
+sept. 01 00:48:50 systemd[1555]: Listening on PipeWire Multimedia System Sockets.
+sept. 01 00:48:50 systemd[1555]: Listening on Speech Dispatcher Socket.
+sept. 01 00:48:50 systemd[1555]: Starting Create User Files and Directories...
+sept. 01 00:48:50 systemd[1555]: Listening on GCR ssh-agent wrapper.
+sept. 01 00:48:50 systemd[1555]: Finished Create User Files and Directories.
+sept. 01 00:48:50 systemd[1555]: Listening on D-Bus User Message Bus Socket.
+sept. 01 00:48:50 systemd[1555]: Reached target Sockets.
+sept. 01 00:48:50 systemd[1555]: Starting D-Bus User Message Bus...
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.ColorHelper' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.ColorHelper.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.Settings.GlobalShortcutsProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.GlobalShortcutsProvider.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.Settings.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.SearchProvider.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.Settings' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.bluez.obex' in service file '/nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86/share/dbus-1/services/org.bluez.obex.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.AfcVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.Daemon' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.Daemon.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.GPhoto2VolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.GoaVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.MTPVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.Metadata' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.Metadata.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gtk.vfs.UDisks2VolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.portal.Tracker' in service file '/nix/store/l3j5fql7983mqzjf08h9fw75p2k8vqmj-tinysparql-3.11.1/share/dbus-1/services/org.freedesktop.portal.Tracker.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.NautilusPreviewer' in service file '/nix/store/vmfn41hlznwzrqzm89zyjigw9k845bcj-sushi-50.rc.1/share/dbus-1/services/org.gnome.NautilusPreviewer.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.Rygel1' in service file '/nix/store/4byw913gmjv6iihxn29823hs5w6ydidv-rygel-45.1/share/dbus-1/services/org.gnome.Rygel1.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Control' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.Control.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Writeback' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.Writeback.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.LocalSearch3' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files.Control' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.Control.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.Tracker3.Writeback' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Writeback.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.Identity' in service file '/nix/store/b54l5dxbjsq94gh9gkqkd4bnjxlsx3vm-gnome-online-accounts-3.58.1/share/dbus-1/services/org.gnome.Identity.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.OnlineAccounts' in service file '/nix/store/b54l5dxbjsq94gh9gkqkd4bnjxlsx3vm-gnome-online-accounts-3.58.1/share/dbus-1/services/org.gnome.OnlineAccounts.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.BrowserConnector' in service file '/nix/store/3v9qjzcvp1r887kjnnn5kyc2i91win0b-gnome-browser-connector-42.1/share/dbus-1/services/org.gnome.BrowserConnector.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.evolution.dataserver.AddressBook10' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook10.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Policy to allow eavesdropping in /etc/dbus-1/session.conf +27: Eavesdropping is deprecated and ignored
+sept. 01 00:48:50 dbus-broker-launch[1586]: Policy to allow eavesdropping in /etc/dbus-1/session.conf +29: Eavesdropping is deprecated and ignored
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Calendar8' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Sources5' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.evolution.dataserver.UserPrompter0' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.a11y.Bus' in service file '/nix/store/s3knizlhir254y56l6kdd85dq8pm8xb1-at-spi2-core-2.60.1/share/dbus-1/services/org.a11y.Bus.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'com.intel.dleyna-renderer' in service file '/nix/store/inwj258p73cc83sbnfpscgrk79xyzfrg-dleyna-0.8.3/share/dbus-1/services/com.intel.dleyna-renderer.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'com.intel.dleyna-server' in service file '/nix/store/inwj258p73cc83sbnfpscgrk79xyzfrg-dleyna-0.8.3/share/dbus-1/services/com.intel.dleyna-server.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.seahorse.Application' in service file '/nix/store/06qhqkr36d2q62bp2033djxc9xs4jykp-seahorse-47.0.1/share/dbus-1/services/org.gnome.seahorse.Application.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.DiskUtility' in service file '/nix/store/hr3jxb6skihcjpzqc0jf15f8ldfblfg8-gnome-disk-utility-46.1/share/dbus-1/services/org.gnome.DiskUtility.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'ca.desrt.dconf' in service file '/nix/store/f0xjii7970sxgfz2qca66v530j99xwgv-dconf-0.49.0/share/dbus-1/services/ca.desrt.dconf.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.impl.portal.PermissionStore' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.portal.Desktop' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.portal.Desktop.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.portal.Documents' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.portal.Documents.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gnome' in service file '/nix/store/ff7ylgalc5j72bqr3nnpf4x0znfa4a7h-xdg-desktop-portal-gnome-50.0/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gnome.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gtk' in service file '/nix/store/c4qd650jyr7vgnwnspjg12nr30xyjhs0-xdg-desktop-portal-gtk-1.15.3/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gtk.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:48:50 systemd[1555]: Started D-Bus User Message Bus.
+sept. 01 00:48:50 dbus-broker-launch[1586]: Ready
+sept. 01 00:48:50 systemd[1555]: Reached target Basic System.
+sept. 01 00:48:50 systemd[1]: Started User Manager for UID 60578.
+sept. 01 00:48:50 systemd[1555]: Started GCR ssh-agent wrapper.
+sept. 01 00:48:50 systemd[1]: Started Session c1 of User gdm-greeter.
+sept. 01 00:48:50 systemd[1555]: Starting Run user-specific NixOS activation...
+sept. 01 00:48:50 systemd[1555]: Finished Run user-specific NixOS activation.
+sept. 01 00:48:50 systemd[1555]: Reached target Main User Target.
+sept. 01 00:48:50 systemd[1555]: Startup finished in 453ms.
+sept. 01 00:48:50 .gnome-session-[1596]: Starting GNOME session target: gnome-session@gnome-login.target
+sept. 01 00:48:50 systemd[1555]: Created slice Slice /app/gnome-session-manager.
+sept. 01 00:48:50 systemd[1555]: GNOME Initial Setup Copy Worker skipped, unmet condition check ConditionEnvironment=XDG_SESSION_CLASS=user
+sept. 01 00:48:50 systemd[1555]: Reached target Session services which should run early before the graphical session is brought up.
+sept. 01 00:48:50 systemd[1555]: Starting Monitor Session leader for GNOME Session...
+sept. 01 00:48:50 systemd[1555]: Started Monitor Session leader for GNOME Session.
+sept. 01 00:48:50 systemd[1555]: Reached target Tasks to be run before GNOME Session starts.
+sept. 01 00:48:50 systemd[1555]: Starting GNOME Session Manager (session: gnome-login)...
+sept. 01 00:48:50 systemd[1555]: Started GNOME Session Manager (session: gnome-login).
+sept. 01 00:48:50 systemd[1555]: Reached target GNOME Session Manager is ready.
+sept. 01 00:48:50 systemd[1555]: Starting GNOME Shell...
+sept. 01 00:48:50 avahi-daemon[1275]: Leaving mDNS multicast group on interface enp1s0.IPv6 with address fe80::851a:5257:49de:4b6b.
+sept. 01 00:48:50 avahi-daemon[1275]: Joining mDNS multicast group on interface enp1s0.IPv6 with address fec0::2c91:41c2:714a:23af.
+sept. 01 00:48:50 cupsd[1486]: Subscription 6 has expired...
+sept. 01 00:48:51 gnome-shell[1615]: Running GNOME Shell (using mutter 50.1) as a Wayland display server
+sept. 01 00:48:51 gnome-shell[1615]: pci id for fd 12: 1b36:0100, driver (null)
+sept. 01 00:48:51 gnome-shell[1615]: pci id for fd 13: 1b36:0100, driver (null)
+sept. 01 00:48:51 gnome-shell[1615]: pci id for fd 14: 1b36:0100, driver (null)
+sept. 01 00:48:51 systemd[1]: Starting RealtimeKit Scheduling Policy Service...
+sept. 01 00:48:51 gnome-shell[1615]: pci id for fd 13: 1b36:0100, driver (null)
+sept. 01 00:48:51 gnome-shell[1615]: pci id for fd 14: 1b36:0100, driver (null)
+sept. 01 00:48:51 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:51 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:51 systemd[1]: Started RealtimeKit Scheduling Policy Service.
+sept. 01 00:48:51 rtkit-daemon[1631]: Handling system-suspend using logind.
+sept. 01 00:48:51 rtkit-daemon[1631]: Successfully made thread 1630 of process 1615 owned by '60578' high priority at nice level -15.
+sept. 01 00:48:51 gnome-shell[1615]: Thread 'KMS thread' will be using high priority scheduling
+sept. 01 00:48:51 gnome-shell[1615]: Added device '/dev/dri/card1' (qxl) using atomic mode setting.
+sept. 01 00:48:51 gnome-shell[1615]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Not hardware accelerated
+sept. 01 00:48:51 gnome-shell[1615]: Created gbm renderer for '/dev/dri/card1'
+sept. 01 00:48:51 gnome-shell[1615]: Boot VGA GPU /dev/dri/card1 selected as primary
+sept. 01 00:48:52 systemd[1555]: Starting Accessibility services bus...
+sept. 01 00:48:52 systemd[1555]: Started Accessibility services bus.
+sept. 01 00:48:52 dbus-broker-launch[1659]: Ready
+sept. 01 00:48:52 gnome-shell[1615]: Using public X11 display :1024, (using unix:/tmp/.X11-unix/X1025 for managed services)
+sept. 01 00:48:52 gnome-shell[1615]: Using Wayland display name 'wayland-0'
+sept. 01 00:48:52 systemd[1555]: Created slice Slice /app/dbus-:1.10-org.a11y.atspi.Registry.
+sept. 01 00:48:52 systemd[1]: Starting Manage, Install and Generate Color Profiles...
+sept. 01 00:48:52 systemd[1555]: Started dbus-:1.10-org.a11y.atspi.Registry@0.service.
+sept. 01 00:48:52 at-spi2-registryd[1661]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+sept. 01 00:48:52 colord[1662]: failed to get edid data: EDID length is too small
+sept. 01 00:48:52 systemd[1]: Started Manage, Install and Generate Color Profiles.
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+sept. 01 00:48:53 systemd[1]: Starting Locale Service...
+sept. 01 00:48:53 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:53 systemd[1555]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.Screencast.
+sept. 01 00:48:53 systemd[1555]: Started dbus-:1.1-org.gnome.Shell.Screencast@0.service.
+sept. 01 00:48:53 systemd[1]: Started Locale Service.
+sept. 01 00:48:53 systemd[1555]: Starting sandboxed app permission store...
+sept. 01 00:48:53 systemd[1555]: Started sandboxed app permission store.
+sept. 01 00:48:53 systemd[1]: Starting Daemon for power management...
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Registering session with GDM
+sept. 01 00:48:53 systemd[1555]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.Notifications.
+sept. 01 00:48:53 systemd[1555]: Started dbus-:1.1-org.gnome.Shell.Notifications@0.service.
+sept. 01 00:48:53 systemd[1555]: Started GNOME Shell.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME Session is initialized.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME basic session services.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME Session (session: gnome-login).
+sept. 01 00:48:53 systemd[1555]: Starting Signal initialization done to GNOME Session Manager...
+sept. 01 00:48:53 systemd[1555]: Starting IBus Daemon for GNOME...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME accessibility service...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME keyboard configuration service...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME keyboard shortcuts service...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME power management service...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME RFKill support service...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME file sharing service...
+sept. 01 00:48:53 gnome-session-service[1609]: Entering running state
+sept. 01 00:48:53 systemd[1555]: Starting GNOME smartcard service...
+sept. 01 00:48:53 systemd[1555]: Starting GNOME USB protection service...
+sept. 01 00:48:53 systemd[1555]: Finished Signal initialization done to GNOME Session Manager.
+sept. 01 00:48:53 systemd[1555]: Started GNOME RFKill support service.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME RFKill support target.
+sept. 01 00:48:53 systemd[1555]: Started GNOME accessibility service.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME accessibility target.
+sept. 01 00:48:53 systemd[1555]: Started GNOME keyboard configuration service.
+sept. 01 00:48:53 systemd[1555]: Started GNOME file sharing service.
+sept. 01 00:48:53 systemd[1555]: Started GNOME USB protection service.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME keyboard configuration target.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME file sharing target.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME USB protection target.
+sept. 01 00:48:53 kernel: rfkill: input handler disabled
+sept. 01 00:48:53 systemd[1555]: Started GNOME smartcard service.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME smartcard target.
+sept. 01 00:48:53 systemd[1]: Started Daemon for power management.
+sept. 01 00:48:53 systemd[1555]: Created slice Slice /app/dbus-:1.1-org.gnome.ScreenSaver.
+sept. 01 00:48:53 systemd[1555]: Started dbus-:1.1-org.gnome.ScreenSaver@0.service.
+sept. 01 00:48:53 systemd[1555]: Started GNOME power management service.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME power management target.
+sept. 01 00:48:53 systemd[1555]: Started IBus Daemon for GNOME.
+sept. 01 00:48:53 systemd[1555]: Created slice Slice /app/dbus-:1.1-org.freedesktop.portal.IBus.
+sept. 01 00:48:53 systemd[1555]: Started dbus-:1.1-org.freedesktop.portal.IBus@0.service.
+sept. 01 00:48:53 systemd[1555]: Started GNOME keyboard shortcuts service.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME keyboard shortcuts target.
+sept. 01 00:48:53 systemd[1555]: Reached target GNOME Session.
+sept. 01 00:48:53 systemd[1555]: Reached target Current graphical user session.
+sept. 01 00:48:53 systemd[1555]: GNOME Initial Setup skipped, unmet condition check ConditionEnvironment=XDG_SESSION_CLASS=user
+sept. 01 00:48:53 systemd[1555]: Started PipeWire Multimedia Service.
+sept. 01 00:48:53 systemd[1555]: Started PipeWire PulseAudio.
+sept. 01 00:48:53 systemd[1555]: Started Multimedia Service Session Manager.
+sept. 01 00:48:53 pipewire-pulse[1809]: mod.protocol-pulse: setsockopt(SO_PRIORITY) failed: Mauvais descripteur de fichier
+sept. 01 00:48:53 pipewire-pulse[1809]: mod.protocol-pulse: client 0x63fbd7975030: no peercred: Mauvais descripteur de fichier
+sept. 01 00:48:53 rtkit-daemon[1631]: Successfully made thread 1807 of process 1807 owned by '60578' high priority at nice level -11.
+sept. 01 00:48:53 rtkit-daemon[1631]: Successfully made thread 1809 of process 1809 owned by '60578' high priority at nice level -11.
+sept. 01 00:48:53 rtkit-daemon[1631]: Successfully made thread 1841 of process 1807 owned by '60578' RT at priority 20.
+sept. 01 00:48:53 rtkit-daemon[1631]: Successfully made thread 1842 of process 1809 owned by '60578' RT at priority 20.
+sept. 01 00:48:53 rtkit-daemon[1631]: Successfully made thread 1812 of process 1812 owned by '60578' high priority at nice level -11.
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Registering display with GDM
+sept. 01 00:48:53 gsd-usb-protection[1726]: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Will monitor session c1
+sept. 01 00:48:53 gsd-media-keys[1715]: Failed to grab accelerator for keybinding settings:playback-repeat
+sept. 01 00:48:53 gsd-media-keys[1715]: Failed to grab accelerator for keybinding settings:hibernate
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+sept. 01 00:48:53 .gnome-shell-wr[1615]: Will monitor session c1
+sept. 01 00:48:53 systemd[1]: Starting Power Profiles daemon...
+sept. 01 00:48:53 systemd-timesyncd[1003]: Network configuration changed, trying to establish connection.
+sept. 01 00:48:53 systemd[1555]: Starting Portal service...
+sept. 01 00:48:53 systemd[1]: Started Power Profiles daemon.
+sept. 01 00:48:53 systemd[1555]: Starting flatpak document portal service...
+sept. 01 00:48:54 systemd[1555]: Started flatpak document portal service.
+sept. 01 00:48:54 systemd[1555]: Starting Portal service (GNOME implementation)...
+sept. 01 00:48:54 gnome-shell[1854]: Xwayland glamor: GBM Wayland interfaces not available
+sept. 01 00:48:54 gnome-shell[1854]: Failed to initialize glamor, falling back to sw
+sept. 01 00:48:54 gnome-shell[1896]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+sept. 01 00:48:54 gnome-shell[1896]: > Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+sept. 01 00:48:54 gnome-shell[1896]: >                   Using F23, ignoring XF86TouchpadOff
+sept. 01 00:48:54 gnome-shell[1896]: > Warning:          Symbol map for key <FK23> redefined
+sept. 01 00:48:54 gnome-shell[1896]: >                   Using last definition for conflicting fields
+sept. 01 00:48:54 gnome-shell[1896]: > Warning:          Symbol map for key <FK24> redefined
+sept. 01 00:48:54 gnome-shell[1896]: >                   Using last definition for conflicting fields
+sept. 01 00:48:54 gnome-shell[1896]: Errors from xkbcomp are not fatal to the X server
+sept. 01 00:48:54 pipewire-pulse[1809]: mod.protocol-pulse: setsockopt(SO_PRIORITY) failed: Mauvais descripteur de fichier
+sept. 01 00:48:54 pipewire-pulse[1809]: mod.protocol-pulse: client 0x63fbd798e7d0: no peercred: Mauvais descripteur de fichier
+sept. 01 00:48:54 systemd[1]: Starting Network Manager Wait Online...
+sept. 01 00:48:54 systemd[1]: Finished Network Manager Wait Online.
+sept. 01 00:48:54 systemd[1]: Reached target Network is Online.
+sept. 01 00:48:54 systemd[1]: Starting Location Lookup Service...
+sept. 01 00:48:54 systemd[1555]: Reached target GNOME session X11 services.
+sept. 01 00:48:54 systemd[1555]: Starting GNOME XSettings service...
+sept. 01 00:48:54 gnome-shell[1928]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+sept. 01 00:48:54 gnome-shell[1928]: > Warning:          Unsupported maximum keycode 709, clipping.
+sept. 01 00:48:54 gnome-shell[1928]: >                   X11 cannot support keycodes above 255.
+sept. 01 00:48:54 gnome-shell[1928]: > Warning:          Virtual modifier Hyper multiply defined
+sept. 01 00:48:54 gnome-shell[1928]: >                   Using 0, ignoring 0
+sept. 01 00:48:54 gnome-shell[1928]: > Warning:          Virtual modifier ScrollLock multiply defined
+sept. 01 00:48:54 gnome-shell[1928]: >                   Using 0, ignoring 0
+sept. 01 00:48:54 gnome-shell[1928]: Errors from xkbcomp are not fatal to the X server
+sept. 01 00:48:54 rtkit-daemon[1631]: Successfully made thread 1932 of process 1812 owned by '60578' RT at priority 20.
+sept. 01 00:48:54 systemd[1555]: Started GNOME XSettings service.
+sept. 01 00:48:54 systemd[1555]: Reached target GNOME session X11 services.
+sept. 01 00:48:54 systemd[1555]: GNOME XSettings target is inactive.
+sept. 01 00:48:54 gsd-xsettings[1929]: Failed to get current UI scaling factor: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Destination does not exist
+sept. 01 00:48:54 systemd[1]: Started Location Lookup Service.
+sept. 01 00:48:54 systemd[1]: Starting Modem Manager...
+sept. 01 00:48:54 ModemManager[1955]: <msg> ModemManager (version 1.24.2) starting in system bus...
+sept. 01 00:48:54 systemd[1555]: Created slice Slice /app/dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider.
+sept. 01 00:48:54 systemd[1555]: Started dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service.
+sept. 01 00:48:54 wireplumber[1812]: spa.bluez5: BlueZ system service is not available
+sept. 01 00:48:54 gsd-media-keys[1715]: Unable to get default sink
+sept. 01 00:48:54 kernel: NET: Registered PF_QIPCRTR protocol family
+sept. 01 00:48:54 systemd[1]: Started Modem Manager.
+sept. 01 00:48:54 gnome-shell[1963]: libEGL warning: DRI3 error: Could not get DRI3 device
+sept. 01 00:48:54 gnome-shell[1963]: libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+sept. 01 00:48:54 wireplumber[1812]: [0:00:36.260618431] [1812]  INFO IPAManager ipa_manager.cpp:147 libcamera is not installed. Adding '/nix/store/src/ipa' to the IPA search path
+sept. 01 00:48:54 wireplumber[1812]: [0:00:36.263642792] [1812]  INFO Camera camera_manager.cpp:340 libcamera v0.7.0
+sept. 01 00:48:55 systemd[1555]: Started Portal service (GNOME implementation).
+sept. 01 00:48:55 systemd[1555]: Starting Portal service (GTK/GNOME implementation)...
+sept. 01 00:48:55 systemd[1555]: Started Portal service (GTK/GNOME implementation).
+sept. 01 00:48:55 systemd[1555]: Created slice Slice /app/dbus-:1.1-org.freedesktop.secrets.
+sept. 01 00:48:55 systemd[1555]: Started dbus-:1.1-org.freedesktop.secrets@0.service.
+sept. 01 00:48:55 gnome-keyring-daemon[2020]: couldn't access control socket: /run/user/60578/keyring/control: Aucun fichier ou dossier de ce nom
+sept. 01 00:48:55 gnome-keyring-daemon[2020]: couldn't access control socket: /run/user/60578/keyring/control: Aucun fichier ou dossier de ce nom
+sept. 01 00:48:55 gnome-keyring-daemon[2020]: discover_other_daemon: 0
+sept. 01 00:48:55 systemd[1555]: Started Portal service.
+sept. 01 00:48:58 ModemManager[1955]: <msg> [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:02.0/0000:01:00.0': not supported by any plugin
+sept. 01 00:48:59 gdm-password][2029]: gkr-pam: unable to locate daemon control file
+sept. 01 00:48:59 gdm-password][2029]: gkr-pam: stashed password to try later in open session
+sept. 01 00:49:00 gdm-password][2029]: pam_unix(gdm-password:session): session opened for user benoit(uid=1000) by (uid=0)
+sept. 01 00:49:00 systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+sept. 01 00:49:00 systemd[1]: NetworkManager-dispatcher.service: Consumed 117ms CPU time over 10.881s wall clock time, 20.6M memory peak, 16.7M read from disk.
+sept. 01 00:49:00 systemd-logind[1307]: New session '2' of user 'benoit' with class 'user' and type 'wayland'.
+sept. 01 00:49:00 systemd[1]: Created slice Slice /user/1000.
+sept. 01 00:49:00 systemd[1]: Starting User Runtime Directory /run/user/1000...
+sept. 01 00:49:00 systemd[1]: Finished User Runtime Directory /run/user/1000.
+sept. 01 00:49:00 systemd[1]: Starting User Manager for UID 1000...
+sept. 01 00:49:00 (systemd)[2043]: pam_unix(systemd-user:session): session opened for user benoit(uid=1000) by (uid=0)
+sept. 01 00:49:00 systemd-logind[1307]: New session '3' of user 'benoit' with class 'manager' and type 'unspecified'.
+sept. 01 00:49:00 systemd[2043]: Queued start job for default target Main User Target.
+sept. 01 00:49:00 systemd[2043]: Created slice User Application Slice.
+sept. 01 00:49:00 systemd[2043]: Created slice User Core Session Slice.
+sept. 01 00:49:00 systemd[2043]: Started Daily Cleanup of User's Temporary Directories.
+sept. 01 00:49:00 systemd[2043]: Reached target Paths.
+sept. 01 00:49:00 systemd[2043]: Reached target Timers.
+sept. 01 00:49:00 dbus-broker-launch[2054]: Policy to allow eavesdropping in /etc/dbus-1/session.conf +27: Eavesdropping is deprecated and ignored
+sept. 01 00:49:00 dbus-broker-launch[2054]: Policy to allow eavesdropping in /etc/dbus-1/session.conf +29: Eavesdropping is deprecated and ignored
+sept. 01 00:49:00 systemd[2043]: Starting D-Bus User Message Bus Socket...
+sept. 01 00:49:00 systemd[2043]: Starting GCR ssh-agent wrapper...
+sept. 01 00:49:00 systemd[2043]: Listening on PipeWire PulseAudio.
+sept. 01 00:49:00 systemd[2043]: Listening on PipeWire Multimedia System Sockets.
+sept. 01 00:49:00 systemd[2043]: Listening on Speech Dispatcher Socket.
+sept. 01 00:49:00 systemd[2043]: Starting Create User Files and Directories...
+sept. 01 00:49:00 systemd[2043]: Listening on D-Bus User Message Bus Socket.
+sept. 01 00:49:00 systemd[2043]: Starting D-Bus User Message Bus...
+sept. 01 00:49:00 systemd[2043]: Finished Create User Files and Directories.
+sept. 01 00:49:00 systemd[2043]: Listening on GCR ssh-agent wrapper.
+sept. 01 00:49:00 systemd[2043]: Reached target Sockets.
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.ColorHelper' in service file '/nix/store/5gndkw05j5j478i74asyfwwkmr4lppxk-colord-1.4.8/share/dbus-1/services/org.freedesktop.ColorHelper.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'ca.desrt.dconf' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/ca.desrt.dconf.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-renderer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/com.intel.dleyna-renderer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-server' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/com.intel.dleyna-server.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.a11y.Bus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.a11y.Bus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.bluez.obex' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.bluez.obex.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.ColorHelper' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.ColorHelper.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.FileManager1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.FileManager1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Control' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.LocalSearch3.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Writeback' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.LocalSearch3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.LocalSearch3.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files.Control' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Writeback' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.Tracker3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.PermissionStore' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gnome' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gnome.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gtk' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gtk.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.import1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.import1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.machine1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.machine1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portable1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portable1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Desktop' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.Desktop.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Documents' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.Documents.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Tracker' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.portal.Tracker.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.systemd1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.freedesktop.systemd1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.BrowserConnector' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.BrowserConnector.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Calculator.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Calculator.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Calendar' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Calendar.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Characters' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Characters.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Connections' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Connections.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Console' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Console.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Contacts.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Contacts.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Contacts' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Contacts.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Decibels' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Decibels.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.DiskUtility' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.DiskUtility.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Epiphany.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Epiphany.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Epiphany.WebAppProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Epiphany.WebAppProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Extensions' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Extensions.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Identity' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Identity.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Logs' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Logs.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Loupe' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Loupe.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Maps' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Maps.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Music' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Music.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Nautilus' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Nautilus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.NautilusPreviewer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.NautilusPreviewer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.OnlineAccounts' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.OnlineAccounts.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Rygel1' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Rygel1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.ScreenSaver' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.ScreenSaver.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Settings.GlobalShortcutsProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.GlobalShortcutsProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Settings.SearchProvider' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.SearchProvider.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Settings' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Settings.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.CalendarServer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.CalendarServer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.Extensions' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.Extensions.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.HotplugSniffer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.HotplugSniffer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.Notifications' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.Notifications.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.PortalHelper' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.PortalHelper.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Shell.Screencast' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Shell.Screencast.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Showtime' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Showtime.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Snapshot' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Snapshot.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.SystemMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.SystemMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.TextEditor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.TextEditor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Tour' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Tour.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Weather.BackgroundService' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Weather.BackgroundService.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Weather' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.Weather.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.baobab' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.baobab.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.clocks' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.clocks.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.AddressBook10' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook10.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Calendar8' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Sources5' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.UserPrompter0' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.font-viewer' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.font-viewer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.seahorse.Application' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gnome.seahorse.Application.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.AfcVolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Daemon' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.Daemon.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GPhoto2VolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GoaVolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.MTPVolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Metadata' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.Metadata.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.UDisks2VolumeMonitor' in service file '/nix/store/ajp6h03b3553rwkw74jvqm7962989vvr-system-path/share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.bluez.obex' in service file '/nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86/share/dbus-1/services/org.bluez.obex.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.AfcVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.AfcVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Daemon' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.Daemon.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GPhoto2VolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.GPhoto2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.GoaVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.GoaVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.MTPVolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.MTPVolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.Metadata' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.Metadata.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gtk.vfs.UDisks2VolumeMonitor' in service file '/nix/store/cwdc26jh42czb5la5fs7fh9v6lsi77d3-gvfs-1.60.0/share/dbus-1/services/org.gtk.vfs.UDisks2VolumeMonitor.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Tracker' in service file '/nix/store/l3j5fql7983mqzjf08h9fw75p2k8vqmj-tinysparql-3.11.1/share/dbus-1/services/org.freedesktop.portal.Tracker.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.NautilusPreviewer' in service file '/nix/store/vmfn41hlznwzrqzm89zyjigw9k845bcj-sushi-50.rc.1/share/dbus-1/services/org.gnome.NautilusPreviewer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Rygel1' in service file '/nix/store/4byw913gmjv6iihxn29823hs5w6ydidv-rygel-45.1/share/dbus-1/services/org.gnome.Rygel1.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Control' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3.Writeback' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.LocalSearch3' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.LocalSearch3.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files.Control' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.Control.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Miner.Files' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Miner.Files.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.Tracker3.Writeback' in service file '/nix/store/jyvpkc1w0j4vsxrh47nsmmm4j25c7n9h-localsearch-3.11.1/share/dbus-1/services/org.freedesktop.Tracker3.Writeback.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.Identity' in service file '/nix/store/b54l5dxbjsq94gh9gkqkd4bnjxlsx3vm-gnome-online-accounts-3.58.1/share/dbus-1/services/org.gnome.Identity.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.OnlineAccounts' in service file '/nix/store/b54l5dxbjsq94gh9gkqkd4bnjxlsx3vm-gnome-online-accounts-3.58.1/share/dbus-1/services/org.gnome.OnlineAccounts.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.BrowserConnector' in service file '/nix/store/3v9qjzcvp1r887kjnnn5kyc2i91win0b-gnome-browser-connector-42.1/share/dbus-1/services/org.gnome.BrowserConnector.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.AddressBook10' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook10.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Calendar8' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.Sources5' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.evolution.dataserver.UserPrompter0' in service file '/nix/store/g0si61pm80g04962580hdzl79562b2v3-evolution-with-plugins/share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.a11y.Bus' in service file '/nix/store/s3knizlhir254y56l6kdd85dq8pm8xb1-at-spi2-core-2.60.1/share/dbus-1/services/org.a11y.Bus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-renderer' in service file '/nix/store/inwj258p73cc83sbnfpscgrk79xyzfrg-dleyna-0.8.3/share/dbus-1/services/com.intel.dleyna-renderer.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'com.intel.dleyna-server' in service file '/nix/store/inwj258p73cc83sbnfpscgrk79xyzfrg-dleyna-0.8.3/share/dbus-1/services/com.intel.dleyna-server.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.seahorse.Application' in service file '/nix/store/06qhqkr36d2q62bp2033djxc9xs4jykp-seahorse-47.0.1/share/dbus-1/services/org.gnome.seahorse.Application.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.DiskUtility' in service file '/nix/store/hr3jxb6skihcjpzqc0jf15f8ldfblfg8-gnome-disk-utility-46.1/share/dbus-1/services/org.gnome.DiskUtility.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'ca.desrt.dconf' in service file '/nix/store/f0xjii7970sxgfz2qca66v530j99xwgv-dconf-0.49.0/share/dbus-1/services/ca.desrt.dconf.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.PermissionStore' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Desktop' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.portal.Desktop.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.Documents' in service file '/nix/store/vzkn1a38x6fg66qkn29pbfbvrlznjmjn-xdg-desktop-portal-1.20.4/share/dbus-1/services/org.freedesktop.portal.Documents.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gnome' in service file '/nix/store/ff7ylgalc5j72bqr3nnpf4x0znfa4a7h-xdg-desktop-portal-gnome-50.0/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gnome.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.desktop.gtk' in service file '/nix/store/c4qd650jyr7vgnwnspjg12nr30xyjhs0-xdg-desktop-portal-gtk-1.15.3/share/dbus-1/services/org.freedesktop.impl.portal.desktop.gtk.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.impl.portal.Secret' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.secrets' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.freedesktop.secrets.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.gnome.keyring' in service file '/nix/store/dah18kvxqm2yqjwh9fpq3axs09mhi12x-gnome-keyring-50.0/share/dbus-1/services/org.gnome.keyring.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.IBus.service'
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ignoring duplicate name 'org.freedesktop.portal.IBus' in service file '/nix/store/q9mh4qy3984np3ggrjzvmq9mmv4pb2yl-ibus-with-plugins-1.5.33/share/dbus-1/services/org.freedesktop.portal.IBus.service'
+sept. 01 00:49:00 systemd[2043]: Started D-Bus User Message Bus.
+sept. 01 00:49:00 dbus-broker-launch[2054]: Ready
+sept. 01 00:49:00 systemd[2043]: Reached target Basic System.
+sept. 01 00:49:00 systemd[1]: Started User Manager for UID 1000.
+sept. 01 00:49:00 systemd[2043]: Started GCR ssh-agent wrapper.
+sept. 01 00:49:00 systemd[1]: Started Session 2 of User benoit.
+sept. 01 00:49:00 systemd[2043]: Starting Run user-specific NixOS activation...
+sept. 01 00:49:00 gdm-password][2029]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+sept. 01 00:49:00 systemd[2043]: Finished Run user-specific NixOS activation.
+sept. 01 00:49:00 systemd[2043]: Reached target Main User Target.
+sept. 01 00:49:00 systemd[2043]: Startup finished in 317ms.
+sept. 01 00:49:00 kernel: rfkill: input handler enabled
+sept. 01 00:49:00 systemd[1555]: Reached target Sound Card.
+sept. 01 00:49:00 systemd[2043]: Reached target Sound Card.
+sept. 01 00:49:00 .gnome-session-[2079]: Starting GNOME session target: gnome-session@gnome.target
+sept. 01 00:49:00 gsd-media-keys[1715]: Unable to get default source
+sept. 01 00:49:00 gsd-media-keys[1715]: Unable to get default sink
+sept. 01 00:49:00 systemd[2043]: Created slice Slice /app/gnome-session-manager.
+sept. 01 00:49:00 systemd[2043]: Created slice User Background Tasks Slice.
+sept. 01 00:49:00 systemd[2043]: GNOME Initial Setup Copy Worker skipped, unmet condition check ConditionPathExists=!/home/benoit/.config/gnome-initial-setup-done
+sept. 01 00:49:00 systemd[2043]: Starting Monitor Session leader for GNOME Session...
+sept. 01 00:49:00 systemd[2043]: Starting User folders update...
+sept. 01 00:49:00 systemd[2043]: Finished User folders update.
+sept. 01 00:49:00 systemd[2043]: Reached target Session services which should run early before the graphical session is brought up.
+sept. 01 00:49:00 systemd[2043]: Started Monitor Session leader for GNOME Session.
+sept. 01 00:49:00 systemd[2043]: Reached target Tasks to be run before GNOME Session starts.
+sept. 01 00:49:00 systemd[2043]: Starting GNOME Session Manager (session: gnome)...
+sept. 01 00:49:00 gnome-session-service[2105]: App at-spi-dbus-bus.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 gnome-session-service[2105]: App gnome-keyring-pkcs11.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 gnome-session-service[2105]: App gnome-keyring-secrets.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 gnome-session-service[2105]: App xdg-user-dirs.desktop sets X-GNOME-Autostart-Phase, but gnome-session no longer manages session services
+sept. 01 00:49:00 systemd[2043]: Started GNOME Session Manager (session: gnome).
+sept. 01 00:49:00 systemd[2043]: Reached target GNOME Session Manager is ready.
+sept. 01 00:49:00 systemd[2043]: Starting GNOME Shell...
+sept. 01 00:49:00 systemd[2043]: Starting Virtual filesystem service...
+sept. 01 00:49:01 systemd[2043]: Started Virtual filesystem service.
+sept. 01 00:49:01 gnome-shell[2111]: Running GNOME Shell (using mutter 50.1) as a Wayland display server
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 12: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 13: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 14: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 13: 1b36:0100, driver (null)
+sept. 01 00:49:01 rtkit-daemon[1631]: Successfully made thread 2141 of process 2111 owned by '1000' high priority at nice level -15.
+sept. 01 00:49:01 gnome-shell[2111]: Thread 'KMS thread' will be using high priority scheduling
+sept. 01 00:49:01 gnome-shell[2111]: pci id for fd 14: 1b36:0100, driver (null)
+sept. 01 00:49:01 gnome-shell[2111]: Added device '/dev/dri/card1' (qxl) using atomic mode setting.
+sept. 01 00:49:01 gnome-shell[2111]: Failed to initialize accelerated iGPU/dGPU framebuffer sharing: Not hardware accelerated
+sept. 01 00:49:01 gnome-shell[2111]: Created gbm renderer for '/dev/dri/card1'
+sept. 01 00:49:01 gnome-shell[2111]: Boot VGA GPU /dev/dri/card1 selected as primary
+sept. 01 00:49:01 systemd[2043]: Starting Accessibility services bus...
+sept. 01 00:49:01 systemd[2043]: Started Accessibility services bus.
+sept. 01 00:49:01 dbus-broker-launch[2168]: Ready
+sept. 01 00:49:01 gnome-shell[2111]: Using public X11 display :0, (using unix:/tmp/.X11-unix/X1 for managed services)
+sept. 01 00:49:01 gnome-shell[2111]: Using Wayland display name 'wayland-0'
+sept. 01 00:49:01 systemd[2043]: Created slice Slice /app/dbus-:1.12-org.a11y.atspi.Registry.
+sept. 01 00:49:01 systemd[2043]: Started dbus-:1.12-org.a11y.atspi.Registry@0.service.
+sept. 01 00:49:01 at-spi2-registryd[2170]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Unset XDG_SESSION_ID, getCurrentSessionProxy() called outside a user session. Asking logind directly.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.Screencast.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.Shell.Screencast@0.service.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.CalendarServer.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.Shell.CalendarServer@0.service.
+sept. 01 00:49:02 systemd[2043]: Starting sandboxed app permission store...
+sept. 01 00:49:02 systemd[2043]: Started sandboxed app permission store.
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Registering session with GDM
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Shell.Notifications.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.Shell.Notifications@0.service.
+sept. 01 00:49:02 systemd[2043]: Starting Evolution source registry...
+sept. 01 00:49:02 systemd[2043]: Started GNOME Shell.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME Session is initialized.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME basic session services.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME session services.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME Session (session: gnome).
+sept. 01 00:49:02 systemd[2043]: Starting Signal initialization done to GNOME Session Manager...
+sept. 01 00:49:02 systemd[2043]: Starting IBus Daemon for GNOME...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME accessibility service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME color management service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME date & time service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME maintenance of expirable data service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME keyboard configuration service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME keyboard shortcuts service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME power management service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME printer notifications service...
+sept. 01 00:49:02 gnome-session-service[2105]: Entering running state
+sept. 01 00:49:02 systemd[2043]: Starting GNOME RFKill support service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME FreeDesktop screensaver service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME file sharing service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME smartcard service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME sound sample caching service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME USB protection service...
+sept. 01 00:49:02 systemd[2043]: Starting GNOME WWan support service...
+sept. 01 00:49:02 systemd[2043]: Finished Signal initialization done to GNOME Session Manager.
+sept. 01 00:49:02 systemd[2043]: Started GNOME accessibility service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME color management service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME maintenance of expirable data service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME keyboard configuration service.
+sept. 01 00:49:02 systemd[2043]: Started Application launched by gnome-session-service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME accessibility target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME color management target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME maintenance of expirable data target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME keyboard configuration target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME date & time service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME date & time target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME WWan support service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME WWan support target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME FreeDesktop screensaver service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME sound sample caching service.
+sept. 01 00:49:02 systemd[2043]: Started GNOME RFKill support service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME RFKill support target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME FreeDesktop screensaver target.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME sound sample caching target.
+sept. 01 00:49:02 systemd[1]: Starting Disk Manager...
+sept. 01 00:49:02 systemd[2043]: Started GNOME printer notifications service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME printer notifications target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME USB protection service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME USB protection target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME smartcard service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME smartcard target.
+sept. 01 00:49:02 systemd[2043]: Started GNOME file sharing service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME file sharing target.
+sept. 01 00:49:02 kernel: rfkill: input handler disabled
+sept. 01 00:49:02 systemd[2043]: Started GNOME power management service.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME power management target.
+sept. 01 00:49:02 cupsd[1486]: REQUEST localhost - - "POST / HTTP/1.1" 200 362 Create-Printer-Subscriptions successful-ok
+sept. 01 00:49:02 systemd[2043]: Started GNOME keyboard shortcuts service.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.ScreenSaver.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME keyboard shortcuts target.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.gnome.ScreenSaver@0.service.
+sept. 01 00:49:02 systemd[2043]: Started PipeWire Multimedia Service.
+sept. 01 00:49:02 systemd[2043]: Started PipeWire PulseAudio.
+sept. 01 00:49:02 systemd[2043]: Started Multimedia Service Session Manager.
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Will monitor session 2
+sept. 01 00:49:02 .gnome-shell-wr[2111]: Error looking up permission: GDBus.Error:org.freedesktop.portal.Error.NotFound: No entry for geolocation
+sept. 01 00:49:02 pipewire-pulse[2372]: mod.protocol-pulse: setsockopt(SO_PRIORITY) failed: Mauvais descripteur de fichier
+sept. 01 00:49:02 pipewire-pulse[2372]: mod.protocol-pulse: client 0x5cf835a1f000: no peercred: Mauvais descripteur de fichier
+sept. 01 00:49:02 systemd[2043]: Starting Portal service...
+sept. 01 00:49:02 gsd-media-keys[2231]: Failed to grab accelerator for keybinding settings:hibernate
+sept. 01 00:49:02 gsd-media-keys[2231]: Failed to grab accelerator for keybinding settings:playback-repeat
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - disk device monitor...
+sept. 01 00:49:02 rtkit-daemon[1631]: Successfully made thread 2372 of process 2372 owned by '1000' high priority at nice level -11.
+sept. 01 00:49:02 systemd[2043]: Started IBus Daemon for GNOME.
+sept. 01 00:49:02 rtkit-daemon[1631]: Successfully made thread 2400 of process 2372 owned by '1000' RT at priority 20.
+sept. 01 00:49:02 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.freedesktop.portal.IBus.
+sept. 01 00:49:02 systemd[2043]: Reached target GNOME Session.
+sept. 01 00:49:02 systemd[2043]: Reached target Current graphical user session.
+sept. 01 00:49:02 systemd[2043]: Started dbus-:1.1-org.freedesktop.portal.IBus@0.service.
+sept. 01 00:49:02 systemd[2043]: Starting Event and Task Reminders...
+sept. 01 00:49:02 systemd[2043]: GNOME Initial Setup skipped, unmet condition check ConditionPathExists=!/home/benoit/.config/gnome-initial-setup-done
+sept. 01 00:49:02 systemd[2043]: Starting LocalSearch indexer...
+sept. 01 00:49:02 systemd[2043]: Started User folders update.
+sept. 01 00:49:02 rtkit-daemon[1631]: Successfully made thread 2371 of process 2371 owned by '1000' high priority at nice level -11.
+sept. 01 00:49:02 systemd[2043]: Starting flatpak document portal service...
+sept. 01 00:49:02 rtkit-daemon[1631]: Successfully made thread 2399 of process 2371 owned by '1000' RT at priority 20.
+sept. 01 00:49:02 systemd[1]: Started Disk Manager.
+sept. 01 00:49:02 systemd[2043]: Started LocalSearch indexer.
+sept. 01 00:49:02 rtkit-daemon[1631]: Successfully made thread 2374 of process 2374 owned by '1000' high priority at nice level -11.
+sept. 01 00:49:02 systemd[2043]: Started flatpak document portal service.
+sept. 01 00:49:02 systemd[2043]: Started Virtual filesystem service - disk device monitor.
+sept. 01 00:49:02 systemd[2043]: Starting Portal service (GNOME implementation)...
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - Media Transfer Protocol monitor...
+sept. 01 00:49:02 systemd[2043]: Started Virtual filesystem service - Media Transfer Protocol monitor.
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - digital camera monitor...
+sept. 01 00:49:02 systemd[2043]: Started Virtual filesystem service - digital camera monitor.
+sept. 01 00:49:02 systemd[2043]: Starting Virtual filesystem service - GNOME Online Accounts monitor...
+sept. 01 00:49:03 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.OnlineAccounts.
+sept. 01 00:49:03 systemd[2043]: Started dbus-:1.1-org.gnome.OnlineAccounts@0.service.
+sept. 01 00:49:03 goa-daemon[2494]: goa-daemon version 3.58.1 starting
+sept. 01 00:49:03 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Identity.
+sept. 01 00:49:03 systemd[2043]: Started dbus-:1.1-org.gnome.Identity@0.service.
+sept. 01 00:49:03 systemd[2043]: Started Virtual filesystem service - GNOME Online Accounts monitor.
+sept. 01 00:49:03 systemd[2043]: Starting Virtual filesystem service - Apple File Conduit monitor...
+sept. 01 00:49:03 systemd[2043]: Started Virtual filesystem service - Apple File Conduit monitor.
+sept. 01 00:49:03 gsd-usb-protection[2264]: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+sept. 01 00:49:03 systemd[2043]: Started Evolution source registry.
+sept. 01 00:49:03 gnome-shell[2412]: Xwayland glamor: GBM Wayland interfaces not available
+sept. 01 00:49:03 gnome-shell[2412]: Failed to initialize glamor, falling back to sw
+sept. 01 00:49:03 kernel: ISO 9660 Extensions: Microsoft Joliet Level 3
+sept. 01 00:49:03 kernel: ISO 9660 Extensions: RRIP_1991A
+sept. 01 00:49:03 systemd[2043]: Starting Evolution calendar service...
+sept. 01 00:49:03 pipewire-pulse[2372]: mod.protocol-pulse: setsockopt(SO_PRIORITY) failed: Mauvais descripteur de fichier
+sept. 01 00:49:03 pipewire-pulse[2372]: mod.protocol-pulse: client 0x5cf835a38760: no peercred: Mauvais descripteur de fichier
+sept. 01 00:49:03 gnome-shell[2573]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+sept. 01 00:49:03 gnome-shell[2573]: > Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+sept. 01 00:49:03 gnome-shell[2573]: >                   Using F23, ignoring XF86TouchpadOff
+sept. 01 00:49:03 gnome-shell[2573]: > Warning:          Symbol map for key <FK23> redefined
+sept. 01 00:49:03 gnome-shell[2573]: >                   Using last definition for conflicting fields
+sept. 01 00:49:03 gnome-shell[2573]: > Warning:          Symbol map for key <FK24> redefined
+sept. 01 00:49:03 gnome-shell[2573]: >                   Using last definition for conflicting fields
+sept. 01 00:49:03 gnome-shell[2573]: Errors from xkbcomp are not fatal to the X server
+sept. 01 00:49:03 systemd[2043]: Started Event and Task Reminders.
+sept. 01 00:49:03 systemd[2043]: Started Evolution calendar service.
+sept. 01 00:49:03 systemd[2043]: Starting Evolution address book service...
+sept. 01 00:49:03 .gnome-shell-wr[2111]: GNOME Shell started at Tue Sep 01 2026 00:49:02 GMT+0200 (heure d’été d’Europe centrale)
+sept. 01 00:49:03 .gnome-shell-wr[2111]: Registering display with GDM
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME Session (session: gnome-login).
+sept. 01 00:49:03 dbus-broker[1660]: Dispatched 32 messages @ 15(±18)μs / message.
+sept. 01 00:49:03 systemd[1555]: Stopping Accessibility services bus...
+sept. 01 00:49:03 systemd[1555]: Stopping Portal service (GNOME implementation)...
+sept. 01 00:49:03 systemd[1555]: Stopping Portal service (GTK/GNOME implementation)...
+sept. 01 00:49:03 systemd[1555]: Stopping Portal service...
+sept. 01 00:49:03 systemd[1555]: Stopping flatpak document portal service...
+sept. 01 00:49:03 systemd[1555]: Stopping sandboxed app permission store...
+sept. 01 00:49:03 systemd[1555]: Stopped Accessibility services bus.
+sept. 01 00:49:03 systemd[1555]: Stopped Portal service (GNOME implementation).
+sept. 01 00:49:03 systemd[1555]: Stopped Portal service (GTK/GNOME implementation).
+sept. 01 00:49:03 systemd[1555]: Stopped sandboxed app permission store.
+sept. 01 00:49:03 systemd[1555]: Stopped Portal service.
+sept. 01 00:49:03 systemd[1]: run-user-60578-doc.mount: Deactivated successfully.
+sept. 01 00:49:03 systemd[1555]: Stopped target Current graphical user session.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME Session.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME basic session services.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME session X11 services.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME accessibility target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME keyboard configuration target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME keyboard shortcuts target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME power management target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME RFKill support target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME file sharing target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME smartcard target.
+sept. 01 00:49:03 systemd[1555]: Stopped target GNOME USB protection target.
+sept. 01 00:49:03 systemd[1555]: Stopping IBus Daemon for GNOME...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME accessibility service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME keyboard configuration service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME keyboard shortcuts service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME power management service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME RFKill support service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME file sharing service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME smartcard service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME USB protection service...
+sept. 01 00:49:03 systemd[1555]: Stopping GNOME XSettings service...
+sept. 01 00:49:03 systemd[1555]: Stopped Monitor Session leader for GNOME Session.
+sept. 01 00:49:03 systemd[1555]: Stopped IBus Daemon for GNOME.
+sept. 01 00:49:03 systemd[1555]: Stopped flatpak document portal service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME keyboard shortcuts service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME smartcard service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME power management service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME accessibility service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME USB protection service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME RFKill support service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME keyboard configuration service.
+sept. 01 00:49:03 systemd[1555]: Stopped GNOME file sharing service.
+sept. 01 00:49:04 systemd[1555]: Stopped GNOME XSettings service.
+sept. 01 00:49:04 systemd[1555]: Stopped target GNOME session X11 services.
+sept. 01 00:49:04 systemd[1555]: Stopped target GNOME Session is initialized.
+sept. 01 00:49:04 gnome-shell[1615]: Shutting down GNOME Shell
+sept. 01 00:49:04 systemd[1555]: Stopping GNOME Shell...
+sept. 01 00:49:04 pipewire[1807]: mod.x11-bell: X11 I/O error handler called on display :1024
+sept. 01 00:49:04 pipewire[1807]: mod.x11-bell: X11 display (:1024) has encountered a fatal I/O error
+sept. 01 00:49:04 systemd[2043]: Started Evolution address book service.
+sept. 01 00:49:04 gnome-shell[1615]: Connection to xwayland lost
+sept. 01 00:49:04 gnome-shell[1615]: Using public X11 display :1024, (using unix:/tmp/.X11-unix/X1025 for managed services)
+sept. 01 00:49:04 .gnome-shell-wr[1615]: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name is not activatable
+                                         
+                                         Stack trace:
+                                           asyncCallback@resource:///org/gnome/gjs/modules/core/overrides/Gio.js:115:23
+                                           _initializeUI/<@resource:///org/gnome/shell/ui/main.js:277:14
+                                           
+sept. 01 00:49:04 systemd[2043]: Reached target GNOME session X11 services.
+sept. 01 00:49:04 systemd[2043]: Starting GNOME XSettings service...
+sept. 01 00:49:04 gnome-shell[2662]: The XKEYBOARD keymap compiler (xkbcomp) reports:
+sept. 01 00:49:04 gnome-shell[2662]: > Warning:          Unsupported maximum keycode 709, clipping.
+sept. 01 00:49:04 gnome-shell[2662]: >                   X11 cannot support keycodes above 255.
+sept. 01 00:49:04 gnome-shell[2662]: > Warning:          Virtual modifier Hyper multiply defined
+sept. 01 00:49:04 gnome-shell[2662]: >                   Using 0, ignoring 0
+sept. 01 00:49:04 gnome-shell[2662]: > Warning:          Virtual modifier ScrollLock multiply defined
+sept. 01 00:49:04 gnome-shell[2662]: >                   Using 0, ignoring 0
+sept. 01 00:49:04 gnome-shell[2662]: Errors from xkbcomp are not fatal to the X server
+sept. 01 00:49:04 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider.
+sept. 01 00:49:04 rtkit-daemon[1631]: Successfully made thread 2665 of process 2374 owned by '1000' RT at priority 20.
+sept. 01 00:49:04 systemd[2043]: Started dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service.
+sept. 01 00:49:04 systemd[2043]: Started GNOME XSettings service.
+sept. 01 00:49:04 systemd[2043]: Reached target GNOME session X11 services.
+sept. 01 00:49:04 systemd[2043]: GNOME XSettings target is inactive.
+sept. 01 00:49:04 gsd-xsettings[2666]: Failed to get current UI scaling factor: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Destination does not exist
+sept. 01 00:49:04 gnome-control-center-global-shortcuts-provider[1973]: Lost connection to Wayland compositor.
+sept. 01 00:49:04 systemd[1555]: dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service: Main process exited, code=exited, status=1/FAILURE
+sept. 01 00:49:04 systemd[1555]: dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider@0.service: Failed with result 'exit-code'.
+sept. 01 00:49:04 wireplumber[2374]: spa.bluez5: BlueZ system service is not available
+sept. 01 00:49:04 gsd-media-keys[2231]: Unable to get default sink
+sept. 01 00:49:04 systemd[1555]: Stopped GNOME Shell.
+sept. 01 00:49:04 systemd[1555]: org.gnome.Shell@gdm.service: Consumed 5.038s CPU time over 13.518s wall clock time, 476.5M memory peak.
+sept. 01 00:49:04 systemd[1555]: Stopped target GNOME Session Manager is ready.
+sept. 01 00:49:04 systemd[1555]: Stopping GNOME Session Manager (session: gnome-login)...
+sept. 01 00:49:04 wireplumber[2374]: [0:00:45.612456363] [2374]  INFO IPAManager ipa_manager.cpp:147 libcamera is not installed. Adding '/nix/store/src/ipa' to the IPA search path
+sept. 01 00:49:04 wireplumber[2374]: [0:00:45.612843559] [2374]  INFO Camera camera_manager.cpp:340 libcamera v0.7.0
+sept. 01 00:49:04 systemd[1555]: Stopped GNOME Session Manager (session: gnome-login).
+sept. 01 00:49:04 systemd[1555]: Stopped target Tasks to be run before GNOME Session starts.
+sept. 01 00:49:04 systemd[1555]: Stopped target Session services which should run early before the graphical session is brought up.
+sept. 01 00:49:04 systemd[1555]: Reached target Shutdown running GNOME Session.
+sept. 01 00:49:04 systemd[1555]: Starting Restart DBus after GNOME Session shutdown...
+sept. 01 00:49:04 systemd[1555]: Stopped target Shutdown running GNOME Session.
+sept. 01 00:49:04 systemd[1]: session-c1.scope: Deactivated successfully.
+sept. 01 00:49:04 systemd[1]: session-c1.scope: Consumed 64ms CPU time over 13.840s wall clock time, 5.8M memory peak, 3M read from disk.
+sept. 01 00:49:04 systemd-logind[1307]: Session c1 logged out. Waiting for processes to exit.
+sept. 01 00:49:04 systemd-logind[1307]: Removed session c1.
+sept. 01 00:49:04 systemd[1555]: Started Restart DBus after GNOME Session shutdown.
+sept. 01 00:49:04 systemd[1555]: Stopping PipeWire PulseAudio...
+sept. 01 00:49:04 systemd[1555]: Stopping Multimedia Service Session Manager...
+sept. 01 00:49:04 systemd[1555]: Stopped PipeWire PulseAudio.
+sept. 01 00:49:04 systemd[1555]: Stopped Multimedia Service Session Manager.
+sept. 01 00:49:04 dbus-broker[1587]: Dispatched 3535 messages @ 8(±11)μs / message.
+sept. 01 00:49:04 systemd[1555]: Stopping D-Bus User Message Bus...
+sept. 01 00:49:04 gnome-keyring-daemon[2020]: discover_other_daemon: 0
+sept. 01 00:49:04 systemd[1555]: Stopping PipeWire Multimedia Service...
+sept. 01 00:49:04 systemd[1555]: Stopped D-Bus User Message Bus.
+sept. 01 00:49:04 systemd[1555]: Stopped PipeWire Multimedia Service.
+sept. 01 00:49:04 gdm[1475]: Gdm: Child process -1590 was already dead.
+sept. 01 00:49:04 gnome-shell[2727]: libEGL warning: DRI3 error: Could not get DRI3 device
+sept. 01 00:49:04 gnome-shell[2727]: libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+sept. 01 00:49:04 systemd[2043]: Started Portal service (GNOME implementation).
+sept. 01 00:49:04 systemd[2043]: Starting Portal service (GTK/GNOME implementation)...
+sept. 01 00:49:04 systemd[2043]: Started Portal service (GTK/GNOME implementation).
+sept. 01 00:49:04 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.freedesktop.secrets.
+sept. 01 00:49:04 systemd[2043]: Started dbus-:1.1-org.freedesktop.secrets@0.service.
+sept. 01 00:49:04 gnome-keyring-daemon[2764]: discover_other_daemon: 1
+sept. 01 00:49:04 systemd[2043]: Started Portal service.
+sept. 01 00:49:14 systemd[1]: Stopping User Manager for UID 60578...
+sept. 01 00:49:14 systemd[1555]: Activating special unit Exit the Session...
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.10-org.a11y.atspi.Registry.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.1-org.freedesktop.portal.IBus.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.1-org.freedesktop.secrets.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.1-org.gnome.ScreenSaver.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.1-org.gnome.Settings.GlobalShortcutsProvider.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.1-org.gnome.Shell.Notifications.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/dbus-:1.1-org.gnome.Shell.Screencast.
+sept. 01 00:49:14 systemd[1555]: Removed slice Slice /app/gnome-session-manager.
+sept. 01 00:49:14 systemd[1555]: Removed slice User Core Session Slice.
+sept. 01 00:49:14 systemd[1555]: session.slice: Consumed 6.987s CPU time over 24.037s wall clock time, 570.6M memory peak.
+sept. 01 00:49:14 systemd[1555]: Stopped target Main User Target.
+sept. 01 00:49:14 systemd[1555]: Stopped target Sound Card.
+sept. 01 00:49:14 systemd[1555]: Stopping GCR ssh-agent wrapper...
+sept. 01 00:49:14 systemd[1555]: Stopped GCR ssh-agent wrapper.
+sept. 01 00:49:14 systemd[1555]: Stopped target Basic System.
+sept. 01 00:49:14 systemd[1555]: Stopped target Paths.
+sept. 01 00:49:14 systemd[1555]: Stopped target Sockets.
+sept. 01 00:49:14 systemd[1555]: Stopped target Timers.
+sept. 01 00:49:14 systemd[1555]: Stopped Daily Cleanup of User's Temporary Directories.
+sept. 01 00:49:14 systemd[1555]: Closed D-Bus User Message Bus Socket.
+sept. 01 00:49:14 systemd[1555]: Closed GCR ssh-agent wrapper.
+sept. 01 00:49:14 systemd[1555]: Closed PipeWire PulseAudio.
+sept. 01 00:49:14 systemd[1555]: Closed PipeWire Multimedia System Sockets.
+sept. 01 00:49:14 systemd[1555]: Closed Speech Dispatcher Socket.
+sept. 01 00:49:14 systemd[1555]: Stopped Create User Files and Directories.
+sept. 01 00:49:14 systemd[1555]: Removed slice User Application Slice.
+sept. 01 00:49:14 systemd[1555]: app.slice: Consumed 2.067s CPU time over 24.045s wall clock time, 127.5M memory peak.
+sept. 01 00:49:14 systemd[1555]: Reached target Shutdown.
+sept. 01 00:49:14 systemd[1555]: Finished Exit the Session.
+sept. 01 00:49:14 systemd[1555]: Reached target Exit the Session.
+sept. 01 00:49:14 (sd-pam)[1573]: pam_unix(systemd-user:session): session closed for user gdm-greeter
+sept. 01 00:49:14 systemd-logind[1307]: Removed session 1.
+sept. 01 00:49:14 systemd[1]: user@60578.service: Deactivated successfully.
+sept. 01 00:49:14 systemd[1]: Stopped User Manager for UID 60578.
+sept. 01 00:49:14 systemd[1]: user@60578.service: Consumed 9.817s CPU time over 24.382s wall clock time, 705.7M memory peak, 422.1M read from disk, 400K written to disk.
+sept. 01 00:49:14 systemd[1]: Stopping User Runtime Directory /run/user/60578...
+sept. 01 00:49:14 systemd[1]: run-user-60578.mount: Deactivated successfully.
+sept. 01 00:49:14 systemd[1]: user-runtime-dir@60578.service: Deactivated successfully.
+sept. 01 00:49:14 systemd[1]: Stopped User Runtime Directory /run/user/60578.
+sept. 01 00:49:16 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Console.
+sept. 01 00:49:16 systemd[2043]: Started dbus-:1.1-org.gnome.Console@0.service.
+sept. 01 00:49:16 kgx[2785]: The resource style-dark.css is deprecated and shouldn't be used anymore. Use style.css with media queries instead.
+sept. 01 00:49:16 systemd[2043]: Started VTE child process 2792 launched by kgx process 2785.
+sept. 01 00:49:17 kgx[2785]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+sept. 01 00:49:17 kgx[2785]: libEGL warning: failed to get driver name for fd -1
+sept. 01 00:49:17 kgx[2785]: libEGL warning: MESA-LOADER: failed to retrieve device information
+sept. 01 00:49:17 kgx[2785]: libEGL warning: failed to get driver name for fd -1
+sept. 01 00:49:17 kgx[2785]: MESA: error: ZINK: failed to choose pdev
+sept. 01 00:49:17 kgx[2785]: libEGL warning: egl: failed to create dri2 screen
+sept. 01 00:49:20 cupsd[1486]: Saving subscriptions.conf...
+août 31 22:49:24 systemd-timesyncd[1003]: Contacted time server 51.68.232.126:123 (2.nixos.pool.ntp.org).
+août 31 22:49:24 systemd-timesyncd[1003]: Initial clock synchronization to Mon 2026-08-31 22:49:24.046334 CEST.
+août 31 22:49:24 systemd-journald[980]: Time jumped backwards, rotating.
+août 31 22:49:31 systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+août 31 22:49:33 systemd[1]: systemd-localed.service: Deactivated successfully.
+août 31 22:49:53 geoclue[1924]: Service not used for 60 seconds. Shutting down..
+août 31 22:49:53 systemd[1]: geoclue.service: Deactivated successfully.
+août 31 22:50:01 systemd[2043]: Starting Virtual filesystem metadata service...
+août 31 22:50:01 systemd[2043]: Started Virtual filesystem metadata service.
+août 31 22:50:10 sudo[2883]:   benoit : TTY=pts/0 ; PWD=/home/benoit ; USER=root ; COMMAND=/run/current-system/sw/bin/dmesg
+août 31 22:50:10 sudo[2883]: pam_unix(sudo:session): session opened for user root(uid=0) by benoit(uid=1000)
+août 31 22:50:10 sudo[2883]: pam_unix(sudo:session): session closed for user root
+août 31 22:50:18 sudo[2890]:   benoit : TTY=pts/0 ; PWD=/home/benoit ; USER=root ; COMMAND=/run/current-system/sw/bin/dmesg
+août 31 22:50:18 sudo[2890]: pam_unix(sudo:session): session opened for user root(uid=0) by benoit(uid=1000)
+août 31 22:50:18 sudo[2890]: pam_unix(sudo:session): session closed for user root
+août 31 22:50:39 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.Nautilus.
+août 31 22:50:39 systemd[2043]: Started dbus-:1.1-org.gnome.Nautilus@0.service.
+août 31 22:50:39 org.gnome.Nautilus[2921]: Connecting to org.freedesktop.Tracker3.Miner.Files
+août 31 22:50:39 org.gnome.Nautilus[2921]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+août 31 22:50:39 nautilus[2921]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:39 nautilus[2921]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:50:39 nautilus[2921]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:39 nautilus[2921]: MESA: error: ZINK: failed to choose pdev
+août 31 22:50:39 nautilus[2921]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:39 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.NautilusPreviewer.
+août 31 22:50:39 systemd[2043]: Started dbus-:1.1-org.gnome.NautilusPreviewer@0.service.
+août 31 22:50:39 systemd[1]: Starting Hostname Service...
+août 31 22:50:39 systemd[1]: Started Hostname Service.
+août 31 22:50:40 .gvfsd-wsdd-wra[3020]: Failed to spawn the wsdd daemon: L’exécution du processus fils « wsdd » a échoué (Aucun fichier ou dossier de ce nom)
+août 31 22:50:40 .gvfsd-network-[3001]: Couldn't create directory monitor on wsdd:///. Error: Le montage automatique a échoué : Échec du lancement du démon wsdd sous-jacent.
+août 31 22:50:40 org.gnome.Nautilus[2921]: Failed to add emblem. “. GThemedIcon emblem-unwritable-symbolic unwritable-symbolic emblem-unwritable unwritable” not found in the icon theme
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: MESA: error: ZINK: failed to choose pdev
+août 31 22:50:41 org.gnome.NautilusPreviewer[2983]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:50 systemd[2043]: Created slice Slice /app/dbus-:1.1-org.gnome.TextEditor.
+août 31 22:50:50 systemd[2043]: Started dbus-:1.1-org.gnome.TextEditor@0.service.
+août 31 22:50:50 gnome-text-editor[3054]: The resource style-hc.css is deprecated and shouldn't be used anymore. Use style.css with media queries instead.
+août 31 22:50:50 gnome-text-editor[3054]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: failed to get driver name for fd -1
+août 31 22:50:50 gnome-text-editor[3054]: MESA: error: ZINK: failed to choose pdev
+août 31 22:50:50 gnome-text-editor[3054]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:50:51 systemd[2043]: dbus-:1.1-org.gnome.NautilusPreviewer@0.service: Consumed 1.694s CPU time over 12.103s wall clock time, 161.8M memory peak.
+août 31 22:51:10 systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+août 31 22:51:33 systemd[2043]: dbus-:1.1-org.gnome.TextEditor@0.service: Consumed 7.545s CPU time over 43.940s wall clock time, 180.1M memory peak.
+août 31 22:52:51 systemd[2043]: Started dbus-:1.1-org.gnome.TextEditor@1.service.
+août 31 22:52:51 gnome-text-editor[3158]: The resource style-hc.css is deprecated and shouldn't be used anymore. Use style.css with media queries instead.
+août 31 22:52:51 gnome-text-editor[3158]: Vulkan: ../src/intel/vulkan/anv_physical_device.c:2650: Unable to open device : Aucun fichier ou dossier de ce nom (VK_ERROR_INCOMPATIBLE_DRIVER)
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: failed to get driver name for fd -1
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: MESA-LOADER: failed to retrieve device information
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: failed to get driver name for fd -1
+août 31 22:52:51 gnome-text-editor[3158]: MESA: error: ZINK: failed to choose pdev
+août 31 22:52:51 gnome-text-editor[3158]: libEGL warning: egl: failed to create dri2 screen
+août 31 22:53:03 systemd[2043]: dbus-:1.1-org.gnome.TextEditor@1.service: Consumed 1.911s CPU time over 12.585s wall clock time, 100.2M memory peak.
+août 31 22:54:45 systemd[2043]: Starting Cleanup of User's Temporary Files and Directories...
+août 31 22:54:45 systemd[2043]: Finished Cleanup of User's Temporary Files and Directories.
