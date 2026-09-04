@@ -1,0 +1,132 @@
+
+
+# AIB - NON FINALEMENT PRENDRE LE CONTAINER PODMAN DISPO SUR LE SITE WEB
+Faire un distrobox de développement qui contiendra les outils suivants :
+
+distrobox create fedora_dev
+distrobox enter fedora_dev
+
+# dans la distrobox :
+sudo dnf group install -y --setopt=install_weak_deps=False development-tools development-libs cmake gcc-c++ pciutils-devel procps-ng curl file
+
+# rendre disponible sur dans l'environnement "hôte"
+BINARIES_TO_EXPORT=(
+    gcc
+    g++
+    cc
+    make
+    ld
+    ar
+    pkg-config
+)
+
+for bin in "${BINARIES_TO_EXPORT[@]}"; do
+    distrobox-export --bin /usr/bin/$bin --export-path ~/.local/bin --extra-flags "-p"
+done
+exit
+
+
+# RYZENADJ - KO A CAUSE DE SECURE BOOT SUR DELLE 5485 - MEME EN RPM DANS BOOTC. ESSAYER SUR LE RYZEN 3600 (mais pas d'interet, le PPT est réglable dans le bios ...)
+# ne fonctionne pas en distrobox, à cause de secure boot (??), du coup pas le choix on l'install dans l'OCI depuis le repo tiers de ublue.
+# on compile ryzenadj, toujours dans la distrobox, le binaire sera placé dans le home, plus besoin de la distrobox ensuite (mais on la conserve, toujours utile d'avoir un distrobox de dev) :
+git clone https://github.com/FlyGoat/RyzenAdj.git
+cd RyzenAdj
+rm -r win32
+mkdir build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+if [ -d ~/.local/bin ]; then ln -s $(readlink -f ryzenadj) ~/.local/bin/ryzenadj && echo "symlinked to ~/.local/bin/ryzenadj"; fi
+if [ -d ~/.bin ]; then ln -s $(readlink -f ryzenadj) ~/.bin/ryzenadj && echo "symlinked to ~/.bin/ryzenadj"; fi
+exit
+
+echo "alias ryzen_low='ryzenadj --stapm-limit=15000 --fast-limit=15000 --slow-limit=15000'" >> "${HOME}/.bashrc"
+echo "alias ryzen_default='ryzenadj --stapm-limit=25000--fast-limit=25000 --slow-limit=25000'" >> "${HOME}/.bashrc"
+
+
+NE PAS INSTALLER RYZENADJ DANS UNE DISTROBOX ROOT
+ne fonctionne pas bien du tout ... les droits root ne passent pas, et impossible d'executer distrobox en root.
+installer via le depot de ublue.
+
+installer_ryzenadj () {
+echo "4. Installation de ryzenadj en distrobox,volontairement hors de l'OS, car provient d'un dépot tiers"
+# --- Configuration ---
+BOX_NAME="ryzenadj-rootbox"
+ALIAS_BOX_NAME="${BOX_NAME}"   # nom de la box utilisée dans l'alias final (adapter si différent)
+SHELL_RC="${HOME}/.bashrc"
+
+echo "==> Création de la distrobox root '${BOX_NAME}'"
+distrobox-create --root "${BOX_NAME}" --image registry.fedoraproject.org/fedora-toolbox:latest --yes
+
+echo "==> Installation de ryzenadj dans la distrobox (root)"
+distrobox-enter --root -n "${BOX_NAME}" -- bash -c "
+    set -euo pipefail
+    sudo dnf5 -y copr enable ublue-os/bazzite
+    sudo dnf5 install -y --setopt=install_weak_deps=False ryzenadj
+    sudo dnf5 -y copr disable ublue-os/bazzite
+"
+
+echo "==> Export du binaire ryzenadj vers l'hôte"
+distrobox-enter --root -n "${BOX_NAME}" -- distrobox-export --bin /usr/bin/ryzenadj
+
+ALIAS_LINE_LOW="alias ryzen_low='distrobox-enter --root -n ${ALIAS_BOX_NAME} -- /usr/bin/ryzenadj --stapm-limit=15000 --fast-limit=15000 --slow-limit=15000'"
+ALIAS_LINE_DEFAULT="alias ryzen_default='distrobox-enter --root -n ${ALIAS_BOX_NAME} -- /usr/bin/ryzenadj --stapm-limit=25000--fast-limit=25000 --slow-limit=25000'"
+
+if grep -qF "alias ryzenadj=" "${SHELL_RC}" 2>/dev/null; then
+    echo "==> Alias 'ryzenadj' déjà présent dans ${SHELL_RC}, remplacement"
+    sed -i "\|alias ryzenadj=|d" "${SHELL_RC}"
+fi
+
+echo "==> Ajout de l'alias dans ${SHELL_RC}"
+echo "${ALIAS_LINE_LOW}" >> "${SHELL_RC}"
+echo "${ALIAS_LINE_DEFAULT}" >> "${SHELL_RC}"
+
+echo "✅ ryzenadj installé avec succès."
+echo ""
+echo "#####################################################################################"
+echo ""
+}
+
+
+
+### https://github.com/JasonN3/fedora_workstation/blob/main/Containerfile.gnome
+### Disable non-functional services
+### RUN rm /usr/etc/systemd/system/systemd-remount-fs.service
+### inclure dans les services à desactiver, pour ne plus avoir les erreus au démarrage
+
+
+
+
+
+### Fedora par défaut :
+# zram en lzo-rle (on veut zstd)
+# compression btrfs zstd niveau 1 dans /etc/fstab, mais n'est pas utilisé par le système
+# relatime (mieux que noatime)
+# gamemode : installé par défaut.
+# fstrim.timer : déjà activé et actif (hebdomadaire)
+# discard=async : déjà présent sur tous les montages btrfs et à travers LUKS
+# ne pas utiliser earlyoom
+# tip : on peut overrider les fichiers de /usr/lib/ en placant un fichier du même nom dans le dossier correspondant dans /etc/
+
+
+### Kernel arg : compression btrfs forcée en zstd:3
+### https://github.com/ublue-os/bazzite/issues/3602
+### https://discussion.fedoraproject.org/t/talk-mount-options-are-ignored-in-fedora-atomic-desktops-42/148874/22
+### https://gitlab.com/fedora/ostree/sig/-/work_items/72
+### les options kargs ne remplacent pas les existantes, mais s'y ajoutent sans fusion
+### Cela fait un doublon de kargs qui est sans conséquence compress-force=zstd:3
+### est bien actif (test sur fichier avant et apres l'ajout des kaargs
+### https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/using_image_mode_for_rhel_to_build_deploy_and_manage_operating_systems/managing-kernel-arguments-in-bootc-systems#how-to-inject-kernel-arguments-in-the-containerfile
+mkdir -p /usr/lib/bootc/kargs.d
+cat > /usr/lib/bootc/kargs.d/10-btrfs-compress.toml << 'EOF'
+kargs = ["rootflags=subvol=root,compress-force=zstd:3"]
+EOF
+
+
+https://discussion.fedoraproject.org/t/root-mount-options-are-ignored-in-fedora-atomic-desktops-42-and-later/148562
+Since Fedora Atomic Desktops 42, mount options set in /etc/fstab for the following mount points are ignored:
+
+    root (/) mount point
+    /proc & /sys mount points, if manually specified (they are not created by default) and listed after the entry for the root mount point
+
+All other mount points are processed normally.
+
