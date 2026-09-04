@@ -24,7 +24,7 @@
   - [trimming.nix](#trimming.nix)
 - [Process Silverblue](#Process-Silverblue)
   - [Containerfile+build.sh](#Containerfile+build.sh)
-  - [softwares.sh](#softwares.sh)
+  - [distrobox](#distrobox)
   - [environment.nsh](#environment.sh)
   - [tweaks.sh](#tweaks.sh)
   - [trimming.sh](#trimming.sh)
@@ -118,6 +118,15 @@ Egalement, pré-personnalisation du système (firefox, shell, gnome, xdg).
 
 ## Logiciels à installer
 
+Silverblue : soit en rpm-ostree, soit en distrobox (installation scriptée pour exporter tous les binaires)
+On peut également compléter avec brew pour les binaires pas dispos dans les repos fedora.
+Le plus propre et "as intended" étant une distrobox.
+
+Silverblue bootc : à intégrer sur l'image.
+
+Sur nixos, le plus propre et "as intended" est en déclaratif.
+
+
 Logiciels | Silverblue | Nixos 
 ----|----|----
 compsize | intégré | pkgs
@@ -140,36 +149,38 @@ tree | intégré | pkgs
 usbutils | intégré | pkgs
 wget | intégré | pkgs
 nix-tree | sans objet | pkgs
-gnome-shell-extension-dash-to-panel | softwares.sh | pkgs
-aria2 | softwares.sh | pkgs
-cosign | softwares.sh | pkgs
-duf | softwares.sh | pkgs
-earlyloom | softwares.sh | pkgs
-powertop | softwares.sh | pkgs
-lm_sensors | softwares.sh | pkgs
-stress-ng | softwares.sh | pkgs
-s-tui | softwares.sh | pkgs
-libva-utils | softwares.sh | pkgs
-msedit | softwares.sh | pkgs
-shellcheck | softwares.sh | pkgs
-bat | softwares.sh | pkgs
-glow | softwares.sh | pkgs
-dialog | softwares.sh | pkgs
-zenity | softwares.sh | pkgs
-kiwix-tools | softwares.sh | pkgs
-llama-cpp-vulkan | softwares.sh | pkgs
-distrobox | softwares.sh | pkgs
-just | softwares.sh | pkgs
-tmux | softwares.sh | pkgs
-ryzenadj | softwares.sh | pkgs
-smartmontools | softwares.sh | pkgs
-yt-dlp | softwares.sh | pkgs
-mc | softwares.sh | pkgs
-btop | softwares.sh | pkgs
-fd-find | softwares.sh | pkgs
-fzf | softwares.sh | pkgs
-tldr | softwares.sh | pkgs
-zoxide | softwares.sh | pkgs
+gamescope | rpm-ostree | pkgs
+zenity | rpm-ostree | pkgs
+gnome-shell-extension-dash-to-panel | extensions.gnome.org | pkgs
+aria2 | distrobox | pkgs
+cosign | brew | pkgs
+duf | distrobox | pkgs
+earlyloom (inutile) | distrobox | pkgs
+powertop | distrobox | pkgs
+nix | distrobox | intégré
+lm_sensors | brew | pkgs
+stress-ng | distrobox | pkgs
+s-tui | distrobox | pkgs
+libva-utils | distrobox | pkgs
+msedit | distrobox | pkgs
+shellcheck | distrobox | pkgs
+bat | distrobox | pkgs
+glow | distrobox | pkgs
+dialog | distrobox | pkgs
+kiwix-tools | distrobox | pkgs
+llama-cpp-vulkan | ./local/bin | pkgs
+distrobox | ./local/bin | pkgs
+just | distrobox | pkgs
+tmux | distrobox | pkgs
+ryzenadj (pas fonctionnel)| ./local/bin | pkgs
+smartmontools | brew | pkgs
+yt-dlp | distrobox | pkgs
+mc | brew | pkgs
+btop | distrobox | pkgs
+fd-find | distrobox | pkgs
+fzf | distrobox | pkgs
+tldr | distrobox | pkgs
+zoxide | distrobox | pkgs
 
 
 On intègre le repo flathub : flathub.flatpakrepo (ainsi qu'activation du service flatpak pour nixos)
@@ -197,27 +208,37 @@ L'opération ne fera que télécharger les paquets pour la transaction.
 
 ---
 
-## Tweaks à mettre en place
+## Etat des lieux système
 
-Optimisation | Silverblue | Nixos 
+Relevés fait sur une VM, installation par défaut telle que proposée par l'installateur graphique de l'iso (Nixos 26.05 : calamares - Silverblue 44 : anaconda)
+
+Elément | Silverblue | Nixos | Bluefin
 ----|----|----
-relatime | intégré | nix
-gamemode | intégré | nix
-fstrim.timer | intégré | nix
-discard=async | intégré | nix (à déclarer sur LUKS et volumes btrfs)
-ntsync | charger module | nix
-swappiness | paramétrer | nix
-zram zstd | passer de lzo-rle à zstd | nix
-btrfs zstd 3 | passer de 1 à 3 | nix
-
-
-Options | Silverblue | Nixos 
-----|----|----
+ram (top : used apres demarrage et reposv 15 minutes) | 1,4 | 1,1 | 1,4
+disque | 7 | 4 (5 sans flatpaks) | 10 (5 sans flatpaks)
+dossier home en fr | intégré | intégré
+xdg-desktop-portal | intégré | intégré
+relatime | intégré |  à déclarer
+gamemode | intégré |  à déclarer
+oomd  | oui | oui
+fstrim.timer | intégré | intégré
+btrf discard=async | intégré | intégré
+luks discard=async | intégré | à déclarer
+ntsync | charger module | à déclarer
+swappiness | paramétrer | à déclarer
+zram zstd | passer de lzo-rle à zstd |  à déclarer
+btrfs force zstd 3 | passer de 1 à 3 (rpm-ostree!) |  à déclarer
 Sécurité | SELinux intégré | apparmor à déclarer
 Boot graphique plymouth | intégré | à déclarer
+Pilote amd dans initrd | si bootc : initrd à modifier. Verifier s'il y a besoin de faire quelque chose dans Silverblue (dans ce cas, ce sera un rpm-ostree)  | à déclarer
 bluetooth | intégré | à déclarer
 vulkan | intégré | à déclarer
 upower | intégré | à déclarer
+
+
+
+A intégrer sur une image bootc.
+Sur Silverblue : la majeur partie se paramètre dans /etc (mutable). Quelques options nécessient rpm-ostree.
 
 ---
 
