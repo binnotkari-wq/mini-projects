@@ -31,6 +31,7 @@ Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblu
 - https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/
 - https://fedoraproject.org/wiki/Firefox_Hardware_acceleration?ref=lurkerlabs.com
 - https://fedoraproject.org/wiki/Hardware_Video_Acceleration
+- https://dev.to/archerallstars/my-opinionated-fedora-silverblue-setup-4o9p
 
 Le mieux : laisser l'installateur faire le travail.
 
