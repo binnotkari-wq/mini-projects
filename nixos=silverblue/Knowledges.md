@@ -19,13 +19,16 @@ Ce qui ne marche pas :
 - quelle que soit la distribution : ne pas essayer de modifier les bases, les principes (partionnements, process d'installation, usine gaz et adaptation alambiquées...). Tout est faisable, mais ça génère un travail de maintenance, de documentation et de mémoire. Ca amène une exclusivité qui complique les diagnostiques lorsque quelque chose ne vas pas.
 - zenity : ne pas installer dans une distrobox. Cela tire beaucoup de dépendances.
 - gamescope dans une distrobox : les appels directs à wayland impliquent une execution directement depuis l'hôte, sans l'isolement d'un container.
-
+- essayer d'installer une extension gnome avec un script. Il y a une erreur dbus
+- essayer de relocaliser les machines virtuelles de gnome-machine
+- essayer de chercher un ISO en dehors des dossiers utilisateur
 
 Ce qui marche
 - compression btrfs spécifiée en KARGS
 - powertop peut être installé et exécuté dans une distrobox
 - nix peut être installé dans une distrobox
 - distrobox peut exposer les binaires à l'hôte avec des wrappers dans ~/.local/bin
+- anaconda créé les sous-volumes root, home et var. Pour conserver flatpaks, containers root, il suffit de conserver ce sous-volume.
 
 Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblue :
 - https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/
@@ -33,10 +36,11 @@ Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblu
 - https://fedoraproject.org/wiki/Hardware_Video_Acceleration
 - https://dev.to/archerallstars/my-opinionated-fedora-silverblue-setup-4o9p
 
-Le mieux : laisser l'installateur faire le travail.
 
+Faire avec ce qui est prévu :
+- laisser l'installateur faire le travail.
+- au lieu de créer des sous-volumes supplémentaires, laisser le schema de partitions mis en place par l'installateur.
 
-Concernant le partitionnement : au lieu de créer des sous-volumes supplémentaires, laisser le schema de partitions mis en place par l'installateur.
 
 STEAM : on peut deplacer la bibliothèque et faire un lien ?
 
