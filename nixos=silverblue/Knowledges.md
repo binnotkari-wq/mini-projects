@@ -22,6 +22,7 @@ Ce qui ne marche pas :
 - essayer d'installer une extension gnome avec un script. Il y a une erreur dbus
 - essayer de relocaliser les machines virtuelles de gnome-machine
 - essayer de chercher un ISO en dehors des dossiers utilisateur
+- llama vulkan n'est pas disponible sous fedora, et tire 2go de dépendances rocm. On installe soit en téléchargeant depuis github, soit dans brew.
 
 Ce qui marche
 - compression btrfs spécifiée en KARGS
@@ -36,11 +37,11 @@ Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblu
 - https://fedoraproject.org/wiki/Hardware_Video_Acceleration
 - https://dev.to/archerallstars/my-opinionated-fedora-silverblue-setup-4o9p
 
-
 Faire avec ce qui est prévu :
 - laisser l'installateur faire le travail.
 - au lieu de créer des sous-volumes supplémentaires, laisser le schema de partitions mis en place par l'installateur.
-
+- on banni le mode --user pour les flatpaks. Pour une question de sécurité : installation "systeme" pour que personne (ni un utilisateur, ni un logiciel malveillant) ne puisse altérer les outils de base. En installation mode --user, un logiciel malveillant n'a besoin d'aucun privilège particulier pour alterer le contenu d'un flatpak. De plus, l'installation en mode --user n'isole pas plus les flatpaks. En mode système, il sont dans /var/lib, et donc deja en dehors des fichiers de l'OS (aucune pollution).
+# Pour l'instant, installation automatique de l'éditeur de texte, Bazaar et Suchi (preview Nautilus) uniquement.
 
 STEAM : on peut deplacer la bibliothèque et faire un lien ?
 
