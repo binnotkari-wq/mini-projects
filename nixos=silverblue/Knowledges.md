@@ -1,15 +1,11 @@
 Base conaissance Nixos / Silverblue
 
 Ce qui a déjà été réfléchi, pour ne pas perdre de temps à vouloir réinventer l'eau chaude.
-
 La plupart de ces comportement peuvent probablement être résolus avec un bon paramétrage. Mais on s'éloigne du système qui fonctionne "as is".
 
 
 
-Ne pas faire ....
-
-
-Ce qui ne marche pas :
+### Ce qui ne marche pas :
 
 - changer les répertoires de Gnome Boxes (Machines) version Flatpak.
 - charger un iso ailleurs que depuis home avec Gnome Boxes (Machines) version Flatpak. Même avec flatpak override des autorisations, ca ne va pas.
@@ -23,21 +19,26 @@ Ce qui ne marche pas :
 - essayer de relocaliser les machines virtuelles de gnome-machine
 - essayer de chercher un ISO en dehors des dossiers utilisateur
 - llama vulkan n'est pas disponible sous fedora, et tire 2go de dépendances rocm. On installe soit en téléchargeant depuis github, soit dans brew.
+- just dans une distrobox ne pourra pas avoir accès à l'ensemble des outils de l'hôte. Il n'st pas très utile de l'exporter; il vaut mieux l'installer dans homebrew.
 
-Ce qui marche
+### Ce qui marche :
+
 - compression btrfs spécifiée en KARGS
 - powertop peut être installé et exécuté dans une distrobox
 - nix peut être installé dans une distrobox
 - distrobox peut exposer les binaires à l'hôte avec des wrappers dans ~/.local/bin
+- installer just dans homebrew, ainsi il aura accès aux outils système
 - anaconda créé les sous-volumes root, home et var. Pour conserver flatpaks, containers root, il suffit de conserver ce sous-volume.
 
 Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblue :
+
 - https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/
 - https://fedoraproject.org/wiki/Firefox_Hardware_acceleration?ref=lurkerlabs.com
 - https://fedoraproject.org/wiki/Hardware_Video_Acceleration
 - https://dev.to/archerallstars/my-opinionated-fedora-silverblue-setup-4o9p
 
-Faire avec ce qui est prévu :
+### Faire avec ce qui est prévu :
+
 - laisser l'installateur faire le travail.
 - au lieu de créer des sous-volumes supplémentaires, laisser le schema de partitions mis en place par l'installateur.
 - on banni le mode --user pour les flatpaks. Pour une question de sécurité : installation "systeme" pour que personne (ni un utilisateur, ni un logiciel malveillant) ne puisse altérer les outils de base. En installation mode --user, un logiciel malveillant n'a besoin d'aucun privilège particulier pour alterer le contenu d'un flatpak. De plus, l'installation en mode --user n'isole pas plus les flatpaks. En mode système, il sont dans /var/lib, et donc deja en dehors des fichiers de l'OS (aucune pollution).
@@ -45,7 +46,7 @@ Faire avec ce qui est prévu :
 
 STEAM : on peut deplacer la bibliothèque et faire un lien ?
 
-Ce qui est inutile :
+### Ce qui est inutile :
 
 - flatpak remote-modify --no-filter --enable flathub : ne sert à rien. Autant faire flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo car cette commande est idempotente. Si le repo existe, elle ne fait rien, s'il nexiste pas elle le remplace, et s'il existe en version filtrée, elle le remplace.
   
@@ -56,14 +57,17 @@ Ce qui est inutile :
 
 La copie sera immédiate sur un sous-volume, puisqu'on reste sur le même volume btrfs.
 
+```
 $HOME/.local/share/containers
 $HOME/.var/app/org.gnome.Boxes
-
+```
 
 ### Dossiers systèmes à sauvegarder
 
+```
 /var/lib/flatpak
 /var/lib/containers
+```
 
 Mieux : un sous volume btrfs monté sur chacun de ces dossiers
 
