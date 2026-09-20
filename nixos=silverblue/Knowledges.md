@@ -29,7 +29,7 @@ La plupart de ces comportement peuvent probablement être résolus avec un bon p
 - distrobox peut exposer les binaires à l'hôte avec des wrappers dans ~/.local/bin
 - installer just dans homebrew, ainsi il aura accès aux outils système
 - anaconda créé les sous-volumes root, home et var. Pour conserver flatpaks, containers root, il suffit de conserver ce sous-volume.
-
+- pour accéder à une librairie de jeux sur un autre disque avec la version flatpak de steam :  flatpak override --user --filesystem=/path/to/other/Steam/Library com.github.Matoking.protontricks
 Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblue :
 
 - https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/
