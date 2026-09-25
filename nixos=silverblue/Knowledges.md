@@ -104,7 +104,7 @@ sudo btrfs filesystem defragment -r -v -f -czstd /chemin/vers/données
 ### Exécution
 
 ```
-benoit@fedora:~/Téléchargements$ sudo ./btrfs-compress-bench.sh
+sudo ./btrfs-compress-bench.sh
 == Vérification des dépendances ==
 == Provisionnement du dataset synthétique dans /var/tmp/btrfs-bench.EpcduF/dataset ==
 -- Copie de fichiers texte réels --
