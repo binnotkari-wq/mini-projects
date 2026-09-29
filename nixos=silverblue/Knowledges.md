@@ -1,18 +1,53 @@
 Base conaissance Nixos / Silverblue
 
 Ce qui a déjà été réfléchi, pour ne pas perdre de temps à vouloir réinventer l'eau chaude.
-La plupart de ces comportement peuvent probablement être résolus avec un bon paramétrage. Mais on s'éloigne du système qui fonctionne "as is".
+
+# Premier boot Bazzite
+
+POUR RESTER HORS LIGNE JUSQU'A ACTIVATION DE LA COMPRESSION BTRFS
+
+Il faut donc bypass le premier setup steam online, grâce à un login sur le bureau. Depuis tty2 (ctrl alt f2) au premier ecran de setup steam :
+
+```
+ujust set-default-desktop
+sudo systemctl reboot
+```
+
+Cela fera un autologin sur le bureau, et non sur la session gamescope. On pourra ainsi prendre la main sur le pc
+sans passer par la configuration de steam qui doit se faire online.
+(le souci étant que dès qu'on est online bazzite télécharge et se met à jour, et ces nouvelles données ne seront
+pas compressées - cf le problème de systèmes Fedora Atomic avec compose FS qui ne prend pas en compte les
+paramètres zstd de / dans fstab).
+
+De là on peut appliquer le karg de compression BTRFS, et poursuivre le setup du système.
 
 
+* Ne pas essayer de changer les fichiers de config manuellement avec les consignes données par Gemini le 21/09/2026.... ne fonctionne pas.
+* Faire des tests sur une VM si on veut mettre au point une solution avec mot de passe au login.
 
-### Ce qui ne marche pas :
+
+# Dos and don'ts
+
+## Ce qui ne marche pas :
 
 - changer les répertoires de Gnome Boxes (Machines) version Flatpak.
-- charger un iso ailleurs que depuis home avec Gnome Boxes (Machines) version Flatpak. Même avec flatpak override des autorisations, ca ne va pas.
-- Fedora atomic : essayer de paramétrer la compression btrfs dans fstab : aucun effet. Reconnu par la communauté, bug upstream du à composefs.
-- atomic-image-builder : essayer de l'installer dans brew alors que les outils de compilation ne sont pas présents sur l'hote (ce qui est le cas dans silverblue). Il faut installer la version podman proposée par le site.
-- ryzenadj ne fonctionne pas lorsque secureboot est activé : ca ne marche pas, ni avec ryzenadj du repo rpm de ublue, ni en compilant ryzenadj. Il faut désactiver secureboot. DOmmage sur une distrib qui prend en charge secureboot. RyzenAdj accède aux MSR (Model-Specific Registers) directement via /dev/cpu/*/msr, et le mode lockdown du noyau que Secure Boot active sous Linux bloque justement cet accès (lockdown=integrity ou confidentiality selon la distro).
-- quelle que soit la distribution : ne pas essayer de modifier les bases, les principes (partionnements, process d'installation, usine gaz et adaptation alambiquées...). Tout est faisable, mais ça génère un travail de maintenance, de documentation et de mémoire. Ca amène une exclusivité qui complique les diagnostiques lorsque quelque chose ne vas pas.
+- charger un iso ailleurs que depuis home avec Gnome Boxes (Machines) version Flatpak.
+Même avec flatpak override des autorisations, ca ne va pas.
+- Fedora atomic : essayer de paramétrer la compression btrfs dans fstab : aucun effet.
+Reconnu par la communauté, bug upstream du à composefs.
+- atomic-image-builder : essayer de l'installer dans brew alors que les outils de
+compilation ne sont pas présents sur l'hote (ce qui est le cas dans silverblue).
+Il faut installer la version podman proposée par le site.
+- ryzenadj ne fonctionne pas lorsque secureboot est activé : ca ne marche pas, ni
+avec ryzenadj du repo rpm de ublue, ni en compilant ryzenadj. Il faut désactiver
+secureboot. Dommage sur une distrib qui prend en charge secureboot. RyzenAdj accède
+aux MSR (Model-Specific Registers) directement via /dev/cpu/*/msr, et le mode lockdown
+du noyau que Secure Boot active sous Linux bloque justement cet accès
+(lockdown=integrity ou confidentiality selon la distro).
+- quelle que soit la distribution : ne pas essayer de modifier les bases, les
+principes (partionnements, process d'installation, usine gaz et adaptation alambiquées...).
+Tout est faisable, mais ça génère un travail de maintenance, de documentation et de mémoire.
+Ca amène une exclusivité qui complique les diagnostiques lorsque quelque chose ne vas pas.
 - zenity : ne pas installer dans une distrobox. Cela tire beaucoup de dépendances.
 - gamescope dans une distrobox : les appels directs à wayland impliquent une execution directement depuis l'hôte, sans l'isolement d'un container.
 - essayer d'installer une extension gnome avec un script. Il y a une erreur dbus
@@ -21,7 +56,7 @@ La plupart de ces comportement peuvent probablement être résolus avec un bon p
 - llama vulkan n'est pas disponible sous fedora, et tire 2go de dépendances rocm. On installe soit en téléchargeant depuis github, soit dans brew.
 - just dans une distrobox ne pourra pas avoir accès à l'ensemble des outils de l'hôte. Il n'st pas très utile de l'exporter; il vaut mieux l'installer dans homebrew.
 
-### Ce qui marche :
+## Ce qui marche :
 
 - compression btrfs spécifiée en KARGS
 - powertop peut être installé et exécuté dans une distrobox
@@ -32,28 +67,22 @@ La plupart de ces comportement peuvent probablement être résolus avec un bon p
 - pour accéder à une librairie de jeux sur un autre disque avec la version flatpak de steam :  flatpak override --user --filesystem=/path/to/other/Steam/Library com.github.Matoking.protontricks
 Quelques bonnes référence de paramétrage réflechi et argumenté de Silverblue :
 
-- https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/
-- https://fedoraproject.org/wiki/Firefox_Hardware_acceleration?ref=lurkerlabs.com
-- https://fedoraproject.org/wiki/Hardware_Video_Acceleration
-- https://dev.to/archerallstars/my-opinionated-fedora-silverblue-setup-4o9p
+	- https://lurkerlabs.com/fedora-silverblue-ultimate-post-install-guide/
+	- https://fedoraproject.org/wiki/Firefox_Hardware_acceleration?ref=lurkerlabs.com
+	- https://fedoraproject.org/wiki/Hardware_Video_Acceleration
+	- https://dev.to/archerallstars/my-opinionated-fedora-silverblue-setup-4o9p
 
-### Faire avec ce qui est prévu :
+## Faire avec ce qui est prévu :
 
 - laisser l'installateur faire le travail.
 - au lieu de créer des sous-volumes supplémentaires, laisser le schema de partitions mis en place par l'installateur.
 - on banni le mode --user pour les flatpaks. Pour une question de sécurité : installation "systeme" pour que personne (ni un utilisateur, ni un logiciel malveillant) ne puisse altérer les outils de base. En installation mode --user, un logiciel malveillant n'a besoin d'aucun privilège particulier pour alterer le contenu d'un flatpak. De plus, l'installation en mode --user n'isole pas plus les flatpaks. En mode système, il sont dans /var/lib, et donc deja en dehors des fichiers de l'OS (aucune pollution).
-# Pour l'instant, installation automatique de l'éditeur de texte, Bazaar et Suchi (preview Nautilus) uniquement.
 
 STEAM : on peut deplacer la bibliothèque et faire un lien ?
 
-### Ce qui est inutile :
+# Bon à savoir
 
-- flatpak remote-modify --no-filter --enable flathub : ne sert à rien. Autant faire flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo car cette commande est idempotente. Si le repo existe, elle ne fait rien, s'il nexiste pas elle le remplace, et s'il existe en version filtrée, elle le remplace.
-  
-
-## Bon à savoir
-
-### Dossiers utilisateur à sauvegarder
+## Dossiers utilisateur contenant des données logicielles utiles
 
 La copie sera immédiate sur un sous-volume, puisqu'on reste sur le même volume btrfs.
 
@@ -62,7 +91,7 @@ $HOME/.local/share/containers
 $HOME/.var/app/org.gnome.Boxes
 ```
 
-### Dossiers systèmes à sauvegarder
+## Dossiers systèmes contenant des données logicielles utiles
 
 ```
 /var/lib/flatpak
@@ -71,21 +100,26 @@ $HOME/.var/app/org.gnome.Boxes
 
 Mieux : un sous volume btrfs monté sur chacun de ces dossiers
 
+# Choix de paramétrages
 
 ## Paramètres de compression BTRFS
 
 Exécution du script btrfs-compress-bench.sh puis analyse de Claude (02/09/22026)
 --> compress=zstd:1 est le choix optimum.
 
-Sur Silverblue, le paramètre de compression doit être passé au KARGS :
+Sur Silverblue et autres dérivés Fedora Atomic (Bazzite ...), le paramètre de compression doit être passé au KARGS :
 
 ```
-rpm-ostree kargs --delete="rootflags=subvol=root" --append="rootflags=subvol=root,compress=zstd:1"
+sudo rpm-ostree kargs --delete="rootflags=subvol=root" --append="rootflags=subvol=root,compress=zstd:1"
+sudo systemctl reboot
 ```
 
-Cela s'appliquera à l'ensemble de / y compris ses sous-volumes et y compris à travers composefs. C'est la seule façon à ce jour (02/09/2026) de mettre en place la compression btrfs sur / et ses sous-volumes, car les options de montage de / et de ses sous-volumes sont ignorées par OSTREE / composefs dans /etc/fstab.
+Cela s'appliquera à l'ensemble de / y compris ses sous-volumes et y compris à travers composefs.
+C'est la seule façon à ce jour (02/09/2026) de mettre en place la compression btrfs sur / et ses sous-volumes,
+car les options de montage de / et de ses sous-volumes sont ignorées par OSTREE / composefs dans /etc/fstab.
 
-Pour d'autres volumes que / (disque secondaire), on peut spécifier les paramètres de compression dans Gnome Disques, ou directement marquer le volume avec le paramètre.
+Pour d'autres volumes que / (disque secondaire), on peut spécifier les paramètres de compression dans
+Gnome Disques, ou directement marquer le volume avec le paramètre.
 
 ```
 sudo btrfs property set /mnt/disque_secondaire_monté compression zstd
@@ -101,7 +135,7 @@ sudo btrfs filesystem defragment -r -v -f -czstd /chemin/vers/données
 ```
 
 
-### Exécution
+### Tests et mesures
 
 ```
 sudo ./btrfs-compress-bench.sh
@@ -206,30 +240,18 @@ zstd         5%       12M         219M         219M
 Temps de lecture complète (tar->/dev/null) : .023219411s
 ```
 
-### Analyse CLaude
-
-Voici la lecture honnête de ces résultats.
-
+### Analyse Claude
 
 En excution randomisés des différents cas + un run d'échauffement, le biais systémique disparaît complètement.
 L'écart réel entre zstd:1 et zstd:3, une fois le bruit maîtrisé, reste faible (0.5 à 1.9s sur ~8-12s de copie, soit 5-20%) — cohérent avec les sources citées plus tôt (Fedora wiki, patch kernel 1.5.7) qui trouvaient un écart modeste.
-Il reste du bruit résiduel (le contre-exemple à 1.9s dans l'autre sens) — normal sur un poste de bureau avec d'autres processus actifs, pas un banc dédié. Pour trancher plus finement, il faudrait 5-10 répétitions par option et comparer les médianes, comme fait le script Facebook original.
 
+Il reste du bruit résiduel (le contre-exemple à 1.9s dans l'autre sens) — normal sur un poste de bureau avec d'autres processus actifs, pas un banc dédié. Pour trancher plus finement, il faudrait 5-10 répétitions par option et comparer les médianes, comme fait le script Facebook original.
 
 Sur ton usage (rootfs, dotfiles, config), la différence de vitesse et de ratio entre zstd:1 et zstd:3 est trop faible pour être un critère de choix déterminant — compress=zstd:1 reste un choix raisonnable et simple pour tes machines les moins puissantes (X240, L380), et zstd:3 convient très bien si tu préfères l'utiliser partout par simplicité de config.
 
-
-
-
-
-
-
-
-## Configuration RAM
-
+## Configuration mémoire
 
 ### A propos de l'emplacement des fichiers de configuration
-
 
 Exemple pour zram-generator.conf : dans /etc/systemd/zram-generator.conf.d/ ou dans /etc/systemd/ ? (on voit d'origine un zram-generator.conf fourni par Fedora dans /etc/systemd/)
 
@@ -248,12 +270,10 @@ Petit détail à corriger : le nom du fichier dans conf.d/ ne doit pas obligatoi
 En résumé : ta commande actuelle (écrire dans conf.d/) est correcte et c'est la bonne approche pour Silverblue.
 
 
-
-
 ### ZRAM
 
-https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram
-swappiness agressif comme Bazzite pour favoriser ZRAM avant le swap disque
+swappiness agressif comme Bazzite pour favoriser ZRAM avant le swap disque : https://wiki.archlinux.org/title/Zram#Optimizing_swap_on_zram
+
 VMMC : https://fedoraproject.org/wiki/Changes/IncreaseVmMaxMapCount
 
 On crée un fichier dédié dans /etc/sysctl.d/ pour ne pas polluer le sysctl.conf principal
