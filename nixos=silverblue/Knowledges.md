@@ -55,6 +55,7 @@ Ca amène une exclusivité qui complique les diagnostiques lorsque quelque chose
 - essayer de chercher un ISO en dehors des dossiers utilisateur
 - llama vulkan n'est pas disponible sous fedora, et tire 2go de dépendances rocm. On installe soit en téléchargeant depuis github, soit dans brew.
 - just dans une distrobox ne pourra pas avoir accès à l'ensemble des outils de l'hôte. Il n'st pas très utile de l'exporter; il vaut mieux l'installer dans homebrew.
+- Emulation : ne pas installer emudeck. Trop invasif dans le système.
 
 ## Ce qui marche :
 
@@ -102,7 +103,7 @@ Mieux : un sous volume btrfs monté sur chacun de ces dossiers
 
 # Choix de paramétrages
 
-## Paramètres de compression BTRFS
+## Paramètres de compression BTRFS ( mais vérifier si ça sera toujours vabale dans fedora 45)
 
 Exécution du script btrfs-compress-bench.sh puis analyse de Claude (02/09/22026)
 --> compress=zstd:1 est le choix optimum.
