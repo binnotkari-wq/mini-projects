@@ -1,0 +1,12 @@
+snap install steam gimp libreoffice gnome-boxes
+
+
+
+installer infra flatpak
+si ubuntu, apt install flatpak
+injecter flathub
+installer bazaar
+
+
+
+installer dash to panel en automatique sur ubuntu ? pas de paquet snapdonc meme situation que sur fedora
