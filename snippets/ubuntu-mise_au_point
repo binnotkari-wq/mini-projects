@@ -1,12 +1,22 @@
 snap install steam gimp libreoffice gnome-boxes
 
 
-
-installer infra flatpak
-si ubuntu, apt install flatpak
-injecter flathub
-installer bazaar
+# lancement du serveur
+llama-server --model /home/benoit/resources/llm/Qwen3.5-4B-Q4_K_M.gguf --alias smollm2-135m --port 8080 --host 127.0.0.1 --no-warmup --sleep-idle-seconds 600 --fit-ctx 4096
 
 
 
-installer dash to panel en automatique sur ubuntu ? pas de paquet snapdonc meme situation que sur fedora
+
+# purger les anciennes versions des snaps
+
+snap list --all | awk '/désactivé/{print $1, $3}' |
+    while read snapname revision; do
+        sudo snap remove "$snapname" --revision="$revision"
+    done
+ 
+ 
+ 
+ 
+ # installation llama d'après le site officiel https://llama.app/
+ 
+ curl -LsSf https://llama.app/install.sh | sh
