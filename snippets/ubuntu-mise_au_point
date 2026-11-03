@@ -1,22 +1,38 @@
-snap install steam gimp libreoffice gnome-boxes
-
-
 # lancement du serveur
-llama-server --model /home/benoit/resources/llm/Qwen3.5-4B-Q4_K_M.gguf --alias smollm2-135m --port 8080 --host 127.0.0.1 --no-warmup --sleep-idle-seconds 600 --fit-ctx 4096
-
+llama serve --model /home/benoit/resources/llm/Qwen3.5-4B-Q4_K_M.gguf --port 8080 --host 127.0.0.1 --no-warmup --sleep-idle-seconds 600 --fit-ctx 4096
 
 
 
 # purger les anciennes versions des snaps
-
 snap list --all | awk '/désactivé/{print $1, $3}' |
     while read snapname revision; do
         sudo snap remove "$snapname" --revision="$revision"
     done
- 
- 
- 
- 
- # installation llama d'après le site officiel https://llama.app/
- 
- curl -LsSf https://llama.app/install.sh | sh
+
+
+
+# Dans la base de connaissances :
+Dans une installe complète de Ubuntu, les logiciels suivants sont ajoutés en snap :
+thunderbird
+
+Et les logiciels suivants sont ajoutés en .deb :
+agenda
+lecteur video (showtime)
+camera (snapshot)
+créateur de disque de démarrage (usb-creator-gtk)
+fileroller (pour les archives)
+sauvegardes (deja-du)
+libreoffice
+rythmbox
+numeriseur de documents (simple-scan)
+remmina (bureau à distance)
+shotwell (gestion de photos)
+transmission (torrents)
+
+
+
+ils sont par ailleurs dispos en snap
+libreoffice
+remmina
+shotwell
+transmission
